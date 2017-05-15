@@ -1,0 +1,474 @@
+[p LITE_MODE AUTOSTATIC PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1717 ]
+[d frameptr 6 ]
+"56 C:\Users\armst\Desktop\PIC16F1717\P01_Thermometer.X\16F1717_Internal.c
+[v _internal_16 internal_16 `(v  1 e 1 0 ]
+"32 C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
+"492 C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\doprnt.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"56 C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\ftoa.c
+[v _ftoa ftoa `(*.4uc  1 e 1 0 ]
+"18 C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"44 C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\isdigit.c
+[v _isdigit isdigit `(b  1 e 0 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\itoa.c
+[v _itoa itoa `(*.4uc  1 e 1 0 ]
+"17
+[v _utoa utoa `(*.4uc  1 e 1 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+"35 C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\lltoft.c
+[v ___lltoft __lltoft `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\memmove.c
+[v _memmove memmove `(*.4v  1 e 1 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"19 C:\Users\armst\Desktop\PIC16F1717\P01_Thermometer.X\I2C.c
+[v _I2C_Init I2C_Init `(v  1 e 1 0 ]
+"48
+[v _Send_I2C_Data Send_I2C_Data `(v  1 e 1 0 ]
+"96
+[v _Send_I2C_StartBit Send_I2C_StartBit `(v  1 e 1 0 ]
+"106
+[v _Send_I2C_StopBit Send_I2C_StopBit `(v  1 e 1 0 ]
+"40 C:\Users\armst\Desktop\PIC16F1717\P01_Thermometer.X\Main.c
+[v _initMain initMain `(v  1 e 1 0 ]
+"105
+[v _main main `(v  1 e 1 0 ]
+"138 C:\Users\armst\Desktop\PIC16F1717\P01_Thermometer.X\oled.c
+[v _OLED_Command OLED_Command `(v  1 e 1 0 ]
+"174
+[v _OLED_Init OLED_Init `(v  1 e 1 0 ]
+"213
+[v _OLED_YX OLED_YX `(v  1 e 1 0 ]
+"229
+[v _OLED_PutChar OLED_PutChar `(v  1 e 1 0 ]
+"264
+[v _OLED_Clear OLED_Clear `(v  1 e 1 0 ]
+"284
+[v _OLED_Write_String OLED_Write_String `(v  1 e 1 0 ]
+"299
+[v _OLED_Write_Integer OLED_Write_Integer `(v  1 e 1 0 ]
+[s S66 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSP1IF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 TMR1GIF 1 0 :1:7 
+]
+"710 C:\Program Files (x86)\Microchip\xc8\v1.41\include\pic16f1717.h
+[u S75 . 1 `S66 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES75  1 e 1 @17 ]
+[s S161 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"1315
+[u S170 . 1 `S161 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES170  1 e 1 @142 ]
+"2020
+[v _ADRESL ADRESL `VEuc  1 e 1 @155 ]
+"2039
+[v _ADRESH ADRESH `VEuc  1 e 1 @156 ]
+[s S240 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 GO_nDONE 1 0 :1:1 
+`uc 1 CHS 1 0 :5:2 
+]
+"2083
+[s S244 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 ADGO 1 0 :1:1 
+`uc 1 CHS0 1 0 :1:2 
+`uc 1 CHS1 1 0 :1:3 
+`uc 1 CHS2 1 0 :1:4 
+`uc 1 CHS3 1 0 :1:5 
+`uc 1 CHS4 1 0 :1:6 
+]
+[s S252 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO 1 0 :1:1 
+]
+[u S255 . 1 `S240 1 . 1 0 `S244 1 . 1 0 `S252 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES255  1 e 1 @157 ]
+[s S218 . 1 `uc 1 ADPREF 1 0 :2:0 
+`uc 1 ADNREF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 ADCS 1 0 :3:4 
+`uc 1 ADFM 1 0 :1:7 
+]
+"2155
+[s S224 . 1 `uc 1 ADPREF0 1 0 :1:0 
+`uc 1 ADPREF1 1 0 :1:1 
+]
+[u S227 . 1 `S218 1 . 1 0 `S224 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES227  1 e 1 @158 ]
+[s S142 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 ANSC2 1 0 :1:2 
+`uc 1 ANSC3 1 0 :1:3 
+`uc 1 ANSC4 1 0 :1:4 
+`uc 1 ANSC5 1 0 :1:5 
+`uc 1 ANSC6 1 0 :1:6 
+`uc 1 ANSC7 1 0 :1:7 
+]
+"3847
+[u S150 . 1 `S142 1 . 1 0 ]
+[v _ANSELCbits ANSELCbits `VES150  1 e 1 @398 ]
+[s S277 . 1 `uc 1 ANSE0 1 0 :1:0 
+`uc 1 ANSE1 1 0 :1:1 
+`uc 1 ANSE2 1 0 :1:2 
+]
+"3954
+[u S281 . 1 `S277 1 . 1 0 ]
+[v _ANSELEbits ANSELEbits `VES281  1 e 1 @400 ]
+"5278
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @529 ]
+"5531
+[v _SSPADD SSPADD `VEuc  1 e 1 @530 ]
+[s S33 . 1 `uc 1 SSPM 1 0 :4:0 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"6249
+[s S39 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+]
+[u S44 . 1 `S33 1 . 1 0 `S39 1 . 1 0 ]
+[v _SSPCONbits SSPCONbits `VES44  1 e 1 @533 ]
+[s S88 . 1 `uc 1 SEN 1 0 :1:0 
+`uc 1 RSEN 1 0 :1:1 
+`uc 1 PEN 1 0 :1:2 
+`uc 1 RCEN 1 0 :1:3 
+`uc 1 ACKEN 1 0 :1:4 
+`uc 1 ACKDT 1 0 :1:5 
+`uc 1 ACKSTAT 1 0 :1:6 
+`uc 1 GCEN 1 0 :1:7 
+]
+"6499
+[u S97 . 1 `S88 1 . 1 0 ]
+[v _SSPCON2bits SSPCON2bits `VES97  1 e 1 @534 ]
+"10598
+[v _PPSLOCK PPSLOCK `VEuc  1 e 1 @3599 ]
+[s S183 . 1 `uc 1 PPSLOCKED 1 0 :1:0 
+]
+"10608
+[u S185 . 1 `S183 1 . 1 0 ]
+[v _PPSLOCKbits PPSLOCKbits `VES185  1 e 1 @3599 ]
+[s S204 . 1 `uc 1 SSPCLKPPS 1 0 :5:0 
+]
+"10760
+[u S206 . 1 `S204 1 . 1 0 ]
+[v _SSPCLKPPSbits SSPCLKPPSbits `VES206  1 e 1 @3616 ]
+[s S197 . 1 `uc 1 SSPDATPPS 1 0 :5:0 
+]
+"10779
+[u S199 . 1 `S197 1 . 1 0 ]
+[v _SSPDATPPSbits SSPDATPPSbits `VES199  1 e 1 @3617 ]
+[s S190 . 1 `uc 1 RC4PPS 1 0 :5:0 
+]
+"11311
+[u S192 . 1 `S190 1 . 1 0 ]
+[v _RC4PPSbits RC4PPSbits `VES192  1 e 1 @3748 ]
+[s S211 . 1 `uc 1 RC5PPS 1 0 :5:0 
+]
+"11330
+[u S213 . 1 `S211 1 . 1 0 ]
+[v _RC5PPSbits RC5PPSbits `VES213  1 e 1 @3749 ]
+"16732
+[v _IRCF0 IRCF0 `VEb  1 e 0 @1227 ]
+"16734
+[v _IRCF1 IRCF1 `VEb  1 e 0 @1228 ]
+"16736
+[v _IRCF2 IRCF2 `VEb  1 e 0 @1229 ]
+"16738
+[v _IRCF3 IRCF3 `VEb  1 e 0 @1230 ]
+"17772
+[v _SCS0 SCS0 `VEb  1 e 0 @1224 ]
+"17774
+[v _SCS1 SCS1 `VEb  1 e 0 @1225 ]
+"17858
+[v _SPLLEN SPLLEN `VEb  1 e 0 @1231 ]
+"29 C:\Users\armst\Desktop\PIC16F1717\P01_Thermometer.X\oled.c
+[v _OledFont OledFont `DCC[96][8]uc  1 e 768 0 ]
+"105 C:\Users\armst\Desktop\PIC16F1717\P01_Thermometer.X\Main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"123
+[v main@celsius celsius `f  1 a 3 53 ]
+"122
+[v main@farenheit farenheit `f  1 a 3 50 ]
+"121
+[v main@conversion10 conversion10 `f  1 a 3 47 ]
+"118
+[v main@result result `f  1 a 3 44 ]
+"161
+} 0
+"40
+[v _initMain initMain `(v  1 e 1 0 ]
+{
+"95
+} 0
+"56 C:\Users\armst\Desktop\PIC16F1717\P01_Thermometer.X\16F1717_Internal.c
+[v _internal_16 internal_16 `(v  1 e 1 0 ]
+{
+"69
+} 0
+"44 C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+{
+"47
+[v ___fttol@lval lval `ul  1 a 4 9 ]
+"46
+[v ___fttol@exp1 exp1 `uc  1 a 1 13 ]
+[v ___fttol@sign1 sign1 `uc  1 a 1 8 ]
+"44
+[v ___fttol@f1 f1 `f  1 p 3 0 ]
+"73
+} 0
+"62 C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+{
+"65
+[v ___ftmul@f3_as_product f3_as_product `um  1 a 3 18 ]
+"64
+[v ___ftmul@sign sign `uc  1 a 1 22 ]
+[v ___ftmul@cntr cntr `uc  1 a 1 21 ]
+[v ___ftmul@exp exp `uc  1 a 1 17 ]
+"62
+[v ___ftmul@f1 f1 `f  1 p 3 7 ]
+[v ___ftmul@f2 f2 `f  1 p 3 10 ]
+"157
+} 0
+"56 C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+{
+"60
+[v ___ftdiv@f3 f3 `f  1 a 3 34 ]
+"59
+[v ___ftdiv@sign sign `uc  1 a 1 38 ]
+[v ___ftdiv@exp exp `uc  1 a 1 37 ]
+[v ___ftdiv@cntr cntr `uc  1 a 1 33 ]
+"56
+[v ___ftdiv@f2 f2 `f  1 p 3 23 ]
+[v ___ftdiv@f1 f1 `f  1 p 3 26 ]
+"86
+} 0
+"86 C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+{
+"88
+[v ___ftadd@exp1 exp1 `uc  1 a 1 6 ]
+[v ___ftadd@exp2 exp2 `uc  1 a 1 5 ]
+[v ___ftadd@sign sign `uc  1 a 1 4 ]
+"86
+[v ___ftadd@f1 f1 `f  1 p 3 8 ]
+[v ___ftadd@f2 f2 `f  1 p 3 11 ]
+"148
+} 0
+"32 C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
+{
+"34
+[v ___awtoft@sign sign `uc  1 a 1 13 ]
+"32
+[v ___awtoft@c c `i  1 p 2 8 ]
+"42
+} 0
+"62 C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+{
+[v ___ftpack@arg arg `um  1 p 3 0 ]
+[v ___ftpack@exp exp `uc  1 p 1 3 ]
+[v ___ftpack@sign sign `uc  1 p 1 4 ]
+"86
+} 0
+"299 C:\Users\armst\Desktop\PIC16F1717\P01_Thermometer.X\oled.c
+[v _OLED_Write_Integer OLED_Write_Integer `(v  1 e 1 0 ]
+{
+[v OLED_Write_Integer@i i `uc  1 a 1 wreg ]
+"302
+[v OLED_Write_Integer@status status `i  1 a 2 26 ]
+"301
+[v OLED_Write_Integer@buff11 buff11 `*.4uc  1 a 1 25 ]
+"299
+[v OLED_Write_Integer@i i `uc  1 a 1 wreg ]
+"304
+[v OLED_Write_Integer@i i `uc  1 a 1 24 ]
+"309
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\itoa.c
+[v _itoa itoa `(*.4uc  1 e 1 0 ]
+{
+[v itoa@buf buf `*.4uc  1 a 1 wreg ]
+"6
+[v itoa@cp cp `*.4uc  1 a 1 8 ]
+"4
+[v itoa@buf buf `*.4uc  1 a 1 wreg ]
+[v itoa@val val `i  1 p 2 4 ]
+[v itoa@base base `i  1 p 2 6 ]
+"6
+[v itoa@buf buf `*.4uc  1 a 1 9 ]
+"14
+} 0
+"17
+[v _utoa utoa `(*.4uc  1 e 1 0 ]
+{
+[v utoa@buf buf `*.4uc  1 a 1 wreg ]
+"19
+[v utoa@v v `ui  1 a 2 0 ]
+"20
+[v utoa@c c `uc  1 a 1 2 ]
+"17
+[v utoa@buf buf `*.4uc  1 a 1 wreg ]
+[v utoa@val val `ui  1 p 2 8 ]
+[v utoa@base base `i  1 p 2 10 ]
+"22
+[v utoa@buf buf `*.4uc  1 a 1 3 ]
+"37
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwmod@counter counter `uc  1 a 1 5 ]
+"6
+[v ___lwmod@divisor divisor `ui  1 p 2 0 ]
+[v ___lwmod@dividend dividend `ui  1 p 2 2 ]
+"26
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwdiv@quotient quotient `ui  1 a 2 5 ]
+"12
+[v ___lwdiv@counter counter `uc  1 a 1 7 ]
+"6
+[v ___lwdiv@divisor divisor `ui  1 p 2 0 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
+"31
+} 0
+"284 C:\Users\armst\Desktop\PIC16F1717\P01_Thermometer.X\oled.c
+[v _OLED_Write_String OLED_Write_String `(v  1 e 1 0 ]
+{
+[v OLED_Write_String@s s `*.26uc  1 p 2 12 ]
+"287
+} 0
+"174
+[v _OLED_Init OLED_Init `(v  1 e 1 0 ]
+{
+"202
+} 0
+"264
+[v _OLED_Clear OLED_Clear `(v  1 e 1 0 ]
+{
+"267
+[v OLED_Clear@col col `ui  1 a 2 22 ]
+"266
+[v OLED_Clear@row row `ui  1 a 2 20 ]
+"272
+} 0
+"213
+[v _OLED_YX OLED_YX `(v  1 e 1 0 ]
+{
+[v OLED_YX@Row Row `uc  1 a 1 wreg ]
+[v OLED_YX@Row Row `uc  1 a 1 wreg ]
+[v OLED_YX@Column Column `uc  1 p 1 5 ]
+"215
+[v OLED_YX@Row Row `uc  1 a 1 9 ]
+"218
+} 0
+"138
+[v _OLED_Command OLED_Command `(v  1 e 1 0 ]
+{
+[v OLED_Command@temp temp `uc  1 a 1 wreg ]
+[v OLED_Command@temp temp `uc  1 a 1 wreg ]
+"140
+[v OLED_Command@temp temp `uc  1 a 1 4 ]
+"145
+} 0
+"229
+[v _OLED_PutChar OLED_PutChar `(v  1 e 1 0 ]
+{
+[v OLED_PutChar@ch ch `uc  1 a 1 wreg ]
+"237
+[v OLED_PutChar@bytes bytes `[9]uc  1 a 9 6 ]
+"245
+[v OLED_PutChar@i i `i  1 a 2 17 ]
+"235
+[v OLED_PutChar@base base `*.25DCCuc  1 a 2 15 ]
+"229
+[v OLED_PutChar@ch ch `uc  1 a 1 wreg ]
+"231
+[v OLED_PutChar@ch ch `uc  1 a 1 19 ]
+"252
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\memmove.c
+[v _memmove memmove `(*.4v  1 e 1 0 ]
+{
+[v memmove@d1 d1 `*.4v  1 a 1 wreg ]
+"17
+[v memmove@s s `*.25DCCuc  1 a 2 9 ]
+"15
+[v memmove@d d `*.4uc  1 a 1 11 ]
+"8
+[v memmove@d1 d1 `*.4v  1 a 1 wreg ]
+[v memmove@s1 s1 `*.25DCCv  1 p 2 0 ]
+[v memmove@n n `ui  1 p 2 2 ]
+"19
+[v memmove@d1 d1 `*.4v  1 a 1 8 ]
+"37
+} 0
+"106 C:\Users\armst\Desktop\PIC16F1717\P01_Thermometer.X\I2C.c
+[v _Send_I2C_StopBit Send_I2C_StopBit `(v  1 e 1 0 ]
+{
+"111
+} 0
+"96
+[v _Send_I2C_StartBit Send_I2C_StartBit `(v  1 e 1 0 ]
+{
+"101
+} 0
+"48
+[v _Send_I2C_Data Send_I2C_Data `(v  1 e 1 0 ]
+{
+[v Send_I2C_Data@databyte databyte `ui  1 p 2 0 ]
+"53
+} 0
+"19
+[v _I2C_Init I2C_Init `(v  1 e 1 0 ]
+{
+"43
+} 0
