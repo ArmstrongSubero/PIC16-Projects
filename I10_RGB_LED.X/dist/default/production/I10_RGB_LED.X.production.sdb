@@ -1,0 +1,196 @@
+[p LITE_MODE AUTOSTATIC PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1717 ]
+[d frameptr 6 ]
+"56 C:\Users\armst\Desktop\PIC16F1717\ZZ_old\I10_RGB_LED.X\16F1717_Internal.c
+[v _internal_16 internal_16 `(v  1 e 1 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"32 C:\Users\armst\Desktop\PIC16F1717\ZZ_old\I10_RGB_LED.X\Main.c
+[v _PWM1_LoadDutyValue PWM1_LoadDutyValue `(v  1 e 1 0 ]
+"43
+[v _PWM2_LoadDutyValue PWM2_LoadDutyValue `(v  1 e 1 0 ]
+"54
+[v _PWM3_LoadDutyValue PWM3_LoadDutyValue `(v  1 e 1 0 ]
+"66
+[v _RGB_LoadValue RGB_LoadValue `(v  1 e 1 0 ]
+"85
+[v _initMain initMain `(v  1 e 1 0 ]
+"201
+[v _main main `(v  1 e 1 0 ]
+[s S40 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"1254 C:\Program Files (x86)\Microchip\xc8\v1.41\include\pic16f1717.h
+[u S49 . 1 `S40 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES49  1 e 1 @141 ]
+"3782
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"6945
+[v _CCPR1L CCPR1L `VEuc  1 e 1 @657 ]
+"6983
+[v _CCP1CON CCP1CON `VEuc  1 e 1 @659 ]
+[s S123 . 1 `uc 1 CCP1M 1 0 :4:0 
+`uc 1 DC1B 1 0 :2:4 
+]
+"7012
+[s S126 . 1 `uc 1 CCP1M0 1 0 :1:0 
+`uc 1 CCP1M1 1 0 :1:1 
+`uc 1 CCP1M2 1 0 :1:2 
+`uc 1 CCP1M3 1 0 :1:3 
+`uc 1 DC1B0 1 0 :1:4 
+`uc 1 DC1B1 1 0 :1:5 
+]
+[s S133 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 CCP1Y 1 0 :1:4 
+`uc 1 CCP1X 1 0 :1:5 
+]
+[u S137 . 1 `S123 1 . 1 0 `S126 1 . 1 0 `S133 1 . 1 0 ]
+[v _CCP1CONbits CCP1CONbits `VES137  1 e 1 @659 ]
+"7144
+[v _CCPR2L CCPR2L `VEuc  1 e 1 @664 ]
+"7182
+[v _CCP2CON CCP2CON `VEuc  1 e 1 @666 ]
+[s S156 . 1 `uc 1 CCP2M 1 0 :4:0 
+`uc 1 DC2B 1 0 :2:4 
+]
+"7211
+[s S159 . 1 `uc 1 CCP2M0 1 0 :1:0 
+`uc 1 CCP2M1 1 0 :1:1 
+`uc 1 CCP2M2 1 0 :1:2 
+`uc 1 CCP2M3 1 0 :1:3 
+`uc 1 DC2B0 1 0 :1:4 
+`uc 1 DC2B1 1 0 :1:5 
+]
+[s S166 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 CCP2Y 1 0 :1:4 
+`uc 1 CCP2X 1 0 :1:5 
+]
+[u S170 . 1 `S156 1 . 1 0 `S159 1 . 1 0 `S166 1 . 1 0 ]
+[v _CCP2CONbits CCP2CONbits `VES170  1 e 1 @666 ]
+[s S62 . 1 `uc 1 C1TSEL 1 0 :2:0 
+`uc 1 C2TSEL 1 0 :2:2 
+`uc 1 P3TSEL 1 0 :2:4 
+`uc 1 P4TSEL 1 0 :2:6 
+]
+"7360
+[s S67 . 1 `uc 1 C1TSEL0 1 0 :1:0 
+`uc 1 C1TSEL1 1 0 :1:1 
+`uc 1 C2TSEL0 1 0 :1:2 
+`uc 1 C2TSEL1 1 0 :1:3 
+`uc 1 P3TSEL0 1 0 :1:4 
+`uc 1 P3TSEL1 1 0 :1:5 
+`uc 1 P4TSEL0 1 0 :1:6 
+`uc 1 P4TSEL1 1 0 :1:7 
+]
+[u S76 . 1 `S62 1 . 1 0 `S67 1 . 1 0 ]
+[v _CCPTMRSbits CCPTMRSbits `VES76  1 e 1 @670 ]
+"8716
+[v _PR6 PR6 `VEuc  1 e 1 @1053 ]
+[s S94 . 1 `uc 1 T6CKPS 1 0 :2:0 
+`uc 1 TMR6ON 1 0 :1:2 
+`uc 1 T6OUTPS 1 0 :4:3 
+]
+"8756
+[s S98 . 1 `uc 1 T6CKPS0 1 0 :1:0 
+`uc 1 T6CKPS1 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 T6OUTPS0 1 0 :1:3 
+`uc 1 T6OUTPS1 1 0 :1:4 
+`uc 1 T6OUTPS2 1 0 :1:5 
+`uc 1 T6OUTPS3 1 0 :1:6 
+]
+[u S106 . 1 `S94 1 . 1 0 `S98 1 . 1 0 ]
+[v _T6CONbits T6CONbits `VES106  1 e 1 @1054 ]
+"9391
+[v _PWM3DCL PWM3DCL `VEuc  1 e 1 @1559 ]
+"9426
+[v _PWM3DCH PWM3DCH `VEuc  1 e 1 @1560 ]
+"9495
+[v _PWM3CON PWM3CON `VEuc  1 e 1 @1561 ]
+"10598
+[v _PPSLOCK PPSLOCK `VEuc  1 e 1 @3599 ]
+[s S191 . 1 `uc 1 PPSLOCKED 1 0 :1:0 
+]
+"10608
+[u S193 . 1 `S191 1 . 1 0 ]
+[v _PPSLOCKbits PPSLOCKbits `VES193  1 e 1 @3599 ]
+[s S198 . 1 `uc 1 RB0PPS 1 0 :5:0 
+]
+"11083
+[u S200 . 1 `S198 1 . 1 0 ]
+[v _RB0PPSbits RB0PPSbits `VES200  1 e 1 @3736 ]
+[s S205 . 1 `uc 1 RB1PPS 1 0 :5:0 
+]
+"11102
+[u S207 . 1 `S205 1 . 1 0 ]
+[v _RB1PPSbits RB1PPSbits `VES207  1 e 1 @3737 ]
+[s S212 . 1 `uc 1 RB2PPS 1 0 :5:0 
+]
+"11121
+[u S214 . 1 `S212 1 . 1 0 ]
+[v _RB2PPSbits RB2PPSbits `VES214  1 e 1 @3738 ]
+"16732
+[v _IRCF0 IRCF0 `VEb  1 e 0 @1227 ]
+"16734
+[v _IRCF1 IRCF1 `VEb  1 e 0 @1228 ]
+"16736
+[v _IRCF2 IRCF2 `VEb  1 e 0 @1229 ]
+"16738
+[v _IRCF3 IRCF3 `VEb  1 e 0 @1230 ]
+"17772
+[v _SCS0 SCS0 `VEb  1 e 0 @1224 ]
+"17774
+[v _SCS1 SCS1 `VEb  1 e 0 @1225 ]
+"17858
+[v _SPLLEN SPLLEN `VEb  1 e 0 @1231 ]
+"201 C:\Users\armst\Desktop\PIC16F1717\ZZ_old\I10_RGB_LED.X\Main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"239
+} 0
+"85
+[v _initMain initMain `(v  1 e 1 0 ]
+{
+"191
+} 0
+"56 C:\Users\armst\Desktop\PIC16F1717\ZZ_old\I10_RGB_LED.X\16F1717_Internal.c
+[v _internal_16 internal_16 `(v  1 e 1 0 ]
+{
+"69
+} 0
+"66 C:\Users\armst\Desktop\PIC16F1717\ZZ_old\I10_RGB_LED.X\Main.c
+[v _RGB_LoadValue RGB_LoadValue `(v  1 e 1 0 ]
+{
+[v RGB_LoadValue@red red `ui  1 p 2 4 ]
+[v RGB_LoadValue@green green `ui  1 p 2 6 ]
+[v RGB_LoadValue@blue blue `ui  1 p 2 8 ]
+"72
+} 0
+"54
+[v _PWM3_LoadDutyValue PWM3_LoadDutyValue `(v  1 e 1 0 ]
+{
+[v PWM3_LoadDutyValue@dutyValue dutyValue `ui  1 p 2 0 ]
+"60
+} 0
+"43
+[v _PWM2_LoadDutyValue PWM2_LoadDutyValue `(v  1 e 1 0 ]
+{
+[v PWM2_LoadDutyValue@dutyValue dutyValue `ui  1 p 2 0 ]
+"49
+} 0
+"32
+[v _PWM1_LoadDutyValue PWM1_LoadDutyValue `(v  1 e 1 0 ]
+{
+[v PWM1_LoadDutyValue@dutyValue dutyValue `ui  1 p 2 0 ]
+"38
+} 0
