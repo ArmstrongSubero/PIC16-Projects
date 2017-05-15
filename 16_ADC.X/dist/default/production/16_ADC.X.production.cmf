@@ -1,0 +1,726 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$dist/default/production\16_ADC.X.production.obj
+cinit CODE 0 7F6 7F6 A 2
+text1 CODE 0 66E 66E 32 2
+text2 CODE 0 590 590 9 2
+text3 CODE 0 750 750 44 2
+text4 CODE 0 588 588 8 2
+text5 CODE 0 599 599 10 2
+text6 CODE 0 5F0 5F0 26 2
+text7 CODE 0 794 794 62 2
+text8 CODE 0 642 642 2C 2
+text9 CODE 0 6A0 6A0 34 2
+text10 CODE 0 5D5 5D5 1B 2
+text11 CODE 0 616 616 2C 2
+text12 CODE 0 710 710 40 2
+text13 CODE 0 5A9 5A9 14 2
+text14 CODE 0 5BD 5BD 18 2
+maintext CODE 0 6D4 6D4 3C 2
+cstackCOMMON COMMON 1 70 70 E 1
+cstackBANK0 BANK0 1 20 20 18 1
+bssBANK0 BANK0 1 38 38 11 1
+stringtext STRCODE 0 800 800 33 2
+clrtext CODE 0 582 582 6 2
+$C:\Users\armst\AppData\Local\Temp\s3cs.obj
+reset_vec CODE 0 0 0 2 2
+end_init CODE 0 2 2 2 2
+config CONFIG 0 8007 8007 2 2
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 49-6F 1
+RAM A0-EF 1
+RAM 120-16F 1
+RAM 1A0-1EF 1
+RAM 220-26F 1
+RAM 2A0-2EF 1
+RAM 320-36F 1
+RAM 3A0-3EF 1
+RAM 420-46F 1
+RAM 4A0-4EF 1
+RAM 520-56F 1
+RAM 5A0-5EF 1
+RAM 620-64F 1
+BANK0 49-6F 1
+BANK1 A0-EF 1
+BANK2 120-16F 1
+BANK3 1A0-1EF 1
+BANK4 220-26F 1
+BANK5 2A0-2EF 1
+BANK6 320-36F 1
+BANK7 3A0-3EF 1
+BANK8 420-46F 1
+BANK9 4A0-4EF 1
+CONST 4-581 2
+CONST 833-1FFF 2
+ENTRY 4-581 2
+ENTRY 833-1FFF 2
+IDLOC 8000-8003 2
+SFR10 500-51F 1
+SFR11 580-59F 1
+SFR12 600-61F 1
+SFR13 680-6EF 1
+SFR14 700-76F 1
+SFR15 780-7EF 1
+SFR16 800-86F 1
+SFR17 880-8EF 1
+SFR18 900-96F 1
+SFR19 980-9EF 1
+SFR20 A00-A6F 1
+SFR21 A80-AEF 1
+SFR22 B00-B6F 1
+SFR23 B80-BEF 1
+SFR24 C00-C6F 1
+SFR25 C80-CEF 1
+SFR26 D00-D6F 1
+SFR27 D80-DEF 1
+SFR28 E00-E6F 1
+SFR29 E80-EEF 1
+SFR30 F00-F6F 1
+SFR31 F80-FEF 1
+STACK 2029-23EF 1
+CODE 4-581 2
+CODE 833-1FFF 2
+SFR0 0-1F 1
+SFR1 80-9F 1
+SFR2 100-11F 1
+SFR3 180-19F 1
+SFR4 200-21F 1
+SFR5 280-29F 1
+SFR6 300-31F 1
+SFR7 380-39F 1
+SFR8 400-41F 1
+SFR9 480-49F 1
+BANK10 520-56F 1
+BANK11 5A0-5EF 1
+BANK12 620-64F 1
+BIGRAM 2000-23EF 1
+STRCODE 4-581 2
+STRCODE 833-1FFF 2
+STRING 4-581 2
+STRING 833-1FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\16_ADC.X.production.obj
+7F6 cinit CODE >2073:C:\Users\armst\AppData\Local\Temp\s3cs.
+7F6 cinit CODE >2076:C:\Users\armst\AppData\Local\Temp\s3cs.
+7F6 cinit CODE >2100:C:\Users\armst\AppData\Local\Temp\s3cs.
+7F7 cinit CODE >2101:C:\Users\armst\AppData\Local\Temp\s3cs.
+7F8 cinit CODE >2102:C:\Users\armst\AppData\Local\Temp\s3cs.
+7F9 cinit CODE >2103:C:\Users\armst\AppData\Local\Temp\s3cs.
+7FA cinit CODE >2104:C:\Users\armst\AppData\Local\Temp\s3cs.
+7FB cinit CODE >2105:C:\Users\armst\AppData\Local\Temp\s3cs.
+7FD cinit CODE >2111:C:\Users\armst\AppData\Local\Temp\s3cs.
+7FD cinit CODE >2113:C:\Users\armst\AppData\Local\Temp\s3cs.
+7FE cinit CODE >2114:C:\Users\armst\AppData\Local\Temp\s3cs.
+5BD text14 CODE >28:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+5BE text14 CODE >30:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+5C0 text14 CODE >31:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+5C3 text14 CODE >32:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+5C3 text14 CODE >33:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+5C5 text14 CODE >35:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+5C7 text14 CODE >36:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+5C9 text14 CODE >37:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+5C9 text14 CODE >38:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+5CA text14 CODE >40:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+5CC text14 CODE >41:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+5CE text14 CODE >42:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+5CE text14 CODE >43:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+5CF text14 CODE >45:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+5D1 text14 CODE >46:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+5D3 text14 CODE >47:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+5D3 text14 CODE >48:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+5A9 text13 CODE >59:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+5AA text13 CODE >61:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+5AC text13 CODE >62:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+5B0 text13 CODE >63:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+5B2 text13 CODE >64:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+5BA text13 CODE >65:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+5BC text13 CODE >66:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+710 text12 CODE >90:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+711 text12 CODE >93:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+714 text12 CODE >95:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+719 text12 CODE >96:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+723 text12 CODE >97:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+728 text12 CODE >98:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+72C text12 CODE >99:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+72F text12 CODE >100:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+730 text12 CODE >101:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+734 text12 CODE >103:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+739 text12 CODE >104:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+743 text12 CODE >105:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+748 text12 CODE >106:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+74C text12 CODE >107:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+74F text12 CODE >108:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+616 text11 CODE >146:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+617 text11 CODE >149:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+61C text11 CODE >150:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+621 text11 CODE >151:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+623 text11 CODE >152:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+62D text11 CODE >153:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+62F text11 CODE >154:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+633 text11 CODE >155:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+635 text11 CODE >156:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+639 text11 CODE >157:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+63B text11 CODE >158:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+63F text11 CODE >159:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+641 text11 CODE >160:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+5D5 text10 CODE >170:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+5D6 text10 CODE >173:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+5E1 text10 CODE >174:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+5EB text10 CODE >173:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+6A0 text9 CODE >6:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\lwdiv.c
+6A0 text9 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\lwdiv.c
+6A2 text9 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\lwdiv.c
+6A6 text9 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\lwdiv.c
+6A8 text9 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\lwdiv.c
+6AA text9 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\lwdiv.c
+6AF text9 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\lwdiv.c
+6B3 text9 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\lwdiv.c
+6B4 text9 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\lwdiv.c
+6B9 text9 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\lwdiv.c
+6C1 text9 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\lwdiv.c
+6C5 text9 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\lwdiv.c
+6C6 text9 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\lwdiv.c
+6CB text9 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\lwdiv.c
+6CF text9 CODE >30:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\lwdiv.c
+642 text8 CODE >6:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\lwmod.c
+642 text8 CODE >13:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\lwmod.c
+646 text8 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\lwmod.c
+648 text8 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\lwmod.c
+64A text8 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\lwmod.c
+64F text8 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\lwmod.c
+653 text8 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\lwmod.c
+654 text8 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\lwmod.c
+65C text8 CODE >21:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\lwmod.c
+660 text8 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\lwmod.c
+665 text8 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\lwmod.c
+669 text8 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\lwmod.c
+794 text7 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\itoa.c
+796 text7 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\itoa.c
+79A text7 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\itoa.c
+7AA text7 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\itoa.c
+7AE text7 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\itoa.c
+7B2 text7 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\itoa.c
+7B8 text7 CODE >29:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\itoa.c
+7C8 text7 CODE >30:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\itoa.c
+7D7 text7 CODE >31:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\itoa.c
+7DC text7 CODE >32:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\itoa.c
+7E0 text7 CODE >33:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\itoa.c
+7E4 text7 CODE >34:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\itoa.c
+7ED text7 CODE >35:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\itoa.c
+7F1 text7 CODE >36:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\itoa.c
+5F0 text6 CODE >4:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\itoa.c
+5F2 text6 CODE >6:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\itoa.c
+5F6 text6 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\itoa.c
+5F8 text6 CODE >9:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\itoa.c
+603 text6 CODE >10:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\itoa.c
+608 text6 CODE >12:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\itoa.c
+613 text6 CODE >13:C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\itoa.c
+599 text5 CODE >213:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+599 text5 CODE >217:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+5A8 text5 CODE >218:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+588 text4 CODE >76:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+588 text4 CODE >78:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+58C text4 CODE >79:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+58F text4 CODE >80:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+750 text3 CODE >119:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+750 text3 CODE >121:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+754 text3 CODE >122:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+75C text3 CODE >123:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+760 text3 CODE >124:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+768 text3 CODE >125:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+76C text3 CODE >126:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+774 text3 CODE >127:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+778 text3 CODE >129:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+77C text3 CODE >130:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+780 text3 CODE >131:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+784 text3 CODE >132:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+788 text3 CODE >133:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+78C text3 CODE >134:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+790 text3 CODE >135:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+793 text3 CODE >136:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\LCD.c
+590 text2 CODE >56:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\16F1717_Internal.c
+590 text2 CODE >58:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\16F1717_Internal.c
+592 text2 CODE >59:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\16F1717_Internal.c
+593 text2 CODE >62:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\16F1717_Internal.c
+594 text2 CODE >63:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\16F1717_Internal.c
+595 text2 CODE >64:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\16F1717_Internal.c
+596 text2 CODE >65:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\16F1717_Internal.c
+597 text2 CODE >68:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\16F1717_Internal.c
+598 text2 CODE >69:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\16F1717_Internal.c
+66E text1 CODE >52:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\Main.c
+66E text1 CODE >54:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\Main.c
+671 text1 CODE >57:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\Main.c
+673 text1 CODE >60:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\Main.c
+675 text1 CODE >63:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\Main.c
+677 text1 CODE >64:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\Main.c
+679 text1 CODE >67:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\Main.c
+67B text1 CODE >70:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\Main.c
+67D text1 CODE >73:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\Main.c
+67F text1 CODE >76:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\Main.c
+681 text1 CODE >83:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\Main.c
+686 text1 CODE >86:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\Main.c
+687 text1 CODE >89:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\Main.c
+688 text1 CODE >92:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\Main.c
+68A text1 CODE >95:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\Main.c
+68C text1 CODE >98:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\Main.c
+68D text1 CODE >99:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\Main.c
+68E text1 CODE >102:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\Main.c
+691 text1 CODE >103:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\Main.c
+69D text1 CODE >104:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\Main.c
+69F text1 CODE >105:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\Main.c
+6D4 maintext CODE >115:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\Main.c
+6D4 maintext CODE >116:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\Main.c
+6D7 maintext CODE >124:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\Main.c
+6D9 maintext CODE >127:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\Main.c
+6DD maintext CODE >128:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\Main.c
+6DF maintext CODE >129:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\Main.c
+6E1 maintext CODE >132:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\Main.c
+6E8 maintext CODE >135:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\Main.c
+6EE maintext CODE >136:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\Main.c
+6F7 maintext CODE >137:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\Main.c
+6FF maintext CODE >140:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\Main.c
+70C maintext CODE >141:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\Main.c
+70F maintext CODE >121:C:\Users\armst\Desktop\PIC16F1717\16_ADC.X\Main.c
+582 clrtext CODE >2089:C:\Users\armst\AppData\Local\Temp\s3cs.
+582 clrtext CODE >2090:C:\Users\armst\AppData\Local\Temp\s3cs.
+583 clrtext CODE >2091:C:\Users\armst\AppData\Local\Temp\s3cs.
+583 clrtext CODE >2092:C:\Users\armst\AppData\Local\Temp\s3cs.
+584 clrtext CODE >2093:C:\Users\armst\AppData\Local\Temp\s3cs.
+585 clrtext CODE >2094:C:\Users\armst\AppData\Local\Temp\s3cs.
+586 clrtext CODE >2095:C:\Users\armst\AppData\Local\Temp\s3cs.
+587 clrtext CODE >2096:C:\Users\armst\AppData\Local\Temp\s3cs.
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___latbits 2 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+___lwmod@counter 75 0 COMMON 1 cstackCOMMON dist/default/production\16_ADC.X.production.obj
+__Hspace_0 8009 0 ABS 0 - -
+__Hspace_1 7E 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__size_of_initMain 0 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+_Lcd_Init EA0 0 CODE 0 text3 dist/default/production\16_ADC.X.production.obj
+_Lcd_Port B7A 0 CODE 0 text14 dist/default/production\16_ADC.X.production.obj
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+__end_of_Lcd_Init F28 0 CODE 0 text3 dist/default/production\16_ADC.X.production.obj
+__end_of_Lcd_Port BAA 0 CODE 0 text14 dist/default/production\16_ADC.X.production.obj
+__Lstringtext 0 0 ABS 0 stringtext -
+__Hstrings 0 0 ABS 0 strings -
+itoa@base 26 0 BANK0 1 cstackBANK0 dist/default/production\16_ADC.X.production.obj
+_SCS0 4C8 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+_SCS1 4C9 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+___sp 0 0 STACK 2 stack C:\Users\armst\AppData\Local\Temp\s3cs.obj
+_itoa BE0 0 CODE 0 text6 dist/default/production\16_ADC.X.production.obj
+_main DA8 0 CODE 0 maintext dist/default/production\16_ADC.X.production.obj
+_utoa F28 0 CODE 0 text7 dist/default/production\16_ADC.X.production.obj
+btemp 7E 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+_Lcd_Write_Char C2C 0 CODE 0 text11 dist/default/production\16_ADC.X.production.obj
+start 4 0 CODE 0 init C:\Users\armst\AppData\Local\Temp\s3cs.obj
+__CFG_BOREN$OFF 0 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+__size_of_itoa 0 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+__size_of_main 0 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+__size_of_utoa 0 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+__size_of___lwdiv 0 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+__size_of___lwmod 0 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+Lcd_Port@a 70 0 COMMON 1 cstackCOMMON dist/default/production\16_ADC.X.production.obj
+Lcd_Write_Char@temp 72 0 COMMON 1 cstackCOMMON dist/default/production\16_ADC.X.production.obj
+__Hpowerup 0 0 CODE 0 powerup -
+utoa@c 22 0 BANK0 1 cstackBANK0 dist/default/production\16_ADC.X.production.obj
+utoa@v 20 0 BANK0 1 cstackBANK0 dist/default/production\16_ADC.X.production.obj
+intlevel0 0 0 CODE 0 functab C:\Users\armst\AppData\Local\Temp\s3cs.obj
+intlevel1 0 0 CODE 0 functab C:\Users\armst\AppData\Local\Temp\s3cs.obj
+intlevel2 0 0 CODE 0 functab C:\Users\armst\AppData\Local\Temp\s3cs.obj
+intlevel3 0 0 CODE 0 functab C:\Users\armst\AppData\Local\Temp\s3cs.obj
+intlevel4 0 0 CODE 0 functab C:\Users\armst\AppData\Local\Temp\s3cs.obj
+intlevel5 0 0 CODE 0 functab C:\Users\armst\AppData\Local\Temp\s3cs.obj
+_initMain CDC 0 CODE 0 text1 dist/default/production\16_ADC.X.production.obj
+Lcd_Write_Integer@buf 2C 0 BANK0 1 cstackBANK0 dist/default/production\16_ADC.X.production.obj
+wtemp0 7E 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+__Hfunctab 0 0 CODE 0 functab -
+__size_of_Lcd_Set_Cursor 0 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+__Hclrtext 0 0 ABS 0 clrtext -
+__end_of_initMain D40 0 CODE 0 text1 dist/default/production\16_ADC.X.production.obj
+__end_of_Lcd_Write_Char C84 0 CODE 0 text11 dist/default/production\16_ADC.X.production.obj
+_ADRESH 9C 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+_ADRESL 9B 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+_ANSELD 18F 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+__Lmaintext 0 0 ABS 0 maintext -
+_internal_16 B20 0 CODE 0 text2 dist/default/production\16_ADC.X.production.obj
+___lwmod@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production\16_ADC.X.production.obj
+__end_of___lwdiv DA8 0 CODE 0 text9 dist/default/production\16_ADC.X.production.obj
+__end_of___lwmod CDC 0 CODE 0 text8 dist/default/production\16_ADC.X.production.obj
+___lwdiv@quotient 75 0 COMMON 1 cstackCOMMON dist/default/production\16_ADC.X.production.obj
+Lcd_Set_Cursor@temp 79 0 COMMON 1 cstackCOMMON dist/default/production\16_ADC.X.production.obj
+itoa@buf 29 0 BANK0 1 cstackBANK0 dist/default/production\16_ADC.X.production.obj
+itoa@val 24 0 BANK0 1 cstackBANK0 dist/default/production\16_ADC.X.production.obj
+___lwmod@dividend 72 0 COMMON 1 cstackCOMMON dist/default/production\16_ADC.X.production.obj
+__CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+__CFG_MCLRE$OFF 0 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+__size_of_Lcd_Write_Integer 0 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+start_initialization FEC 0 CODE 0 cinit dist/default/production\16_ADC.X.production.obj
+_TRISAbits 8C 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+_TRISBbits 8D 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+_TRISDbits 8F 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+_Lcd_Write_String BAA 0 CODE 0 text10 dist/default/production\16_ADC.X.production.obj
+clear_ram0 B04 0 CODE 0 clrtext dist/default/production\16_ADC.X.production.obj
+_SPLLEN 4CF 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+__pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\16_ADC.X.production.obj
+utoa@buf 23 0 BANK0 1 cstackBANK0 dist/default/production\16_ADC.X.production.obj
+utoa@val 78 0 COMMON 1 cstackCOMMON dist/default/production\16_ADC.X.production.obj
+__size_of_Lcd_Cmd 0 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+___int_sp 0 0 STACK 2 stack C:\Users\armst\AppData\Local\Temp\s3cs.obj
+__Hbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 ABS 0 bank2 -
+__Hbank3 0 0 ABS 0 bank3 -
+__Hbank4 0 0 ABS 0 bank4 -
+__Hbank5 0 0 ABS 0 bank5 -
+__Hbank6 0 0 ABS 0 bank6 -
+__Hbank7 0 0 ABS 0 bank7 -
+__Hbank8 0 0 ABS 0 bank8 -
+__Hbank9 0 0 ABS 0 bank9 -
+__Hcinit 1000 0 CODE 0 cinit -
+__Hidloc 0 0 IDLOC 0 idloc -
+__Hsfr10 0 0 ABS 0 sfr10 -
+__Hsfr11 0 0 ABS 0 sfr11 -
+__Hsfr12 0 0 ABS 0 sfr12 -
+__Hsfr13 0 0 ABS 0 sfr13 -
+__Hsfr14 0 0 ABS 0 sfr14 -
+__Hsfr15 0 0 ABS 0 sfr15 -
+__Hsfr16 0 0 ABS 0 sfr16 -
+__Hsfr17 0 0 ABS 0 sfr17 -
+__Hsfr18 0 0 ABS 0 sfr18 -
+__Hsfr19 0 0 ABS 0 sfr19 -
+__Hsfr20 0 0 ABS 0 sfr20 -
+__Hsfr21 0 0 ABS 0 sfr21 -
+__Hsfr22 0 0 ABS 0 sfr22 -
+__Hsfr23 0 0 ABS 0 sfr23 -
+__Hsfr24 0 0 ABS 0 sfr24 -
+__Hsfr25 0 0 ABS 0 sfr25 -
+__Hsfr26 0 0 ABS 0 sfr26 -
+__Hsfr27 0 0 ABS 0 sfr27 -
+__Hsfr28 0 0 ABS 0 sfr28 -
+__Hsfr29 0 0 ABS 0 sfr29 -
+__Hsfr30 0 0 ABS 0 sfr30 -
+__Hsfr31 0 0 ABS 0 sfr31 -
+__Hstack 0 0 STACK 2 stack -
+___lwdiv@counter 77 0 COMMON 1 cstackCOMMON dist/default/production\16_ADC.X.production.obj
+__Hbank10 0 0 ABS 0 bank10 -
+__Hbank11 0 0 ABS 0 bank11 -
+__Hbank12 0 0 ABS 0 bank12 -
+__Hbank13 0 0 BANK13 1 bank13 -
+__Hbank14 0 0 BANK14 1 bank14 -
+__Hbank15 0 0 BANK15 1 bank15 -
+__Hbank16 0 0 BANK16 1 bank16 -
+__Hbank17 0 0 BANK17 1 bank17 -
+__Hbank18 0 0 BANK18 1 bank18 -
+__Hbank19 0 0 BANK19 1 bank19 -
+__Hbank20 0 0 BANK20 1 bank20 -
+__Hbank21 0 0 BANK21 1 bank21 -
+__Hbank22 0 0 BANK22 1 bank22 -
+__Hbank23 0 0 BANK23 1 bank23 -
+__Hbank24 0 0 BANK24 1 bank24 -
+__Hbank25 0 0 BANK25 1 bank25 -
+__Hbank26 0 0 BANK26 1 bank26 -
+__Hbank27 0 0 BANK27 1 bank27 -
+__Hbank28 0 0 BANK28 1 bank28 -
+__Hbank29 0 0 BANK29 1 bank29 -
+__Hbank30 0 0 BANK30 1 bank30 -
+__Hbank31 0 0 BANK31 1 bank31 -
+__Hbigram 0 0 ABS 0 bigram -
+__Hmaintext 0 0 ABS 0 maintext -
+__CFG_FOSC$INTOSC 0 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+__Hcommon 0 0 ABS 0 common -
+__Hconfig 10012 0 CONFIG 0 config -
+__Lbank0 0 0 ABS 0 bank0 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Lbank2 0 0 ABS 0 bank2 -
+__Lbank3 0 0 ABS 0 bank3 -
+__Lbank4 0 0 ABS 0 bank4 -
+__Lbank5 0 0 ABS 0 bank5 -
+__Lbank6 0 0 ABS 0 bank6 -
+__Lbank7 0 0 ABS 0 bank7 -
+__Lbank8 0 0 ABS 0 bank8 -
+__Lbank9 0 0 ABS 0 bank9 -
+__Lcinit FEC 0 CODE 0 cinit -
+__Lidloc 0 0 IDLOC 0 idloc -
+__Lsfr10 0 0 ABS 0 sfr10 -
+__Lsfr11 0 0 ABS 0 sfr11 -
+__Lsfr12 0 0 ABS 0 sfr12 -
+__Lsfr13 0 0 ABS 0 sfr13 -
+__Lsfr14 0 0 ABS 0 sfr14 -
+__Lsfr15 0 0 ABS 0 sfr15 -
+__Lsfr16 0 0 ABS 0 sfr16 -
+__Lsfr17 0 0 ABS 0 sfr17 -
+__Lsfr18 0 0 ABS 0 sfr18 -
+__Lsfr19 0 0 ABS 0 sfr19 -
+__Lsfr20 0 0 ABS 0 sfr20 -
+__Lsfr21 0 0 ABS 0 sfr21 -
+__Lsfr22 0 0 ABS 0 sfr22 -
+__Lsfr23 0 0 ABS 0 sfr23 -
+__Lsfr24 0 0 ABS 0 sfr24 -
+__Lsfr25 0 0 ABS 0 sfr25 -
+__Lsfr26 0 0 ABS 0 sfr26 -
+__Lsfr27 0 0 ABS 0 sfr27 -
+__Lsfr28 0 0 ABS 0 sfr28 -
+__Lsfr29 0 0 ABS 0 sfr29 -
+__Lsfr30 0 0 ABS 0 sfr30 -
+__Lsfr31 0 0 ABS 0 sfr31 -
+__Lstack 0 0 STACK 2 stack -
+__Habs1 0 0 ABS 0 abs1 -
+__Hcode 0 0 ABS 0 code -
+__Hinit 4 0 CODE 0 init -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Hsfr4 0 0 ABS 0 sfr4 -
+__Hsfr5 0 0 ABS 0 sfr5 -
+__Hsfr6 0 0 ABS 0 sfr6 -
+__Hsfr7 0 0 ABS 0 sfr7 -
+__Hsfr8 0 0 ABS 0 sfr8 -
+__Hsfr9 0 0 ABS 0 sfr9 -
+__Htext 0 0 ABS 0 text -
+__Labs1 0 0 ABS 0 abs1 -
+__Lcode 0 0 ABS 0 code -
+__Linit 4 0 CODE 0 init -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+__Lsfr4 0 0 ABS 0 sfr4 -
+__Lsfr5 0 0 ABS 0 sfr5 -
+__Lsfr6 0 0 ABS 0 sfr6 -
+__Lsfr7 0 0 ABS 0 sfr7 -
+__Lsfr8 0 0 ABS 0 sfr8 -
+__Lsfr9 0 0 ABS 0 sfr9 -
+__Ltext 0 0 ABS 0 text -
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+_RD2 7A 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+_RD3 7B 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+_RD4 7C 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+_RD5 7D 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+_RD6 7E 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+_RD7 7F 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+__S0 8009 0 ABS 0 - -
+__S1 7E 0 ABS 0 - -
+__S2 0 0 ABS 0 - -
+utoa@base 7A 0 COMMON 1 cstackCOMMON dist/default/production\16_ADC.X.production.obj
+__end_of_Lcd_Write_String BE0 0 CODE 0 text10 dist/default/production\16_ADC.X.production.obj
+ftoa@buf 38 0 BANK0 1 bssBANK0 dist/default/production\16_ADC.X.production.obj
+__end_of_Lcd_Write_Integer B52 0 CODE 0 text5 dist/default/production\16_ADC.X.production.obj
+__end_of_Lcd_Clear B20 0 CODE 0 text4 dist/default/production\16_ADC.X.production.obj
+__Lintentry 4 0 CODE 0 intentry -
+__size_of_Lcd_Write_String 0 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+Lcd_Write_String@a 78 0 COMMON 1 cstackCOMMON dist/default/production\16_ADC.X.production.obj
+Lcd_Write_String@i 76 0 COMMON 1 cstackCOMMON dist/default/production\16_ADC.X.production.obj
+reset_vec 0 0 CODE 0 reset_vec C:\Users\armst\AppData\Local\Temp\s3cs.obj
+__size_of_Lcd_Clear 0 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+__end_of_Lcd_Cmd B7A 0 CODE 0 text13 dist/default/production\16_ADC.X.production.obj
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
+__ptext10 BAA 0 CODE 0 text10 dist/default/production\16_ADC.X.production.obj
+__ptext11 C2C 0 CODE 0 text11 dist/default/production\16_ADC.X.production.obj
+__ptext12 E20 0 CODE 0 text12 dist/default/production\16_ADC.X.production.obj
+__ptext13 B52 0 CODE 0 text13 dist/default/production\16_ADC.X.production.obj
+__ptext14 B7A 0 CODE 0 text14 dist/default/production\16_ADC.X.production.obj
+_Lcd_Clear B10 0 CODE 0 text4 dist/default/production\16_ADC.X.production.obj
+__size_of_Lcd_Write_Char 0 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+_Lcd_Set_Cursor E20 0 CODE 0 text12 dist/default/production\16_ADC.X.production.obj
+___lwdiv D40 0 CODE 0 text9 dist/default/production\16_ADC.X.production.obj
+___lwmod C84 0 CODE 0 text8 dist/default/production\16_ADC.X.production.obj
+__Lbank10 0 0 ABS 0 bank10 -
+__Lbank11 0 0 ABS 0 bank11 -
+__Lbank12 0 0 ABS 0 bank12 -
+__Lbank13 0 0 BANK13 1 bank13 -
+__Lbank14 0 0 BANK14 1 bank14 -
+__Lbank15 0 0 BANK15 1 bank15 -
+__Lbank16 0 0 BANK16 1 bank16 -
+__Lbank17 0 0 BANK17 1 bank17 -
+__Lbank18 0 0 BANK18 1 bank18 -
+__Lbank19 0 0 BANK19 1 bank19 -
+__Lbank20 0 0 BANK20 1 bank20 -
+__Lbank21 0 0 BANK21 1 bank21 -
+__Lbank22 0 0 BANK22 1 bank22 -
+__Lbank23 0 0 BANK23 1 bank23 -
+__Lbank24 0 0 BANK24 1 bank24 -
+__Lbank25 0 0 BANK25 1 bank25 -
+__Lbank26 0 0 BANK26 1 bank26 -
+__Lbank27 0 0 BANK27 1 bank27 -
+__Lbank28 0 0 BANK28 1 bank28 -
+__Lbank29 0 0 BANK29 1 bank29 -
+__Lbank30 0 0 BANK30 1 bank30 -
+__Lbank31 0 0 BANK31 1 bank31 -
+__pmaintext DA8 0 CODE 0 maintext dist/default/production\16_ADC.X.production.obj
+__Lbigram 0 0 ABS 0 bigram -
+__CFG_BORV$LO 0 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+__Lcommon 0 0 ABS 0 common -
+__Lconfig 1000E 0 CONFIG 0 config -
+__CFG_CP$OFF 0 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+__CFG_IESO$ON 0 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+__CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+_LATDbits 10F 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+__end_of_internal_16 B32 0 CODE 0 text2 dist/default/production\16_ADC.X.production.obj
+___lwdiv@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production\16_ADC.X.production.obj
+itoa@cp 28 0 BANK0 1 cstackBANK0 dist/default/production\16_ADC.X.production.obj
+stackhi 23EF 0 ABS 0 - C:\Users\armst\AppData\Local\Temp\s3cs.obj
+stacklo 2029 0 ABS 0 - C:\Users\armst\AppData\Local\Temp\s3cs.obj
+_ADCON0bits 9D 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+_ADCON1bits 9E 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+__CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+__CFG_ZCDDIS$ON 0 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__Lend_init 4 0 CODE 0 end_init -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+_Lcd_Write_Integer B32 0 CODE 0 text5 dist/default/production\16_ADC.X.production.obj
+end_of_initialization FFA 0 CODE 0 cinit dist/default/production\16_ADC.X.production.obj
+__end_of_Lcd_Set_Cursor EA0 0 CODE 0 text12 dist/default/production\16_ADC.X.production.obj
+__Hintentry 4 0 CODE 0 intentry -
+__CFG_STVREN$ON 0 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+Lcd_Set_Cursor@a 76 0 COMMON 1 cstackCOMMON dist/default/production\16_ADC.X.production.obj
+Lcd_Set_Cursor@b 73 0 COMMON 1 cstackCOMMON dist/default/production\16_ADC.X.production.obj
+Lcd_Set_Cursor@y 78 0 COMMON 1 cstackCOMMON dist/default/production\16_ADC.X.production.obj
+Lcd_Set_Cursor@z 77 0 COMMON 1 cstackCOMMON dist/default/production\16_ADC.X.production.obj
+__Lstrings 0 0 ABS 0 strings -
+___lwdiv@dividend 72 0 COMMON 1 cstackCOMMON dist/default/production\16_ADC.X.production.obj
+?___lwdiv 70 0 COMMON 1 cstackCOMMON dist/default/production\16_ADC.X.production.obj
+?___lwmod 70 0 COMMON 1 cstackCOMMON dist/default/production\16_ADC.X.production.obj
+__Hreset_vec 4 0 CODE 0 reset_vec -
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
+__ptext1 CDC 0 CODE 0 text1 dist/default/production\16_ADC.X.production.obj
+__ptext2 B20 0 CODE 0 text2 dist/default/production\16_ADC.X.production.obj
+__ptext3 EA0 0 CODE 0 text3 dist/default/production\16_ADC.X.production.obj
+__ptext4 B10 0 CODE 0 text4 dist/default/production\16_ADC.X.production.obj
+__ptext5 B32 0 CODE 0 text5 dist/default/production\16_ADC.X.production.obj
+__ptext6 BE0 0 CODE 0 text6 dist/default/production\16_ADC.X.production.obj
+__ptext7 F28 0 CODE 0 text7 dist/default/production\16_ADC.X.production.obj
+__ptext8 C84 0 CODE 0 text8 dist/default/production\16_ADC.X.production.obj
+__ptext9 D40 0 CODE 0 text9 dist/default/production\16_ADC.X.production.obj
+__Lpowerup 0 0 CODE 0 powerup -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+__pstringtext 1000 0 STRCODE 0 stringtext dist/default/production\16_ADC.X.production.obj
+__Lreset_vec 0 0 CODE 0 reset_vec -
+__CFG_LPBOR$OFF 0 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+__CFG_CLKOUTEN$OFF 0 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+__end_of__initialization FFA 0 CODE 0 cinit dist/default/production\16_ADC.X.production.obj
+main@result 36 0 BANK0 1 cstackBANK0 dist/default/production\16_ADC.X.production.obj
+__Lfunctab 0 0 CODE 0 functab -
+Lcd_Cmd@a 72 0 COMMON 1 cstackCOMMON dist/default/production\16_ADC.X.production.obj
+__Lclrtext 0 0 ABS 0 clrtext -
+__CFG_PLLEN$OFF 0 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\16_ADC.X.production.obj
+__size_of_Lcd_Init 0 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+__size_of_Lcd_Port 0 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+__Hend_init 8 0 CODE 0 end_init -
+__end_of_itoa C2C 0 CODE 0 text6 dist/default/production\16_ADC.X.production.obj
+__end_of_main E20 0 CODE 0 maintext dist/default/production\16_ADC.X.production.obj
+__end_of_utoa FEC 0 CODE 0 text7 dist/default/production\16_ADC.X.production.obj
+__end_of_dpowers 1050 0 STRCODE 0 stringtext dist/default/production\16_ADC.X.production.obj
+_IRCF0 4CB 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+_IRCF1 4CC 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+_IRCF2 4CD 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+_IRCF3 4CE 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+__size_of_internal_16 0 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+_TRISD 8F 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+_Lcd_Cmd B52 0 CODE 0 text13 dist/default/production\16_ADC.X.production.obj
+__CFG_PPS1WAY$ON 0 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+__initialization FEC 0 CODE 0 cinit dist/default/production\16_ADC.X.production.obj
+__CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+Lcd_Write_Integer@v 2A 0 BANK0 1 cstackBANK0 dist/default/production\16_ADC.X.production.obj
+__pbssBANK0 38 0 BANK0 1 bssBANK0 dist/default/production\16_ADC.X.production.obj
+__Hstringtext 0 0 ABS 0 stringtext -
+__CFG_WRT$OFF 0 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+_ANSELAbits 18C 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+_ANSELBbits 18D 0 ABS 0 - dist/default/production\16_ADC.X.production.obj
+Lcd_Write_Char@a 74 0 COMMON 1 cstackCOMMON dist/default/production\16_ADC.X.production.obj
+Lcd_Write_Char@y 73 0 COMMON 1 cstackCOMMON dist/default/production\16_ADC.X.production.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+cinit 0 7F6 FEC A 2
+text1 0 66E CDC 32 2
+text2 0 590 B20 9 2
+text3 0 750 EA0 44 2
+text4 0 588 B10 8 2
+text5 0 599 B32 10 2
+text6 0 5F0 BE0 26 2
+text7 0 794 F28 62 2
+text8 0 642 C84 2C 2
+text9 0 6A0 D40 34 2
+text10 0 5D5 BAA 1B 2
+text11 0 616 C2C 2C 2
+text12 0 710 E20 40 2
+text13 0 5A9 B52 14 2
+text14 0 5BD B7A 18 2
+maintext 0 6D4 DA8 3C 2
+cstackCOMMON 1 70 70 E 1
+cstackBANK0 1 20 20 29 1
+reset_vec 0 0 0 4 2
+stringtext 0 800 1000 33 2
+clrtext 0 582 B04 6 2
+config 0 8007 1000E 2 2
