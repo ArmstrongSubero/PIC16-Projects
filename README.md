@@ -1,2 +1,2 @@
 # PIC16-Projects
-Using different peripherals of the PIC16F1717.
+Contains projects for the PIC16F (PIC16F1717) Microcontroller.
