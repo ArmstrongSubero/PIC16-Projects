@@ -11,7 +11,7 @@
  *                      Bluetooth
  *                      
  *           
- * Hardware Description: A HC-06 is connected to the PIC16F1717 as follows:
+ * Hardware Description: A HC-05 is connected to the PIC16F1717 as follows:
  *                        
  *                       RX -> RB3
  *                       TX -> RB2
