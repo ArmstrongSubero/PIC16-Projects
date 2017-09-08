@@ -1,0 +1,413 @@
+MPASM 5.75                          MAIN.ASM   8-28-2017  17:49:42         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00001 ;*******************************************************************************
+                      00002 ;                                                                              *
+                      00003 ;    Microchip licenses this software to you solely for use with Microchip     *
+                      00004 ;    products. The software is owned by Microchip and/or its licensors, and is *
+                      00005 ;    protected under applicable copyright laws.  All rights reserved.          *
+                      00006 ;                                                                              *
+                      00007 ;    This software and any accompanying information is for suggestion only.    *
+                      00008 ;    It shall not be deemed to modify Microchip?s standard warranty for its    *
+                      00009 ;    products.  It is your responsibility to ensure that this software meets   *
+                      00010 ;    your requirements.                                                        *
+                      00011 ;                                                                              *
+                      00012 ;    SOFTWARE IS PROVIDED "AS IS".  MICROCHIP AND ITS LICENSORS EXPRESSLY      *
+                      00013 ;    DISCLAIM ANY WARRANTY OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING  *
+                      00014 ;    BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS    *
+                      00015 ;    FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. IN NO EVENT SHALL          *
+                      00016 ;    MICROCHIP OR ITS LICENSORS BE LIABLE FOR ANY INCIDENTAL, SPECIAL,         *
+                      00017 ;    INDIRECT OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, HARM TO     *
+                      00018 ;    YOUR EQUIPMENT, COST OF PROCUREMENT OF SUBSTITUTE GOODS, TECHNOLOGY OR    *
+                      00019 ;    SERVICES, ANY CLAIMS BY THIRD PARTIES (INCLUDING BUT NOT LIMITED TO ANY   *
+                      00020 ;    DEFENSE THEREOF), ANY CLAIMS FOR INDEMNITY OR CONTRIBUTION, OR OTHER      *
+                      00021 ;    SIMILAR COSTS.                                                            *
+                      00022 ;                                                                              *
+                      00023 ;    To the fullest extend allowed by law, Microchip and its licensors         *
+                      00024 ;    liability shall not exceed the amount of fee, if any, that you have paid  *
+                      00025 ;    directly to Microchip to use this software.                               *
+                      00026 ;                                                                              *
+                      00027 ;    MICROCHIP PROVIDES THIS SOFTWARE CONDITIONALLY UPON YOUR ACCEPTANCE OF    *
+                      00028 ;    THESE TERMS.                                                              *
+                      00029 ;                                                                              *
+                      00030 ;*******************************************************************************
+                      00031 ;                                                                              *
+                      00032 ;    Filename:                                                                 *
+                      00033 ;    Date:                                                                     *
+                      00034 ;    File Version:                                                             *
+                      00035 ;    Author:                                                                   *
+                      00036 ;    Company:                                                                  *
+                      00037 ;    Description:                                                              *
+                      00038 ;                                                                              *
+                      00039 ;*******************************************************************************
+                      00040 ;                                                                              *
+                      00041 ;    Notes: In the MPLAB X Help, refer to the MPASM Assembler documentation    *
+                      00042 ;    for information on assembly instructions.                                 *
+                      00043 ;                                                                              *
+                      00044 ;*******************************************************************************
+                      00045 ;                                                                              *
+                      00046 ;    Known Issues: This template is designed for relocatable code.  As such,   *
+                      00047 ;    build errors such as "Directive only allowed when generating an object    *
+                      00048 ;    file" will result when the 'Build in Absolute Mode' checkbox is selected  *
+                      00049 ;    in the project properties.  Designing code in absolute mode is            *
+                      00050 ;    antiquated - use relocatable mode.                                        *
+                      00051 ;                                                                              *
+                      00052 ;*******************************************************************************
+                      00053 ;                                                                              *
+MPASM 5.75                          MAIN.ASM   8-28-2017  17:49:42         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00054 ;    Revision History:                                                         *
+                      00055 ;                                                                              *
+                      00056 ;*******************************************************************************
+                      00057 
+                      00058 
+                      00059 
+                      00060 ;*******************************************************************************
+                      00061 ; Processor Inclusion
+                      00062 ;
+                      00063 ; TODO Step #1 Open the task list under Window > Tasks.  Include your
+                      00064 ; device .inc file - e.g. #include <device_name>.inc.  Available
+                      00065 ; include files are in C:\Program Files\Microchip\MPLABX\mpasmx
+                      00066 ; assuming the default installation path for MPLAB X.  You may manually find
+                      00067 ; the appropriate include file for your device here and include it, or
+                      00068 ; simply copy the include generated by the configuration bits
+                      00069 ; generator (see Step #2).
+                      00070 ;
+                      00071 ;*******************************************************************************
+                      00072 
+                      00073 ; TODO INSERT INCLUDE CODE HERE
+                      00074 
+                      00075 ;*******************************************************************************
+                      00076 ;
+                      00077 ; TODO Step #2 - Configuration Word Setup
+                      00078 ;
+                      00079 ; The 'CONFIG' directive is used to embed the configuration word within the
+                      00080 ; .asm file. MPLAB X requires users to embed their configuration words
+                      00081 ; into source code.  See the device datasheet for additional information
+                      00082 ; on configuration word settings.  Device configuration bits descriptions
+                      00083 ; are in C:\Program Files\Microchip\MPLABX\mpasmx\P<device_name>.inc
+                      00084 ; (may change depending on your MPLAB X installation directory).
+                      00085 ;
+                      00086 ; MPLAB X has a feature which generates configuration bits source code.  Go to
+                      00087 ; Window > PIC Memory Views > Configuration Bits.  Configure each field as
+                      00088 ; needed and select 'Generate Source Code to Output'.  The resulting code which
+                      00089 ; appears in the 'Output Window' > 'Config Bits Source' tab may be copied
+                      00090 ; below.
+                      00091 ;
+                      00092 ;*******************************************************************************
+                      00093     list     p=16F506
+                      00094     #include "p16f506.inc"
+                      00001         LIST
+                      00002 
+                      00003 ;==========================================================================
+                      00004 ; Build date : Jul 02 2017
+                      00005 ;  MPASM PIC16F506 processor include
+                      00006 ; 
+                      00007 ;  (c) Copyright 1999-2017 Microchip Technology, All rights reserved
+                      00008 ;==========================================================================
+                      00009 
+                      00243         LIST
+                      00095     
+                      00096     radix    dec
+MPASM 5.75                          MAIN.ASM   8-28-2017  17:49:42         PAGE  3
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00097 
+                      00098 ; CONFIG
+                      00099 ; __config 0xFFBC  ; run at 4 Mhz
+0FFF   0FB4           00100  __CONFIG _OSC_IntRC_RB4EN & _WDT_OFF & _CP_OFF & _MCLRE_ON & _IOSCFS_OFF
+                      00101     
+                      00102     
+                      00103 ;*******************************************************************************
+                      00104 ;
+                      00105 ; TODO Step #3 - Variable Definitions
+                      00106 ;
+                      00107 ; Refer to datasheet for available data memory (RAM) organization assuming
+                      00108 ; relocatible code organization (which is an option in project
+                      00109 ; properties > mpasm (Global Options)).  Absolute mode generally should
+                      00110 ; be used sparingly.
+                      00111 ;
+                      00112 ; Example of using GPR Uninitialized Data
+                      00113 ;
+                      00114 ;   GPR_VAR        UDATA
+                      00115 ;   MYVAR1         RES        1      ; User variable linker places
+                      00116 ;   MYVAR2         RES        1      ; User variable linker places
+                      00117 ;   MYVAR3         RES        1      ; User variable linker places
+                      00118 ;
+                      00119 ;   ; Example of using Access Uninitialized Data Section (when available)
+                      00120 ;   ; The variables for the context saving in the device datasheet may need
+                      00121 ;   ; memory reserved here.
+                      00122 ;   INT_VAR        UDATA_ACS
+                      00123 ;   W_TEMP         RES        1      ; w register for context saving (ACCESS)
+                      00124 ;   STATUS_TEMP    RES        1      ; status used for context saving
+                      00125 ;   BSR_TEMP       RES        1      ; bank select used for ISR context saving
+                      00126 ;
+                      00127 ;*******************************************************************************
+                      00128 
+                      00129 ; TODO PLACE VARIABLE DEFINITIONS GO HERE
+                      00130 
+                      00131 
+                      00132 ;*******************************************************************************
+                      00133 ; Reset Vector
+                      00134 ;*******************************************************************************
+                      00135 
+                      00136 RES_VECT  CODE    0x0000            ; processor reset vector
+0000   0A??           00137     GOTO    START                   ; go to beginning of program
+                      00138 
+                      00139 ;*******************************************************************************
+                      00140 ; TODO Step #4 - Interrupt Service Routines
+                      00141 ;
+                      00142 ; There are a few different ways to structure interrupt routines in the 8
+                      00143 ; bit device families.  On PIC18's the high priority and low priority
+                      00144 ; interrupts are located at 0x0008 and 0x0018, respectively.  On PIC16's and
+                      00145 ; lower the interrupt is at 0x0004.  Between device families there is subtle
+                      00146 ; variation in the both the hardware supporting the ISR (for restoring
+                      00147 ; interrupt context) as well as the software used to restore the context
+                      00148 ; (without corrupting the STATUS bits).
+                      00149 ;
+MPASM 5.75                          MAIN.ASM   8-28-2017  17:49:42         PAGE  4
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00150 ; General formats are shown below in relocatible format.
+                      00151 ;
+                      00152 ;------------------------------PIC16's and below--------------------------------
+                      00153 ;
+                      00154 ; ISR       CODE    0x0004           ; interrupt vector location
+                      00155 ;
+                      00156 ;     <Search the device datasheet for 'context' and copy interrupt
+                      00157 ;     context saving code here.  Older devices need context saving code,
+                      00158 ;     but newer devices like the 16F#### don't need context saving code.>
+                      00159 ;
+                      00160 ;     RETFIE
+                      00161 ;
+                      00162 ;----------------------------------PIC18's--------------------------------------
+                      00163 ;
+                      00164 ; ISRHV     CODE    0x0008
+                      00165 ;     GOTO    HIGH_ISR
+                      00166 ; ISRLV     CODE    0x0018
+                      00167 ;     GOTO    LOW_ISR
+                      00168 ;
+                      00169 ; ISRH      CODE                     ; let linker place high ISR routine
+                      00170 ; HIGH_ISR
+                      00171 ;     <Insert High Priority ISR Here - no SW context saving>
+                      00172 ;     RETFIE  FAST
+                      00173 ;
+                      00174 ; ISRL      CODE                     ; let linker place low ISR routine
+                      00175 ; LOW_ISR
+                      00176 ;       <Search the device datasheet for 'context' and copy interrupt
+                      00177 ;       context saving code here>
+                      00178 ;     RETFIE
+                      00179 ;
+                      00180 ;*******************************************************************************
+                      00181 
+                      00182 ; TODO INSERT ISR HERE
+                      00183 
+                      00184 ;*******************************************************************************
+                      00185 ; MAIN PROGRAM
+                      00186 ;*******************************************************************************
+                      00187 
+                      00188 MAIN_PROG CODE                      ; let linker place main program
+                      00189 
+0000                  00190 START  
+0000   0C30           00191     movlw   b'110000'               ; set lower byte of PORTC as output
+0001   0007           00192     tris    PORTC
+                      00193     
+0002   006B           00194     clrf    CM2CON0                 ; disable comparator2
+0003   006C           00195     clrf    VRCON                   ; disable CVref -> RC2 usable
+                      00196     
+                      00197     ; configure adc
+0004   0CB1           00198     movlw   b'10110001'
+                      00199             ; 10------      ; AN0, AN2 analog (ANS = 10)
+                      00200             ; --11----      ; clock = INTOSC/4 (ADCS = 11)
+                      00201             ; ----00--      ; select channel AN0 (CHS = 00)
+                      00202             ; -------1      ; turn ADC on
+MPASM 5.75                          MAIN.ASM   8-28-2017  17:49:42         PAGE  5
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0005   0029           00203     movwf   ADCON0          ; move to ADC configuration register
+                      00204     
+0006                  00205 main_loop
+                      00206         ; sample analog input
+0006   0529           00207         bsf      ADCON0, GO         ; start conversion
+0007                  00208 w_adc 
+0007   0629           00209         btfsc    ADCON0, NOT_DONE   ; wait until done
+0008   0A??           00210         goto     w_adc
+                      00211         
+                      00212         ; display result on 4 x LEDs
+0009   038A           00213         swapf   ADRES, w            ; copy high nibble of result
+000A   0027           00214         movwf   PORTC               ; to lower nibble of output port
+                      00215         
+                      00216         ; repeat forever
+000B   0A??           00217         goto main_loop
+                      00218     
+0FB4                  00219         END
+MPASM 5.75                          MAIN.ASM   8-28-2017  17:49:42         PAGE  6
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+ADCON0                            00000009
+ADCS0                             00000004
+ADCS1                             00000005
+ADON                              00000000
+ADRES                             0000000A
+ANS0                              00000006
+ANS1                              00000007
+C                                 00000000
+C1NREF                            00000002
+C1ON                              00000003
+C1OUT                             00000007
+C1POL                             00000005
+C1PREF                            00000001
+C2NREF                            00000002
+C2ON                              00000003
+C2OUT                             00000007
+C2POL                             00000005
+C2PREF1                           00000001
+C2PREF2                           00000004
+CAL0                              00000001
+CAL1                              00000002
+CAL2                              00000003
+CAL3                              00000004
+CAL4                              00000005
+CAL5                              00000006
+CAL6                              00000007
+CHS0                              00000002
+CHS1                              00000003
+CM1CON0                           00000008
+CM2CON0                           0000000B
+CWUF                              00000006
+DC                                00000001
+F                                 00000001
+FSR                               00000004
+GO                                00000001
+GO_NOT_DONE                       00000001
+INDF                              00000000
+NOT_C1OUTEN                       00000006
+NOT_C1T0CS                        00000004
+NOT_C1WU                          00000000
+NOT_C2OUTEN                       00000006
+NOT_C2WU                          00000000
+NOT_DONE                          00000001
+NOT_GPPU                          00000006
+NOT_GPWU                          00000007
+NOT_PD                            00000003
+NOT_RBPU                          00000006
+NOT_RBWU                          00000007
+NOT_TO                            00000004
+OSCCAL                            00000005
+PA0                               00000005
+PCL                               00000002
+PORTB                             00000006
+MPASM 5.75                          MAIN.ASM   8-28-2017  17:49:42         PAGE  7
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+PORTC                             00000007
+PS0                               00000000
+PS1                               00000001
+PS2                               00000002
+PSA                               00000003
+RB0                               00000000
+RB1                               00000001
+RB2                               00000002
+RB3                               00000003
+RB4                               00000004
+RB5                               00000005
+RBWUF                             00000007
+RC0                               00000000
+RC1                               00000001
+RC2                               00000002
+RC3                               00000003
+RC4                               00000004
+RC5                               00000005
+START                             00000000
+STATUS                            00000003
+T0CS                              00000005
+T0SE                              00000004
+TMR0                              00000001
+TRISB0                            00000000
+TRISB1                            00000001
+TRISB2                            00000002
+TRISB3                            00000003
+TRISB4                            00000004
+TRISB5                            00000005
+TRISC0                            00000000
+TRISC1                            00000001
+TRISC2                            00000002
+TRISC3                            00000003
+TRISC4                            00000004
+TRISC5                            00000005
+VR0                               00000000
+VR1                               00000001
+VR2                               00000002
+VR3                               00000003
+VRCON                             0000000C
+VREN                              00000007
+VROE                              00000006
+VRR                               00000005
+W                                 00000000
+Z                                 00000002
+_CONFIG                           00000FFF
+_CP_OFF                           00000FFF
+_CP_ON                            00000FEF
+_EC_OSC                           00000FFB
+_ExtRC_OSC_CLKOUTEN               00000FFF
+_ExtRC_OSC_RB4EN                  00000FFE
+_HS_OSC                           00000FFA
+_IDLOC0                           00000400
+MPASM 5.75                          MAIN.ASM   8-28-2017  17:49:42         PAGE  8
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+_IDLOC1                           00000401
+_IDLOC2                           00000402
+_IDLOC3                           00000403
+_IOSCFS_OFF                       00000FBF
+_IOSCFS_ON                        00000FFF
+_IntRC_OSC_CLKOUTEN               00000FFD
+_IntRC_OSC_RB4EN                  00000FFC
+_LP_OSC                           00000FF8
+_MCLRE_OFF                        00000FDF
+_MCLRE_ON                         00000FFF
+_OSC_EC                           00000FFB
+_OSC_ExtRC_CLKOUTEN               00000FFF
+_OSC_ExtRC_RB4EN                  00000FFE
+_OSC_HS                           00000FFA
+_OSC_IntRC_CLKOUTEN               00000FFD
+_OSC_IntRC_RB4EN                  00000FFC
+_OSC_LP                           00000FF8
+_OSC_XT                           00000FF9
+_WDT_OFF                          00000FF7
+_WDT_ON                           00000FFF
+_XT_OSC                           00000FF9
+__16F506                          00000001
+main_loop                         00000006
+w_adc                             00000007
+
+Errors   :     0
+Warnings :     0 reported,     0 suppressed
+Messages :     0 reported,     0 suppressed
+
+
