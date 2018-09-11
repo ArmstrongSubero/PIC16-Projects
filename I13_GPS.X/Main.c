@@ -2,7 +2,7 @@
  * File: Main.c
  * Author: Armstrong Subero
  * PIC: 16F1717 w/Int OSC @ 16MHz, 5v
- * Program: 21_EUSART
+ * Program: I13_GPS
  * Compiler: XC8 (v1.38, MPLAX X v3.40)
  * Program Version: 1.0
  *                
