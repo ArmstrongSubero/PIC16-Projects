@@ -48,14 +48,13 @@ void initMain(){
     PPSLOCK = 0xAA;
     PPSLOCKbits.PPSLOCKED = 0x00; // unlock PPS
 
-    RC0PPSbits.RC0PPS = 0x03;   //RC0->NCO1:NCO1OUT;
+    RA4PPSbits.RA4PPS = 0x03;   //RC0->NCO1:NCO1OUT;
 
     PPSLOCK = 0x55;
     PPSLOCK = 0xAA;
     PPSLOCKbits.PPSLOCKED = 0x01; // lock PPS
 
-    GIE = state;
-    
+    TRISCbits.TRISC0 = 0;
     LATCbits.LATC0 = 0;
     
     // Enable NCO
@@ -72,9 +71,7 @@ void initMain(){
     
     // NCO increment 
     NCO1INC =0x3334;
-     
-
-    
+  
 }
 
 /*******************************************************************************
@@ -88,8 +85,11 @@ void initMain(){
 void main(void) {
     initMain();
     
+    NCO1INC = 0x4CCD;
+    
     while(1){
-       // Connect scope to RC0
+       
+     
     }
     
     return;
