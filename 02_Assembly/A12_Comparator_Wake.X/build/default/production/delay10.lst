@@ -1,0 +1,209 @@
+MPASM 5.75                       DELAY10.ASM   8-28-2017  17:20:57         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00001 ; TODO INSERT CONFIG CODE HERE USING CONFIG BITS GENERATOR
+                      00002         #include <p16f506.inc>
+                      00001         LIST
+                      00002 
+                      00003 ;==========================================================================
+                      00004 ; Build date : Jul 02 2017
+                      00005 ;  MPASM PIC16F506 processor include
+                      00006 ; 
+                      00007 ;  (c) Copyright 1999-2017 Microchip Technology, All rights reserved
+                      00008 ;==========================================================================
+                      00009 
+                      00243         LIST
+                      00003         
+  0000                00004         GLOBAL delay10_R
+                      00005 
+                      00006 ;**** variable definitions
+                      00007     UDATA
+0000                  00008 dc1 res 1
+0001                  00009 dc2 res 1
+0002                  00010 dc3 res 1
+                      00011 
+                      00012 ;**** subroutines
+                      00013     CODE
+                      00014 
+                      00015 ;**********
+                      00016 ; Delay W * 10 ms
+                      00017 ;
+0000                  00018 delay10_R
+                      00019     ; delay 10 ms
+0000   ???? ????      00020     banksel  dc3
+0002   00??           00021     movwf    dc3
+0003                  00022 dly2
+0003   0C0D           00023     movlw    .13
+0004   00??           00024     movwf    dc2
+0005   00??           00025     clrf     dc1
+0006                  00026 dly1
+0006   02??           00027     decfsz   dc1, f
+0007   0A??           00028     goto     dly1
+0008   02??           00029     decfsz   dc2, f
+0009   0A??           00030     goto     dly1
+000A   02??           00031     decfsz   dc3, f
+000B   0A??           00032     goto     dly2
+                      00033     
+000C   0800           00034     retlw   0                       ; return
+                      00035 
+                      00036     END
+MPASM 5.75                       DELAY10.ASM   8-28-2017  17:20:57         PAGE  2
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+ADCON0                            00000009
+ADCS0                             00000004
+ADCS1                             00000005
+ADON                              00000000
+ADRES                             0000000A
+ANS0                              00000006
+ANS1                              00000007
+C                                 00000000
+C1NREF                            00000002
+C1ON                              00000003
+C1OUT                             00000007
+C1POL                             00000005
+C1PREF                            00000001
+C2NREF                            00000002
+C2ON                              00000003
+C2OUT                             00000007
+C2POL                             00000005
+C2PREF1                           00000001
+C2PREF2                           00000004
+CAL0                              00000001
+CAL1                              00000002
+CAL2                              00000003
+CAL3                              00000004
+CAL4                              00000005
+CAL5                              00000006
+CAL6                              00000007
+CHS0                              00000002
+CHS1                              00000003
+CM1CON0                           00000008
+CM2CON0                           0000000B
+CWUF                              00000006
+DC                                00000001
+F                                 00000001
+FSR                               00000004
+GO                                00000001
+GO_NOT_DONE                       00000001
+INDF                              00000000
+NOT_C1OUTEN                       00000006
+NOT_C1T0CS                        00000004
+NOT_C1WU                          00000000
+NOT_C2OUTEN                       00000006
+NOT_C2WU                          00000000
+NOT_DONE                          00000001
+NOT_GPPU                          00000006
+NOT_GPWU                          00000007
+NOT_PD                            00000003
+NOT_RBPU                          00000006
+NOT_RBWU                          00000007
+NOT_TO                            00000004
+OSCCAL                            00000005
+PA0                               00000005
+PCL                               00000002
+PORTB                             00000006
+MPASM 5.75                       DELAY10.ASM   8-28-2017  17:20:57         PAGE  3
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+PORTC                             00000007
+PS0                               00000000
+PS1                               00000001
+PS2                               00000002
+PSA                               00000003
+RB0                               00000000
+RB1                               00000001
+RB2                               00000002
+RB3                               00000003
+RB4                               00000004
+RB5                               00000005
+RBWUF                             00000007
+RC0                               00000000
+RC1                               00000001
+RC2                               00000002
+RC3                               00000003
+RC4                               00000004
+RC5                               00000005
+STATUS                            00000003
+T0CS                              00000005
+T0SE                              00000004
+TMR0                              00000001
+TRISB0                            00000000
+TRISB1                            00000001
+TRISB2                            00000002
+TRISB3                            00000003
+TRISB4                            00000004
+TRISB5                            00000005
+TRISC0                            00000000
+TRISC1                            00000001
+TRISC2                            00000002
+TRISC3                            00000003
+TRISC4                            00000004
+TRISC5                            00000005
+VR0                               00000000
+VR1                               00000001
+VR2                               00000002
+VR3                               00000003
+VRCON                             0000000C
+VREN                              00000007
+VROE                              00000006
+VRR                               00000005
+W                                 00000000
+Z                                 00000002
+_CONFIG                           00000FFF
+_CP_OFF                           00000FFF
+_CP_ON                            00000FEF
+_EC_OSC                           00000FFB
+_ExtRC_OSC_CLKOUTEN               00000FFF
+_ExtRC_OSC_RB4EN                  00000FFE
+_HS_OSC                           00000FFA
+_IDLOC0                           00000400
+_IDLOC1                           00000401
+MPASM 5.75                       DELAY10.ASM   8-28-2017  17:20:57         PAGE  4
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+_IDLOC2                           00000402
+_IDLOC3                           00000403
+_IOSCFS_OFF                       00000FBF
+_IOSCFS_ON                        00000FFF
+_IntRC_OSC_CLKOUTEN               00000FFD
+_IntRC_OSC_RB4EN                  00000FFC
+_LP_OSC                           00000FF8
+_MCLRE_OFF                        00000FDF
+_MCLRE_ON                         00000FFF
+_OSC_EC                           00000FFB
+_OSC_ExtRC_CLKOUTEN               00000FFF
+_OSC_ExtRC_RB4EN                  00000FFE
+_OSC_HS                           00000FFA
+_OSC_IntRC_CLKOUTEN               00000FFD
+_OSC_IntRC_RB4EN                  00000FFC
+_OSC_LP                           00000FF8
+_OSC_XT                           00000FF9
+_WDT_OFF                          00000FF7
+_WDT_ON                           00000FFF
+_XT_OSC                           00000FF9
+__16F506                          00000001
+dc1                               00000000
+dc2                               00000001
+dc3                               00000002
+delay10_R                         00000000
+dly1                              00000006
+dly2                              00000003
+
+Errors   :     0
+Warnings :     0 reported,     0 suppressed
+Messages :     0 reported,     0 suppressed
+
+

@@ -1,0 +1,1850 @@
+
+
+Microchip Technology PIC LITE Macro Assembler V1.41 build -162212810 
+                                                                                               Tue Apr 18 11:22:55 2017
+
+Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250102
+     1                           	processor	16F1717
+     2                           	opt	pw 120
+     3                           	opt	lm
+     4                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     5                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1
+     6                           	psect	maintext,global,class=CODE,merge=1,split=1,delta=2
+     7                           	psect	text1,local,class=CODE,merge=1,delta=2
+     8                           	psect	text2,local,class=CODE,merge=1,delta=2
+     9                           	psect	text3,local,class=CODE,merge=1,delta=2
+    10                           	psect	text4,local,class=CODE,merge=1,delta=2
+    11                           	psect	text5,local,class=CODE,merge=1,delta=2
+    12                           	psect	text6,local,class=CODE,merge=1,delta=2
+    13                           	dabs	1,0x7E,2
+    14  0000                     
+    15                           ; Version 1.41
+    16                           ; Generated 25/01/2017 GMT
+    17                           ; 
+    18                           ; Copyright © 2017, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    19                           ; All rights reserved.
+    20                           ; 
+    21                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    22                           ; 
+    23                           ; Redistribution and use in source and binary forms, with or without modification, are
+    24                           ; permitted provided that the following conditions are met:
+    25                           ; 
+    26                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    27                           ;        conditions and the following disclaimer.
+    28                           ; 
+    29                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    30                           ;        of conditions and the following disclaimer in the documentation and/or other
+    31                           ;        materials provided with the distribution.
+    32                           ; 
+    33                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    34                           ;        software without specific prior written permission.
+    35                           ; 
+    36                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    37                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    38                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    39                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    40                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    41                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    42                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    43                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    44                           ; 
+    45                           ; 
+    46                           ; Code-generator required, PIC16F1717 Definitions
+    47                           ; 
+    48                           ; SFR Addresses
+    49  0000                     	;# 
+    50  0001                     	;# 
+    51  0002                     	;# 
+    52  0003                     	;# 
+    53  0004                     	;# 
+    54  0005                     	;# 
+    55  0006                     	;# 
+    56  0007                     	;# 
+    57  0008                     	;# 
+    58  0009                     	;# 
+    59  000A                     	;# 
+    60  000B                     	;# 
+    61  000C                     	;# 
+    62  000D                     	;# 
+    63  000E                     	;# 
+    64  000F                     	;# 
+    65  0010                     	;# 
+    66  0011                     	;# 
+    67  0012                     	;# 
+    68  0013                     	;# 
+    69  0015                     	;# 
+    70  0016                     	;# 
+    71  0016                     	;# 
+    72  0017                     	;# 
+    73  0018                     	;# 
+    74  0019                     	;# 
+    75  001A                     	;# 
+    76  001B                     	;# 
+    77  001C                     	;# 
+    78  008C                     	;# 
+    79  008D                     	;# 
+    80  008E                     	;# 
+    81  008F                     	;# 
+    82  0090                     	;# 
+    83  0091                     	;# 
+    84  0092                     	;# 
+    85  0093                     	;# 
+    86  0095                     	;# 
+    87  0096                     	;# 
+    88  0097                     	;# 
+    89  0098                     	;# 
+    90  0099                     	;# 
+    91  009A                     	;# 
+    92  009B                     	;# 
+    93  009B                     	;# 
+    94  009C                     	;# 
+    95  009D                     	;# 
+    96  009E                     	;# 
+    97  009F                     	;# 
+    98  010C                     	;# 
+    99  010D                     	;# 
+   100  010E                     	;# 
+   101  010F                     	;# 
+   102  0110                     	;# 
+   103  0111                     	;# 
+   104  0112                     	;# 
+   105  0113                     	;# 
+   106  0114                     	;# 
+   107  0115                     	;# 
+   108  0116                     	;# 
+   109  0117                     	;# 
+   110  0118                     	;# 
+   111  0119                     	;# 
+   112  011A                     	;# 
+   113  011B                     	;# 
+   114  011B                     	;# 
+   115  011C                     	;# 
+   116  018C                     	;# 
+   117  018D                     	;# 
+   118  018E                     	;# 
+   119  018F                     	;# 
+   120  0190                     	;# 
+   121  0191                     	;# 
+   122  0191                     	;# 
+   123  0192                     	;# 
+   124  0193                     	;# 
+   125  0193                     	;# 
+   126  0194                     	;# 
+   127  0195                     	;# 
+   128  0196                     	;# 
+   129  0197                     	;# 
+   130  0199                     	;# 
+   131  0199                     	;# 
+   132  0199                     	;# 
+   133  019A                     	;# 
+   134  019A                     	;# 
+   135  019A                     	;# 
+   136  019B                     	;# 
+   137  019B                     	;# 
+   138  019B                     	;# 
+   139  019B                     	;# 
+   140  019B                     	;# 
+   141  019C                     	;# 
+   142  019C                     	;# 
+   143  019C                     	;# 
+   144  019D                     	;# 
+   145  019D                     	;# 
+   146  019D                     	;# 
+   147  019E                     	;# 
+   148  019E                     	;# 
+   149  019E                     	;# 
+   150  019F                     	;# 
+   151  019F                     	;# 
+   152  019F                     	;# 
+   153  019F                     	;# 
+   154  019F                     	;# 
+   155  020C                     	;# 
+   156  020D                     	;# 
+   157  020E                     	;# 
+   158  020F                     	;# 
+   159  0210                     	;# 
+   160  0211                     	;# 
+   161  0211                     	;# 
+   162  0212                     	;# 
+   163  0212                     	;# 
+   164  0213                     	;# 
+   165  0213                     	;# 
+   166  0214                     	;# 
+   167  0214                     	;# 
+   168  0215                     	;# 
+   169  0215                     	;# 
+   170  0215                     	;# 
+   171  0215                     	;# 
+   172  0216                     	;# 
+   173  0216                     	;# 
+   174  0217                     	;# 
+   175  0217                     	;# 
+   176  028C                     	;# 
+   177  028D                     	;# 
+   178  028E                     	;# 
+   179  028F                     	;# 
+   180  0290                     	;# 
+   181  0291                     	;# 
+   182  0291                     	;# 
+   183  0292                     	;# 
+   184  0293                     	;# 
+   185  0293                     	;# 
+   186  0298                     	;# 
+   187  0298                     	;# 
+   188  0299                     	;# 
+   189  029A                     	;# 
+   190  029A                     	;# 
+   191  029E                     	;# 
+   192  030C                     	;# 
+   193  030D                     	;# 
+   194  030E                     	;# 
+   195  030F                     	;# 
+   196  0310                     	;# 
+   197  038C                     	;# 
+   198  038D                     	;# 
+   199  038E                     	;# 
+   200  038F                     	;# 
+   201  0390                     	;# 
+   202  0391                     	;# 
+   203  0392                     	;# 
+   204  0393                     	;# 
+   205  0394                     	;# 
+   206  0395                     	;# 
+   207  0396                     	;# 
+   208  0397                     	;# 
+   209  0398                     	;# 
+   210  0399                     	;# 
+   211  039D                     	;# 
+   212  039E                     	;# 
+   213  039F                     	;# 
+   214  0415                     	;# 
+   215  0416                     	;# 
+   216  0417                     	;# 
+   217  041C                     	;# 
+   218  041D                     	;# 
+   219  041E                     	;# 
+   220  0498                     	;# 
+   221  0498                     	;# 
+   222  0499                     	;# 
+   223  049A                     	;# 
+   224  049B                     	;# 
+   225  049B                     	;# 
+   226  049C                     	;# 
+   227  049D                     	;# 
+   228  049E                     	;# 
+   229  049F                     	;# 
+   230  0511                     	;# 
+   231  0515                     	;# 
+   232  0617                     	;# 
+   233  0618                     	;# 
+   234  0619                     	;# 
+   235  0619                     	;# 
+   236  061A                     	;# 
+   237  061B                     	;# 
+   238  061C                     	;# 
+   239  061C                     	;# 
+   240  0691                     	;# 
+   241  0692                     	;# 
+   242  0693                     	;# 
+   243  0694                     	;# 
+   244  0695                     	;# 
+   245  0696                     	;# 
+   246  0697                     	;# 
+   247  0698                     	;# 
+   248  0699                     	;# 
+   249  069A                     	;# 
+   250  069B                     	;# 
+   251  069C                     	;# 
+   252  069D                     	;# 
+   253  069E                     	;# 
+   254  069F                     	;# 
+   255  0E0F                     	;# 
+   256  0E10                     	;# 
+   257  0E11                     	;# 
+   258  0E12                     	;# 
+   259  0E13                     	;# 
+   260  0E14                     	;# 
+   261  0E15                     	;# 
+   262  0E17                     	;# 
+   263  0E20                     	;# 
+   264  0E21                     	;# 
+   265  0E22                     	;# 
+   266  0E24                     	;# 
+   267  0E25                     	;# 
+   268  0E28                     	;# 
+   269  0E29                     	;# 
+   270  0E2A                     	;# 
+   271  0E2B                     	;# 
+   272  0E90                     	;# 
+   273  0E91                     	;# 
+   274  0E92                     	;# 
+   275  0E93                     	;# 
+   276  0E94                     	;# 
+   277  0E95                     	;# 
+   278  0E96                     	;# 
+   279  0E97                     	;# 
+   280  0E98                     	;# 
+   281  0E99                     	;# 
+   282  0E9A                     	;# 
+   283  0E9B                     	;# 
+   284  0E9C                     	;# 
+   285  0E9D                     	;# 
+   286  0E9E                     	;# 
+   287  0E9F                     	;# 
+   288  0EA0                     	;# 
+   289  0EA1                     	;# 
+   290  0EA2                     	;# 
+   291  0EA3                     	;# 
+   292  0EA4                     	;# 
+   293  0EA5                     	;# 
+   294  0EA6                     	;# 
+   295  0EA7                     	;# 
+   296  0EA8                     	;# 
+   297  0EA9                     	;# 
+   298  0EAA                     	;# 
+   299  0EAB                     	;# 
+   300  0EAC                     	;# 
+   301  0EAD                     	;# 
+   302  0EAE                     	;# 
+   303  0EAF                     	;# 
+   304  0EB0                     	;# 
+   305  0EB1                     	;# 
+   306  0EB2                     	;# 
+   307  0F0F                     	;# 
+   308  0F10                     	;# 
+   309  0F11                     	;# 
+   310  0F12                     	;# 
+   311  0F13                     	;# 
+   312  0F14                     	;# 
+   313  0F15                     	;# 
+   314  0F16                     	;# 
+   315  0F17                     	;# 
+   316  0F18                     	;# 
+   317  0F19                     	;# 
+   318  0F1A                     	;# 
+   319  0F1B                     	;# 
+   320  0F1C                     	;# 
+   321  0F1D                     	;# 
+   322  0F1E                     	;# 
+   323  0F1F                     	;# 
+   324  0F20                     	;# 
+   325  0F21                     	;# 
+   326  0F22                     	;# 
+   327  0F23                     	;# 
+   328  0F24                     	;# 
+   329  0F25                     	;# 
+   330  0F26                     	;# 
+   331  0F27                     	;# 
+   332  0F28                     	;# 
+   333  0F29                     	;# 
+   334  0F2A                     	;# 
+   335  0F2B                     	;# 
+   336  0F2C                     	;# 
+   337  0F2D                     	;# 
+   338  0F2E                     	;# 
+   339  0F2F                     	;# 
+   340  0F30                     	;# 
+   341  0F31                     	;# 
+   342  0F32                     	;# 
+   343  0F33                     	;# 
+   344  0F34                     	;# 
+   345  0F35                     	;# 
+   346  0F36                     	;# 
+   347  0F37                     	;# 
+   348  0FE4                     	;# 
+   349  0FE5                     	;# 
+   350  0FE6                     	;# 
+   351  0FE7                     	;# 
+   352  0FE8                     	;# 
+   353  0FE9                     	;# 
+   354  0FEA                     	;# 
+   355  0FEB                     	;# 
+   356  0FED                     	;# 
+   357  0FEE                     	;# 
+   358  0FEF                     	;# 
+   359  0000                     	;# 
+   360  0001                     	;# 
+   361  0002                     	;# 
+   362  0003                     	;# 
+   363  0004                     	;# 
+   364  0005                     	;# 
+   365  0006                     	;# 
+   366  0007                     	;# 
+   367  0008                     	;# 
+   368  0009                     	;# 
+   369  000A                     	;# 
+   370  000B                     	;# 
+   371  000C                     	;# 
+   372  000D                     	;# 
+   373  000E                     	;# 
+   374  000F                     	;# 
+   375  0010                     	;# 
+   376  0011                     	;# 
+   377  0012                     	;# 
+   378  0013                     	;# 
+   379  0015                     	;# 
+   380  0016                     	;# 
+   381  0016                     	;# 
+   382  0017                     	;# 
+   383  0018                     	;# 
+   384  0019                     	;# 
+   385  001A                     	;# 
+   386  001B                     	;# 
+   387  001C                     	;# 
+   388  008C                     	;# 
+   389  008D                     	;# 
+   390  008E                     	;# 
+   391  008F                     	;# 
+   392  0090                     	;# 
+   393  0091                     	;# 
+   394  0092                     	;# 
+   395  0093                     	;# 
+   396  0095                     	;# 
+   397  0096                     	;# 
+   398  0097                     	;# 
+   399  0098                     	;# 
+   400  0099                     	;# 
+   401  009A                     	;# 
+   402  009B                     	;# 
+   403  009B                     	;# 
+   404  009C                     	;# 
+   405  009D                     	;# 
+   406  009E                     	;# 
+   407  009F                     	;# 
+   408  010C                     	;# 
+   409  010D                     	;# 
+   410  010E                     	;# 
+   411  010F                     	;# 
+   412  0110                     	;# 
+   413  0111                     	;# 
+   414  0112                     	;# 
+   415  0113                     	;# 
+   416  0114                     	;# 
+   417  0115                     	;# 
+   418  0116                     	;# 
+   419  0117                     	;# 
+   420  0118                     	;# 
+   421  0119                     	;# 
+   422  011A                     	;# 
+   423  011B                     	;# 
+   424  011B                     	;# 
+   425  011C                     	;# 
+   426  018C                     	;# 
+   427  018D                     	;# 
+   428  018E                     	;# 
+   429  018F                     	;# 
+   430  0190                     	;# 
+   431  0191                     	;# 
+   432  0191                     	;# 
+   433  0192                     	;# 
+   434  0193                     	;# 
+   435  0193                     	;# 
+   436  0194                     	;# 
+   437  0195                     	;# 
+   438  0196                     	;# 
+   439  0197                     	;# 
+   440  0199                     	;# 
+   441  0199                     	;# 
+   442  0199                     	;# 
+   443  019A                     	;# 
+   444  019A                     	;# 
+   445  019A                     	;# 
+   446  019B                     	;# 
+   447  019B                     	;# 
+   448  019B                     	;# 
+   449  019B                     	;# 
+   450  019B                     	;# 
+   451  019C                     	;# 
+   452  019C                     	;# 
+   453  019C                     	;# 
+   454  019D                     	;# 
+   455  019D                     	;# 
+   456  019D                     	;# 
+   457  019E                     	;# 
+   458  019E                     	;# 
+   459  019E                     	;# 
+   460  019F                     	;# 
+   461  019F                     	;# 
+   462  019F                     	;# 
+   463  019F                     	;# 
+   464  019F                     	;# 
+   465  020C                     	;# 
+   466  020D                     	;# 
+   467  020E                     	;# 
+   468  020F                     	;# 
+   469  0210                     	;# 
+   470  0211                     	;# 
+   471  0211                     	;# 
+   472  0212                     	;# 
+   473  0212                     	;# 
+   474  0213                     	;# 
+   475  0213                     	;# 
+   476  0214                     	;# 
+   477  0214                     	;# 
+   478  0215                     	;# 
+   479  0215                     	;# 
+   480  0215                     	;# 
+   481  0215                     	;# 
+   482  0216                     	;# 
+   483  0216                     	;# 
+   484  0217                     	;# 
+   485  0217                     	;# 
+   486  028C                     	;# 
+   487  028D                     	;# 
+   488  028E                     	;# 
+   489  028F                     	;# 
+   490  0290                     	;# 
+   491  0291                     	;# 
+   492  0291                     	;# 
+   493  0292                     	;# 
+   494  0293                     	;# 
+   495  0293                     	;# 
+   496  0298                     	;# 
+   497  0298                     	;# 
+   498  0299                     	;# 
+   499  029A                     	;# 
+   500  029A                     	;# 
+   501  029E                     	;# 
+   502  030C                     	;# 
+   503  030D                     	;# 
+   504  030E                     	;# 
+   505  030F                     	;# 
+   506  0310                     	;# 
+   507  038C                     	;# 
+   508  038D                     	;# 
+   509  038E                     	;# 
+   510  038F                     	;# 
+   511  0390                     	;# 
+   512  0391                     	;# 
+   513  0392                     	;# 
+   514  0393                     	;# 
+   515  0394                     	;# 
+   516  0395                     	;# 
+   517  0396                     	;# 
+   518  0397                     	;# 
+   519  0398                     	;# 
+   520  0399                     	;# 
+   521  039D                     	;# 
+   522  039E                     	;# 
+   523  039F                     	;# 
+   524  0415                     	;# 
+   525  0416                     	;# 
+   526  0417                     	;# 
+   527  041C                     	;# 
+   528  041D                     	;# 
+   529  041E                     	;# 
+   530  0498                     	;# 
+   531  0498                     	;# 
+   532  0499                     	;# 
+   533  049A                     	;# 
+   534  049B                     	;# 
+   535  049B                     	;# 
+   536  049C                     	;# 
+   537  049D                     	;# 
+   538  049E                     	;# 
+   539  049F                     	;# 
+   540  0511                     	;# 
+   541  0515                     	;# 
+   542  0617                     	;# 
+   543  0618                     	;# 
+   544  0619                     	;# 
+   545  0619                     	;# 
+   546  061A                     	;# 
+   547  061B                     	;# 
+   548  061C                     	;# 
+   549  061C                     	;# 
+   550  0691                     	;# 
+   551  0692                     	;# 
+   552  0693                     	;# 
+   553  0694                     	;# 
+   554  0695                     	;# 
+   555  0696                     	;# 
+   556  0697                     	;# 
+   557  0698                     	;# 
+   558  0699                     	;# 
+   559  069A                     	;# 
+   560  069B                     	;# 
+   561  069C                     	;# 
+   562  069D                     	;# 
+   563  069E                     	;# 
+   564  069F                     	;# 
+   565  0E0F                     	;# 
+   566  0E10                     	;# 
+   567  0E11                     	;# 
+   568  0E12                     	;# 
+   569  0E13                     	;# 
+   570  0E14                     	;# 
+   571  0E15                     	;# 
+   572  0E17                     	;# 
+   573  0E20                     	;# 
+   574  0E21                     	;# 
+   575  0E22                     	;# 
+   576  0E24                     	;# 
+   577  0E25                     	;# 
+   578  0E28                     	;# 
+   579  0E29                     	;# 
+   580  0E2A                     	;# 
+   581  0E2B                     	;# 
+   582  0E90                     	;# 
+   583  0E91                     	;# 
+   584  0E92                     	;# 
+   585  0E93                     	;# 
+   586  0E94                     	;# 
+   587  0E95                     	;# 
+   588  0E96                     	;# 
+   589  0E97                     	;# 
+   590  0E98                     	;# 
+   591  0E99                     	;# 
+   592  0E9A                     	;# 
+   593  0E9B                     	;# 
+   594  0E9C                     	;# 
+   595  0E9D                     	;# 
+   596  0E9E                     	;# 
+   597  0E9F                     	;# 
+   598  0EA0                     	;# 
+   599  0EA1                     	;# 
+   600  0EA2                     	;# 
+   601  0EA3                     	;# 
+   602  0EA4                     	;# 
+   603  0EA5                     	;# 
+   604  0EA6                     	;# 
+   605  0EA7                     	;# 
+   606  0EA8                     	;# 
+   607  0EA9                     	;# 
+   608  0EAA                     	;# 
+   609  0EAB                     	;# 
+   610  0EAC                     	;# 
+   611  0EAD                     	;# 
+   612  0EAE                     	;# 
+   613  0EAF                     	;# 
+   614  0EB0                     	;# 
+   615  0EB1                     	;# 
+   616  0EB2                     	;# 
+   617  0F0F                     	;# 
+   618  0F10                     	;# 
+   619  0F11                     	;# 
+   620  0F12                     	;# 
+   621  0F13                     	;# 
+   622  0F14                     	;# 
+   623  0F15                     	;# 
+   624  0F16                     	;# 
+   625  0F17                     	;# 
+   626  0F18                     	;# 
+   627  0F19                     	;# 
+   628  0F1A                     	;# 
+   629  0F1B                     	;# 
+   630  0F1C                     	;# 
+   631  0F1D                     	;# 
+   632  0F1E                     	;# 
+   633  0F1F                     	;# 
+   634  0F20                     	;# 
+   635  0F21                     	;# 
+   636  0F22                     	;# 
+   637  0F23                     	;# 
+   638  0F24                     	;# 
+   639  0F25                     	;# 
+   640  0F26                     	;# 
+   641  0F27                     	;# 
+   642  0F28                     	;# 
+   643  0F29                     	;# 
+   644  0F2A                     	;# 
+   645  0F2B                     	;# 
+   646  0F2C                     	;# 
+   647  0F2D                     	;# 
+   648  0F2E                     	;# 
+   649  0F2F                     	;# 
+   650  0F30                     	;# 
+   651  0F31                     	;# 
+   652  0F32                     	;# 
+   653  0F33                     	;# 
+   654  0F34                     	;# 
+   655  0F35                     	;# 
+   656  0F36                     	;# 
+   657  0F37                     	;# 
+   658  0FE4                     	;# 
+   659  0FE5                     	;# 
+   660  0FE6                     	;# 
+   661  0FE7                     	;# 
+   662  0FE8                     	;# 
+   663  0FE9                     	;# 
+   664  0FEA                     	;# 
+   665  0FEB                     	;# 
+   666  0FED                     	;# 
+   667  0FEE                     	;# 
+   668  0FEF                     	;# 
+   669  008D                     _TRISBbits	set	141
+   670  04CF                     _SPLLEN	set	1231
+   671  04CE                     _IRCF3	set	1230
+   672  04CD                     _IRCF2	set	1229
+   673  04CC                     _IRCF1	set	1228
+   674  04CB                     _IRCF0	set	1227
+   675  04C9                     _SCS1	set	1225
+   676  04C8                     _SCS0	set	1224
+   677  018D                     _ANSELB	set	397
+   678  029A                     _CCP2CONbits	set	666
+   679  0293                     _CCP1CONbits	set	659
+   680  029E                     _CCPTMRSbits	set	670
+   681  029A                     _CCP2CON	set	666
+   682  0298                     _CCPR2L	set	664
+   683  0293                     _CCP1CON	set	659
+   684  0291                     _CCPR1L	set	657
+   685  041D                     _PR6	set	1053
+   686  041E                     _T6CONbits	set	1054
+   687  0619                     _PWM3CON	set	1561
+   688  0617                     _PWM3DCL	set	1559
+   689  0618                     _PWM3DCH	set	1560
+   690  0E0F                     _PPSLOCKbits	set	3599
+   691  0E0F                     _PPSLOCK	set	3599
+   692  0E9A                     _RB2PPSbits	set	3738
+   693  0E99                     _RB1PPSbits	set	3737
+   694  0E98                     _RB0PPSbits	set	3736
+   695                           
+   696                           ; #config settings
+   697  0000                     
+   698                           	psect	cinit
+   699  07FD                     start_initialization:	
+   700  07FD                     __initialization:	
+   701  07FD                     end_of_initialization:	
+   702                           ;End of C runtime variable initialization code
+   703                           
+   704  07FD                     __end_of__initialization:	
+   705  07FD  0020               	movlb	0
+   706  07FE  3187  2F4E         	ljmp	_main	;jump to C main() function
+   707                           
+   708                           	psect	cstackCOMMON
+   709  0070                     __pcstackCOMMON:	
+   710  0070                     ?_internal_16:	
+   711  0070                     ??_internal_16:	
+   712                           ; 1 bytes @ 0x0
+   713                           
+   714  0070                     ?_PWM1_LoadDutyValue:	
+   715                           ; 1 bytes @ 0x0
+   716                           
+   717  0070                     ?_PWM2_LoadDutyValue:	
+   718                           ; 1 bytes @ 0x0
+   719                           
+   720  0070                     ?_PWM3_LoadDutyValue:	
+   721                           ; 1 bytes @ 0x0
+   722                           
+   723  0070                     ?_initMain:	
+   724                           ; 1 bytes @ 0x0
+   725                           
+   726  0070                     ??_initMain:	
+   727                           ; 1 bytes @ 0x0
+   728                           
+   729  0070                     ?_main:	
+   730                           ; 1 bytes @ 0x0
+   731                           
+   732  0070                     PWM1_LoadDutyValue@dutyValue:	
+   733                           ; 1 bytes @ 0x0
+   734                           
+   735  0070                     PWM2_LoadDutyValue@dutyValue:	
+   736                           ; 2 bytes @ 0x0
+   737                           
+   738  0070                     PWM3_LoadDutyValue@dutyValue:	
+   739                           ; 2 bytes @ 0x0
+   740                           
+   741                           
+   742                           ; 2 bytes @ 0x0
+   743  0070                     	ds	2
+   744  0072                     ??_PWM1_LoadDutyValue:	
+   745  0072                     ??_PWM2_LoadDutyValue:	
+   746                           ; 1 bytes @ 0x2
+   747                           
+   748  0072                     ??_PWM3_LoadDutyValue:	
+   749                           ; 1 bytes @ 0x2
+   750                           
+   751                           
+   752                           ; 1 bytes @ 0x2
+   753  0072                     	ds	2
+   754  0074                     ?_RGB_LoadValue:	
+   755  0074                     RGB_LoadValue@red:	
+   756                           ; 1 bytes @ 0x4
+   757                           
+   758                           
+   759                           ; 2 bytes @ 0x4
+   760  0074                     	ds	2
+   761  0076                     RGB_LoadValue@green:	
+   762                           
+   763                           ; 2 bytes @ 0x6
+   764  0076                     	ds	2
+   765  0078                     RGB_LoadValue@blue:	
+   766                           
+   767                           ; 2 bytes @ 0x8
+   768  0078                     	ds	2
+   769  007A                     ??_RGB_LoadValue:	
+   770  007A                     ??_main:	
+   771                           ; 1 bytes @ 0xA
+   772                           
+   773                           
+   774                           ; 1 bytes @ 0xA
+   775  007A                     	ds	2
+   776                           
+   777                           	psect	maintext
+   778  074E                     __pmaintext:	
+   779 ;;
+   780 ;;Main: autosize = 0, tempsize = 2, incstack = 0, save=0
+   781 ;;
+   782 ;; *************** function _main *****************
+   783 ;; Defined at:
+   784 ;;		line 201 in file "Main.c"
+   785 ;; Parameters:    Size  Location     Type
+   786 ;;		None
+   787 ;; Auto vars:     Size  Location     Type
+   788 ;;		None
+   789 ;; Return value:  Size  Location     Type
+   790 ;;                  1    wreg      void 
+   791 ;; Registers used:
+   792 ;;		wreg, status,2, status,0, pclath, cstack
+   793 ;; Tracked objects:
+   794 ;;		On entry : B1F/0
+   795 ;;		On exit  : 0/0
+   796 ;;		Unchanged: 0/0
+   797 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12
+   798 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   799 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   800 ;;      Temps:          2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   801 ;;      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   802 ;;Total ram usage:        2 bytes
+   803 ;; Hardware stack levels required when called:    2
+   804 ;; This function calls:
+   805 ;;		_PWM1_LoadDutyValue
+   806 ;;		_PWM2_LoadDutyValue
+   807 ;;		_PWM3_LoadDutyValue
+   808 ;;		_RGB_LoadValue
+   809 ;;		_initMain
+   810 ;; This function is called by:
+   811 ;;		Startup code after reset
+   812 ;; This function uses a non-reentrant model
+   813 ;;
+   814                           
+   815                           
+   816                           ;psect for function _main
+   817  074E                     _main:	
+   818                           
+   819                           ;Main.c: 202: initMain();
+   820                           
+   821                           ;incstack = 0
+   822                           ; Regs used in _main: [wreg+status,2+status,0+pclath+cstack]
+   823  074E  3187  2703  3187   	fcall	_initMain
+   824                           
+   825                           ;Main.c: 206: PWM1_LoadDutyValue(0);
+   826  0751  3000               	movlw	0
+   827  0752  00F0               	movwf	PWM1_LoadDutyValue@dutyValue
+   828  0753  00F1               	movwf	PWM1_LoadDutyValue@dutyValue+1
+   829  0754  3186  26D5  3187   	fcall	_PWM1_LoadDutyValue
+   830                           
+   831                           ;Main.c: 207: PWM2_LoadDutyValue(0);
+   832  0757  3000               	movlw	0
+   833  0758  00F0               	movwf	PWM2_LoadDutyValue@dutyValue
+   834  0759  00F1               	movwf	PWM2_LoadDutyValue@dutyValue+1
+   835  075A  3186  26EC  3187   	fcall	_PWM2_LoadDutyValue
+   836                           
+   837                           ;Main.c: 208: PWM3_LoadDutyValue(0);
+   838  075D  3000               	movlw	0
+   839  075E  00F0               	movwf	PWM3_LoadDutyValue@dutyValue
+   840  075F  00F1               	movwf	PWM3_LoadDutyValue@dutyValue+1
+   841  0760  3186  26BF  3187   	fcall	_PWM3_LoadDutyValue
+   842  0763                     l95:	
+   843                           ;Main.c: 210: while(1){
+   844                           
+   845                           
+   846                           ;Main.c: 213: RGB_LoadValue(512, 0, 0);
+   847  0763  3000               	movlw	0
+   848  0764  00F4               	movwf	RGB_LoadValue@red
+   849  0765  3002               	movlw	2
+   850  0766  00F5               	movwf	RGB_LoadValue@red+1
+   851  0767  3000               	movlw	0
+   852  0768  00F6               	movwf	RGB_LoadValue@green
+   853  0769  00F7               	movwf	RGB_LoadValue@green+1
+   854  076A  3000               	movlw	0
+   855  076B  00F8               	movwf	RGB_LoadValue@blue
+   856  076C  00F9               	movwf	RGB_LoadValue@blue+1
+   857  076D  3186  26AA  3187   	fcall	_RGB_LoadValue
+   858                           
+   859                           ;Main.c: 214: _delay((unsigned long)((1000)*(16000000/4000.0)));
+   860  0770  3015               	movlw	21
+   861  0771  00FB               	movwf	??_main+1
+   862  0772  304B               	movlw	75
+   863  0773  00FA               	movwf	??_main
+   864  0774  30BE               	movlw	190
+   865  0775                     u77:	
+   866  0775  0B89               	decfsz	9,f
+   867  0776  2F75               	goto	u77
+   868  0777  0BFA               	decfsz	??_main,f
+   869  0778  2F75               	goto	u77
+   870  0779  0BFB               	decfsz	??_main+1,f
+   871  077A  2F75               	goto	u77
+   872  077B  3200               	nop2
+   873                           
+   874                           ;Main.c: 218: RGB_LoadValue(0, 512, 0);
+   875  077C  3000               	movlw	0
+   876  077D  00F4               	movwf	RGB_LoadValue@red
+   877  077E  00F5               	movwf	RGB_LoadValue@red+1
+   878  077F  3000               	movlw	0
+   879  0780  00F6               	movwf	RGB_LoadValue@green
+   880  0781  3002               	movlw	2
+   881  0782  00F7               	movwf	RGB_LoadValue@green+1
+   882  0783  3000               	movlw	0
+   883  0784  00F8               	movwf	RGB_LoadValue@blue
+   884  0785  00F9               	movwf	RGB_LoadValue@blue+1
+   885  0786  3186  26AA  3187   	fcall	_RGB_LoadValue
+   886                           
+   887                           ;Main.c: 219: _delay((unsigned long)((1000)*(16000000/4000.0)));
+   888  0789  3015               	movlw	21
+   889  078A  00FB               	movwf	??_main+1
+   890  078B  304B               	movlw	75
+   891  078C  00FA               	movwf	??_main
+   892  078D  30BE               	movlw	190
+   893  078E                     u87:	
+   894  078E  0B89               	decfsz	9,f
+   895  078F  2F8E               	goto	u87
+   896  0790  0BFA               	decfsz	??_main,f
+   897  0791  2F8E               	goto	u87
+   898  0792  0BFB               	decfsz	??_main+1,f
+   899  0793  2F8E               	goto	u87
+   900  0794  3200               	nop2
+   901                           
+   902                           ;Main.c: 222: RGB_LoadValue(0, 0, 512);
+   903  0795  3000               	movlw	0
+   904  0796  00F4               	movwf	RGB_LoadValue@red
+   905  0797  00F5               	movwf	RGB_LoadValue@red+1
+   906  0798  3000               	movlw	0
+   907  0799  00F6               	movwf	RGB_LoadValue@green
+   908  079A  00F7               	movwf	RGB_LoadValue@green+1
+   909  079B  3000               	movlw	0
+   910  079C  00F8               	movwf	RGB_LoadValue@blue
+   911  079D  3002               	movlw	2
+   912  079E  00F9               	movwf	RGB_LoadValue@blue+1
+   913  079F  3186  26AA  3187   	fcall	_RGB_LoadValue
+   914                           
+   915                           ;Main.c: 223: _delay((unsigned long)((1000)*(16000000/4000.0)));
+   916  07A2  3015               	movlw	21
+   917  07A3  00FB               	movwf	??_main+1
+   918  07A4  304B               	movlw	75
+   919  07A5  00FA               	movwf	??_main
+   920  07A6  30BE               	movlw	190
+   921  07A7                     u97:	
+   922  07A7  0B89               	decfsz	9,f
+   923  07A8  2FA7               	goto	u97
+   924  07A9  0BFA               	decfsz	??_main,f
+   925  07AA  2FA7               	goto	u97
+   926  07AB  0BFB               	decfsz	??_main+1,f
+   927  07AC  2FA7               	goto	u97
+   928  07AD  3200               	nop2
+   929                           
+   930                           ;Main.c: 226: RGB_LoadValue(192, 192, 0);
+   931  07AE  30C0               	movlw	192
+   932  07AF  00F4               	movwf	RGB_LoadValue@red
+   933  07B0  3000               	movlw	0
+   934  07B1  00F5               	movwf	RGB_LoadValue@red+1
+   935  07B2  30C0               	movlw	192
+   936  07B3  00F6               	movwf	RGB_LoadValue@green
+   937  07B4  3000               	movlw	0
+   938  07B5  00F7               	movwf	RGB_LoadValue@green+1
+   939  07B6  3000               	movlw	0
+   940  07B7  00F8               	movwf	RGB_LoadValue@blue
+   941  07B8  00F9               	movwf	RGB_LoadValue@blue+1
+   942  07B9  3186  26AA  3187   	fcall	_RGB_LoadValue
+   943                           
+   944                           ;Main.c: 227: _delay((unsigned long)((1000)*(16000000/4000.0)));
+   945  07BC  3015               	movlw	21
+   946  07BD  00FB               	movwf	??_main+1
+   947  07BE  304B               	movlw	75
+   948  07BF  00FA               	movwf	??_main
+   949  07C0  30BE               	movlw	190
+   950  07C1                     u107:	
+   951  07C1  0B89               	decfsz	9,f
+   952  07C2  2FC1               	goto	u107
+   953  07C3  0BFA               	decfsz	??_main,f
+   954  07C4  2FC1               	goto	u107
+   955  07C5  0BFB               	decfsz	??_main+1,f
+   956  07C6  2FC1               	goto	u107
+   957  07C7  3200               	nop2
+   958                           
+   959                           ;Main.c: 230: RGB_LoadValue(192, 0, 192);
+   960  07C8  30C0               	movlw	192
+   961  07C9  00F4               	movwf	RGB_LoadValue@red
+   962  07CA  3000               	movlw	0
+   963  07CB  00F5               	movwf	RGB_LoadValue@red+1
+   964  07CC  3000               	movlw	0
+   965  07CD  00F6               	movwf	RGB_LoadValue@green
+   966  07CE  00F7               	movwf	RGB_LoadValue@green+1
+   967  07CF  30C0               	movlw	192
+   968  07D0  00F8               	movwf	RGB_LoadValue@blue
+   969  07D1  3000               	movlw	0
+   970  07D2  00F9               	movwf	RGB_LoadValue@blue+1
+   971  07D3  3186  26AA  3187   	fcall	_RGB_LoadValue
+   972                           
+   973                           ;Main.c: 231: _delay((unsigned long)((1000)*(16000000/4000.0)));
+   974  07D6  3015               	movlw	21
+   975  07D7  00FB               	movwf	??_main+1
+   976  07D8  304B               	movlw	75
+   977  07D9  00FA               	movwf	??_main
+   978  07DA  30BE               	movlw	190
+   979  07DB                     u117:	
+   980  07DB  0B89               	decfsz	9,f
+   981  07DC  2FDB               	goto	u117
+   982  07DD  0BFA               	decfsz	??_main,f
+   983  07DE  2FDB               	goto	u117
+   984  07DF  0BFB               	decfsz	??_main+1,f
+   985  07E0  2FDB               	goto	u117
+   986  07E1  3200               	nop2
+   987                           
+   988                           ;Main.c: 234: RGB_LoadValue(0, 512, 512);
+   989  07E2  3000               	movlw	0
+   990  07E3  00F4               	movwf	RGB_LoadValue@red
+   991  07E4  00F5               	movwf	RGB_LoadValue@red+1
+   992  07E5  3000               	movlw	0
+   993  07E6  00F6               	movwf	RGB_LoadValue@green
+   994  07E7  3002               	movlw	2
+   995  07E8  00F7               	movwf	RGB_LoadValue@green+1
+   996  07E9  3000               	movlw	0
+   997  07EA  00F8               	movwf	RGB_LoadValue@blue
+   998  07EB  3002               	movlw	2
+   999  07EC  00F9               	movwf	RGB_LoadValue@blue+1
+  1000  07ED  3186  26AA  3187   	fcall	_RGB_LoadValue
+  1001                           
+  1002                           ;Main.c: 235: _delay((unsigned long)((1000)*(16000000/4000.0)));
+  1003  07F0  3015               	movlw	21
+  1004  07F1  00FB               	movwf	??_main+1
+  1005  07F2  304B               	movlw	75
+  1006  07F3  00FA               	movwf	??_main
+  1007  07F4  30BE               	movlw	190
+  1008  07F5                     u127:	
+  1009  07F5  0B89               	decfsz	9,f
+  1010  07F6  2FF5               	goto	u127
+  1011  07F7  0BFA               	decfsz	??_main,f
+  1012  07F8  2FF5               	goto	u127
+  1013  07F9  0BFB               	decfsz	??_main+1,f
+  1014  07FA  2FF5               	goto	u127
+  1015  07FB  3200               	nop2
+  1016  07FC  2F63               	goto	l95
+  1017  07FD                     __end_of_main:	
+  1018                           ;Main.c: 237: }
+  1019                           ;Main.c: 238: return;
+  1020                           
+  1021                           
+  1022                           	psect	text1
+  1023  0703                     __ptext1:	
+  1024 ;; *************** function _initMain *****************
+  1025 ;; Defined at:
+  1026 ;;		line 85 in file "Main.c"
+  1027 ;; Parameters:    Size  Location     Type
+  1028 ;;		None
+  1029 ;; Auto vars:     Size  Location     Type
+  1030 ;;		None
+  1031 ;; Return value:  Size  Location     Type
+  1032 ;;                  1    wreg      void 
+  1033 ;; Registers used:
+  1034 ;;		wreg, status,2, status,0, pclath, cstack
+  1035 ;; Tracked objects:
+  1036 ;;		On entry : 0/0
+  1037 ;;		On exit  : 0/0
+  1038 ;;		Unchanged: 0/0
+  1039 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12
+  1040 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1041 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1042 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1043 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1044 ;;Total ram usage:        0 bytes
+  1045 ;; Hardware stack levels used:    1
+  1046 ;; Hardware stack levels required when called:    1
+  1047 ;; This function calls:
+  1048 ;;		_internal_16
+  1049 ;; This function is called by:
+  1050 ;;		_main
+  1051 ;; This function uses a non-reentrant model
+  1052 ;;
+  1053                           
+  1054                           
+  1055                           ;psect for function _initMain
+  1056  0703                     _initMain:	
+  1057                           
+  1058                           ;Main.c: 87: internal_16();
+  1059                           
+  1060                           ;incstack = 0
+  1061                           ; Regs used in _initMain: [wreg+status,2+status,0+pclath+cstack]
+  1062  0703  3186  26A1  3187   	fcall	_internal_16
+  1063                           
+  1064                           ;Main.c: 95: TRISBbits.TRISB0 = 0;
+  1065  0706  0021               	movlb	1	; select bank1
+  1066  0707  100D               	bcf	13,0	;volatile
+  1067                           
+  1068                           ;Main.c: 98: TRISBbits.TRISB1 = 0;
+  1069  0708  108D               	bcf	13,1	;volatile
+  1070                           
+  1071                           ;Main.c: 101: TRISBbits.TRISB2 = 0;
+  1072  0709  110D               	bcf	13,2	;volatile
+  1073                           
+  1074                           ;Main.c: 104: ANSELB = 0;
+  1075  070A  0023               	movlb	3	; select bank3
+  1076  070B  018D               	clrf	13	;volatile
+  1077                           
+  1078                           ;Main.c: 111: CCPTMRSbits.C1TSEL = 0b10;
+  1079  070C  0025               	movlb	5	; select bank5
+  1080  070D  081E               	movf	30,w	;volatile
+  1081  070E  39FC               	andlw	-4
+  1082  070F  3802               	iorlw	2
+  1083  0710  009E               	movwf	30	;volatile
+  1084                           
+  1085                           ;Main.c: 112: CCPTMRSbits.C2TSEL = 0b10;
+  1086  0711  081E               	movf	30,w	;volatile
+  1087  0712  39F3               	andlw	-13
+  1088  0713  3808               	iorlw	8
+  1089  0714  009E               	movwf	30	;volatile
+  1090                           
+  1091                           ;Main.c: 126: T6CONbits.T6CKPS = 0b00;
+  1092  0715  30FC               	movlw	-4
+  1093  0716  0028               	movlb	8	; select bank8
+  1094  0717  059E               	andwf	30,f	;volatile
+  1095                           
+  1096                           ;Main.c: 129: T6CONbits.TMR6ON = 1;
+  1097  0718  151E               	bsf	30,2	;volatile
+  1098                           
+  1099                           ;Main.c: 132: PR6 = 255;
+  1100  0719  30FF               	movlw	255
+  1101  071A  009D               	movwf	29	;volatile
+  1102                           
+  1103                           ;Main.c: 142: CCP1CONbits.DC1B = 00;
+  1104  071B  30CF               	movlw	-49
+  1105  071C  0025               	movlb	5	; select bank5
+  1106  071D  0593               	andwf	19,f	;volatile
+  1107                           
+  1108                           ;Main.c: 145: CCP1CONbits.CCP1M = 0b1100;
+  1109  071E  0813               	movf	19,w	;volatile
+  1110  071F  39F0               	andlw	-16
+  1111  0720  380C               	iorlw	12
+  1112  0721  0093               	movwf	19	;volatile
+  1113                           
+  1114                           ;Main.c: 150: CCP2CONbits.DC2B = 00;
+  1115  0722  30CF               	movlw	-49
+  1116  0723  059A               	andwf	26,f	;volatile
+  1117                           
+  1118                           ;Main.c: 153: CCP2CONbits.CCP2M = 0b1100;
+  1119  0724  081A               	movf	26,w	;volatile
+  1120  0725  39F0               	andlw	-16
+  1121  0726  380C               	iorlw	12
+  1122  0727  009A               	movwf	26	;volatile
+  1123                           
+  1124                           ;Main.c: 158: PWM3CON = 0x80;
+  1125  0728  3080               	movlw	128
+  1126  0729  002C               	movlb	12	; select bank12
+  1127  072A  0099               	movwf	25	;volatile
+  1128                           
+  1129                           ;Main.c: 161: PWM3DCH = 0x7F;
+  1130  072B  307F               	movlw	127
+  1131  072C  0098               	movwf	24	;volatile
+  1132                           
+  1133                           ;Main.c: 164: PWM3DCL = 0xC0;
+  1134  072D  30C0               	movlw	192
+  1135  072E  0097               	movwf	23	;volatile
+  1136                           
+  1137                           ;Main.c: 167: CCPTMRSbits.P3TSEL = 0b10;
+  1138  072F  0025               	movlb	5	; select bank5
+  1139  0730  081E               	movf	30,w	;volatile
+  1140  0731  39CF               	andlw	-49
+  1141  0732  3820               	iorlw	32
+  1142  0733  009E               	movwf	30	;volatile
+  1143                           
+  1144                           ;Main.c: 174: PPSLOCK = 0x55;
+  1145  0734  3055               	movlw	85
+  1146  0735  003C               	movlb	28	; select bank28
+  1147  0736  008F               	movwf	15	;volatile
+  1148                           
+  1149                           ;Main.c: 175: PPSLOCK = 0xAA;
+  1150  0737  30AA               	movlw	170
+  1151  0738  008F               	movwf	15	;volatile
+  1152                           
+  1153                           ;Main.c: 176: PPSLOCKbits.PPSLOCKED = 0x00;
+  1154  0739  100F               	bcf	15,0	;volatile
+  1155                           
+  1156                           ;Main.c: 179: RB0PPSbits.RB0PPS = 0b01100;
+  1157  073A  003D               	movlb	29	; select bank29
+  1158  073B  0818               	movf	24,w	;volatile
+  1159  073C  39E0               	andlw	-32
+  1160  073D  380C               	iorlw	12
+  1161  073E  0098               	movwf	24	;volatile
+  1162                           
+  1163                           ;Main.c: 182: RB1PPSbits.RB1PPS = 0b01101;
+  1164  073F  0819               	movf	25,w	;volatile
+  1165  0740  39E0               	andlw	-32
+  1166  0741  380D               	iorlw	13
+  1167  0742  0099               	movwf	25	;volatile
+  1168                           
+  1169                           ;Main.c: 185: RB2PPSbits.RB2PPS = 0x0E;
+  1170  0743  081A               	movf	26,w	;volatile
+  1171  0744  39E0               	andlw	-32
+  1172  0745  380E               	iorlw	14
+  1173  0746  009A               	movwf	26	;volatile
+  1174                           
+  1175                           ;Main.c: 187: PPSLOCK = 0x55;
+  1176  0747  3055               	movlw	85
+  1177  0748  003C               	movlb	28	; select bank28
+  1178  0749  008F               	movwf	15	;volatile
+  1179                           
+  1180                           ;Main.c: 188: PPSLOCK = 0xAA;
+  1181  074A  30AA               	movlw	170
+  1182  074B  008F               	movwf	15	;volatile
+  1183                           
+  1184                           ;Main.c: 189: PPSLOCKbits.PPSLOCKED = 0x01;
+  1185  074C  140F               	bsf	15,0	;volatile
+  1186  074D  0008               	return
+  1187  074E                     __end_of_initMain:	
+  1188                           
+  1189                           	psect	text2
+  1190  06A1                     __ptext2:	
+  1191 ;; *************** function _internal_16 *****************
+  1192 ;; Defined at:
+  1193 ;;		line 56 in file "16F1717_Internal.c"
+  1194 ;; Parameters:    Size  Location     Type
+  1195 ;;		None
+  1196 ;; Auto vars:     Size  Location     Type
+  1197 ;;		None
+  1198 ;; Return value:  Size  Location     Type
+  1199 ;;                  1    wreg      void 
+  1200 ;; Registers used:
+  1201 ;;		None
+  1202 ;; Tracked objects:
+  1203 ;;		On entry : 0/0
+  1204 ;;		On exit  : 0/0
+  1205 ;;		Unchanged: 0/0
+  1206 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12
+  1207 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1208 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1209 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1210 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1211 ;;Total ram usage:        0 bytes
+  1212 ;; Hardware stack levels used:    1
+  1213 ;; This function calls:
+  1214 ;;		Nothing
+  1215 ;; This function is called by:
+  1216 ;;		_initMain
+  1217 ;; This function uses a non-reentrant model
+  1218 ;;
+  1219                           
+  1220                           
+  1221                           ;psect for function _internal_16
+  1222  06A1                     _internal_16:	
+  1223                           
+  1224                           ;16F1717_Internal.c: 58: SCS0 = 0;
+  1225                           
+  1226                           ;incstack = 0
+  1227                           ; Regs used in _internal_16: []
+  1228  06A1  0021               	movlb	1	; select bank1
+  1229  06A2  1019               	bcf	25,0	;volatile
+  1230                           
+  1231                           ;16F1717_Internal.c: 59: SCS1 = 0;
+  1232  06A3  1099               	bcf	25,1	;volatile
+  1233                           
+  1234                           ;16F1717_Internal.c: 62: IRCF0 = 1;
+  1235  06A4  1599               	bsf	25,3	;volatile
+  1236                           
+  1237                           ;16F1717_Internal.c: 63: IRCF1 = 1;
+  1238  06A5  1619               	bsf	25,4	;volatile
+  1239                           
+  1240                           ;16F1717_Internal.c: 64: IRCF2 = 1;
+  1241  06A6  1699               	bsf	25,5	;volatile
+  1242                           
+  1243                           ;16F1717_Internal.c: 65: IRCF3 = 1;
+  1244  06A7  1719               	bsf	25,6	;volatile
+  1245                           
+  1246                           ;16F1717_Internal.c: 68: SPLLEN = 0;
+  1247  06A8  1399               	bcf	25,7	;volatile
+  1248  06A9  0008               	return
+  1249  06AA                     __end_of_internal_16:	
+  1250                           
+  1251                           	psect	text3
+  1252  06AA                     __ptext3:	
+  1253 ;; *************** function _RGB_LoadValue *****************
+  1254 ;; Defined at:
+  1255 ;;		line 66 in file "Main.c"
+  1256 ;; Parameters:    Size  Location     Type
+  1257 ;;  red             2    4[COMMON] unsigned int 
+  1258 ;;  green           2    6[COMMON] unsigned int 
+  1259 ;;  blue            2    8[COMMON] unsigned int 
+  1260 ;; Auto vars:     Size  Location     Type
+  1261 ;;		None
+  1262 ;; Return value:  Size  Location     Type
+  1263 ;;                  1    wreg      void 
+  1264 ;; Registers used:
+  1265 ;;		wreg, status,2, status,0, pclath, cstack
+  1266 ;; Tracked objects:
+  1267 ;;		On entry : 0/0
+  1268 ;;		On exit  : 0/0
+  1269 ;;		Unchanged: 0/0
+  1270 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12
+  1271 ;;      Params:         6       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1272 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1273 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1274 ;;      Totals:         6       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1275 ;;Total ram usage:        6 bytes
+  1276 ;; Hardware stack levels used:    1
+  1277 ;; Hardware stack levels required when called:    1
+  1278 ;; This function calls:
+  1279 ;;		_PWM1_LoadDutyValue
+  1280 ;;		_PWM2_LoadDutyValue
+  1281 ;;		_PWM3_LoadDutyValue
+  1282 ;; This function is called by:
+  1283 ;;		_main
+  1284 ;; This function uses a non-reentrant model
+  1285 ;;
+  1286                           
+  1287                           
+  1288                           ;psect for function _RGB_LoadValue
+  1289  06AA                     _RGB_LoadValue:	
+  1290                           
+  1291                           ;Main.c: 69: PWM1_LoadDutyValue(red);
+  1292                           
+  1293                           ;incstack = 0
+  1294                           ; Regs used in _RGB_LoadValue: [wreg+status,2+status,0+pclath+cstack]
+  1295  06AA  0875               	movf	RGB_LoadValue@red+1,w
+  1296  06AB  00F1               	movwf	PWM1_LoadDutyValue@dutyValue+1
+  1297  06AC  0874               	movf	RGB_LoadValue@red,w
+  1298  06AD  00F0               	movwf	PWM1_LoadDutyValue@dutyValue
+  1299  06AE  3186  26D5  3186   	fcall	_PWM1_LoadDutyValue
+  1300                           
+  1301                           ;Main.c: 70: PWM2_LoadDutyValue(green);
+  1302  06B1  0877               	movf	RGB_LoadValue@green+1,w
+  1303  06B2  00F1               	movwf	PWM2_LoadDutyValue@dutyValue+1
+  1304  06B3  0876               	movf	RGB_LoadValue@green,w
+  1305  06B4  00F0               	movwf	PWM2_LoadDutyValue@dutyValue
+  1306  06B5  3186  26EC  3186   	fcall	_PWM2_LoadDutyValue
+  1307                           
+  1308                           ;Main.c: 71: PWM3_LoadDutyValue(blue);
+  1309  06B8  0879               	movf	RGB_LoadValue@blue+1,w
+  1310  06B9  00F1               	movwf	PWM3_LoadDutyValue@dutyValue+1
+  1311  06BA  0878               	movf	RGB_LoadValue@blue,w
+  1312  06BB  00F0               	movwf	PWM3_LoadDutyValue@dutyValue
+  1313  06BC  3186  26BF         	fcall	_PWM3_LoadDutyValue
+  1314  06BE  0008               	return
+  1315  06BF                     __end_of_RGB_LoadValue:	
+  1316                           
+  1317                           	psect	text4
+  1318  06BF                     __ptext4:	
+  1319 ;; *************** function _PWM3_LoadDutyValue *****************
+  1320 ;; Defined at:
+  1321 ;;		line 54 in file "Main.c"
+  1322 ;; Parameters:    Size  Location     Type
+  1323 ;;  dutyValue       2    0[COMMON] unsigned int 
+  1324 ;; Auto vars:     Size  Location     Type
+  1325 ;;		None
+  1326 ;; Return value:  Size  Location     Type
+  1327 ;;                  1    wreg      void 
+  1328 ;; Registers used:
+  1329 ;;		wreg, status,2, status,0
+  1330 ;; Tracked objects:
+  1331 ;;		On entry : 0/0
+  1332 ;;		On exit  : 0/0
+  1333 ;;		Unchanged: 0/0
+  1334 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12
+  1335 ;;      Params:         2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1336 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1337 ;;      Temps:          2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1338 ;;      Totals:         4       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1339 ;;Total ram usage:        4 bytes
+  1340 ;; Hardware stack levels used:    1
+  1341 ;; This function calls:
+  1342 ;;		Nothing
+  1343 ;; This function is called by:
+  1344 ;;		_RGB_LoadValue
+  1345 ;;		_main
+  1346 ;; This function uses a non-reentrant model
+  1347 ;;
+  1348                           
+  1349                           
+  1350                           ;psect for function _PWM3_LoadDutyValue
+  1351  06BF                     _PWM3_LoadDutyValue:	
+  1352                           
+  1353                           ;Main.c: 56: PWM3DCH = (dutyValue & 0x03FC) >> 2;
+  1354                           
+  1355                           ;incstack = 0
+  1356                           ; Regs used in _PWM3_LoadDutyValue: [wreg+status,2+status,0]
+  1357  06BF  0871               	movf	PWM3_LoadDutyValue@dutyValue+1,w
+  1358  06C0  00F3               	movwf	??_PWM3_LoadDutyValue+1
+  1359  06C1  0870               	movf	PWM3_LoadDutyValue@dutyValue,w
+  1360  06C2  00F2               	movwf	??_PWM3_LoadDutyValue
+  1361  06C3  36F3               	lsrf	??_PWM3_LoadDutyValue+1,f
+  1362  06C4  0CF2               	rrf	??_PWM3_LoadDutyValue,f
+  1363  06C5  36F3               	lsrf	??_PWM3_LoadDutyValue+1,f
+  1364  06C6  0CF2               	rrf	??_PWM3_LoadDutyValue,f
+  1365  06C7  0872               	movf	??_PWM3_LoadDutyValue,w
+  1366  06C8  002C               	movlb	12	; select bank12
+  1367  06C9  0098               	movwf	24	;volatile
+  1368                           
+  1369                           ;Main.c: 59: PWM3DCL = (dutyValue & 0x0003) << 6;
+  1370  06CA  0870               	movf	PWM3_LoadDutyValue@dutyValue,w
+  1371  06CB  3903               	andlw	3
+  1372  06CC  00F2               	movwf	??_PWM3_LoadDutyValue
+  1373  06CD  3005               	movlw	5
+  1374  06CE                     u65:	
+  1375  06CE  35F2               	lslf	??_PWM3_LoadDutyValue,f
+  1376  06CF  3EFF               	addlw	-1
+  1377  06D0  1D03               	skipz
+  1378  06D1  2ECE               	goto	u65
+  1379  06D2  3572               	lslf	??_PWM3_LoadDutyValue,w
+  1380  06D3  0097               	movwf	23	;volatile
+  1381  06D4  0008               	return
+  1382  06D5                     __end_of_PWM3_LoadDutyValue:	
+  1383                           
+  1384                           	psect	text5
+  1385  06EC                     __ptext5:	
+  1386 ;; *************** function _PWM2_LoadDutyValue *****************
+  1387 ;; Defined at:
+  1388 ;;		line 43 in file "Main.c"
+  1389 ;; Parameters:    Size  Location     Type
+  1390 ;;  dutyValue       2    0[COMMON] unsigned int 
+  1391 ;; Auto vars:     Size  Location     Type
+  1392 ;;		None
+  1393 ;; Return value:  Size  Location     Type
+  1394 ;;                  1    wreg      void 
+  1395 ;; Registers used:
+  1396 ;;		wreg, status,2, status,0
+  1397 ;; Tracked objects:
+  1398 ;;		On entry : 0/0
+  1399 ;;		On exit  : 0/0
+  1400 ;;		Unchanged: 0/0
+  1401 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12
+  1402 ;;      Params:         2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1403 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1404 ;;      Temps:          2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1405 ;;      Totals:         4       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1406 ;;Total ram usage:        4 bytes
+  1407 ;; Hardware stack levels used:    1
+  1408 ;; This function calls:
+  1409 ;;		Nothing
+  1410 ;; This function is called by:
+  1411 ;;		_RGB_LoadValue
+  1412 ;;		_main
+  1413 ;; This function uses a non-reentrant model
+  1414 ;;
+  1415                           
+  1416                           
+  1417                           ;psect for function _PWM2_LoadDutyValue
+  1418  06EC                     _PWM2_LoadDutyValue:	
+  1419                           
+  1420                           ;Main.c: 45: CCPR2L = ((dutyValue & 0x03FC) >> 2);
+  1421                           
+  1422                           ;incstack = 0
+  1423                           ; Regs used in _PWM2_LoadDutyValue: [wreg+status,2+status,0]
+  1424  06EC  0871               	movf	PWM2_LoadDutyValue@dutyValue+1,w
+  1425  06ED  00F3               	movwf	??_PWM2_LoadDutyValue+1
+  1426  06EE  0870               	movf	PWM2_LoadDutyValue@dutyValue,w
+  1427  06EF  00F2               	movwf	??_PWM2_LoadDutyValue
+  1428  06F0  36F3               	lsrf	??_PWM2_LoadDutyValue+1,f
+  1429  06F1  0CF2               	rrf	??_PWM2_LoadDutyValue,f
+  1430  06F2  36F3               	lsrf	??_PWM2_LoadDutyValue+1,f
+  1431  06F3  0CF2               	rrf	??_PWM2_LoadDutyValue,f
+  1432  06F4  0872               	movf	??_PWM2_LoadDutyValue,w
+  1433  06F5  0025               	movlb	5	; select bank5
+  1434  06F6  0098               	movwf	24	;volatile
+  1435                           
+  1436                           ;Main.c: 48: CCP2CON = (CCP2CON & 0xCF) | ((dutyValue & 0x0003) << 4);
+  1437  06F7  0870               	movf	PWM2_LoadDutyValue@dutyValue,w
+  1438  06F8  3903               	andlw	3
+  1439  06F9  00F2               	movwf	??_PWM2_LoadDutyValue
+  1440  06FA  3004               	movlw	4
+  1441  06FB                     u55:	
+  1442  06FB  35F2               	lslf	??_PWM2_LoadDutyValue,f
+  1443  06FC  0B89               	decfsz	9,f
+  1444  06FD  2EFB               	goto	u55
+  1445  06FE  081A               	movf	26,w	;volatile
+  1446  06FF  39CF               	andlw	207
+  1447  0700  0472               	iorwf	??_PWM2_LoadDutyValue,w
+  1448  0701  009A               	movwf	26	;volatile
+  1449  0702  0008               	return
+  1450  0703                     __end_of_PWM2_LoadDutyValue:	
+  1451                           
+  1452                           	psect	text6
+  1453  06D5                     __ptext6:	
+  1454 ;; *************** function _PWM1_LoadDutyValue *****************
+  1455 ;; Defined at:
+  1456 ;;		line 32 in file "Main.c"
+  1457 ;; Parameters:    Size  Location     Type
+  1458 ;;  dutyValue       2    0[COMMON] unsigned int 
+  1459 ;; Auto vars:     Size  Location     Type
+  1460 ;;		None
+  1461 ;; Return value:  Size  Location     Type
+  1462 ;;                  1    wreg      void 
+  1463 ;; Registers used:
+  1464 ;;		wreg, status,2, status,0
+  1465 ;; Tracked objects:
+  1466 ;;		On entry : 0/0
+  1467 ;;		On exit  : 0/0
+  1468 ;;		Unchanged: 0/0
+  1469 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12
+  1470 ;;      Params:         2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1471 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1472 ;;      Temps:          2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1473 ;;      Totals:         4       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1474 ;;Total ram usage:        4 bytes
+  1475 ;; Hardware stack levels used:    1
+  1476 ;; This function calls:
+  1477 ;;		Nothing
+  1478 ;; This function is called by:
+  1479 ;;		_RGB_LoadValue
+  1480 ;;		_main
+  1481 ;; This function uses a non-reentrant model
+  1482 ;;
+  1483                           
+  1484                           
+  1485                           ;psect for function _PWM1_LoadDutyValue
+  1486  06D5                     _PWM1_LoadDutyValue:	
+  1487                           
+  1488                           ;Main.c: 34: CCPR1L = ((dutyValue & 0x03FC) >> 2);
+  1489                           
+  1490                           ;incstack = 0
+  1491                           ; Regs used in _PWM1_LoadDutyValue: [wreg+status,2+status,0]
+  1492  06D5  0871               	movf	PWM1_LoadDutyValue@dutyValue+1,w
+  1493  06D6  00F3               	movwf	??_PWM1_LoadDutyValue+1
+  1494  06D7  0870               	movf	PWM1_LoadDutyValue@dutyValue,w
+  1495  06D8  00F2               	movwf	??_PWM1_LoadDutyValue
+  1496  06D9  36F3               	lsrf	??_PWM1_LoadDutyValue+1,f
+  1497  06DA  0CF2               	rrf	??_PWM1_LoadDutyValue,f
+  1498  06DB  36F3               	lsrf	??_PWM1_LoadDutyValue+1,f
+  1499  06DC  0CF2               	rrf	??_PWM1_LoadDutyValue,f
+  1500  06DD  0872               	movf	??_PWM1_LoadDutyValue,w
+  1501  06DE  0025               	movlb	5	; select bank5
+  1502  06DF  0091               	movwf	17	;volatile
+  1503                           
+  1504                           ;Main.c: 37: CCP1CON = (CCP1CON & 0xCF) | ((dutyValue & 0x0003) << 4);
+  1505  06E0  0870               	movf	PWM1_LoadDutyValue@dutyValue,w
+  1506  06E1  3903               	andlw	3
+  1507  06E2  00F2               	movwf	??_PWM1_LoadDutyValue
+  1508  06E3  3004               	movlw	4
+  1509  06E4                     u45:	
+  1510  06E4  35F2               	lslf	??_PWM1_LoadDutyValue,f
+  1511  06E5  0B89               	decfsz	9,f
+  1512  06E6  2EE4               	goto	u45
+  1513  06E7  0813               	movf	19,w	;volatile
+  1514  06E8  39CF               	andlw	207
+  1515  06E9  0472               	iorwf	??_PWM1_LoadDutyValue,w
+  1516  06EA  0093               	movwf	19	;volatile
+  1517  06EB  0008               	return
+  1518  06EC                     __end_of_PWM1_LoadDutyValue:	
+  1519  007E                     btemp	set	126	;btemp
+  1520  007E                     wtemp0	set	126
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        0
+    BSS         0
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON           14     12      12
+    BANK0            80      0       0
+    BANK1            80      0       0
+    BANK2            80      0       0
+    BANK3            80      0       0
+    BANK4            80      0       0
+    BANK5            80      0       0
+    BANK6            80      0       0
+    BANK7            80      0       0
+    BANK8            80      0       0
+    BANK9            80      0       0
+    BANK10           80      0       0
+    BANK11           80      0       0
+    BANK12           48      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMMON
+
+    _main->_RGB_LoadValue
+    _RGB_LoadValue->_PWM1_LoadDutyValue
+    _RGB_LoadValue->_PWM2_LoadDutyValue
+    _RGB_LoadValue->_PWM3_LoadDutyValue
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _main in BANK4
+
+    None.
+
+Critical Paths under _main in BANK5
+
+    None.
+
+Critical Paths under _main in BANK6
+
+    None.
+
+Critical Paths under _main in BANK7
+
+    None.
+
+Critical Paths under _main in BANK8
+
+    None.
+
+Critical Paths under _main in BANK9
+
+    None.
+
+Critical Paths under _main in BANK10
+
+    None.
+
+Critical Paths under _main in BANK11
+
+    None.
+
+Critical Paths under _main in BANK12
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 2     2      0    1620
+                                             10 COMMON     2     2      0
+                 _PWM1_LoadDutyValue
+                 _PWM2_LoadDutyValue
+                 _PWM3_LoadDutyValue
+                      _RGB_LoadValue
+                           _initMain
+ ---------------------------------------------------------------------------------
+ (1) _initMain                                             0     0      0       0
+                        _internal_16
+ ---------------------------------------------------------------------------------
+ (2) _internal_16                                          0     0      0       0
+ ---------------------------------------------------------------------------------
+ (1) _RGB_LoadValue                                        6     0      6    1230
+                                              4 COMMON     6     0      6
+                 _PWM1_LoadDutyValue
+                 _PWM2_LoadDutyValue
+                 _PWM3_LoadDutyValue
+ ---------------------------------------------------------------------------------
+ (2) _PWM3_LoadDutyValue                                   4     2      2     130
+                                              0 COMMON     4     2      2
+ ---------------------------------------------------------------------------------
+ (2) _PWM2_LoadDutyValue                                   4     2      2     130
+                                              0 COMMON     4     2      2
+ ---------------------------------------------------------------------------------
+ (2) _PWM1_LoadDutyValue                                   4     2      2     130
+                                              0 COMMON     4     2      2
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 2
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _PWM1_LoadDutyValue
+   _PWM2_LoadDutyValue
+   _PWM3_LoadDutyValue
+   _RGB_LoadValue
+     _PWM1_LoadDutyValue
+     _PWM2_LoadDutyValue
+     _PWM3_LoadDutyValue
+   _initMain
+     _internal_16
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BIGRAM             3F0      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+BITCOMMON            E      0       0       1        0.0%
+BITSFR0              0      0       0       1        0.0%
+SFR0                 0      0       0       1        0.0%
+COMMON               E      C       C       2       85.7%
+BITSFR1              0      0       0       2        0.0%
+SFR1                 0      0       0       2        0.0%
+BITSFR2              0      0       0       3        0.0%
+SFR2                 0      0       0       3        0.0%
+STACK                0      0       0       3        0.0%
+BITBANK0            50      0       0       4        0.0%
+BITSFR3              0      0       0       4        0.0%
+SFR3                 0      0       0       4        0.0%
+BANK0               50      0       0       5        0.0%
+BITSFR4              0      0       0       5        0.0%
+SFR4                 0      0       0       5        0.0%
+BITBANK1            50      0       0       6        0.0%
+BITSFR5              0      0       0       6        0.0%
+SFR5                 0      0       0       6        0.0%
+BANK1               50      0       0       7        0.0%
+BITSFR6              0      0       0       7        0.0%
+SFR6                 0      0       0       7        0.0%
+BITBANK2            50      0       0       8        0.0%
+BITSFR7              0      0       0       8        0.0%
+SFR7                 0      0       0       8        0.0%
+BANK2               50      0       0       9        0.0%
+BITSFR8              0      0       0       9        0.0%
+SFR8                 0      0       0       9        0.0%
+BITBANK3            50      0       0      10        0.0%
+BITSFR9              0      0       0      10        0.0%
+SFR9                 0      0       0      10        0.0%
+BANK3               50      0       0      11        0.0%
+BITSFR10             0      0       0      11        0.0%
+SFR10                0      0       0      11        0.0%
+BITBANK4            50      0       0      12        0.0%
+BITSFR11             0      0       0      12        0.0%
+SFR11                0      0       0      12        0.0%
+BANK4               50      0       0      13        0.0%
+BITSFR12             0      0       0      13        0.0%
+SFR12                0      0       0      13        0.0%
+BITBANK5            50      0       0      14        0.0%
+BITSFR13             0      0       0      14        0.0%
+SFR13                0      0       0      14        0.0%
+BANK5               50      0       0      15        0.0%
+BITSFR14             0      0       0      15        0.0%
+SFR14                0      0       0      15        0.0%
+BITBANK6            50      0       0      16        0.0%
+BITSFR15             0      0       0      16        0.0%
+SFR15                0      0       0      16        0.0%
+BANK6               50      0       0      17        0.0%
+BITSFR16             0      0       0      17        0.0%
+SFR16                0      0       0      17        0.0%
+BITBANK7            50      0       0      18        0.0%
+BITSFR17             0      0       0      18        0.0%
+SFR17                0      0       0      18        0.0%
+BANK7               50      0       0      19        0.0%
+BITSFR18             0      0       0      19        0.0%
+SFR18                0      0       0      19        0.0%
+BITSFR19             0      0       0      20        0.0%
+SFR19                0      0       0      20        0.0%
+ABS                  0      0       0      20        0.0%
+BITBANK8            50      0       0      21        0.0%
+BITSFR20             0      0       0      21        0.0%
+SFR20                0      0       0      21        0.0%
+BANK8               50      0       0      22        0.0%
+BITSFR21             0      0       0      22        0.0%
+SFR21                0      0       0      22        0.0%
+BITBANK9            50      0       0      23        0.0%
+BITSFR22             0      0       0      23        0.0%
+SFR22                0      0       0      23        0.0%
+BANK9               50      0       0      24        0.0%
+BITSFR23             0      0       0      24        0.0%
+SFR23                0      0       0      24        0.0%
+BITBANK10           50      0       0      25        0.0%
+BITSFR24             0      0       0      25        0.0%
+SFR24                0      0       0      25        0.0%
+BANK10              50      0       0      26        0.0%
+BITSFR25             0      0       0      26        0.0%
+SFR25                0      0       0      26        0.0%
+BITBANK11           50      0       0      27        0.0%
+BITSFR26             0      0       0      27        0.0%
+SFR26                0      0       0      27        0.0%
+BANK11              50      0       0      28        0.0%
+BITSFR27             0      0       0      28        0.0%
+SFR27                0      0       0      28        0.0%
+BITBANK12           30      0       0      29        0.0%
+BITSFR28             0      0       0      29        0.0%
+SFR28                0      0       0      29        0.0%
+BANK12              30      0       0      30        0.0%
+BITSFR29             0      0       0      30        0.0%
+SFR29                0      0       0      30        0.0%
+BITSFR30             0      0       0      31        0.0%
+SFR30                0      0       0      31        0.0%
+DATA                 0      0       0      31        0.0%
+BITSFR31             0      0       0      32        0.0%
+SFR31                0      0       0      32        0.0%
+
+
+Microchip Technology PIC Macro Assembler V1.41 build -162212810 
+Symbol Table                                                                                   Tue Apr 18 11:22:55 2017
+
+                __CFG_CP$OFF 0000                           l95 0763                           u45 06E4  
+                         u55 06FB                           u65 06CE                           u77 0775  
+                         u87 078E                           u97 07A7                          u107 07C1  
+                        u117 07DB                          u127 07F5                          _PR6 041D  
+               __CFG_BORV$LO 0000                          wreg 0009                 __CFG_IESO$ON 0000  
+      __end_of_RGB_LoadValue 06BF                 __CFG_LVP$OFF 0000                         _SCS0 04C8  
+                       _SCS1 04C9                 __CFG_WRT$OFF 0000                         _main 074E  
+                       btemp 007E                         start 0002                        ?_main 0070  
+              __CFG_WDTE$OFF 0000                        _IRCF0 04CB                        _IRCF1 04CC  
+                      _IRCF2 04CD                        _IRCF3 04CE               __CFG_FCMEN$OFF 0000  
+             __CFG_BOREN$OFF 0000                        wtemp0 007E                 ?_internal_16 0070  
+             __CFG_MCLRE$OFF 0000              __initialization 07FD                 __end_of_main 07FD  
+             __CFG_LPBOR$OFF 0000                       ??_main 007A               __CFG_PLLEN$OFF 0000  
+                     _CCPR1L 0291                       _CCPR2L 0298               __CFG_ZCDDIS$ON 0000  
+                     _ANSELB 018D                       _SPLLEN 04CF               __CFG_PWRTE$OFF 0000  
+__size_of_PWM3_LoadDutyValue 0016               __CFG_STVREN$ON 0000             __end_of_initMain 074E  
+           RGB_LoadValue@red 0074      __end_of__initialization 07FD   __end_of_PWM2_LoadDutyValue 0703  
+PWM1_LoadDutyValue@dutyValue 0070               __pcstackCOMMON 0070           _PWM1_LoadDutyValue 06D5  
+        ?_PWM1_LoadDutyValue 0070         ??_PWM1_LoadDutyValue 0072                   __pmaintext 074E  
+       __size_of_internal_16 0009              __CFG_PPS1WAY$ON 0000                      _CCP1CON 0293  
+                    _CCP2CON 029A                      _PWM3DCH 0618                      _PWM3DCL 0617  
+                    _PWM3CON 0619                      _PPSLOCK 0E0F                    ?_initMain 0070  
+     __size_of_RGB_LoadValue 0015                      __ptext1 0703                      __ptext2 06A1  
+                    __ptext3 06AA                      __ptext4 06BF                      __ptext5 06EC  
+                    __ptext6 06D5                    _T6CONbits 041E         end_of_initialization 07FD  
+          RGB_LoadValue@blue 0078                   ??_initMain 0070             __CFG_FOSC$INTOSC 0000  
+                  _TRISBbits 008D                _RGB_LoadValue 06AA                  _CCP1CONbits 0293  
+                _CCP2CONbits 029A   __end_of_PWM3_LoadDutyValue 06D5           _PWM2_LoadDutyValue 06EC  
+        start_initialization 07FD          ?_PWM2_LoadDutyValue 0070               ?_RGB_LoadValue 0074  
+       ??_PWM2_LoadDutyValue 0072  PWM2_LoadDutyValue@dutyValue 0070                  _CCPTMRSbits 029E  
+                  ___latbits 0002                ??_internal_16 0070            __size_of_initMain 004B  
+__size_of_PWM1_LoadDutyValue 0017              ??_RGB_LoadValue 007A          __end_of_internal_16 06AA  
+         _PWM3_LoadDutyValue 06BF          ?_PWM3_LoadDutyValue 0070                     _initMain 0703  
+              __size_of_main 00AF                  _internal_16 06A1                   _RB0PPSbits 0E98  
+                 _RB1PPSbits 0E99                   _RB2PPSbits 0E9A         ??_PWM3_LoadDutyValue 0072  
+         RGB_LoadValue@green 0076            __CFG_CLKOUTEN$OFF 0000                  _PPSLOCKbits 0E0F  
+__size_of_PWM2_LoadDutyValue 0017  PWM3_LoadDutyValue@dutyValue 0070   __end_of_PWM1_LoadDutyValue 06EC  

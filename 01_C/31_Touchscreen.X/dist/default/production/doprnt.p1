@@ -1,0 +1,544 @@
+Version 3.2 HI-TECH Software Intermediate Code
+"10 C:\Program Files (x86)\Microchip\xc8\v1.41\include\stdarg.h
+[v ___va_start `(*v ~T0 @X0 0 ef ]
+[p i ___va_start ]
+"7 C:\Program Files (x86)\Microchip\xc8\v1.41\include\ctype.h
+[v _isdigit `(b ~T0 @X0 0 ef1`uc ]
+"13 C:\Program Files (x86)\Microchip\xc8\v1.41\include\stdarg.h
+[v ___va_arg `(*v ~T0 @X0 0 ev`*v ]
+[p i ___va_arg ]
+[; ;__size_t.h: 4: typedef unsigned size_t;
+[; ;stdarg.h: 7: typedef void * va_list[1];
+[; ;stdarg.h: 10: extern void * __va_start(void);
+[; ;stdarg.h: 13: extern void * __va_arg(void *, ...);
+[; ;stdio.h: 43: struct __prbuf
+[; ;stdio.h: 44: {
+[; ;stdio.h: 45: char * ptr;
+[; ;stdio.h: 46: void (* func)(char);
+[; ;stdio.h: 47: };
+[; ;errno.h: 29: extern int errno;
+[; ;conio.h: 12: extern void init_uart(void);
+[; ;conio.h: 14: extern char getch(void);
+[; ;conio.h: 15: extern char getche(void);
+[; ;conio.h: 16: extern void putch(char);
+[; ;conio.h: 17: extern void ungetch(char);
+[; ;conio.h: 19: extern __bit kbhit(void);
+[; ;conio.h: 23: extern char * cgets(char *);
+[; ;conio.h: 24: extern void cputs(const char *);
+[; ;stdio.h: 88: extern int cprintf(char *, ...);
+[; ;stdio.h: 93: extern int _doprnt(struct __prbuf *, const register char *, register va_list);
+[; ;stdio.h: 183: extern char * gets(char *);
+[; ;stdio.h: 184: extern int puts(const char *);
+[; ;stdio.h: 185: extern int scanf(const char *, ...) __attribute__((unsupported("scanf() is not supported by this compiler")));
+[; ;stdio.h: 186: extern int sscanf(const char *, const char *, ...) __attribute__((unsupported("sscanf() is not supported by this compiler")));
+[; ;stdio.h: 187: extern int vprintf(const char *, va_list) __attribute__((unsupported("vprintf() is not supported by this compiler")));
+[; ;stdio.h: 188: extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
+[; ;stdio.h: 189: extern int vscanf(const char *, va_list ap) __attribute__((unsupported("vscanf() is not supported by this compiler")));
+[; ;stdio.h: 190: extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
+[; ;stdio.h: 194: extern int sprintf(char *, const char *, ...);
+[; ;stdio.h: 195: extern int printf(const char *, ...);
+[; ;ctype.h: 4: extern __bit isalpha(char);
+[; ;ctype.h: 5: extern __bit isupper(char);
+[; ;ctype.h: 6: extern __bit islower(char);
+[; ;ctype.h: 7: extern __bit isdigit(char);
+[; ;ctype.h: 8: extern __bit isxdigit(char);
+[; ;ctype.h: 9: extern __bit isspace(char);
+[; ;ctype.h: 10: extern __bit ispunct(char);
+[; ;ctype.h: 11: extern __bit isalnum(char);
+[; ;ctype.h: 12: extern __bit isprint(char);
+[; ;ctype.h: 13: extern __bit isgraph(char);
+[; ;ctype.h: 14: extern __bit iscntrl(char);
+[; ;ctype.h: 17: extern char toupper(char);
+[; ;ctype.h: 18: extern char tolower(char);
+[; ;stdlib.h: 7: typedef unsigned short wchar_t;
+[; ;stdlib.h: 15: typedef struct {
+[; ;stdlib.h: 16: int rem;
+[; ;stdlib.h: 17: int quot;
+[; ;stdlib.h: 18: } div_t;
+[; ;stdlib.h: 19: typedef struct {
+[; ;stdlib.h: 20: unsigned rem;
+[; ;stdlib.h: 21: unsigned quot;
+[; ;stdlib.h: 22: } udiv_t;
+[; ;stdlib.h: 23: typedef struct {
+[; ;stdlib.h: 24: long quot;
+[; ;stdlib.h: 25: long rem;
+[; ;stdlib.h: 26: } ldiv_t;
+[; ;stdlib.h: 27: typedef struct {
+[; ;stdlib.h: 28: unsigned long quot;
+[; ;stdlib.h: 29: unsigned long rem;
+[; ;stdlib.h: 30: } uldiv_t;
+[; ;stdlib.h: 53: extern double atof(const char *);
+[; ;stdlib.h: 54: extern double strtod(const char *, const char **);
+[; ;stdlib.h: 55: extern int atoi(const char *);
+[; ;stdlib.h: 56: extern unsigned xtoi(const char *);
+[; ;stdlib.h: 57: extern long atol(const char *);
+[; ;stdlib.h: 58: extern long strtol(const char *, char **, int);
+[; ;stdlib.h: 60: extern int rand(void);
+[; ;stdlib.h: 61: extern void srand(unsigned int);
+[; ;stdlib.h: 62: extern void * calloc(size_t, size_t);
+[; ;stdlib.h: 63: extern div_t div(int numer, int denom);
+[; ;stdlib.h: 64: extern udiv_t udiv(unsigned numer, unsigned denom);
+[; ;stdlib.h: 65: extern ldiv_t ldiv(long numer, long denom);
+[; ;stdlib.h: 66: extern uldiv_t uldiv(unsigned long numer,unsigned long denom);
+[; ;stdlib.h: 67: extern unsigned long _lrotl(unsigned long value, unsigned int shift);
+[; ;stdlib.h: 68: extern unsigned long _lrotr(unsigned long value, unsigned int shift);
+[; ;stdlib.h: 69: extern unsigned int _rotl(unsigned int value, unsigned int shift);
+[; ;stdlib.h: 70: extern unsigned int _rotr(unsigned int value, unsigned int shift);
+[; ;stdlib.h: 75: extern void * malloc(size_t);
+[; ;stdlib.h: 76: extern void free(void *);
+[; ;stdlib.h: 77: extern void * realloc(void *, size_t);
+[; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
+[; ;stdlib.h: 86: extern int atexit(void (*)(void));
+[; ;stdlib.h: 87: extern char * getenv(const char *);
+[; ;stdlib.h: 88: extern char ** environ;
+[; ;stdlib.h: 89: extern int system(char *);
+[; ;stdlib.h: 90: extern void qsort(void *, size_t, size_t, int (*)(const void *, const void *));
+[; ;stdlib.h: 91: extern void * bsearch(const void *, void *, size_t, size_t, int(*)(const void *, const void *));
+[; ;stdlib.h: 92: extern int abs(int);
+[; ;stdlib.h: 93: extern long labs(long);
+[; ;stdlib.h: 95: extern char * itoa(char * buf, int val, int base);
+[; ;stdlib.h: 96: extern char * utoa(char * buf, unsigned val, int base);
+[; ;stdlib.h: 101: extern char * ltoa(char * buf, long val, int base);
+[; ;stdlib.h: 102: extern char * ultoa(char * buf, unsigned long val, int base);
+[; ;stdlib.h: 104: extern char * ftoa(float f, int * status);
+[; ;string.h: 14: extern void * memcpy(void *, const void *, size_t);
+[; ;string.h: 15: extern void * memmove(void *, const void *, size_t);
+[; ;string.h: 16: extern void * memset(void *, int, size_t);
+[; ;string.h: 20: extern void * __builtin_memcpy(void *, const void *, size_t);
+[; ;string.h: 34: extern char * strcat(char *, const char *);
+[; ;string.h: 35: extern char * strcpy(char *, const char *);
+[; ;string.h: 36: extern char * strncat(char *, const char *, size_t);
+[; ;string.h: 37: extern char * strncpy(char *, const char *, size_t);
+[; ;string.h: 38: extern char * strdup(const char *);
+[; ;string.h: 39: extern char * strtok(char *, const char *);
+[; ;string.h: 42: extern int memcmp(const void *, const void *, size_t);
+[; ;string.h: 43: extern int strcmp(const char *, const char *);
+[; ;string.h: 44: extern int stricmp(const char *, const char *);
+[; ;string.h: 45: extern int strncmp(const char *, const char *, size_t);
+[; ;string.h: 46: extern int strnicmp(const char *, const char *, size_t);
+[; ;string.h: 47: extern void * memchr(const void *, int, size_t);
+[; ;string.h: 48: extern size_t strcspn(const char *, const char *);
+[; ;string.h: 49: extern char * strpbrk(const char *, const char *);
+[; ;string.h: 50: extern size_t strspn(const char *, const char *);
+[; ;string.h: 51: extern char * strstr(const char *, const char *);
+[; ;string.h: 52: extern char * stristr(const char *, const char *);
+[; ;string.h: 53: extern char * strerror(int);
+[; ;string.h: 54: extern size_t strlen(const char *);
+[; ;string.h: 55: extern char * strchr(const char *, int);
+[; ;string.h: 56: extern char * strichr(const char *, int);
+[; ;string.h: 57: extern char * strrchr(const char *, int);
+[; ;string.h: 58: extern char * strrichr(const char *, int);
+[; ;sys.h: 22: extern int execl(char *, char *, ...);
+[; ;sys.h: 23: extern int execv(char *, char **);
+[; ;sys.h: 24: extern int execve(char *, char **, char **);
+[; ;sys.h: 25: extern int execle(char *, char *, ...);
+[; ;sys.h: 26: extern int execvp(char *, char **);
+[; ;sys.h: 27: extern int execlp(char *, char *, ...);
+[; ;sys.h: 28: extern int getpid(void);
+[; ;sys.h: 29: extern char * mktemp(char *);
+[; ;sys.h: 43: extern int spawnl(char *, char *, ...);
+[; ;sys.h: 44: extern int spawnv(char *, char **);
+[; ;sys.h: 45: extern int spawnle(char *, char *, ...);
+[; ;sys.h: 46: extern int spawnve(char *, char **, char **);
+[; ;sys.h: 47: extern int spawnlp(char *, char *, ...);
+[; ;sys.h: 48: extern int spawnvp(char *, char **);
+[; ;sys.h: 50: extern int chdir(char *);
+[; ;sys.h: 51: extern int chdrv(char *);
+[; ;sys.h: 52: extern int mkdir(char *);
+[; ;sys.h: 53: extern int rmdir(char *);
+[; ;sys.h: 54: extern char * getcwd(char *);
+[; ;sys.h: 55: extern void persist_validate(void);
+[; ;sys.h: 56: extern int persist_check(int);
+[; ;sys.h: 57: extern char * getdrv(void);
+[; ;sys.h: 58: extern char ** _getargs(char *, char *);
+[; ;sys.h: 59: extern int _argc_;
+[; ;sys.h: 70: extern void * sbrk(size_t);
+[; ;sys.h: 71: extern void brk(void *);
+[; ;sys.h: 77: extern int _pnum(unsigned long, signed char, signed char, unsigned char, unsigned char, struct __prbuf *, unsigned char);
+[; ;sys.h: 78: extern int _fnum(double, short, short, short, struct __prbuf *, short);
+[; ;math.h: 30: extern double fabs(double);
+[; ;math.h: 31: extern double floor(double);
+[; ;math.h: 32: extern double ceil(double);
+[; ;math.h: 33: extern double modf(double, double *);
+[; ;math.h: 34: extern double sqrt(double);
+[; ;math.h: 35: extern double atof(const char *);
+[; ;math.h: 36: extern double sin(double) ;
+[; ;math.h: 37: extern double cos(double) ;
+[; ;math.h: 38: extern double tan(double) ;
+[; ;math.h: 39: extern double asin(double) ;
+[; ;math.h: 40: extern double acos(double) ;
+[; ;math.h: 41: extern double atan(double);
+[; ;math.h: 42: extern double atan2(double, double) ;
+[; ;math.h: 43: extern double log(double);
+[; ;math.h: 44: extern double log10(double);
+[; ;math.h: 45: extern double pow(double, double) ;
+[; ;math.h: 46: extern double exp(double) ;
+[; ;math.h: 47: extern double sinh(double) ;
+[; ;math.h: 48: extern double cosh(double) ;
+[; ;math.h: 49: extern double tanh(double);
+[; ;math.h: 50: extern double eval_poly(double, const double *, int);
+[; ;math.h: 51: extern double frexp(double, int *);
+[; ;math.h: 52: extern double ldexp(double, int);
+[; ;math.h: 53: extern double fmod(double, double);
+[; ;math.h: 54: extern double trunc(double);
+[; ;math.h: 55: extern double round(double);
+"13 C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\doprnt.c
+[p n 350 ]
+"354
+[v _dpowers `Cul ~T0 @X0 -> 0 `x s ]
+[i _dpowers
+:U ..
+-> -> -> 1 `i `l `ul
+-> -> -> 10 `i `l `ul
+-> -> -> 100 `i `l `ul
+-> -> -> 1000 `i `l `ul
+-> -> -> 10000 `i `l `ul
+"356
+-> -> 100000 `l `ul
+-> -> 1000000 `l `ul
+-> -> 10000000 `l `ul
+-> -> 100000000 `l `ul
+"359
+-> -> 1000000000 `l `ul
+..
+]
+[; ;doprnt.c: 354: const static unsigned long dpowers[] = {1, 10, 100, 1000, 10000,
+[; ;doprnt.c: 356: 100000, 1000000, 10000000, 100000000,
+[; ;doprnt.c: 357: 1000000000
+[; ;doprnt.c: 359: };
+"492
+[v _sprintf `(i ~T0 @X0 1 e1v`*uc`*Cuc ]
+"493
+{
+[; ;doprnt.c: 455: int
+[; ;doprnt.c: 492: sprintf(char * sp, const char * f, ...)
+[; ;doprnt.c: 493: {
+[e :U _sprintf ]
+"492
+[v _sp `*uc ~T0 @X0 1 r1 ]
+[v _f `*Cuc ~T0 @X0 1 r0 ]
+"493
+[f ]
+"494
+[v _ap `*v ~T0 @X0 -> -> 1 `i `ux a ]
+"499
+[v _c `c ~T0 @X0 1 a ]
+"501
+[v _width `i ~T0 @X0 1 a ]
+"504
+[v _prec `i ~T0 @X0 1 a ]
+"508
+[v _flag `uc ~T0 @X0 1 a ]
+"523
+[u S6 `ul 1 `d 1 ]
+[n S6 . vd integ ]
+"526
+[v _tmpval `S6 ~T0 @X0 1 a ]
+"528
+[v _val `ul ~T0 @X0 1 a ]
+"529
+[v _len `ui ~T0 @X0 1 a ]
+"530
+[v _cp `*Cuc ~T0 @X0 1 a ]
+[; ;doprnt.c: 494: va_list ap;
+[; ;doprnt.c: 499: signed char c;
+[; ;doprnt.c: 501: int width;
+[; ;doprnt.c: 504: int prec;
+[; ;doprnt.c: 508: unsigned char flag;
+[; ;doprnt.c: 523: union {
+[; ;doprnt.c: 524: unsigned long vd;
+[; ;doprnt.c: 525: double integ;
+[; ;doprnt.c: 526: } tmpval;
+[; ;doprnt.c: 528: unsigned long val;
+[; ;doprnt.c: 529: unsigned len;
+[; ;doprnt.c: 530: const char * cp;
+[; ;doprnt.c: 533: *ap = __va_start();
+"533
+[e = *U &U _ap ( ___va_start ..  ]
+[; ;doprnt.c: 536: while(c = *f++) {
+"536
+[e $U 8  ]
+[e :U 9 ]
+{
+[; ;doprnt.c: 538: if(c != '%')
+"538
+[e $ ! != -> -> _c `i `ui -> 37 `ui 11  ]
+[; ;doprnt.c: 540: {
+"540
+{
+[; ;doprnt.c: 541: ((*sp++ = (c)));
+"541
+[e = *U ++ _sp * -> -> 1 `i `x -> -> # *U _sp `i `x -> _c `uc ]
+[; ;doprnt.c: 542: continue;
+"542
+[e $U 8  ]
+"543
+}
+[e :U 11 ]
+[; ;doprnt.c: 543: }
+[; ;doprnt.c: 546: width = 0;
+"546
+[e = _width -> 0 `i ]
+[; ;doprnt.c: 548: flag = 0;
+"548
+[e = _flag -> -> 0 `i `uc ]
+[; ;doprnt.c: 597: if(isdigit((unsigned)*f)) {
+"597
+[e $ ! ( _isdigit (1 -> -> *U _f `ui `uc 12  ]
+{
+[; ;doprnt.c: 598: width = 0;
+"598
+[e = _width -> 0 `i ]
+[; ;doprnt.c: 599: do {
+"599
+[e :U 15 ]
+{
+[; ;doprnt.c: 600: width *= 10;
+"600
+[e =* _width -> 10 `i ]
+[; ;doprnt.c: 601: width += *f++ - '0';
+"601
+[e =+ _width -> - -> *U ++ _f * -> -> 1 `i `x -> -> # *U _f `i `x `ui -> 48 `ui `i ]
+"602
+}
+[; ;doprnt.c: 602: } while(isdigit((unsigned)*f));
+[e $ ( _isdigit (1 -> -> *U _f `ui `uc 15  ]
+[e :U 14 ]
+"608
+}
+[e :U 12 ]
+[; ;doprnt.c: 608: }
+[; ;doprnt.c: 611: if(*f == '.') {
+"611
+[e $ ! == -> *U _f `ui -> 46 `ui 16  ]
+{
+[; ;doprnt.c: 612: flag |= 0x4000;
+"612
+[e =| _flag -> -> 16384 `i `uc ]
+[; ;doprnt.c: 613: f++;
+"613
+[e ++ _f * -> -> 1 `i `x -> -> # *U _f `i `x ]
+[; ;doprnt.c: 620: {
+"620
+{
+[; ;doprnt.c: 621: prec = 0;
+"621
+[e = _prec -> 0 `i ]
+[; ;doprnt.c: 622: while(isdigit((unsigned)*f))
+"622
+[e $U 17  ]
+[e :U 18 ]
+[; ;doprnt.c: 623: prec = prec*10 + *f++ - '0';
+"623
+[e = _prec -> - -> + * _prec -> 10 `i -> *U ++ _f * -> -> 1 `i `x -> -> # *U _f `i `x `i `ui -> 48 `ui `i ]
+[e :U 17 ]
+"622
+[e $ ( _isdigit (1 -> -> *U _f `ui `uc 18  ]
+[e :U 19 ]
+"624
+}
+"625
+}
+[; ;doprnt.c: 624: }
+[; ;doprnt.c: 625: } else {
+[e $U 20  ]
+[e :U 16 ]
+{
+[; ;doprnt.c: 626: prec = 0;
+"626
+[e = _prec -> 0 `i ]
+"630
+}
+[e :U 20 ]
+[; ;doprnt.c: 630: }
+[; ;doprnt.c: 633: loop:
+"633
+[e :U 21 ]
+[; ;doprnt.c: 635: switch(c = *f++) {
+"635
+[e $U 23  ]
+{
+[; ;doprnt.c: 637: case 0:
+"637
+[e :U 24 ]
+[; ;doprnt.c: 638: goto alldone;
+"638
+[e $U 25  ]
+[; ;doprnt.c: 641: case 'l':
+"641
+[e :U 26 ]
+[; ;doprnt.c: 643: flag |= 0x10;
+"643
+[e =| _flag -> -> 16 `i `uc ]
+[; ;doprnt.c: 644: goto loop;
+"644
+[e $U 21  ]
+[; ;doprnt.c: 802: default:
+"802
+[e :U 27 ]
+[; ;doprnt.c: 813: continue;
+"813
+[e $U 8  ]
+[; ;doprnt.c: 817: case 'u':
+"817
+[e :U 28 ]
+[; ;doprnt.c: 818: flag |= 0xC0;
+"818
+[e =| _flag -> -> 192 `i `uc ]
+[; ;doprnt.c: 819: break;
+"819
+[e $U 22  ]
+"822
+}
+[; ;doprnt.c: 822: }
+[e $U 22  ]
+"635
+[e :U 23 ]
+[e [\ = _c -> *U ++ _f * -> -> 1 `i `x -> -> # *U _f `i `x `c , $ -> -> 0 `i `c 24
+ , $ -> -> 108 `ui `c 26
+ , $ -> -> 117 `ui `c 28
+ 27 ]
+"822
+[e :U 22 ]
+[; ;doprnt.c: 1273: {
+"1273
+{
+[; ;doprnt.c: 1281: if(flag & 0x10)
+"1281
+[e $ ! != & -> _flag `i -> 16 `i -> 0 `i 29  ]
+[; ;doprnt.c: 1282: val = (*(unsigned long *)__va_arg((*(unsigned long **)ap), (unsigned long)0));
+"1282
+[e = _val *U -> ( ___va_arg , (. -> *U -> &U _ap `**ul `*v -> -> 0 `i `ul `*ul ]
+[e $U 30  ]
+"1283
+[e :U 29 ]
+[; ;doprnt.c: 1283: else
+[; ;doprnt.c: 1286: val = (*(unsigned *)__va_arg((*(unsigned **)ap), (unsigned)0));
+"1286
+[e = _val -> *U -> ( ___va_arg , (. -> *U -> &U _ap `**ui `*v -> -> 0 `i `ui `*ui `ul ]
+[e :U 30 ]
+"1287
+}
+[; ;doprnt.c: 1287: }
+[; ;doprnt.c: 1290: if(prec == 0 && val == 0)
+"1290
+[e $ ! && == _prec -> 0 `i == _val -> -> -> 0 `i `l `ul 31  ]
+[; ;doprnt.c: 1291: prec++;
+"1291
+[e ++ _prec -> 1 `i ]
+[e :U 31 ]
+[; ;doprnt.c: 1305: for(c = 1 ; c != sizeof dpowers/sizeof dpowers[0] ; c++)
+"1305
+{
+[e = _c -> -> 1 `i `c ]
+[e $ != -> -> _c `i `ui / -> # _dpowers `ui -> # *U + &U _dpowers * -> -> -> 0 `i `ui `ux -> -> # *U &U _dpowers `ui `ux `ui 32  ]
+[e $U 33  ]
+"1306
+[e :U 32 ]
+[; ;doprnt.c: 1306: if(val < dpowers[c])
+[e $ ! < _val *U + &U _dpowers * -> -> _c `uc `ux -> -> # *U &U _dpowers `ui `ux 35  ]
+[; ;doprnt.c: 1307: break;
+"1307
+[e $U 33  ]
+[e :U 35 ]
+"1305
+[e ++ _c -> -> 1 `i `c ]
+[e $ != -> -> _c `i `ui / -> # _dpowers `ui -> # *U + &U _dpowers * -> -> -> 0 `i `ui `ux -> -> # *U &U _dpowers `ui `ux `ui 32  ]
+[e :U 33 ]
+"1339
+}
+[; ;doprnt.c: 1339: if(c < prec)
+[e $ ! < -> _c `i _prec 36  ]
+[; ;doprnt.c: 1340: c = prec;
+"1340
+[e = _c -> _prec `c ]
+[e $U 37  ]
+"1341
+[e :U 36 ]
+[; ;doprnt.c: 1341: else if(prec < c)
+[e $ ! < _prec -> _c `i 38  ]
+[; ;doprnt.c: 1342: prec = c;
+"1342
+[e = _prec -> _c `i ]
+[e :U 38 ]
+"1381
+[e :U 37 ]
+[; ;doprnt.c: 1381: if(width > c)
+[e $ ! > _width -> _c `i 39  ]
+[; ;doprnt.c: 1382: width -= c;
+"1382
+[e =- _width -> _c `i ]
+[e $U 40  ]
+"1383
+[e :U 39 ]
+[; ;doprnt.c: 1383: else
+[; ;doprnt.c: 1384: width = 0;
+"1384
+[e = _width -> 0 `i ]
+[e :U 40 ]
+[; ;doprnt.c: 1422: {
+"1422
+{
+[; ;doprnt.c: 1424: if(width
+[; ;doprnt.c: 1428: )
+"1428
+[e $ ! != _width -> 0 `i 41  ]
+[; ;doprnt.c: 1429: do
+"1429
+[e :U 44 ]
+[; ;doprnt.c: 1430: ((*sp++ = (' ')));
+"1430
+[e = *U ++ _sp * -> -> 1 `i `x -> -> # *U _sp `i `x -> -> 32 `ui `uc ]
+[; ;doprnt.c: 1431: while(--width);
+"1431
+[e $ != =- _width -> 1 `i -> 0 `i 44  ]
+[e :U 43 ]
+[e :U 41 ]
+"1469
+}
+[; ;doprnt.c: 1469: }
+[; ;doprnt.c: 1474: while(prec--) {
+"1474
+[e $U 45  ]
+[e :U 46 ]
+{
+[; ;doprnt.c: 1478: {
+"1478
+{
+[; ;doprnt.c: 1489: c = (val / dpowers[prec]) % 10 + '0';
+"1489
+[e = _c -> + % / _val *U + &U _dpowers * -> -> _prec `ui `ux -> -> # *U &U _dpowers `ui `ux -> -> -> 10 `i `l `ul -> -> 48 `ui `ul `c ]
+"1523
+}
+[; ;doprnt.c: 1523: }
+[; ;doprnt.c: 1524: ((*sp++ = (c)));
+"1524
+[e = *U ++ _sp * -> -> 1 `i `x -> -> # *U _sp `i `x -> _c `uc ]
+"1525
+}
+[e :U 45 ]
+"1474
+[e $ != -- _prec -> 1 `i -> 0 `i 46  ]
+[e :U 47 ]
+"1533
+}
+[e :U 8 ]
+"536
+[e $ != -> = _c -> *U ++ _f * -> -> 1 `i `x -> -> # *U _f `i `x `c `i -> -> -> 0 `i `c `i 9  ]
+[e :U 10 ]
+[; ;doprnt.c: 1525: }
+[; ;doprnt.c: 1533: }
+[; ;doprnt.c: 1535: alldone:
+"1535
+[e :U 25 ]
+[; ;doprnt.c: 1538: *sp = 0;
+"1538
+[e = *U _sp -> -> 0 `i `uc ]
+[; ;doprnt.c: 1540: return 0;
+"1540
+[e ) -> 0 `i ]
+[e $UE 7  ]
+[; ;doprnt.c: 1541: }
+"1541
+[e :UE 7 ]
+}
