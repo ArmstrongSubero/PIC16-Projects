@@ -2,29 +2,20 @@
  * File: Main.c
  * Author: Armstrong Subero
  * PIC: 16F1717 w/Int OSC @ 16MHz, 5v
- * Program: 22_SPI
+ * Program: 23_I2C
  * Compiler: XC8 (v1.38, MPLAX X v3.40)
  * Program Version: 1.0
  *                
  *                
  * Program Description: This Program Allows PIC16F1717 to communicate via the
- *                      SPI interface
+ *                      I2C interface
  *                      
  *           
- * Hardware Description: A HD44780 LCD is connected via PORTD and a MCP4131
- *                       digital potentiometer is connected as follows:
- *                        
- *                       Vss --> Vss
- *                       Vdd --> Vdd
- *                       SS  --> RD1
- *                       SCK --> RC3
- *                       SDI --> RC5
- *                       POB --> GND
- *                       POW --> LED via 1k resistor
- *                       POA --> Vdd
- *                     
+ * Hardware Description: A HD44780 LCD is connected via PORTD and a 24LC EEPROM
+ *                       is connected to 
+
  *                      
- * Created November 10th, 2016, 4:42 PM
+ * Updated April 22nd, 2019, 2:07 PM
  */
 
 
@@ -38,6 +29,8 @@
 
 #define LC164_ADDRESS     0x50   // slave device address
 
+
+// function to read EEPROM
 uint8_t LC164_Read(uint8_t addrlo, uint8_t *pData)
 {
     I2C_MESSAGE_STATUS status = I2C_MESSAGE_PENDING;
@@ -52,6 +45,7 @@ uint8_t LC164_Read(uint8_t addrlo, uint8_t *pData)
     return (status == I2C_MESSAGE_COMPLETE); 
 } 
 
+// Function to write EEPROM
 uint8_t LC164_Write(uint8_t addrlo, uint8_t data)
 {
     I2C_MESSAGE_STATUS status = I2C_MESSAGE_PENDING;
@@ -105,6 +99,9 @@ void I2C_PIN_Initialize(void)
     PPSLOCKbits.PPSLOCKED = 0x01; // lock PPS
     GIE = state;
 }
+
+
+
 void initmain(){
      internal_16();
   
