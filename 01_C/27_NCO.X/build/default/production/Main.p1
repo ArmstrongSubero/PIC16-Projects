@@ -1,28 +1,8 @@
 Version 3.2 HI-TECH Software Intermediate Code
 "64 16F1717_Internal.h
 [v _internal_16 `(v ~T0 @X0 0 ef ]
-"1306 C:\Program Files (x86)\Microchip\xc8\v1.38\include\pic16f1717.h
-[s S69 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S69 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 TRISC6 TRISC7 ]
-"1305
-[u S68 `S69 1 ]
-[n S68 . . ]
-"1317
-[v _TRISCbits `VS68 ~T0 @X0 0 e@142 ]
-"3833
-[v _ANSELC `Vuc ~T0 @X0 0 e@398 ]
-"16490
-[v _GIE `Vb ~T0 @X0 0 e@95 ]
-"10600
+"10600 C:\Program Files (x86)\Microchip\xc8\v1.38\include\pic16f1717.h
 [v _PPSLOCK `Vuc ~T0 @X0 0 e@3599 ]
-"10606
-[s S490 :1 `uc 1 ]
-[n S490 . PPSLOCKED ]
-"10605
-[u S489 `S490 1 ]
-[n S489 . . ]
-"10610
-[v _PPSLOCKbits `VS489 ~T0 @X0 0 e@3599 ]
 "11005
 [s S532 :5 `uc 1 ]
 [n S532 . RA4PPS ]
@@ -31,14 +11,27 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S531 . . ]
 "11009
 [v _RA4PPSbits `VS531 ~T0 @X0 0 e@3732 ]
-"2366
-[s S115 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S115 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
-"2365
-[u S114 `S115 1 ]
-[n S114 . . ]
-"2377
-[v _LATCbits `VS114 ~T0 @X0 0 e@270 ]
+"1184
+[s S65 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S65 . TRISA0 TRISA1 TRISA2 TRISA3 TRISA4 TRISA5 TRISA6 TRISA7 ]
+"1183
+[u S64 `S65 1 ]
+[n S64 . . ]
+"1195
+[v _TRISAbits `VS64 ~T0 @X0 0 e@140 ]
+"3741
+[s S172 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S172 . ANSA0 ANSA1 ANSA2 ANSA3 ANSA4 ANSA5 ]
+"3740
+[u S171 `S172 1 ]
+[n S171 . . ]
+"3750
+[v _ANSELAbits `VS171 ~T0 @X0 0 e@396 ]
+[p mainexit ]
+"9075
+[v _NCO1INCH `Vuc ~T0 @X0 0 e@1180 ]
+"9006
+[v _NCO1INCL `Vuc ~T0 @X0 0 e@1179 ]
 "9195
 [s S421 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S421 . N1PFM . N1POL N1OUT . N1EN ]
@@ -58,9 +51,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S422 . . . ]
 "9248
 [v _NCO1CLKbits `VS422 ~T0 @X0 0 e@1183 ]
-"8999
-[v _NCO1INC `Vum ~T0 @X0 0 e@1179 ]
-[p mainexit ]
 "24 16F1717_Internal.h
 [p x FOSC=INTOSC ]
 "25
@@ -6551,101 +6541,88 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;16F1717_Internal.h: 67: void internal_2();
 [; ;16F1717_Internal.h: 68: void internal_1();
 [; ;16F1717_Internal.h: 69: void internal_31();
-"35 Main.c
+"46 Main.c
 [v _initMain `(v ~T0 @X0 1 ef ]
 {
-[; ;Main.c: 35: void initMain(){
+[; ;Main.c: 46: void initMain(){
 [e :U _initMain ]
 [f ]
-[; ;Main.c: 37: internal_16();
-"37
-[e ( _internal_16 ..  ]
-[; ;Main.c: 42: TRISCbits.TRISC0 = 0x00;
-"42
-[e = . . _TRISCbits 0 0 -> -> 0 `i `uc ]
-[; ;Main.c: 43: ANSELC = 0;
-"43
-[e = _ANSELC -> -> 0 `i `uc ]
-"45
-[v _state `uc ~T0 @X0 1 a ]
-[; ;Main.c: 45: bool state = GIE;
-[e = _state -> -> _GIE `i `uc ]
-[; ;Main.c: 46: GIE = 0;
-"46
-[e = _GIE -> -> 0 `i `b ]
-[; ;Main.c: 47: PPSLOCK = 0x55;
-"47
-[e = _PPSLOCK -> -> 85 `i `uc ]
-[; ;Main.c: 48: PPSLOCK = 0xAA;
+[; ;Main.c: 48: internal_16();
 "48
-[e = _PPSLOCK -> -> 170 `i `uc ]
-[; ;Main.c: 49: PPSLOCKbits.PPSLOCKED = 0x00;
-"49
-[e = . . _PPSLOCKbits 0 0 -> -> 0 `i `uc ]
-[; ;Main.c: 51: RA4PPSbits.RA4PPS = 0x03;
-"51
-[e = . . _RA4PPSbits 0 0 -> -> 3 `i `uc ]
+[e ( _internal_16 ..  ]
 [; ;Main.c: 53: PPSLOCK = 0x55;
 "53
 [e = _PPSLOCK -> -> 85 `i `uc ]
 [; ;Main.c: 54: PPSLOCK = 0xAA;
 "54
 [e = _PPSLOCK -> -> 170 `i `uc ]
-[; ;Main.c: 55: PPSLOCKbits.PPSLOCKED = 0x01;
+[; ;Main.c: 55: PPSLOCK = 0x00;
 "55
-[e = . . _PPSLOCKbits 0 0 -> -> 1 `i `uc ]
-[; ;Main.c: 57: TRISCbits.TRISC0 = 0;
+[e = _PPSLOCK -> -> 0 `i `uc ]
+[; ;Main.c: 57: RA4PPSbits.RA4PPS = 0x03;
 "57
-[e = . . _TRISCbits 0 0 -> -> 0 `i `uc ]
-[; ;Main.c: 58: LATCbits.LATC0 = 0;
-"58
-[e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
-[; ;Main.c: 61: NCO1CONbits.N1EN = 1;
+[e = . . _RA4PPSbits 0 0 -> -> 3 `i `uc ]
+[; ;Main.c: 59: PPSLOCK = 0x55;
+"59
+[e = _PPSLOCK -> -> 85 `i `uc ]
+[; ;Main.c: 60: PPSLOCK = 0xAA;
+"60
+[e = _PPSLOCK -> -> 170 `i `uc ]
+[; ;Main.c: 61: PPSLOCK = 0x01;
 "61
-[e = . . _NCO1CONbits 0 5 -> -> 1 `i `uc ]
-[; ;Main.c: 64: NCO1CONbits.N1PFM = 0;
+[e = _PPSLOCK -> -> 1 `i `uc ]
+[; ;Main.c: 63: TRISAbits.TRISA4 = 0;
+"63
+[e = . . _TRISAbits 0 4 -> -> 0 `i `uc ]
+[; ;Main.c: 64: ANSELAbits.ANSA4 = 0;
 "64
-[e = . . _NCO1CONbits 0 0 -> -> 0 `i `uc ]
-[; ;Main.c: 67: NCO1CONbits.N1POL = 0;
-"67
-[e = . . _NCO1CONbits 0 2 -> -> 0 `i `uc ]
-[; ;Main.c: 70: NCO1CLKbits.N1CKS = 0b01;
-"70
-[e = . . _NCO1CLKbits 1 0 -> -> 1 `i `uc ]
-[; ;Main.c: 73: NCO1INC =0x3334;
-"73
-[e = _NCO1INC -> -> -> 13108 `i `m `um ]
-[; ;Main.c: 75: }
-"75
+[e = . . _ANSELAbits 0 4 -> -> 0 `i `uc ]
+[; ;Main.c: 65: }
+"65
 [e :UE 783 ]
 }
-"85
+"75
 [v _main `(v ~T0 @X0 1 ef ]
 {
-[; ;Main.c: 85: void main(void) {
+[; ;Main.c: 75: void main(void) {
 [e :U _main ]
 [f ]
-[; ;Main.c: 86: initMain();
-"86
+[; ;Main.c: 76: initMain();
+"76
 [e ( _initMain ..  ]
-[; ;Main.c: 88: NCO1INC = 0x4CCD;
-"88
-[e = _NCO1INC -> -> -> 19661 `i `m `um ]
-[; ;Main.c: 90: while(1){
-"90
+[; ;Main.c: 79: NCO1INCH = 0;
+"79
+[e = _NCO1INCH -> -> 0 `i `uc ]
+[; ;Main.c: 80: NCO1INCL = 65;
+"80
+[e = _NCO1INCL -> -> 65 `i `uc ]
+[; ;Main.c: 83: NCO1CONbits.N1EN = 1;
+"83
+[e = . . _NCO1CONbits 0 5 -> -> 1 `i `uc ]
+[; ;Main.c: 86: NCO1CONbits.N1PFM = 0;
+"86
+[e = . . _NCO1CONbits 0 0 -> -> 0 `i `uc ]
+[; ;Main.c: 89: NCO1CONbits.N1POL = 0;
+"89
+[e = . . _NCO1CONbits 0 2 -> -> 0 `i `uc ]
+[; ;Main.c: 92: NCO1CLKbits.N1CKS = 0b01;
+"92
+[e = . . _NCO1CLKbits 1 0 -> -> 1 `i `uc ]
+[; ;Main.c: 95: while(1){
+"95
 [e :U 786 ]
 {
-"93
+"97
 }
 [e :U 785 ]
-"90
+"95
 [e $U 786  ]
 [e :U 787 ]
-[; ;Main.c: 93: }
-[; ;Main.c: 95: return;
-"95
-[e $UE 784  ]
 [; ;Main.c: 97: }
-"97
+[; ;Main.c: 99: return;
+"99
+[e $UE 784  ]
+[; ;Main.c: 101: }
+"101
 [e :UE 784 ]
 }

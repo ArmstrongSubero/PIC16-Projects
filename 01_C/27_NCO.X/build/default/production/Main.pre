@@ -8734,7 +8734,7 @@ void internal_2();
 void internal_1();
 void internal_31();
 
-# 35 "Main.c"
+# 46 "Main.c"
 void initMain(){
 
 internal_16();
@@ -8742,23 +8742,27 @@ internal_16();
 
 
 
-TRISCbits.TRISC0 = 0x00;
-ANSELC = 0;
-
-bool state = GIE;
-GIE = 0;
 PPSLOCK = 0x55;
 PPSLOCK = 0xAA;
-PPSLOCKbits.PPSLOCKED = 0x00;
+PPSLOCK = 0x00;
 
 RA4PPSbits.RA4PPS = 0x03;
 
 PPSLOCK = 0x55;
 PPSLOCK = 0xAA;
-PPSLOCKbits.PPSLOCKED = 0x01;
+PPSLOCK = 0x01;
 
-TRISCbits.TRISC0 = 0;
-LATCbits.LATC0 = 0;
+TRISAbits.TRISA4 = 0;
+ANSELAbits.ANSA4 = 0;
+}
+
+# 75
+void main(void) {
+initMain();
+
+
+NCO1INCH = 0;
+NCO1INCL = 65;
 
 
 NCO1CONbits.N1EN = 1;
@@ -8773,18 +8777,7 @@ NCO1CONbits.N1POL = 0;
 NCO1CLKbits.N1CKS = 0b01;
 
 
-NCO1INC =0x3334;
-
-}
-
-# 85
-void main(void) {
-initMain();
-
-NCO1INC = 0x4CCD;
-
 while(1){
-
 
 }
 
