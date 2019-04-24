@@ -93,7 +93,7 @@ https://www.apress.com/gp/book/9781484232729
 - A05_Timer0				: 	Uses the Timer0 module
 - A06_Counter				: 	Uses the counter module
 - A07_Sleep					: 	Demonstrates sleep mode
-- A08_WPUC                  : 	Uses UPUC
+- A08_WPUC                  : 	Uses WPUC
 - A10_Watchdog_Timer        : 	Uses watchdog timer
 - A11_Comparator            : 	Uses comparator module
 - A12_Comparator Wake       : 	Comparator and sleep mode
