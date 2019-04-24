@@ -1,0 +1,1984 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$C:\Users\armst\AppData\Local\Temp\sfh8.o
+reset_vec CODE 0 0 0 2 2
+end_init CODE 0 2 2 2 2
+config CONFIG 0 8007 8007 2 2
+$dist/default/production\I21_SD_Card.X.production.o
+cinit CODE 0 7DC 7DC 24 2
+text1 CODE 0 2002 2002 3A 2
+text2 CODE 0 2AC4 2AC4 9 2
+text3 CODE 0 B86 B86 47A 2
+text4 CODE 0 1DAE 1DAE 252 2
+text5 CODE 0 2520 2520 102 2
+text6 CODE 0 22FD 22FD AC 2
+text7 CODE 0 1800 1800 3E 2
+text8 CODE 0 20B8 20B8 7C 2
+text9 CODE 0 2BE7 2BE7 34 2
+text10 CODE 0 79 79 15E 2
+text11 CODE 0 2B68 2B68 27 2
+text12 CODE 0 4 4 75 2
+text13 CODE 0 2C9D 2C9D 47 2
+text14 CODE 0 2134 2134 84 2
+text15 CODE 0 1006 1006 1F4 2
+text16 CODE 0 11FA 11FA 27F 2
+text17 CODE 0 2D36 2D36 55 2
+text18 CODE 0 1D7 1D7 605 2
+text19 CODE 0 2F13 2F13 73 2
+text20 CODE 0 183E 183E 129 2
+text21 CODE 0 2AAB 2AAB 7 2
+text22 CODE 0 203C 203C 7C 2
+text23 CODE 0 1479 1479 387 2
+text24 CODE 0 1967 1967 222 2
+text25 CODE 0 1B89 1B89 225 2
+text26 CODE 0 2622 2622 1DE 2
+text27 CODE 0 2F86 2F86 7A 2
+text28 CODE 0 2BB8 2BB8 2F 2
+text29 CODE 0 2CE4 2CE4 52 2
+text30 CODE 0 2B45 2B45 23 2
+text31 CODE 0 23A9 23A9 B2 2
+text32 CODE 0 2DE1 2DE1 59 2
+text33 CODE 0 2ABB 2ABB 9 2
+text34 CODE 0 80E 80E ED 2
+text35 CODE 0 2AF2 2AF2 18 2
+text36 CODE 0 8FB 8FB 28B 2
+text37 CODE 0 2B0A 2B0A 1B 2
+text38 CODE 0 2ADF 2ADF 13 2
+text39 CODE 0 2E3A 2E3A 66 2
+text40 CODE 0 245B 245B C5 2
+text41 CODE 0 21B8 21B8 A1 2
+text42 CODE 0 2C5C 2C5C 41 2
+text43 CODE 0 2EA0 2EA0 73 2
+text44 CODE 0 2B8F 2B8F 29 2
+text45 CODE 0 2D8B 2D8B 56 2
+text46 CODE 0 2ACD 2ACD 12 2
+text47 CODE 0 2B25 2B25 20 2
+text48 CODE 0 1000 1000 6 2
+text49 CODE 0 2C1B 2C1B 41 2
+text50 CODE 0 2AB2 2AB2 9 2
+maintext CODE 0 2259 2259 A4 2
+cstackCOMMON COMMON 1 70 70 E 1
+cstackBANK0 BANK0 1 20 20 50 1
+cstackBANK1 BANK1 1 A0 A0 47 1
+cstackBANK2 BANK2 1 120 120 2D 1
+stringtext1 STRCODE 0 3000 3000 15 2
+stringtext2 STRCODE 0 3015 3015 F 2
+stringtext3 STRCODE 0 3024 3024 A 2
+bssBANK1 BANK1 1 E7 E7 7 1
+bssBANK2 BANK2 1 14D 14D 20 1
+idataBANK1 CODE 0 801 801 1 2
+dataBANK1 BANK1 1 EE EE 1 1
+clrtext CODE 0 802 802 C 2
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM EF-EF 1
+RAM 16D-16F 1
+RAM 1A0-1EF 1
+RAM 220-26F 1
+RAM 2A0-2EF 1
+RAM 320-36F 1
+RAM 3A0-3EF 1
+RAM 420-46F 1
+RAM 4A0-4EF 1
+RAM 520-56F 1
+RAM 5A0-5EF 1
+RAM 620-66F 1
+RAM 6A0-6EF 1
+RAM 720-76F 1
+RAM 7A0-7EF 1
+RAM 820-86F 1
+RAM 8A0-8EF 1
+RAM 920-941 1
+BANK1 EF-EF 1
+BANK2 16D-16F 1
+BANK3 1A0-1EF 1
+BANK4 220-26F 1
+BANK5 2A0-2EF 1
+BANK6 320-36F 1
+BANK7 3A0-3EF 1
+BANK8 420-46F 1
+BANK9 4A0-4EF 1
+CONST 800-800 2
+CONST 2000-2001 2
+CONST 2800-2AAA 2
+CONST 302E-3FFF 2
+ENTRY 800-800 2
+ENTRY 2000-2001 2
+ENTRY 2800-2AAA 2
+ENTRY 302E-3FFF 2
+IDLOC 8000-8003 2
+SFR10 500-51F 1
+SFR11 580-59F 1
+SFR12 600-61F 1
+SFR13 680-69F 1
+SFR14 700-71F 1
+SFR15 780-79F 1
+SFR16 800-81F 1
+SFR17 880-89F 1
+SFR18 900-91F 1
+SFR19 980-99F 1
+SFR20 A00-A1F 1
+SFR21 A80-A9F 1
+SFR22 B00-B1F 1
+SFR23 B80-B9F 1
+SFR24 C00-C1F 1
+SFR25 C80-C9F 1
+SFR26 D00-D6F 1
+SFR27 D80-DEF 1
+SFR28 E00-E6F 1
+SFR29 E80-EEF 1
+SFR30 F00-F6F 1
+SFR31 F80-FEF 1
+STACK 20ED-25C1 1
+CODE 800-800 2
+CODE 2000-2001 2
+CODE 2800-2AAA 2
+CODE 302E-3FFF 2
+SFR0 0-1F 1
+SFR1 80-9F 1
+SFR2 100-11F 1
+SFR3 180-19F 1
+SFR4 200-21F 1
+SFR5 280-29F 1
+SFR6 300-31F 1
+SFR7 380-39F 1
+SFR8 400-41F 1
+SFR9 480-49F 1
+BANK10 520-56F 1
+BANK11 5A0-5EF 1
+BANK12 620-66F 1
+BANK13 6A0-6EF 1
+BANK14 720-76F 1
+BANK15 7A0-7EF 1
+BANK16 820-86F 1
+BANK17 8A0-8EF 1
+BANK18 920-941 1
+BIGRAM 2000-27EF 1
+STRCODE 800-800 2
+STRCODE 2000-2001 2
+STRCODE 2800-2AAA 2
+STRCODE 302E-3FFF 2
+STRING 800-800 2
+STRING 2000-2001 2
+STRING 2800-2AAA 2
+STRING 302E-3FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\I21_SD_Card.X.production.o
+7DC cinit CODE >3478:C:\Users\armst\AppData\Local\Temp\sfh8.
+7DC cinit CODE >3481:C:\Users\armst\AppData\Local\Temp\sfh8.
+7DC cinit CODE >3517:C:\Users\armst\AppData\Local\Temp\sfh8.
+7DD cinit CODE >3518:C:\Users\armst\AppData\Local\Temp\sfh8.
+7E0 cinit CODE >3519:C:\Users\armst\AppData\Local\Temp\sfh8.
+7E1 cinit CODE >3542:C:\Users\armst\AppData\Local\Temp\sfh8.
+7E2 cinit CODE >3543:C:\Users\armst\AppData\Local\Temp\sfh8.
+7E3 cinit CODE >3544:C:\Users\armst\AppData\Local\Temp\sfh8.
+7E4 cinit CODE >3545:C:\Users\armst\AppData\Local\Temp\sfh8.
+7E5 cinit CODE >3546:C:\Users\armst\AppData\Local\Temp\sfh8.
+7E6 cinit CODE >3547:C:\Users\armst\AppData\Local\Temp\sfh8.
+7E7 cinit CODE >3548:C:\Users\armst\AppData\Local\Temp\sfh8.
+7E8 cinit CODE >3549:C:\Users\armst\AppData\Local\Temp\sfh8.
+7E9 cinit CODE >3550:C:\Users\armst\AppData\Local\Temp\sfh8.
+7EC cinit CODE >3554:C:\Users\armst\AppData\Local\Temp\sfh8.
+7ED cinit CODE >3555:C:\Users\armst\AppData\Local\Temp\sfh8.
+7EE cinit CODE >3556:C:\Users\armst\AppData\Local\Temp\sfh8.
+7EF cinit CODE >3557:C:\Users\armst\AppData\Local\Temp\sfh8.
+7F0 cinit CODE >3558:C:\Users\armst\AppData\Local\Temp\sfh8.
+7F1 cinit CODE >3559:C:\Users\armst\AppData\Local\Temp\sfh8.
+7F2 cinit CODE >3560:C:\Users\armst\AppData\Local\Temp\sfh8.
+7F3 cinit CODE >3564:C:\Users\armst\AppData\Local\Temp\sfh8.
+7F4 cinit CODE >3565:C:\Users\armst\AppData\Local\Temp\sfh8.
+7F5 cinit CODE >3566:C:\Users\armst\AppData\Local\Temp\sfh8.
+7F6 cinit CODE >3567:C:\Users\armst\AppData\Local\Temp\sfh8.
+7F7 cinit CODE >3568:C:\Users\armst\AppData\Local\Temp\sfh8.
+7F8 cinit CODE >3569:C:\Users\armst\AppData\Local\Temp\sfh8.
+7F9 cinit CODE >3570:C:\Users\armst\AppData\Local\Temp\sfh8.
+7FA cinit CODE >3571:C:\Users\armst\AppData\Local\Temp\sfh8.
+7FB cinit CODE >3572:C:\Users\armst\AppData\Local\Temp\sfh8.
+7FD cinit CODE >3578:C:\Users\armst\AppData\Local\Temp\sfh8.
+7FD cinit CODE >3580:C:\Users\armst\AppData\Local\Temp\sfh8.
+7FE cinit CODE >3581:C:\Users\armst\AppData\Local\Temp\sfh8.
+2AB2 text50 CODE >165:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\SPI.c
+2AB3 text50 CODE >168:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\SPI.c
+2AB5 text50 CODE >170:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\SPI.c
+2AB7 text50 CODE >172:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\SPI.c
+2AB7 text50 CODE >174:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\SPI.c
+2AB9 text50 CODE >176:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\SPI.c
+2ABA text50 CODE >177:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\SPI.c
+2C1B text49 CODE >124:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2C1B text49 CODE >133:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2C23 text49 CODE >134:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2C2A text49 CODE >135:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2C2D text49 CODE >136:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2C31 text49 CODE >133:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2C36 text49 CODE >138:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2C3C text49 CODE >141:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2C4B text49 CODE >142:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2C53 text49 CODE >143:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2C57 text49 CODE >144:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2C5A text49 CODE >146:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2C5B text49 CODE >147:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+1000 text48 CODE >94:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+1000 text48 CODE >96:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+1002 text48 CODE >97:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+1005 text48 CODE >98:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2B25 text47 CODE >74:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2B25 text47 CODE >79:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2B2D text47 CODE >80:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2B34 text47 CODE >81:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2B38 text47 CODE >79:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2B3D text47 CODE >84:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2B44 text47 CODE >85:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2ACD text46 CODE >107:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2ACD text46 CODE >109:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2ACF text46 CODE >110:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2AD3 text46 CODE >111:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2ADB text46 CODE >113:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2ADD text46 CODE >114:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2ADE text46 CODE >115:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2D8B text45 CODE >196:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2D8B text45 CODE >197:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2D8C text45 CODE >205:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2D90 text45 CODE >206:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2D93 text45 CODE >207:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2D9B text45 CODE >211:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2DA0 text45 CODE >212:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2DA4 text45 CODE >213:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2DA8 text45 CODE >214:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2DAC text45 CODE >215:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2DB0 text45 CODE >216:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2DB2 text45 CODE >217:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2DB9 text45 CODE >218:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2DC1 text45 CODE >219:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2DC5 text45 CODE >222:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2DCD text45 CODE >223:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2DD1 text45 CODE >226:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2DD6 text45 CODE >225:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2DDD text45 CODE >226:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2DDF text45 CODE >228:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2DE0 text45 CODE >229:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2B8F text44 CODE >233:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2B8F text44 CODE >234:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2B90 text44 CODE >244:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2B92 text44 CODE >245:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2B96 text44 CODE >247:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2BA5 text44 CODE >251:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2BAB text44 CODE >255:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2BB7 text44 CODE >283:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2EA0 text43 CODE >372:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2EA0 text43 CODE >373:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2EA1 text43 CODE >382:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2EAA text43 CODE >383:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2EAF text43 CODE >385:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2EB9 text43 CODE >387:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2ECB text43 CODE >388:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2EDA text43 CODE >390:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2EE9 text43 CODE >391:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2EEE text43 CODE >392:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2EF6 text43 CODE >393:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2F07 text43 CODE >394:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2F07 text43 CODE >395:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2F0A text43 CODE >397:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2F12 text43 CODE >398:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2C5C text42 CODE >157:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2C5C text42 CODE >166:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2C63 text42 CODE >170:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2C67 text42 CODE >172:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2C73 text42 CODE >173:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2C7B text42 CODE >174:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2C7F text42 CODE >175:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2C83 text42 CODE >176:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2C8A text42 CODE >177:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2C91 text42 CODE >166:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2C93 text42 CODE >168:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2C97 text42 CODE >169:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2C9B text42 CODE >181:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2C9C text42 CODE >182:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+21B8 text41 CODE >407:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+21B8 text41 CODE >408:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+21BA text41 CODE >414:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+21C3 text41 CODE >415:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+21C8 text41 CODE >416:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+21CC text41 CODE >418:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+21D6 text41 CODE >420:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+21DB text41 CODE >422:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+21F9 text41 CODE >423:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+21FD text41 CODE >426:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+220D text41 CODE >427:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+221D text41 CODE >429:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+222C text41 CODE >430:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2231 text41 CODE >431:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2239 text41 CODE >432:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2248 text41 CODE >433:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+224D text41 CODE >436:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2250 text41 CODE >438:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2258 text41 CODE >439:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+245B text40 CODE >700:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+245B text40 CODE >706:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+245C text40 CODE >709:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2464 text40 CODE >710:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2472 text40 CODE >711:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2494 text40 CODE >712:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2497 text40 CODE >713:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2498 text40 CODE >714:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+249F text40 CODE >715:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+24D9 text40 CODE >716:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+24EC text40 CODE >717:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+24F9 text40 CODE >718:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2518 text40 CODE >716:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+251E text40 CODE >723:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+251F text40 CODE >724:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2E3A text39 CODE >729:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2E3A text39 CODE >734:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2E3B text39 CODE >737:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2E59 text39 CODE >739:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2E63 text39 CODE >741:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2E66 text39 CODE >742:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2E84 text39 CODE >743:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2E8D text39 CODE >744:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2E8F text39 CODE >746:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2E9E text39 CODE >749:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2E9F text39 CODE >750:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2ADF text38 CODE >1252:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2ADF text38 CODE >1257:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2AE8 text38 CODE >1258:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2AF1 text38 CODE >1259:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2B0A text37 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
+2B0A text37 CODE >43:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
+2B0C text37 CODE >45:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
+2B0E text37 CODE >46:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
+2B12 text37 CODE >47:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
+2B17 text37 CODE >48:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
+2B1C text37 CODE >49:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
+2B20 text37 CODE >52:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
+2B24 text37 CODE >53:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
+8FB text36 CODE >448:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+8FB text36 CODE >449:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+8FC text36 CODE >455:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+900 text36 CODE >459:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+905 text36 CODE >461:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+907 text36 CODE >463:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+90C text36 CODE >467:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+915 text36 CODE >471:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+932 text36 CODE >472:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+93C text36 CODE >473:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+963 text36 CODE >474:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+97D text36 CODE >475:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+97E text36 CODE >476:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+993 text36 CODE >477:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+9BE text36 CODE >478:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+9DC text36 CODE >484:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+9DC text36 CODE >485:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+9DF text36 CODE >486:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+9EF text36 CODE >487:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+9F3 text36 CODE >488:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+A01 text36 CODE >489:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+A11 text36 CODE >490:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+A34 text36 CODE >495:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+A52 text36 CODE >496:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+A55 text36 CODE >497:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+A91 text36 CODE >498:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+A92 text36 CODE >499:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+AD6 text36 CODE >509:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+AE0 text36 CODE >515:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+AFC text36 CODE >521:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+B18 text36 CODE >526:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+B27 text36 CODE >527:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+B41 text36 CODE >533:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+B50 text36 CODE >534:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+B54 text36 CODE >535:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+B61 text36 CODE >541:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+B65 text36 CODE >542:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+B66 text36 CODE >465:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+B81 text36 CODE >544:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+B83 text36 CODE >546:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+B85 text36 CODE >547:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2AF2 text35 CODE >524:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2AF2 text35 CODE >525:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2AF6 text35 CODE >527:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2AFF text35 CODE >528:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2B09 text35 CODE >527:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+80E text34 CODE >760:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+80E text34 CODE >767:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+818 text34 CODE >768:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+81B text34 CODE >770:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+82B text34 CODE >772:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+83B text34 CODE >773:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+846 text34 CODE >774:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+854 text34 CODE >775:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+862 text34 CODE >776:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+87D text34 CODE >777:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+898 text34 CODE >779:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+8BB text34 CODE >780:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+8E0 text34 CODE >781:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+8E7 text34 CODE >784:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+8F5 text34 CODE >785:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+8F8 text34 CODE >788:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+8FA text34 CODE >789:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2ABB text33 CODE >358:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2ABB text33 CODE >359:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2ABC text33 CODE >362:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2AC1 text33 CODE >363:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2AC3 text33 CODE >364:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2DE1 text32 CODE >2372:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2DE1 text32 CODE >2376:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2DE5 text32 CODE >2379:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2E36 text32 CODE >2380:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2E38 text32 CODE >2384:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2E39 text32 CODE >2385:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+23A9 text31 CODE >2813:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+23A9 text31 CODE >2822:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+23B4 text31 CODE >2823:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+23B7 text31 CODE >2824:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+23BE text31 CODE >2833:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+23D9 text31 CODE >2834:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+23DC text31 CODE >2835:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+23E5 text31 CODE >2836:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+23EB text31 CODE >2837:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2405 text31 CODE >2838:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2419 text31 CODE >2840:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2427 text31 CODE >2841:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+242F text31 CODE >2842:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2438 text31 CODE >2843:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+244C text31 CODE >2844:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2459 text31 CODE >2849:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+245A text31 CODE >2850:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2B45 text30 CODE >2861:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2B45 text30 CODE >2869:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2B4F text30 CODE >2870:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2B52 text30 CODE >2873:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2B5D text30 CODE >2874:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2B60 text30 CODE >2882:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2B67 text30 CODE >2889:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2CE4 text29 CODE >5:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
+2CE4 text29 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
+2CEC text29 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
+2CF2 text29 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
+2CF4 text29 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
+2CF6 text29 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
+2CFD text29 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
+2D01 text29 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
+2D02 text29 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
+2D09 text29 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
+2D19 text29 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
+2D21 text29 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
+2D22 text29 CODE >26:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
+2D29 text29 CODE >27:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
+2D2D text29 CODE >29:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
+2D35 text29 CODE >30:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
+2BB8 text28 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul32.c
+2BB8 text28 CODE >119:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul32.c
+2BC0 text28 CODE >121:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul32.c
+2BC2 text28 CODE >122:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul32.c
+2BCA text28 CODE >123:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul32.c
+2BD1 text28 CODE >124:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul32.c
+2BD8 text28 CODE >125:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul32.c
+2BDE text28 CODE >128:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul32.c
+2BE6 text28 CODE >129:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul32.c
+2F86 text27 CODE >800:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2F86 text27 CODE >805:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2F96 text27 CODE >806:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2FC4 text27 CODE >807:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2FFF text27 CODE >808:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2622 text26 CODE >818:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2622 text26 CODE >828:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+264C text26 CODE >829:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2654 text26 CODE >831:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2655 text26 CODE >832:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+265D text26 CODE >834:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+265E text26 CODE >836:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+266C text26 CODE >837:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+26A2 text26 CODE >838:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+26BF text26 CODE >839:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+26F5 text26 CODE >840:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2711 text26 CODE >841:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2726 text26 CODE >845:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2758 text26 CODE >846:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2770 text26 CODE >847:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+277E text26 CODE >848:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+277F text26 CODE >851:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+27B5 text26 CODE >852:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+27CF text26 CODE >853:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+27E7 text26 CODE >854:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+27E8 text26 CODE >834:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+27F7 text26 CODE >861:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+27FF text26 CODE >862:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1B89 text25 CODE >873:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1B89 text25 CODE >884:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1BB3 text25 CODE >885:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1BB7 text25 CODE >887:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1BB8 text25 CODE >890:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1BC6 text25 CODE >891:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1BFC text25 CODE >892:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1BFF text25 CODE >893:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1C15 text25 CODE >894:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1C3A text25 CODE >895:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1C46 text25 CODE >896:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1C7C text25 CODE >897:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1C7F text25 CODE >898:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1C91 text25 CODE >899:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1CC0 text25 CODE >904:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1CF2 text25 CODE >905:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1CF5 text25 CODE >906:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1D0D text25 CODE >907:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1D15 text25 CODE >908:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1D16 text25 CODE >912:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1D4C text25 CODE >913:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1D4F text25 CODE >914:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1D69 text25 CODE >915:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1D84 text25 CODE >916:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1D90 text25 CODE >917:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1D9C text25 CODE >918:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1D9D text25 CODE >888:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1DAC text25 CODE >925:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1DAD text25 CODE >926:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1967 text24 CODE >990:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1967 text24 CODE >999:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+196D text24 CODE >1000:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+197A text24 CODE >1001:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+19AD text24 CODE >1004:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+19D6 text24 CODE >1005:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+19EC text24 CODE >1006:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1A01 text24 CODE >1007:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1A26 text24 CODE >1008:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1A2E text24 CODE >1009:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1A2E text24 CODE >1011:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1A36 text24 CODE >1012:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1A36 text24 CODE >1013:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1A3E text24 CODE >1014:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1A63 text24 CODE >1015:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1A6B text24 CODE >1016:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1A81 text24 CODE >1018:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1AAA text24 CODE >1019:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1AB0 text24 CODE >1020:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1AC1 text24 CODE >1022:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1AD2 text24 CODE >1025:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1AF8 text24 CODE >1026:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1B01 text24 CODE >1027:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1B2F text24 CODE >1029:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1B32 text24 CODE >1030:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1B3F text24 CODE >1031:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1B53 text24 CODE >1032:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1B65 text24 CODE >1033:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1B6C text24 CODE >1036:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1B7F text24 CODE >1037:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1B7F text24 CODE >1039:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1B88 text24 CODE >1040:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1479 text23 CODE >3033:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1479 text23 CODE >3045:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1484 text23 CODE >3046:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1489 text23 CODE >3047:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1491 text23 CODE >3048:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1498 text23 CODE >3111:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+14C9 text23 CODE >3113:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+14D6 text23 CODE >3114:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+14EB text23 CODE >3115:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+14F1 text23 CODE >3116:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1512 text23 CODE >3118:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1560 text23 CODE >3119:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1599 text23 CODE >3120:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+15AE text23 CODE >3121:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+15BB text23 CODE >3122:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+15BC text23 CODE >3123:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+15C9 text23 CODE >3125:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+15CF text23 CODE >3126:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+15EA text23 CODE >3127:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+15FE text23 CODE >3128:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1618 text23 CODE >3129:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1625 text23 CODE >3130:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1625 text23 CODE >3132:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1632 text23 CODE >3134:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1639 text23 CODE >3137:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1640 text23 CODE >3138:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+165B text23 CODE >3139:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1661 text23 CODE >3140:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+166A text23 CODE >3144:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1695 text23 CODE >3145:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+16A0 text23 CODE >3146:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+16D2 text23 CODE >3147:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+16DF text23 CODE >3148:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+16EF text23 CODE >3149:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+16F7 text23 CODE >3135:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1707 text23 CODE >3151:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1717 text23 CODE >3152:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1729 text23 CODE >3153:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1754 text23 CODE >3154:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+175A text23 CODE >3155:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1771 text23 CODE >3159:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+17A8 text23 CODE >3171:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+17B5 text23 CODE >3172:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+17B5 text23 CODE >3174:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+17DF text23 CODE >3175:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+17F9 text23 CODE >3176:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+203C text22 CODE >2175:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+203C text22 CODE >2180:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2050 text22 CODE >2181:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2062 text22 CODE >2182:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2064 text22 CODE >2184:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2072 text22 CODE >2185:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2074 text22 CODE >2187:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2094 text22 CODE >2188:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2096 text22 CODE >2189:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+20B6 text22 CODE >2192:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+20B7 text22 CODE >2193:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2AAB text21 CODE >117:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\SPI.c
+2AAB text21 CODE >122:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\SPI.c
+2AAE text21 CODE >125:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\SPI.c
+2AB0 text21 CODE >128:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\SPI.c
+2AB1 text21 CODE >129:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\SPI.c
+183E text20 CODE >298:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+183E text20 CODE >299:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+1840 text20 CODE >306:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+1845 text20 CODE >308:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+184B text20 CODE >310:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+184E text20 CODE >311:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+185E text20 CODE >313:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+185F text20 CODE >314:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+186E text20 CODE >315:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+187E text20 CODE >316:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+1894 text20 CODE >317:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+189B text20 CODE >318:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+18A3 text20 CODE >319:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+18B2 text20 CODE >320:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+18BB text20 CODE >318:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+18C1 text20 CODE >322:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+18D5 text20 CODE >323:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+18EB text20 CODE >324:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+18F8 text20 CODE >328:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+190B text20 CODE >329:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+1913 text20 CODE >330:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+1914 text20 CODE >331:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+1918 text20 CODE >333:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+1920 text20 CODE >334:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+192F text20 CODE >335:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+1938 text20 CODE >333:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+193E text20 CODE >337:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+1952 text20 CODE >338:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+1954 text20 CODE >341:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+195A text20 CODE >342:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+195D text20 CODE >344:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+1961 text20 CODE >345:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\diskio.c
+2F13 text19 CODE >2114:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2F13 text19 CODE >2115:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2F15 text19 CODE >2120:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2F19 text19 CODE >2129:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2F20 text19 CODE >2130:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2F3E text19 CODE >2131:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2F46 text19 CODE >2132:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2F4D text19 CODE >2133:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2F5C text19 CODE >2134:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2F6B text19 CODE >2135:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2F6F text19 CODE >2136:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2F73 text19 CODE >2137:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2F7E text19 CODE >2156:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2F83 text19 CODE >2161:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1D7 text18 CODE >2203:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1D7 text18 CODE >2219:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1DE text18 CODE >2220:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1E7 text18 CODE >2221:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1EB text18 CODE >2224:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1F3 text18 CODE >2225:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1F9 text18 CODE >2228:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+203 text18 CODE >2230:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+20A text18 CODE >2231:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+218 text18 CODE >2232:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+21A text18 CODE >2233:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+221 text18 CODE >2234:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+223 text18 CODE >2235:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+225 text18 CODE >2242:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+22A text18 CODE >2243:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+23A text18 CODE >2244:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+248 text18 CODE >2245:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+24A text18 CODE >2246:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+24C text18 CODE >2247:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+253 text18 CODE >2254:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+25C text18 CODE >2255:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+272 text18 CODE >2256:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+275 text18 CODE >2257:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+27E text18 CODE >2258:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2A1 text18 CODE >2259:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2D4 text18 CODE >2257:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2D9 text18 CODE >2261:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2DB text18 CODE >2262:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2E3 text18 CODE >2264:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2F8 text18 CODE >2265:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+32C text18 CODE >2266:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+33A text18 CODE >2268:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+340 text18 CODE >2269:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+345 text18 CODE >2273:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+353 text18 CODE >2276:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+368 text18 CODE >2277:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+37C text18 CODE >2278:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+389 text18 CODE >2280:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+3A2 text18 CODE >2281:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+3B4 text18 CODE >2283:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+3DC text18 CODE >2285:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+3F5 text18 CODE >2286:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+40D text18 CODE >2289:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+41C text18 CODE >2290:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+425 text18 CODE >2293:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+439 text18 CODE >2294:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+44D text18 CODE >2296:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+457 text18 CODE >2297:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+45B text18 CODE >2300:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+4A9 text18 CODE >2301:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+4B9 text18 CODE >2302:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+4F4 text18 CODE >2303:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+4FA text18 CODE >2304:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+4FC text18 CODE >2305:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+50E text18 CODE >2306:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+520 text18 CODE >2309:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+548 text18 CODE >2310:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+556 text18 CODE >2311:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+586 text18 CODE >2312:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+5AA text18 CODE >2313:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+5AF text18 CODE >2314:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+5B8 text18 CODE >2315:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+5D7 text18 CODE >2316:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+5EE text18 CODE >2318:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+5F7 text18 CODE >2319:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+625 text18 CODE >2321:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+69D text18 CODE >2323:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+6DC text18 CODE >2328:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+702 text18 CODE >2331:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+712 text18 CODE >2335:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+747 text18 CODE >2337:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+74E text18 CODE >2340:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+789 text18 CODE >2343:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+7A8 text18 CODE >2346:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+7C7 text18 CODE >2352:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+7CE text18 CODE >2353:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2D36 text17 CODE >2402:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2D36 text17 CODE >2411:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2D3D text17 CODE >2414:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2D46 text17 CODE >2415:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2D4A text17 CODE >2416:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2D52 text17 CODE >2418:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2D56 text17 CODE >2425:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2D5B text17 CODE >2428:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2D60 text17 CODE >2429:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2D65 text17 CODE >2434:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2D6F text17 CODE >2436:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2D78 text17 CODE >2438:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2D89 text17 CODE >2439:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2D8A text17 CODE >2440:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+11FA text16 CODE >1128:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+11FA text16 CODE >1140:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1209 text16 CODE >1141:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1220 text16 CODE >1142:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1222 text16 CODE >1144:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1226 text16 CODE >1145:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1236 text16 CODE >1147:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1249 text16 CODE >1148:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1263 text16 CODE >1152:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+128A text16 CODE >1153:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+12B4 text16 CODE >1154:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+12C3 text16 CODE >1155:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+12D1 text16 CODE >1156:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+12F6 text16 CODE >1158:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+12FA text16 CODE >1159:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+131A text16 CODE >1160:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1322 text16 CODE >1161:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1328 text16 CODE >1162:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1333 text16 CODE >1164:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1342 text16 CODE >1165:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+135B text16 CODE >1166:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1390 text16 CODE >1167:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+13AB text16 CODE >1168:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+13BF text16 CODE >1169:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+13CE text16 CODE >1170:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+13E8 text16 CODE >1167:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+13ED text16 CODE >1172:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+140D text16 CODE >1178:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+141A text16 CODE >1179:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1445 text16 CODE >1184:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+144F text16 CODE >1185:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1477 text16 CODE >1187:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1478 text16 CODE >1188:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1006 text15 CODE >1080:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1006 text15 CODE >1089:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+100F text15 CODE >1090:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+101D text15 CODE >1091:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+104A text15 CODE >1092:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+104C text15 CODE >1093:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1064 text15 CODE >1094:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+107C text15 CODE >1096:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1082 text15 CODE >1097:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+10A0 text15 CODE >1099:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+10B7 text15 CODE >1100:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+10B8 text15 CODE >1102:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+10D7 text15 CODE >1103:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+10D7 text15 CODE >1109:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+10E3 text15 CODE >1104:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+110D text15 CODE >1105:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+111B text15 CODE >1106:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+114F text15 CODE >1108:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1156 text15 CODE >1103:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1157 text15 CODE >1110:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1181 text15 CODE >1112:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1190 text15 CODE >1113:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1196 text15 CODE >1114:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+11C8 text15 CODE >1115:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+11F8 text15 CODE >1117:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+11F9 text15 CODE >1118:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2134 text14 CODE >1199:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2134 text14 CODE >1208:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2145 text14 CODE >1209:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2148 text14 CODE >1210:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+214A text14 CODE >1212:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2169 text14 CODE >1213:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+216C text14 CODE >1214:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+218D text14 CODE >1215:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+219A text14 CODE >1217:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+219C text14 CODE >1219:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+21AB text14 CODE >1220:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+21AE text14 CODE >1222:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+21B6 text14 CODE >1223:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+21B7 text14 CODE >1224:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2C9D text13 CODE >507:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2C9D text13 CODE >508:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2CA1 text13 CODE >509:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2CA5 text13 CODE >512:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2CAC text13 CODE >513:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2CB8 text13 CODE >514:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2CC0 text13 CODE >515:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2CC4 text13 CODE >512:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2CC5 text13 CODE >519:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2CD9 text13 CODE >518:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+4 text12 CODE >1578:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+4 text12 CODE >1629:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+12 text12 CODE >1632:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+15 text12 CODE >1633:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+34 text12 CODE >1634:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+37 text12 CODE >1635:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+4A text12 CODE >1636:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+63 text12 CODE >1640:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+77 text12 CODE >1644:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+78 text12 CODE >1645:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2B68 text11 CODE >543:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2B68 text11 CODE >544:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2B83 text11 CODE >545:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2B8E text11 CODE >546:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+79 text10 CODE >1843:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+79 text10 CODE >1974:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+96 text10 CODE >1975:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+9F text10 CODE >1976:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+AE text10 CODE >1977:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+BC text10 CODE >1993:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+C5 text10 CODE >1994:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+D1 text10 CODE >1995:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+DC text10 CODE >1996:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+E4 text10 CODE >1997:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+E9 text10 CODE >1999:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+ED text10 CODE >2000:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+F1 text10 CODE >2009:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+101 text10 CODE >2010:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+10F text10 CODE >2011:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+12D text10 CODE >2013:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+13C text10 CODE >2014:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+13E text10 CODE >2016:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+150 text10 CODE >2018:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+158 text10 CODE >2019:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+159 text10 CODE >2020:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+15A text10 CODE >2021:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+162 text10 CODE >2022:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+165 text10 CODE >2025:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+174 text10 CODE >1992:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+182 text10 CODE >1993:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+186 text10 CODE >2028:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+193 text10 CODE >2029:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1A2 text10 CODE >2031:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1A6 text10 CODE >2032:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1B6 text10 CODE >2034:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1BF text10 CODE >2035:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1C5 text10 CODE >2036:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1CC text10 CODE >2038:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1D5 text10 CODE >2040:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1D6 text10 CODE >2042:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2BE7 text9 CODE >533:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2BE7 text9 CODE >534:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2BEF text9 CODE >535:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2BF1 text9 CODE >537:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2C16 text9 CODE >538:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2C1A text9 CODE >539:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+20B8 text8 CODE >1458:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+20B8 text8 CODE >1468:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+20C6 text8 CODE >1479:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+20CB text8 CODE >1502:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+20E3 text8 CODE >1469:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+20E5 text8 CODE >1475:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2104 text8 CODE >1476:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2107 text8 CODE >1477:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2110 text8 CODE >1478:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2118 text8 CODE >1479:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+211B text8 CODE >1502:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2122 text8 CODE >1505:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2130 text8 CODE >1506:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1800 text7 CODE >1235:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1800 text7 CODE >1242:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+180F text7 CODE >1243:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1817 text7 CODE >1244:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1835 text7 CODE >1246:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+183D text7 CODE >1247:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+22FD text6 CODE >2052:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+22FD text6 CODE >2068:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+230D text6 CODE >2069:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2311 text6 CODE >2070:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2320 text6 CODE >2073:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+232A text6 CODE >2074:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+233B text6 CODE >2075:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2343 text6 CODE >2076:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2344 text6 CODE >2093:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2344 text6 CODE >2094:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2346 text6 CODE >2095:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+234F text6 CODE >2096:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2356 text6 CODE >2099:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2373 text6 CODE >2078:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2382 text6 CODE >2079:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2385 text6 CODE >2080:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+238F text6 CODE >2081:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+239B text6 CODE >2082:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+239E text6 CODE >2083:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+23A1 text6 CODE >2089:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+23A7 text6 CODE >2103:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+23A8 text6 CODE >2104:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2520 text5 CODE >937:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2520 text5 CODE >948:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2552 text5 CODE >949:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2558 text5 CODE >951:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2559 text5 CODE >952:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+255A text5 CODE >953:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+255B text5 CODE >958:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2581 text5 CODE >959:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2584 text5 CODE >960:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2598 text5 CODE >961:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+25A9 text5 CODE >962:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+25AF text5 CODE >974:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+25B8 text5 CODE >953:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+25DD text5 CODE >954:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2606 text5 CODE >955:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+260C text5 CODE >956:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2612 text5 CODE >957:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2620 text5 CODE >978:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2621 text5 CODE >979:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1DAE text4 CODE >2449:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1DAE text4 CODE >2464:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1DB4 text4 CODE >2465:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1DBB text4 CODE >2468:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1DC2 text4 CODE >2473:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1DC7 text4 CODE >2474:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1DE1 text4 CODE >2479:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1DE4 text4 CODE >2480:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1DE8 text4 CODE >2481:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1DF8 text4 CODE >2482:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1DFC text4 CODE >2484:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1DFF text4 CODE >2485:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1E03 text4 CODE >2486:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1E09 text4 CODE >2493:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1E0E text4 CODE >2494:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1E12 text4 CODE >2495:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1E16 text4 CODE >2499:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1E22 text4 CODE >2501:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1E24 text4 CODE >2502:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1E29 text4 CODE >2503:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1E2A text4 CODE >2505:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1E33 text4 CODE >2506:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1E36 text4 CODE >2507:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1E36 text4 CODE >2508:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1E39 text4 CODE >2509:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1E3E text4 CODE >2512:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1E45 text4 CODE >2514:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1E53 text4 CODE >2515:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1E60 text4 CODE >2516:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1E66 text4 CODE >2517:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1E78 text4 CODE >2518:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1E8D text4 CODE >2519:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1E9C text4 CODE >2520:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1EAC text4 CODE >2521:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1EB3 text4 CODE >2522:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1EC1 text4 CODE >2523:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1EDF text4 CODE >2524:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1EE2 text4 CODE >2525:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1F0A text4 CODE >2526:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1F26 text4 CODE >2532:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1F2A text4 CODE >2533:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1F31 text4 CODE >2534:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1F33 text4 CODE >2535:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1F33 text4 CODE >2536:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1F3E text4 CODE >2537:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1F44 text4 CODE >2541:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1F48 text4 CODE >2542:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1F4B text4 CODE >2543:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1F4C text4 CODE >2544:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1F69 text4 CODE >2545:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1F73 text4 CODE >2565:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1F76 text4 CODE >2566:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1F83 text4 CODE >2567:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1F89 text4 CODE >2568:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1FA3 text4 CODE >2569:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1FBF text4 CODE >2570:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1FCE text4 CODE >2571:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1FDD text4 CODE >2575:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1FE6 text4 CODE >2576:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1FFD text4 CODE >2580:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+1FFF text4 CODE >2581:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+B86 text3 CODE >2691:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+B86 text3 CODE >2701:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+B8A text3 CODE >2705:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+B90 text3 CODE >2707:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+B9B text3 CODE >2708:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+B9E text3 CODE >2709:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+BA6 text3 CODE >2711:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+BAD text3 CODE >2713:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+BE7 text3 CODE >2715:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+BEB text3 CODE >2717:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+C05 text3 CODE >2718:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+C2C text3 CODE >2719:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+C2F text3 CODE >2720:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+C42 text3 CODE >2721:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+C4F text3 CODE >2722:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+C55 text3 CODE >2723:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+C66 text3 CODE >2730:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+C86 text3 CODE >2732:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+C8C text3 CODE >2733:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+C9F text3 CODE >2734:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+CB8 text3 CODE >2735:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+CC5 text3 CODE >2736:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+CE5 text3 CODE >2739:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+D27 text3 CODE >2740:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+D35 text3 CODE >2748:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+D60 text3 CODE >2749:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+D73 text3 CODE >2750:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+D80 text3 CODE >2751:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+D8D text3 CODE >2752:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+D91 text3 CODE >2753:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+DB0 text3 CODE >2754:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+DC3 text3 CODE >2755:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+DF7 text3 CODE >2756:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+E05 text3 CODE >2759:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+E3A text3 CODE >2760:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+E72 text3 CODE >2761:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+E80 text3 CODE >2770:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+E8D text3 CODE >2771:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+E8E text3 CODE >2774:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+EB8 text3 CODE >2775:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+ED5 text3 CODE >2776:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+EEC text3 CODE >2785:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+EF9 text3 CODE >2787:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+F12 text3 CODE >2788:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+F1E text3 CODE >2790:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+F3C text3 CODE >2791:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+F4A text3 CODE >2792:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+F79 text3 CODE >2793:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+F8D text3 CODE >2716:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+FB4 text3 CODE >2715:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+FB5 text3 CODE >2800:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+FF9 text3 CODE >2801:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+FFF text3 CODE >2804:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\ff.c
+2AC4 text2 CODE >56:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\16F1717_Internal.c
+2AC4 text2 CODE >58:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\16F1717_Internal.c
+2AC6 text2 CODE >59:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\16F1717_Internal.c
+2AC7 text2 CODE >62:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\16F1717_Internal.c
+2AC8 text2 CODE >63:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\16F1717_Internal.c
+2AC9 text2 CODE >64:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\16F1717_Internal.c
+2ACA text2 CODE >65:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\16F1717_Internal.c
+2ACB text2 CODE >68:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\16F1717_Internal.c
+2ACC text2 CODE >69:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\16F1717_Internal.c
+2002 text1 CODE >58:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\Main.c
+2002 text1 CODE >60:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\Main.c
+2005 text1 CODE >63:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\Main.c
+2007 text1 CODE >64:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\Main.c
+2008 text1 CODE >65:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\Main.c
+2009 text1 CODE >67:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\Main.c
+200B text1 CODE >68:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\Main.c
+200C text1 CODE >69:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\Main.c
+200D text1 CODE >70:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\Main.c
+200E text1 CODE >72:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\Main.c
+200F text1 CODE >74:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\Main.c
+2012 text1 CODE >75:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\Main.c
+2014 text1 CODE >76:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\Main.c
+2015 text1 CODE >78:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\Main.c
+2019 text1 CODE >79:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\Main.c
+201E text1 CODE >80:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\Main.c
+2022 text1 CODE >82:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\Main.c
+2025 text1 CODE >83:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\Main.c
+2027 text1 CODE >84:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\Main.c
+2028 text1 CODE >88:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\Main.c
+202B text1 CODE >92:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\Main.c
+202D text1 CODE >93:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\Main.c
+2039 text1 CODE >94:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\Main.c
+203B text1 CODE >95:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\Main.c
+2259 maintext CODE >105:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\Main.c
+2259 maintext CODE >106:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\Main.c
+225C maintext CODE >110:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\Main.c
+226C maintext CODE >113:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\Main.c
+227F maintext CODE >116:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\Main.c
+229E maintext CODE >122:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\Main.c
+22B2 maintext CODE >125:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\Main.c
+22BA maintext CODE >128:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\Main.c
+22BB maintext CODE >129:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\Main.c
+22C8 maintext CODE >130:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\Main.c
+22CB maintext CODE >139:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\Main.c
+22CE maintext CODE >140:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\Main.c
+22CE maintext CODE >141:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\Main.c
+22D0 maintext CODE >142:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\Main.c
+22DD maintext CODE >143:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\Main.c
+22DF maintext CODE >144:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\Main.c
+22EC maintext CODE >139:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\Main.c
+22FC maintext CODE >149:C:\Users\armst\Desktop\PIC16-Projects\01_C\I21_SD_Card.X\Main.c
+802 clrtext CODE >3525:C:\Users\armst\AppData\Local\Temp\sfh8.
+802 clrtext CODE >3526:C:\Users\armst\AppData\Local\Temp\sfh8.
+803 clrtext CODE >3527:C:\Users\armst\AppData\Local\Temp\sfh8.
+803 clrtext CODE >3528:C:\Users\armst\AppData\Local\Temp\sfh8.
+804 clrtext CODE >3529:C:\Users\armst\AppData\Local\Temp\sfh8.
+805 clrtext CODE >3530:C:\Users\armst\AppData\Local\Temp\sfh8.
+806 clrtext CODE >3531:C:\Users\armst\AppData\Local\Temp\sfh8.
+807 clrtext CODE >3532:C:\Users\armst\AppData\Local\Temp\sfh8.
+808 clrtext CODE >3533:C:\Users\armst\AppData\Local\Temp\sfh8.
+809 clrtext CODE >3534:C:\Users\armst\AppData\Local\Temp\sfh8.
+80A clrtext CODE >3535:C:\Users\armst\AppData\Local\Temp\sfh8.
+80B clrtext CODE >3536:C:\Users\armst\AppData\Local\Temp\sfh8.
+80C clrtext CODE >3538:C:\Users\armst\AppData\Local\Temp\sfh8.
+80D clrtext CODE >3537:C:\Users\armst\AppData\Local\Temp\sfh8.
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___latbits 3 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__LdataBANK1 0 0 ABS 0 dataBANK1 -
+__Hspace_0 8009 0 ABS 0 - -
+__Hspace_1 16D 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+?_mem_cmp 70 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+__HidataBANK1 0 0 ABS 0 idataBANK1 -
+__size_of_initMain 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+_SSP1STATbits 214 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+_get_ldnumber 5E26 0 CODE 0 text19 dist/default/production\I21_SD_Card.X.production.o
+follow_path@dir D4 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+follow_path@res D7 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+__end_of_move_window 5D40 0 CODE 0 text39 dist/default/production\I21_SD_Card.X.production.o
+?_chk_chr 70 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+disk_write@count 2A 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+_bw EC 0 BANK1 1 bssBANK1 dist/default/production\I21_SD_Card.X.production.o
+disk_ioctl@cmd 24 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+disk_ioctl@csd 34 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+disk_ioctl@ptr 4B 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+disk_ioctl@res 49 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+main@y E5 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+__Hstrings 0 0 ABS 0 strings -
+_Fsid E7 0 BANK1 1 bssBANK1 dist/default/production\I21_SD_Card.X.production.o
+_SCS0 4C8 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+_SCS1 4C9 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+_Stat EE 0 BANK1 1 dataBANK1 dist/default/production\I21_SD_Card.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\armst\AppData\Local\Temp\sfh8.o
+_main 44B2 0 CODE 0 maintext dist/default/production\I21_SD_Card.X.production.o
+btemp 7E 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+start 4 0 CODE 0 init C:\Users\armst\AppData\Local\Temp\sfh8.o
+_RC3PPSbits EA3 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+?_ld_clust 70 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+__CFG_BOREN$OFF 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__size_of_main 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__size_of___lldiv 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+disk_ioctl@csize 45 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+_st_clust 55BE 0 CODE 0 text38 dist/default/production\I21_SD_Card.X.production.o
+_get_fat 4C44 0 CODE 0 text26 dist/default/production\I21_SD_Card.X.production.o
+?___lmul 70 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+?___wmul 70 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+__size_of_rcvr_datablock 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+get_fat@clst 50 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+__size_of_sync_window 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+remove_chain@nxt A7 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+remove_chain@res A6 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+__LidataBANK1 0 0 ABS 0 idataBANK1 -
+_dir_find 4170 0 CODE 0 text8 dist/default/production\I21_SD_Card.X.production.o
+_dir_next 23F4 0 CODE 0 text16 dist/default/production\I21_SD_Card.X.production.o
+__end_of_disk_ioctl 170C 0 CODE 0 text36 dist/default/production\I21_SD_Card.X.production.o
+dir_register@res D6 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+create_chain@ncl AB 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+create_chain@res A6 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+create_chain@scl A7 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+mem_set@cnt 74 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+mem_set@dst 70 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+mem_set@val 72 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+__end_of_follow_path 4752 0 CODE 0 text6 dist/default/production\I21_SD_Card.X.production.o
+__end_of_disk_write 44B2 0 CODE 0 text41 dist/default/production\I21_SD_Card.X.production.o
+_wait_ready 564A 0 CODE 0 text47 dist/default/production\I21_SD_Card.X.production.o
+__Hpowerup 0 0 CODE 0 powerup -
+__end_of_st_clust 55E4 0 CODE 0 text38 dist/default/production\I21_SD_Card.X.production.o
+get_ldnumber@vol 24 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+__size_of___send_cmd 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+f_mount@fs 6A 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+f_mount@rp DF 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+f_open@dir 135 0 BANK2 1 cstackBANK2 dist/default/production\I21_SD_Card.X.production.o
+f_open@res 134 0 BANK2 1 cstackBANK2 dist/default/production\I21_SD_Card.X.production.o
+f_open@sfn 120 0 BANK2 1 cstackBANK2 dist/default/production\I21_SD_Card.X.production.o
+__size_of_get_ldnumber 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__end_of_dir_find 4268 0 CODE 0 text8 dist/default/production\I21_SD_Card.X.production.o
+__end_of_dir_next 28F2 0 CODE 0 text16 dist/default/production\I21_SD_Card.X.production.o
+__size_of_xmit_datablock 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__size_of_validate 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\armst\AppData\Local\Temp\sfh8.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\armst\AppData\Local\Temp\sfh8.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\armst\AppData\Local\Temp\sfh8.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\armst\AppData\Local\Temp\sfh8.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\armst\AppData\Local\Temp\sfh8.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\armst\AppData\Local\Temp\sfh8.o
+f_write@bw B9 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+f_write@cc CA 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+f_write@fp B3 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+_initMain 4004 0 CODE 0 text1 dist/default/production\I21_SD_Card.X.production.o
+put_fat@clst 50 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+wtemp0 7E 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+f_lseek@bcs CA 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+f_lseek@ofs B5 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+f_lseek@res C5 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+__Hfunctab 0 0 ENTRY 0 functab -
+follow_path@dp CE 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+follow_path@ns D6 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+put_fat@res 69 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+put_fat@val 54 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+disk_read@buff 24 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+disk_read@pdrv 2D 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+disk_read@sector 26 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+__Hclrtext 0 0 ABS 0 clrtext -
+__end_of_initMain 4078 0 CODE 0 text1 dist/default/production\I21_SD_Card.X.production.o
+__size_of_f_close 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__size_of_f_lseek 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__size_of_f_mount 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__size_of_SPI_Initialize 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__size_of_f_write 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__end_of_get_ldnumber 5F0C 0 CODE 0 text19 dist/default/production\I21_SD_Card.X.production.o
+___wmul@multiplicand 72 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+__size_of_clust2sect 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+_create_name F2 0 CODE 0 text10 dist/default/production\I21_SD_Card.X.production.o
+disk_initialize@ty 2D 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+dir_alloc@dp C7 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+create_name@path 7A 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+?_get_fat 4E 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+get_fat@val 60 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+_dir_sdi 200C 0 CODE 0 text15 dist/default/production\I21_SD_Card.X.production.o
+?_clust2sect 20 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+__end_of___lmul 57CE 0 CODE 0 text28 dist/default/production\I21_SD_Card.X.production.o
+__end_of___wmul 564A 0 CODE 0 text37 dist/default/production\I21_SD_Card.X.production.o
+?_get_ldnumber 70 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+__end_of_dir_alloc 4370 0 CODE 0 text14 dist/default/production\I21_SD_Card.X.production.o
+__size_of_dir_alloc 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__end_of_wait_ready 568A 0 CODE 0 text47 dist/default/production\I21_SD_Card.X.production.o
+__Lmaintext 0 0 ABS 0 maintext -
+_CardType EB 0 BANK1 1 bssBANK1 dist/default/production\I21_SD_Card.X.production.o
+disk_read@count 2A 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+chk_chr@chr 72 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+chk_chr@str 70 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+st_clust@dir 70 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+f_lseek@fp B3 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+_create_chain 32CE 0 CODE 0 text24 dist/default/production\I21_SD_Card.X.production.o
+f_lseek@ifptr C1 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+dir_next@dp B3 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+_internal_16 5588 0 CODE 0 text2 dist/default/production\I21_SD_Card.X.production.o
+f_lseek@nsect C6 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+_validate 5BC2 0 CODE 0 text32 dist/default/production\I21_SD_Card.X.production.o
+__end_of___lldiv 5A6C 0 CODE 0 text29 dist/default/production\I21_SD_Card.X.production.o
+find_volume@nrsv C2 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+find_volume@path 5A 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+find_volume@stat CC 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+sync_window@wsect 3F 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+sync_fs@fs 4C 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+_dir_register 8 0 CODE 0 text12 dist/default/production\I21_SD_Card.X.production.o
+remove_chain@clst A2 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+___stackhi 25C1 0 ABS 0 - C:\Users\armst\AppData\Local\Temp\sfh8.o
+___stacklo 20ED 0 ABS 0 - C:\Users\armst\AppData\Local\Temp\sfh8.o
+__end_of_validate 5C74 0 CODE 0 text32 dist/default/production\I21_SD_Card.X.production.o
+check_fs@sect 50 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+__end_of_f_open 4000 0 CODE 0 text4 dist/default/production\I21_SD_Card.X.production.o
+__end_of_f_sync 48B6 0 CODE 0 text31 dist/default/production\I21_SD_Card.X.production.o
+_dir_alloc 4268 0 CODE 0 text14 dist/default/production\I21_SD_Card.X.production.o
+_SSPDATPPSbits E21 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+dir_find@c CA 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+__size_of_move_window 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+disk_initialize@n 30 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+___lldiv@counter 7D 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+__CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__CFG_MCLRE$OFF 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+start_initialization FB8 0 CODE 0 cinit dist/default/production\I21_SD_Card.X.production.o
+_find_volume 3AE 0 CODE 0 text18 dist/default/production\I21_SD_Card.X.production.o
+__end_of_disk_initialize 32CE 0 CODE 0 text20 dist/default/production\I21_SD_Card.X.production.o
+__size_of_sync_fs 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+create_chain@clst A2 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+_TRISCbits 8E 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+_TRISDbits 8F 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__size_of_mem_cmp 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__size_of_mem_cpy 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__size_of_mem_set 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+___lldiv@dividend 74 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+__size_of_create_chain 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__size_of_chk_chr 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+sync_window@fs 2E 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+sync_window@nf 3D 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+__end_of_f_close 56D0 0 CODE 0 text30 dist/default/production\I21_SD_Card.X.production.o
+clear_ram0 1004 0 CODE 0 clrtext dist/default/production\I21_SD_Card.X.production.o
+_SPLLEN 4CF 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+__pcstackBANK1 A0 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+__pcstackBANK2 120 0 BANK2 1 cstackBANK2 dist/default/production\I21_SD_Card.X.production.o
+_SSPBUF 211 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__end_of_f_lseek 3000 0 CODE 0 text23 dist/default/production\I21_SD_Card.X.production.o
+__end_of_f_mount 5B16 0 CODE 0 text17 dist/default/production\I21_SD_Card.X.production.o
+mem_cmp@cnt 73 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+mem_cmp@dst 70 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+mem_cmp@src 72 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+__end_of_f_write 2000 0 CODE 0 text3 dist/default/production\I21_SD_Card.X.production.o
+get_ldnumber@tp 22 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+get_ldnumber@tt 29 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+dir_sdi@clst B0 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+dir_sdi@sect AC 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+get_fat@bc 68 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+get_fat@fs 4E 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+get_fat@wc 64 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+__size_of_dir_register 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+dir_next@c BF 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+dir_next@i C1 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+__size_of_follow_path 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+dir_next@stretch B5 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+__size_of_put_fat 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__end_of_disk_status 5588 0 CODE 0 text33 dist/default/production\I21_SD_Card.X.production.o
+mem_cpy@cnt 74 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+mem_cpy@dst 70 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+mem_cpy@src 72 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+dir_alloc@n CD 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\armst\AppData\Local\Temp\sfh8.o
+__end_of_select 55BE 0 CODE 0 text46 dist/default/production\I21_SD_Card.X.production.o
+__Hbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 ABS 0 bank2 -
+__Hbank3 0 0 ABS 0 bank3 -
+__Hbank4 0 0 ABS 0 bank4 -
+__Hbank5 0 0 ABS 0 bank5 -
+__Hbank6 0 0 ABS 0 bank6 -
+__Hbank7 0 0 ABS 0 bank7 -
+__Hbank8 0 0 ABS 0 bank8 -
+__Hbank9 0 0 ABS 0 bank9 -
+__Hcinit 1000 0 CODE 0 cinit -
+find_volume@fasize CD 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+__end_of_create_chain 3712 0 CODE 0 text24 dist/default/production\I21_SD_Card.X.production.o
+__Hidloc 0 0 IDLOC 0 idloc -
+__size_of_disk_ioctl 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__Hsfr10 0 0 ABS 0 sfr10 -
+__Hsfr11 0 0 ABS 0 sfr11 -
+__Hsfr12 0 0 ABS 0 sfr12 -
+__Hsfr13 0 0 ABS 0 sfr13 -
+__Hsfr14 0 0 ABS 0 sfr14 -
+__Hsfr15 0 0 ABS 0 sfr15 -
+__Hsfr16 0 0 ABS 0 sfr16 -
+__Hsfr17 0 0 ABS 0 sfr17 -
+__Hsfr18 0 0 ABS 0 sfr18 -
+__Hsfr19 0 0 ABS 0 sfr19 -
+__Hsfr20 0 0 ABS 0 sfr20 -
+__Hsfr21 0 0 ABS 0 sfr21 -
+__Hsfr22 0 0 ABS 0 sfr22 -
+__Hsfr23 0 0 ABS 0 sfr23 -
+__Hsfr24 0 0 ABS 0 sfr24 -
+__Hsfr25 0 0 ABS 0 sfr25 -
+__Hsfr26 0 0 ABS 0 sfr26 -
+__Hsfr27 0 0 ABS 0 sfr27 -
+__Hsfr28 0 0 ABS 0 sfr28 -
+__Hsfr29 0 0 ABS 0 sfr29 -
+__Hsfr30 0 0 ABS 0 sfr30 -
+__Hsfr31 0 0 ABS 0 sfr31 -
+__Hstack 0 0 STACK 2 stack -
+__size_of_disk_write 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+dir_sdi@dp 6A 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+dir_sdi@ic AA 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+__Hbank10 0 0 ABS 0 bank10 -
+__Hbank11 0 0 ABS 0 bank11 -
+__Hbank12 0 0 ABS 0 bank12 -
+__Hbank13 0 0 ABS 0 bank13 -
+__Hbank14 0 0 ABS 0 bank14 -
+__Hbank15 0 0 ABS 0 bank15 -
+__Hbank16 0 0 ABS 0 bank16 -
+__Hbank17 0 0 ABS 0 bank17 -
+__Hbank18 0 0 ABS 0 bank18 -
+__Hbank19 0 0 ABS 0 bank19 -
+__Hbank20 0 0 ABS 0 bank20 -
+__Hbank21 0 0 ABS 0 bank21 -
+__Hbank22 0 0 ABS 0 bank22 -
+__Hbank23 0 0 ABS 0 bank23 -
+__Hbank24 0 0 ABS 0 bank24 -
+__Hbank25 0 0 ABS 0 bank25 -
+__Hbank26 0 0 BANK26 1 bank26 -
+__Hbank27 0 0 BANK27 1 bank27 -
+__Hbank28 0 0 BANK28 1 bank28 -
+__Hbank29 0 0 BANK29 1 bank29 -
+__Hbank30 0 0 BANK30 1 bank30 -
+__Hbank31 0 0 BANK31 1 bank31 -
+__Hbigram 0 0 ABS 0 bigram -
+__Hmaintext 0 0 ABS 0 maintext -
+mem_cmp@d 77 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+mem_cmp@r 79 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+mem_cmp@s 7B 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+mem_cpy@d 77 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+mem_cpy@s 79 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+mem_set@d 76 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+_sync_window 48B6 0 CODE 0 text40 dist/default/production\I21_SD_Card.X.production.o
+__CFG_FOSC$INTOSC 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__Hcommon 0 0 ABS 0 common -
+__Hconfig 10012 0 CONFIG 0 config -
+_disk_read$355 2E 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+__end_of_dir_register F2 0 CODE 0 text12 dist/default/production\I21_SD_Card.X.production.o
+_disk_initialize 307C 0 CODE 0 text20 dist/default/production\I21_SD_Card.X.production.o
+move_window@fs 43 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+__Lbank0 0 0 ABS 0 bank0 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Lbank2 0 0 ABS 0 bank2 -
+__Lbank3 0 0 ABS 0 bank3 -
+__Lbank4 0 0 ABS 0 bank4 -
+__Lbank5 0 0 ABS 0 bank5 -
+__Lbank6 0 0 ABS 0 bank6 -
+__Lbank7 0 0 ABS 0 bank7 -
+__Lbank8 0 0 ABS 0 bank8 -
+__Lbank9 0 0 ABS 0 bank9 -
+__Lcinit FB8 0 CODE 0 cinit -
+__Lidloc 0 0 IDLOC 0 idloc -
+__Lsfr10 0 0 ABS 0 sfr10 -
+__Lsfr11 0 0 ABS 0 sfr11 -
+__Lsfr12 0 0 ABS 0 sfr12 -
+__Lsfr13 0 0 ABS 0 sfr13 -
+__Lsfr14 0 0 ABS 0 sfr14 -
+__Lsfr15 0 0 ABS 0 sfr15 -
+__Lsfr16 0 0 ABS 0 sfr16 -
+__Lsfr17 0 0 ABS 0 sfr17 -
+__Lsfr18 0 0 ABS 0 sfr18 -
+__Lsfr19 0 0 ABS 0 sfr19 -
+__Lsfr20 0 0 ABS 0 sfr20 -
+__Lsfr21 0 0 ABS 0 sfr21 -
+__Lsfr22 0 0 ABS 0 sfr22 -
+__Lsfr23 0 0 ABS 0 sfr23 -
+__Lsfr24 0 0 ABS 0 sfr24 -
+__Lsfr25 0 0 ABS 0 sfr25 -
+__Lsfr26 0 0 ABS 0 sfr26 -
+__Lsfr27 0 0 ABS 0 sfr27 -
+__Lsfr28 0 0 ABS 0 sfr28 -
+__Lsfr29 0 0 ABS 0 sfr29 -
+__Lsfr30 0 0 ABS 0 sfr30 -
+__Lsfr31 0 0 ABS 0 sfr31 -
+__Lstack 0 0 STACK 2 stack -
+_SPI_Exchange8bit 5564 0 CODE 0 text50 dist/default/production\I21_SD_Card.X.production.o
+?_create_chain A0 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+f_open@cl 12C 0 BANK2 1 cstackBANK2 dist/default/production\I21_SD_Card.X.production.o
+f_open@dj 137 0 BANK2 1 cstackBANK2 dist/default/production\I21_SD_Card.X.production.o
+f_open@dw 130 0 BANK2 1 cstackBANK2 dist/default/production\I21_SD_Card.X.production.o
+f_open@fp DA 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+validate@fil 79 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+validate@obj 71 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+__Habs1 0 0 ABS 0 abs1 -
+__Hcode 0 0 ABS 0 code -
+__Hinit 4 0 CODE 0 init -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Hsfr4 0 0 ABS 0 sfr4 -
+__Hsfr5 0 0 ABS 0 sfr5 -
+__Hsfr6 0 0 ABS 0 sfr6 -
+__Hsfr7 0 0 ABS 0 sfr7 -
+__Hsfr8 0 0 ABS 0 sfr8 -
+__Hsfr9 0 0 ABS 0 sfr9 -
+__Htext 0 0 ABS 0 text -
+__Labs1 0 0 ABS 0 abs1 -
+__Lcode 0 0 ABS 0 code -
+__Linit 4 0 CODE 0 init -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+__Lsfr4 0 0 ABS 0 sfr4 -
+__Lsfr5 0 0 ABS 0 sfr5 -
+__Lsfr6 0 0 ABS 0 sfr6 -
+__Lsfr7 0 0 ABS 0 sfr7 -
+__Lsfr8 0 0 ABS 0 sfr8 -
+__Lsfr9 0 0 ABS 0 sfr9 -
+__Ltext 0 0 ABS 0 text -
+__pstringtext1 6000 0 STRCODE 0 stringtext1 dist/default/production\I21_SD_Card.X.production.o
+__pstringtext2 602A 0 STRCODE 0 stringtext2 dist/default/production\I21_SD_Card.X.production.o
+__pstringtext3 6048 0 STRCODE 0 stringtext3 dist/default/production\I21_SD_Card.X.production.o
+__pstringtext4 0 0 STRCODE 0 stringtext4 dist/default/production\I21_SD_Card.X.production.o
+_SSP1CON1 215 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+_SSP1STAT 214 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+___lmul 5770 0 CODE 0 text28 dist/default/production\I21_SD_Card.X.production.o
+___wmul 5614 0 CODE 0 text37 dist/default/production\I21_SD_Card.X.production.o
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__LcstackBANK1 0 0 ABS 0 cstackBANK1 -
+__LcstackBANK2 0 0 ABS 0 cstackBANK2 -
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+move_window@res 4D 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+_Fil 14D 0 BANK2 1 bssBANK2 dist/default/production\I21_SD_Card.X.production.o
+_RD0 78 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__S0 8009 0 ABS 0 - -
+__S1 16D 0 ABS 0 - -
+__S2 0 0 ABS 0 - -
+__end_of_sync_fs 11F6 0 CODE 0 text34 dist/default/production\I21_SD_Card.X.production.o
+disk_write@sector 26 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+__end_of_mem_cmp 5836 0 CODE 0 text9 dist/default/production\I21_SD_Card.X.production.o
+__end_of_mem_cpy 59C8 0 CODE 0 text13 dist/default/production\I21_SD_Card.X.production.o
+__end_of_mem_set 5614 0 CODE 0 text35 dist/default/production\I21_SD_Card.X.production.o
+check_fs@fs 4E 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+find_volume@i D5 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+__size_of_get_fat 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+find_volume@sysect BC 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+find_volume@szbfat B6 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+_rcvr_datablock 5836 0 CODE 0 text49 dist/default/production\I21_SD_Card.X.production.o
+xmit_datablock@token 75 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+_f_open 3B5C 0 CODE 0 text4 dist/default/production\I21_SD_Card.X.production.o
+_f_sync 4752 0 CODE 0 text31 dist/default/production\I21_SD_Card.X.production.o
+__end_of_chk_chr 571E 0 CODE 0 text11 dist/default/production\I21_SD_Card.X.production.o
+find_volume@br A0 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+find_volume@fs D8 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+find_volume@pt BA 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+remove_chain@fs A0 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+__size_of_wait_ready 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__Lintentry 4 0 CODE 0 intentry -
+___lldiv@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\armst\AppData\Local\Temp\sfh8.o
+get_ldnumber@path 28 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+rcvr_datablock@buff 71 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+f_write@btw B7 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+f_write@res C6 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+__end_of_put_fat 3B5C 0 CODE 0 text25 dist/default/production\I21_SD_Card.X.production.o
+ld_clust@dir 72 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+__pdataBANK1 EE 0 BANK1 1 dataBANK1 dist/default/production\I21_SD_Card.X.production.o
+__size_of___lmul 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__size_of___wmul 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+_xmit_datablock 58B8 0 CODE 0 text42 dist/default/production\I21_SD_Card.X.production.o
+__LbssBANK1 0 0 ABS 0 bssBANK1 -
+__LbssBANK2 0 0 ABS 0 bssBANK2 -
+__size_of_send_cmd 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__Lstringtext1 0 0 ABS 0 stringtext1 -
+__Lstringtext2 0 0 ABS 0 stringtext2 -
+__Lstringtext3 0 0 ABS 0 stringtext3 -
+__Lstringtext4 0 0 ABS 0 stringtext4 -
+__end_of_create_name 3AE 0 CODE 0 text10 dist/default/production\I21_SD_Card.X.production.o
+_find_volume$940 B0 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+_find_volume$941 B4 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+f_sync@dir 5E 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+f_sync@res 5D 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+rcvr_datablock@btr 73 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+rcvr_datablock@tmr 76 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+clust2sect@clst 22 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+create_name@dp 78 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+create_name@ni 25 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+create_name@si 22 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+dir_register@dp D0 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+__ptext10 F2 0 CODE 0 text10 dist/default/production\I21_SD_Card.X.production.o
+__ptext11 56D0 0 CODE 0 text11 dist/default/production\I21_SD_Card.X.production.o
+__ptext12 8 0 CODE 0 text12 dist/default/production\I21_SD_Card.X.production.o
+__ptext13 593A 0 CODE 0 text13 dist/default/production\I21_SD_Card.X.production.o
+__ptext14 4268 0 CODE 0 text14 dist/default/production\I21_SD_Card.X.production.o
+__ptext15 200C 0 CODE 0 text15 dist/default/production\I21_SD_Card.X.production.o
+__ptext16 23F4 0 CODE 0 text16 dist/default/production\I21_SD_Card.X.production.o
+__ptext17 5A6C 0 CODE 0 text17 dist/default/production\I21_SD_Card.X.production.o
+__ptext18 3AE 0 CODE 0 text18 dist/default/production\I21_SD_Card.X.production.o
+__ptext19 5E26 0 CODE 0 text19 dist/default/production\I21_SD_Card.X.production.o
+__ptext20 307C 0 CODE 0 text20 dist/default/production\I21_SD_Card.X.production.o
+__ptext21 5556 0 CODE 0 text21 dist/default/production\I21_SD_Card.X.production.o
+__ptext22 4078 0 CODE 0 text22 dist/default/production\I21_SD_Card.X.production.o
+__ptext23 28F2 0 CODE 0 text23 dist/default/production\I21_SD_Card.X.production.o
+__ptext24 32CE 0 CODE 0 text24 dist/default/production\I21_SD_Card.X.production.o
+__ptext25 3712 0 CODE 0 text25 dist/default/production\I21_SD_Card.X.production.o
+__ptext26 4C44 0 CODE 0 text26 dist/default/production\I21_SD_Card.X.production.o
+__ptext27 5F0C 0 CODE 0 text27 dist/default/production\I21_SD_Card.X.production.o
+__ptext28 5770 0 CODE 0 text28 dist/default/production\I21_SD_Card.X.production.o
+__ptext29 59C8 0 CODE 0 text29 dist/default/production\I21_SD_Card.X.production.o
+__ptext30 568A 0 CODE 0 text30 dist/default/production\I21_SD_Card.X.production.o
+__ptext31 4752 0 CODE 0 text31 dist/default/production\I21_SD_Card.X.production.o
+__ptext32 5BC2 0 CODE 0 text32 dist/default/production\I21_SD_Card.X.production.o
+__ptext33 5576 0 CODE 0 text33 dist/default/production\I21_SD_Card.X.production.o
+__ptext34 101C 0 CODE 0 text34 dist/default/production\I21_SD_Card.X.production.o
+__ptext35 55E4 0 CODE 0 text35 dist/default/production\I21_SD_Card.X.production.o
+__ptext36 11F6 0 CODE 0 text36 dist/default/production\I21_SD_Card.X.production.o
+__ptext37 5614 0 CODE 0 text37 dist/default/production\I21_SD_Card.X.production.o
+__ptext38 55BE 0 CODE 0 text38 dist/default/production\I21_SD_Card.X.production.o
+__ptext39 5C74 0 CODE 0 text39 dist/default/production\I21_SD_Card.X.production.o
+__ptext40 48B6 0 CODE 0 text40 dist/default/production\I21_SD_Card.X.production.o
+__ptext41 4370 0 CODE 0 text41 dist/default/production\I21_SD_Card.X.production.o
+__ptext42 58B8 0 CODE 0 text42 dist/default/production\I21_SD_Card.X.production.o
+__ptext43 5D40 0 CODE 0 text43 dist/default/production\I21_SD_Card.X.production.o
+__ptext44 571E 0 CODE 0 text44 dist/default/production\I21_SD_Card.X.production.o
+__ptext45 5B16 0 CODE 0 text45 dist/default/production\I21_SD_Card.X.production.o
+__ptext46 559A 0 CODE 0 text46 dist/default/production\I21_SD_Card.X.production.o
+__ptext47 564A 0 CODE 0 text47 dist/default/production\I21_SD_Card.X.production.o
+__ptext48 2000 0 CODE 0 text48 dist/default/production\I21_SD_Card.X.production.o
+__ptext49 5836 0 CODE 0 text49 dist/default/production\I21_SD_Card.X.production.o
+__ptext50 5564 0 CODE 0 text50 dist/default/production\I21_SD_Card.X.production.o
+disk_status@pdrv 70 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+_create_name$836 20 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+___lldiv 59C8 0 CODE 0 text29 dist/default/production\I21_SD_Card.X.production.o
+__Lbank10 0 0 ABS 0 bank10 -
+__Lbank11 0 0 ABS 0 bank11 -
+__Lbank12 0 0 ABS 0 bank12 -
+__Lbank13 0 0 ABS 0 bank13 -
+__Lbank14 0 0 ABS 0 bank14 -
+__Lbank15 0 0 ABS 0 bank15 -
+__Lbank16 0 0 ABS 0 bank16 -
+__Lbank17 0 0 ABS 0 bank17 -
+__Lbank18 0 0 ABS 0 bank18 -
+__Lbank19 0 0 ABS 0 bank19 -
+__Lbank20 0 0 ABS 0 bank20 -
+__Lbank21 0 0 ABS 0 bank21 -
+__Lbank22 0 0 ABS 0 bank22 -
+__Lbank23 0 0 ABS 0 bank23 -
+__Lbank24 0 0 ABS 0 bank24 -
+__Lbank25 0 0 ABS 0 bank25 -
+__Lbank26 0 0 BANK26 1 bank26 -
+__Lbank27 0 0 BANK27 1 bank27 -
+__Lbank28 0 0 BANK28 1 bank28 -
+__Lbank29 0 0 BANK29 1 bank29 -
+__Lbank30 0 0 BANK30 1 bank30 -
+__Lbank31 0 0 BANK31 1 bank31 -
+__pmaintext 44B2 0 CODE 0 maintext dist/default/production\I21_SD_Card.X.production.o
+__Lbigram 0 0 ABS 0 bigram -
+__CFG_BORV$LO 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+___lmul@multiplier 70 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+_SPI_Initialize 5556 0 CODE 0 text21 dist/default/production\I21_SD_Card.X.production.o
+__size_of_disk_initialize 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__end_of_SPI_Exchange8bit 5576 0 CODE 0 text50 dist/default/production\I21_SD_Card.X.production.o
+_move_window 5C74 0 CODE 0 text39 dist/default/production\I21_SD_Card.X.production.o
+__Lcommon 0 0 ABS 0 common -
+__Lconfig 1000E 0 CONFIG 0 config -
+__CFG_CP$OFF 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__size_of_check_fs 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__CFG_IESO$ON 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__end_of_disk_read 5E26 0 CODE 0 text43 dist/default/production\I21_SD_Card.X.production.o
+___wmul@multiplier 70 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+__size_of_f_open 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__size_of_f_sync 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+find_volume@bsect D1 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+__size_of_SPI_Exchange8bit 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__end_of_internal_16 559A 0 CODE 0 text2 dist/default/production\I21_SD_Card.X.production.o
+__size_of_disk_read 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+find_volume@nclst C8 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+__end_of_rcvr_datablock 58B8 0 CODE 0 text49 dist/default/production\I21_SD_Card.X.production.o
+xmit_datablock@buff 73 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+xmit_datablock@resp 79 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+find_volume@tsect C4 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+find_volume@wmode 5B 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+send_cmd@arg 20 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+send_cmd@cmd 7C 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+send_cmd@res 7D 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+create_name@b 24 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+create_name@c 2D 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+create_name@d 29 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+create_name@i 2A 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+create_name@p 27 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+__size_of_disk_status 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+_select 559A 0 CODE 0 text46 dist/default/production\I21_SD_Card.X.production.o
+put_fat@p 6A 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+__size_of_dir_sdi 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+___send_cmd 5B16 0 CODE 0 text45 dist/default/production\I21_SD_Card.X.production.o
+dir_alloc@nent C9 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+SPI_Exchange8bit@data 70 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+sync_fs@res 52 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+__size_of_ld_clust 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+_remove_chain 4A40 0 CODE 0 text5 dist/default/production\I21_SD_Card.X.production.o
+__CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+disk_initialize@cmd 2C 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+disk_initialize@ocr 26 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+disk_initialize@tmr 2E 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+__pbssBIGRAM 25C2 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__CFG_ZCDDIS$ON 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+_disk_read 5D40 0 CODE 0 text43 dist/default/production\I21_SD_Card.X.production.o
+f_mount@path 6C 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+__end_of_xmit_datablock 593A 0 CODE 0 text42 dist/default/production\I21_SD_Card.X.production.o
+disk_ioctl@buff 25 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+disk_ioctl@pdrv 44 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+_follow_path 45FA 0 CODE 0 text6 dist/default/production\I21_SD_Card.X.production.o
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+_send_cmd 571E 0 CODE 0 text44 dist/default/production\I21_SD_Card.X.production.o
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__HcstackBANK1 0 0 ABS 0 cstackBANK1 -
+__HcstackBANK2 0 0 ABS 0 cstackBANK2 -
+__Lend_init 4 0 CODE 0 end_init -
+dir_alloc@res CF 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+__end_of_find_volume FB8 0 CODE 0 text18 dist/default/production\I21_SD_Card.X.production.o
+__end_of_get_fat 5000 0 CODE 0 text26 dist/default/production\I21_SD_Card.X.production.o
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+_f_close 568A 0 CODE 0 text30 dist/default/production\I21_SD_Card.X.production.o
+_f_lseek 28F2 0 CODE 0 text23 dist/default/production\I21_SD_Card.X.production.o
+_f_mount 5A6C 0 CODE 0 text17 dist/default/production\I21_SD_Card.X.production.o
+_f_write 170C 0 CODE 0 text3 dist/default/production\I21_SD_Card.X.production.o
+f_close@res 63 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+end_of_initialization FFA 0 CODE 0 cinit dist/default/production\I21_SD_Card.X.production.o
+__end_of_send_cmd 5770 0 CODE 0 text44 dist/default/production\I21_SD_Card.X.production.o
+__Hintentry 4 0 CODE 0 intentry -
+__CFG_STVREN$ON 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+dir_sdi@idx 6C 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+__end_of_SPI_Initialize 5564 0 CODE 0 text21 dist/default/production\I21_SD_Card.X.production.o
+_PPSLOCKbits E0F 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+_clust2sect 5F0C 0 CODE 0 text27 dist/default/production\I21_SD_Card.X.production.o
+__Lstrings 0 0 ABS 0 strings -
+f_sync@fp 53 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+_put_fat$612 63 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+_put_fat$613 65 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+?___lldiv 70 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+__Hreset_vec 4 0 CODE 0 reset_vec -
+_check_fs 4078 0 CODE 0 text22 dist/default/production\I21_SD_Card.X.production.o
+disk_write@buff 24 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+disk_write@pdrv 2D 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+__HbssBANK1 0 0 ABS 0 bssBANK1 -
+__HbssBANK2 0 0 ABS 0 bssBANK2 -
+__size_of_select 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+sync_window@res 3C 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+__ptext1 4004 0 CODE 0 text1 dist/default/production\I21_SD_Card.X.production.o
+__ptext2 5588 0 CODE 0 text2 dist/default/production\I21_SD_Card.X.production.o
+__ptext3 170C 0 CODE 0 text3 dist/default/production\I21_SD_Card.X.production.o
+__ptext4 3B5C 0 CODE 0 text4 dist/default/production\I21_SD_Card.X.production.o
+__ptext5 4A40 0 CODE 0 text5 dist/default/production\I21_SD_Card.X.production.o
+__ptext6 45FA 0 CODE 0 text6 dist/default/production\I21_SD_Card.X.production.o
+__ptext7 3000 0 CODE 0 text7 dist/default/production\I21_SD_Card.X.production.o
+__ptext8 4170 0 CODE 0 text8 dist/default/production\I21_SD_Card.X.production.o
+__ptext9 57CE 0 CODE 0 text9 dist/default/production\I21_SD_Card.X.production.o
+__size_of_remove_chain 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+rcvr_datablock@token 78 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+__size_of_deselect 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__end_of_check_fs 4170 0 CODE 0 text22 dist/default/production\I21_SD_Card.X.production.o
+___send_cmd@n 79 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+create_chain@cs AF 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+create_chain@fs A0 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+put_fat@bc 67 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+put_fat@fs 4E 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+__Lpowerup 0 0 CODE 0 powerup -
+get_ldnumber@i 26 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+get_fat@p 66 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+__end_of___send_cmd 5BC2 0 CODE 0 text45 dist/default/production\I21_SD_Card.X.production.o
+_get_fat$586 5E 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+_ld_clust 3000 0 CODE 0 text7 dist/default/production\I21_SD_Card.X.production.o
+f_mount@cfs DD 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+f_mount@opt 6E 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+f_mount@res DC 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+f_mount@vol E1 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+f_write@buff B5 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+f_write@clst D0 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+f_write@sect CC 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+f_write@wcnt D4 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+f_open@mode DE 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+f_open@path DC 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+dir_next@clst C3 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+__Lreset_vec 0 0 CODE 0 reset_vec -
+__Hstringtext1 0 0 ABS 0 stringtext1 -
+__Hstringtext2 0 0 ABS 0 stringtext2 -
+__Hstringtext3 0 0 ABS 0 stringtext3 -
+__Hstringtext4 0 0 ABS 0 stringtext4 -
+f_write@csect C9 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+disk_read@cmd 30 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+__CFG_LPBOR$OFF 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+st_clust@cl 72 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+f_write@wbuff C7 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+__end_of_sync_window 4A40 0 CODE 0 text40 dist/default/production\I21_SD_Card.X.production.o
+xmit_datablock@i 77 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+__CFG_CLKOUTEN$OFF 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__end_of_ld_clust 307C 0 CODE 0 text7 dist/default/production\I21_SD_Card.X.production.o
+__end_of__initialization FFA 0 CODE 0 cinit dist/default/production\I21_SD_Card.X.production.o
+__Lfunctab 0 0 ENTRY 0 functab -
+__end_of_remove_chain 4C44 0 CODE 0 text5 dist/default/production\I21_SD_Card.X.production.o
+__end_of_dir_sdi 23F4 0 CODE 0 text15 dist/default/production\I21_SD_Card.X.production.o
+__pidataBANK1 1002 0 CODE 0 idataBANK1 dist/default/production\I21_SD_Card.X.production.o
+disk_initialize@pdrv 25 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+__size_of_create_name 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__Lclrtext 0 0 ABS 0 clrtext -
+_SSP1CON1bits 215 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__CFG_PLLEN$OFF 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+___lmul@product 78 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+wait_ready@tmr 71 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+_sync_fs 101C 0 CODE 0 text34 dist/default/production\I21_SD_Card.X.production.o
+__end_of_clust2sect 6000 0 CODE 0 text27 dist/default/production\I21_SD_Card.X.production.o
+dir_find@dp C7 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+___lmul@multiplicand 74 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+___lldiv@quotient 79 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+_mem_cmp 57CE 0 CODE 0 text9 dist/default/production\I21_SD_Card.X.production.o
+_mem_cpy 593A 0 CODE 0 text13 dist/default/production\I21_SD_Card.X.production.o
+_mem_set 55E4 0 CODE 0 text35 dist/default/production\I21_SD_Card.X.production.o
+ff@FatFs E9 0 BANK1 1 bssBANK1 dist/default/production\I21_SD_Card.X.production.o
+_SSP1ADD 212 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__Hend_init 8 0 CODE 0 end_init -
+_disk_initialize$346 2A 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+_chk_chr 56D0 0 CODE 0 text11 dist/default/production\I21_SD_Card.X.production.o
+__end_of_main 45FA 0 CODE 0 maintext dist/default/production\I21_SD_Card.X.production.o
+_deselect 2000 0 CODE 0 text48 dist/default/production\I21_SD_Card.X.production.o
+_RC5PPSbits EA5 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+_FatFs 25C2 0 ABS 1 - dist/default/production\I21_SD_Card.X.production.o
+find_volume@fmt D7 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+find_volume@rfs 58 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+find_volume@vol C0 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+_IRCF0 4CB 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+_IRCF1 4CC 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+_IRCF2 4CD 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+_IRCF3 4CE 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+_LATC0 870 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__size_of_internal_16 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+ld_clust@cl 7A 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+ld_clust@fs 70 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+follow_path@path D0 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+dir_find@dir CB 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+dir_find@res CD 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+f_close@fp 60 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+_put_fat 3712 0 CODE 0 text25 dist/default/production\I21_SD_Card.X.production.o
+__end_of_deselect 200C 0 CODE 0 text48 dist/default/production\I21_SD_Card.X.production.o
+___send_cmd@arg 73 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+___send_cmd@cmd 7A 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+___send_cmd@res 78 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+__HdataBANK1 0 0 ABS 0 dataBANK1 -
+create_name@sfn 2C 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+f_lseek@clst CE 0 BANK1 1 cstackBANK1 dist/default/production\I21_SD_Card.X.production.o
+__CFG_PPS1WAY$ON 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__initialization FB8 0 CODE 0 cinit dist/default/production\I21_SD_Card.X.production.o
+__size_of_st_clust 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+disk_ioctl@n 4A 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+move_window@sector 45 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+__CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__pbssBANK1 E7 0 BANK1 1 bssBANK1 dist/default/production\I21_SD_Card.X.production.o
+__pbssBANK2 14D 0 BANK2 1 bssBANK2 dist/default/production\I21_SD_Card.X.production.o
+_PPSLOCK E0F 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__CFG_WRT$OFF 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+_disk_ioctl 11F6 0 CODE 0 text36 dist/default/production\I21_SD_Card.X.production.o
+_disk_write 4370 0 CODE 0 text41 dist/default/production\I21_SD_Card.X.production.o
+___wmul@product 74 0 COMMON 1 cstackCOMMON dist/default/production\I21_SD_Card.X.production.o
+__size_of_dir_find 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+__size_of_dir_next 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+_ANSELCbits 18E 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+_disk_status 5576 0 CODE 0 text33 dist/default/production\I21_SD_Card.X.production.o
+__size_of_find_volume 0 0 ABS 0 - dist/default/production\I21_SD_Card.X.production.o
+clust2sect@fs 20 0 BANK0 1 cstackBANK0 dist/default/production\I21_SD_Card.X.production.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+_FatFs 1 25C2 0
+- 1 CA0 20
+- 1 C20 50
+- 1 BA0 50
+- 1 B20 50
+- 1 AA0 50
+- 1 A20 50
+- 1 9A0 50
+- 1 942 2E
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+cinit 0 7DC FB8 24 2
+text1 0 2002 4004 3A 2
+text2 0 2AC4 5588 9 2
+text3 0 B86 170C 480 2
+text4 0 1DAE 3B5C 252 2
+text5 0 2520 4A40 102 2
+text6 0 22FD 45FA AC 2
+text8 0 20B8 4170 7C 2
+text9 0 2BE7 57CE 34 2
+text10 0 79 F2 15E 2
+text11 0 2B68 56D0 27 2
+text13 0 2C9D 593A 47 2
+text14 0 2134 4268 84 2
+text15 0 1006 200C 1F4 2
+text16 0 11FA 23F4 27F 2
+text17 0 2D36 5A6C 55 2
+text18 0 1D7 3AE 605 2
+text19 0 2F13 5E26 73 2
+text20 0 183E 307C 129 2
+text21 0 2AAB 5556 7 2
+text22 0 203C 4078 7C 2
+text23 0 1479 28F2 3C5 2
+text24 0 1967 32CE 222 2
+text25 0 1B89 3712 225 2
+text26 0 2622 4C44 1DE 2
+text27 0 2F86 5F0C 7A 2
+text28 0 2BB8 5770 2F 2
+text29 0 2CE4 59C8 52 2
+text30 0 2B45 568A 23 2
+text31 0 23A9 4752 B2 2
+text32 0 2DE1 5BC2 59 2
+text33 0 2ABB 5576 9 2
+text34 0 80E 101C ED 2
+text35 0 2AF2 55E4 18 2
+text36 0 8FB 11F6 28B 2
+text37 0 2B0A 5614 1B 2
+text38 0 2ADF 55BE 13 2
+text39 0 2E3A 5C74 66 2
+text40 0 245B 48B6 C5 2
+text41 0 21B8 4370 A1 2
+text42 0 2C5C 58B8 41 2
+text43 0 2EA0 5D40 73 2
+text44 0 2B8F 571E 29 2
+text45 0 2D8B 5B16 56 2
+text46 0 2ACD 559A 12 2
+text47 0 2B25 564A 20 2
+text49 0 2C1B 5836 41 2
+text50 0 2AB2 5564 9 2
+maintext 0 2259 44B2 A4 2
+cstackCOMMON 1 70 70 E 1
+cstackBANK0 1 20 20 50 1
+cstackBANK1 1 A0 A0 4F 1
+cstackBANK2 1 120 120 4D 1
+stringtext1 0 3000 6000 2E 2
+reset_vec 0 0 0 79 2
+idataBANK1 0 801 1002 1 2
+clrtext 0 802 1004 C 2
+config 0 8007 1000E 2 2
