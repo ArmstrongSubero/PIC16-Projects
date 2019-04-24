@@ -16,6 +16,8 @@
  *                       MOSI -> RC5 (SDO)
  *                       SCK  -> RC3 (SCK)
  *                       MISO -> RC4 (SCI)
+ * 
+ * A status LED is connected to PIN D0
  *                       
  * Created April 24th, 2019, 1:39 AM
  */
@@ -110,7 +112,7 @@ void main(void) {
     if (f_mount(&FatFs, "", 1) == FR_OK) {
         
         // open or create file
-		if (f_open(&Fil, "texty.txt", FA_OPEN_ALWAYS | FA_READ | FA_WRITE) == FR_OK) {	
+		if (f_open(&Fil, "text.txt", FA_OPEN_ALWAYS | FA_READ | FA_WRITE) == FR_OK) {	
 
             // go to the end of the file
 			if ((Fil.fsize != 0) && (f_lseek(&Fil, Fil.fsize) != FR_OK))
@@ -134,6 +136,7 @@ void main(void) {
     
     else
     {
+        // error
         int y;
         
         for (y = 0; y<= 3; y++)
