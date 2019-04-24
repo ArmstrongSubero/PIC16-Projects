@@ -19,7 +19,7 @@ Programming PIC Microcontrollers with XC8:
 https://www.apress.com/gp/book/9781484232729
 
 
-### C Libraries and Projects using PIC16F1717 Microcontroller
+### C Libraries and Projects using PIC16F1717/PIC16F1719 Microcontroller
 
 - 00_Documents: Contains datasheets, pinouts, errata and XC8 compiler users guide
 - 00_Output            		:   (PIC16F1) Use I/O pin as output
@@ -39,13 +39,16 @@ https://www.apress.com/gp/book/9781484232729
 - 14_DAC_8_Bit         		:   (PIC16F1) Digital to Analog Converter (DAC) demonstration
 - 15_HD44780_LCD       		:   (PIC16F1) Library for the HD44780 and compatible LCDs
 - 16_ADC               		:   (PIC16F1) Analog to Digital Converter (ADC) module demonstration
-- 17_Timer1            		:   (PIC16F1) Uses the Timer1 module
+- 17_OneWire                :   (PIC16F1) Uses the one wire interface for DS18B20 
+- 18_Timer1            		:   (PIC16F1) Uses the Timer1 module
 - 19_Timer2            		:   (PIC16F1) Uses the Timer2 module
 - 20_PWM               		:   (PIC16F1) Pulse Width Modulation (PWM) demonstration
 - 21_EUSART            		:   (PIC16F1) Driver for the Enhanced USART module
 - 22_SPI               		:   (PIC16F1) Driver for the Serial Peripheral Interface (SPI)
 - 23_I2C               		:   (PIC16F1) Inter-Intgrated Circuit (I2C) driver
 - 24_I2C1              		:   (PIC16F1) Additional Driver for Inter-Integrated circuit
+- 25_Shift_Register         :   (PIC16F1) Driver for 74HC595 shift register
+- 26_Line_Decoder           :   (PIC16F1) Driver for 74HC138 3-8 line decoder
 - 27_NCO               		:   (PIC16F1) Uses the Numerically Controlled Oscillator (NCO) module
 - 28_Sound             		:   (PIC16F1) Uses an I/O pin to produce a sound
 - 29_Soft_UART         		:   (PIC16F1) Software UART implementation
