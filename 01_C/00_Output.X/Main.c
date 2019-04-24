@@ -9,7 +9,7 @@
  * Program Description: This Program Allows PIC16F1719 to Turn on an LED
  * 
  * Hardware Description: An LED is connected via a 150R resistor to PIN D1
- *                      
+ *                       
  * Created November 4th, 2016, 1:00 PM
  * Last Updated: April 20th, 2019, 9:29 PM
  */
