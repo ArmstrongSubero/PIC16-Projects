@@ -76,6 +76,7 @@ https://www.apress.com/gp/book/9781484232729
 - I18_DS1306                :   Interfacing to a DS1306 RTC IC
 - I19_Bluetooth_HC05        :   Interfacing to a HC05 Bluetooth module
 - I20_DHT11                 : 	Interfacing to a DHT11 temperature and humidity sensor
+- I21_SD_Card               : 	Interfacing to a SD Card and writing a file
 
 - P01_Termometer            : 	Digital Thermometer project using a LM34 temperature sensor and OLED
 - P02_Temperature_Logger    : 	Temperature logger project using EEPROM for storage
