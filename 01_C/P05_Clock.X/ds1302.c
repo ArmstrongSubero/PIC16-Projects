@@ -158,9 +158,9 @@ unsigned char get_bcd(unsigned char data)
 
 unsigned char get_dec(byte var)
 {
-    unsigned char var2;. 
+    unsigned char var2; 
     
-    var2 =  (var >> 4) * 10;
+    var2 = (var >> 4) * 10;
     var2 += (var & 15);
     
     return var2;        

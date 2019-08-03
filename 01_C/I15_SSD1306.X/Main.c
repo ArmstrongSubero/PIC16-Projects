@@ -128,7 +128,7 @@ void main(void) {
             // Integer Count
             ////////////////////
             
-            for (count = 0; count <= 100; count++){
+            for (count = 0; count <= 1024; count++){
                 OLED_YX( 0, 0 );
                 OLED_Write_String( "Integer Count:" );
                 OLED_YX(2, 0);

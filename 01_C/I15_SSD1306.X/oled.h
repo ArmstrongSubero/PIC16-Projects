@@ -56,6 +56,6 @@ void OLED_YX(unsigned char Row, unsigned char Column); // *warning!* max 4 rows
 void OLED_PutChar( char ch );
 void OLED_Clear();
 void OLED_Write_String( char *s );
-void OLED_Write_Integer(uint8_t i);
+void OLED_Write_Integer(uint16_t i);
 void OLED_Write_Float(float f);
 
