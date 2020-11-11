@@ -84,8 +84,12 @@ https://www.apress.com/gp/book/9781484232729
 - P04_Temp_Fan              : 	Temperature controlled fan project
 - P05_Clock                 : 	A touch screen clock using RTC IC and Touch LCD Module
 
+### (pic-as) Assembly Libraries and Projects using PIC16F1718 Microcontroller
 
-### Assembly Libraries and Projects using PIC16F506 Microcontroller
+- 01_On                : 	Turns an LED on
+
+
+### (LEGACY MPASM) Assembly Libraries and Projects using PIC16F506 Microcontroller
 
 - A01_Led_On                : 	Turns an LED on
 - A02_Blink                 : 	Blinks an LED
