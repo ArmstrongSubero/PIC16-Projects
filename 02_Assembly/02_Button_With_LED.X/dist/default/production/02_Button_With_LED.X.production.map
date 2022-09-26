@@ -1,0 +1,338 @@
+Microchip MPLAB XC8 PIC(R) Assembler V2.36
+
+Linker command line:
+
+-W-3 --edf=C:\Program Files\Microchip\xc8\v2.36\pic\dat\en_msgs.txt -cs \
+  -h+dist/default/production\02_Button_With_LED.X.production.sym \
+  --cmf=dist/default/production\02_Button_With_LED.X.production.cmf -z \
+  -Q16F1718 -oC:\Users\armst\AppData\Local\Temp\xcAsrbc.4 \
+  -ver=XC8 PIC(R) Assembler \
+  -Mdist/default/production/02_Button_With_LED.X.production.map -E1 \
+  --acfsm=1493 -ACODE=00h-07FFhx8 -ASTRCODE=00h-03FFFh -ASTRING=00h-0FFhx64 \
+  -ACONST=00h-0FFhx64 -AENTRY=00h-0FFhx64 -ACOMMON=070h-07Fh \
+  -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh -ABANK2=0120h-016Fh \
+  -ABANK3=01A0h-01EFh -ABANK4=0220h-026Fh -ABANK5=02A0h-02EFh \
+  -ABANK6=0320h-036Fh -ABANK7=03A0h-03EFh -ABANK8=0420h-046Fh \
+  -ABANK9=04A0h-04EFh -ABANK10=0520h-056Fh -ABANK11=05A0h-05EFh \
+  -ABANK12=0620h-066Fh -ABANK13=06A0h-06EFh -ABANK14=0720h-076Fh \
+  -ABANK15=07A0h-07EFh -ABANK16=0820h-086Fh -ABANK17=08A0h-08EFh \
+  -ABANK18=0920h-096Fh -ABANK19=09A0h-09EFh -ABANK20=0A20h-0A6Fh \
+  -ABANK21=0AA0h-0AEFh -ABANK22=0B20h-0B6Fh -ABANK23=0BA0h-0BEFh \
+  -ABANK24=0C20h-0C6Fh -ABANK25=0CA0h-0CBFh -ABIGRAM=02000h-027EFh \
+  -ARAM=020h-06Fh,0A0h-0EFh,0120h-016Fh,01A0h-01EFh,0220h-026Fh,02A0h-02EFh,0320h-036Fh,03A0h-03EFh,0420h-046Fh,04A0h-04EFh,0520h-056Fh,05A0h-05EFh,0620h-066Fh,06A0h-06EFh,0720h-076Fh,07A0h-07EFh,0820h-086Fh,08A0h-08EFh,0920h-096Fh,09A0h-09EFh,0A20h-0A6Fh,0AA0h-0AEFh,0B20h-0B6Fh,0BA0h-0BEFh,0C20h-0C6Fh,0CA0h-0CBFh \
+  -AABS1=020h-07Fh,0A0h-0EFh,0120h-016Fh,01A0h-01EFh,0220h-026Fh,02A0h-02EFh,0320h-036Fh,03A0h-03EFh,0420h-046Fh,04A0h-04EFh,0520h-056Fh,05A0h-05EFh,0620h-066Fh,06A0h-06EFh,0720h-076Fh,07A0h-07EFh,0820h-086Fh,08A0h-08EFh,0920h-096Fh,09A0h-09EFh,0A20h-0A6Fh,0AA0h-0AEFh,0B20h-0B6Fh,0BA0h-0BEFh,0C20h-0C6Fh,0CA0h-0CBFh \
+  -ASFR0=00h-01Fh -ASFR1=080h-09Fh -ASFR2=0100h-011Fh -ASFR3=0180h-019Fh \
+  -ASFR4=0200h-021Fh -ASFR5=0280h-029Fh -ASFR6=0300h-031Fh \
+  -ASFR7=0380h-039Fh -ASFR8=0400h-041Fh -ASFR9=0480h-049Fh \
+  -ASFR10=0500h-051Fh -ASFR11=0580h-059Fh -ASFR12=0600h-061Fh \
+  -ASFR13=0680h-069Fh -ASFR14=0700h-071Fh -ASFR15=0780h-079Fh \
+  -ASFR16=0800h-081Fh -ASFR17=0880h-089Fh -ASFR18=0900h-091Fh \
+  -ASFR19=0980h-099Fh -ASFR20=0A00h-0A1Fh -ASFR21=0A80h-0A9Fh \
+  -ASFR22=0B00h-0B1Fh -ASFR23=0B80h-0B9Fh -ASFR24=0C00h-0C1Fh \
+  -ASFR25=0C80h-0C9Fh -ASFR26=0D00h-0D6Fh -ASFR27=0D80h-0DEFh \
+  -ASFR28=0E00h-0E6Fh -ASFR29=0E80h-0EEFh -ASFR30=0F00h-0F6Fh \
+  -ASFR31=0F80h-0FEFh -ACONFIG=08007h-08008h -DCONFIG=2 \
+  -AIDLOC=08000h-08003h -DIDLOC=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
+  -DENTRY=2 build/default/production/main.o 
+
+Object code version is 3.11
+
+Machine type is 16F1718
+
+
+
+                Name                               Link     Load   Length Selector   Space Scale
+build/default/production/main.o
+                config                             8007     8007        2        0       4
+                resetVec                            7EE      7EE        2      FDC       0
+                code                                7F0      7F0       10      FE0       0
+
+TOTAL           Name                               Link     Load   Length     Space
+        CLASS   CODE           
+                resetVec                            7EE      7EE        2         0
+                code                                7F0      7F0       10         0
+
+        CLASS   STRCODE        
+
+        CLASS   STRING         
+
+        CLASS   CONST          
+
+        CLASS   ENTRY          
+
+        CLASS   COMMON         
+
+        CLASS   BANK0          
+
+        CLASS   BANK1          
+
+        CLASS   BANK2          
+
+        CLASS   BANK3          
+
+        CLASS   BANK4          
+
+        CLASS   BANK5          
+
+        CLASS   BANK6          
+
+        CLASS   BANK7          
+
+        CLASS   BANK8          
+
+        CLASS   BANK9          
+
+        CLASS   BANK10         
+
+        CLASS   BANK11         
+
+        CLASS   BANK12         
+
+        CLASS   BANK13         
+
+        CLASS   BANK14         
+
+        CLASS   BANK15         
+
+        CLASS   BANK16         
+
+        CLASS   BANK17         
+
+        CLASS   BANK18         
+
+        CLASS   BANK19         
+
+        CLASS   BANK20         
+
+        CLASS   BANK21         
+
+        CLASS   BANK22         
+
+        CLASS   BANK23         
+
+        CLASS   BANK24         
+
+        CLASS   BANK25         
+
+        CLASS   BIGRAM         
+
+        CLASS   RAM            
+
+        CLASS   ABS1           
+
+        CLASS   SFR0           
+
+        CLASS   SFR1           
+
+        CLASS   SFR2           
+
+        CLASS   SFR3           
+
+        CLASS   SFR4           
+
+        CLASS   SFR5           
+
+        CLASS   SFR6           
+
+        CLASS   SFR7           
+
+        CLASS   SFR8           
+
+        CLASS   SFR9           
+
+        CLASS   SFR10          
+
+        CLASS   SFR11          
+
+        CLASS   SFR12          
+
+        CLASS   SFR13          
+
+        CLASS   SFR14          
+
+        CLASS   SFR15          
+
+        CLASS   SFR16          
+
+        CLASS   SFR17          
+
+        CLASS   SFR18          
+
+        CLASS   SFR19          
+
+        CLASS   SFR20          
+
+        CLASS   SFR21          
+
+        CLASS   SFR22          
+
+        CLASS   SFR23          
+
+        CLASS   SFR24          
+
+        CLASS   SFR25          
+
+        CLASS   SFR26          
+
+        CLASS   SFR27          
+
+        CLASS   SFR28          
+
+        CLASS   SFR29          
+
+        CLASS   SFR30          
+
+        CLASS   SFR31          
+
+        CLASS   CONFIG         
+                config                             8007     8007        2         4
+
+        CLASS   IDLOC          
+
+
+
+SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
+
+                resetVec                       0007EE  000002  0007F0       FDC       0  CODE        2
+                code                           0007F0  000010  000800       FE0       0  CODE        2
+
+
+UNUSED ADDRESS RANGES
+
+        Name                Unused          Largest block    Delta
+        BANK0            00020-0006F              50           1
+        BANK1            000A0-000EF              50           1
+        BANK10           00520-0056F              50           1
+        BANK11           005A0-005EF              50           1
+        BANK12           00620-0066F              50           1
+        BANK13           006A0-006EF              50           1
+        BANK14           00720-0076F              50           1
+        BANK15           007A0-007EF              50           1
+        BANK16           00820-0086F              50           1
+        BANK17           008A0-008EF              50           1
+        BANK18           00920-0096F              50           1
+        BANK19           009A0-009EF              50           1
+        BANK2            00120-0016F              50           1
+        BANK20           00A20-00A6F              50           1
+        BANK21           00AA0-00AEF              50           1
+        BANK22           00B20-00B6F              50           1
+        BANK23           00BA0-00BEF              50           1
+        BANK24           00C20-00C6F              50           1
+        BANK25           00CA0-00CBF              20           1
+        BANK3            001A0-001EF              50           1
+        BANK4            00220-0026F              50           1
+        BANK5            002A0-002EF              50           1
+        BANK6            00320-0036F              50           1
+        BANK7            003A0-003EF              50           1
+        BANK8            00420-0046F              50           1
+        BANK9            004A0-004EF              50           1
+        BIGRAM           02000-027EF             7F0           1
+        CODE             00000-007ED             7EE           2
+                         00800-03FFF             800
+        COMMON           00070-0007F              10           1
+        CONST            00000-007ED             100           2
+                         00800-03FFF             100
+        ENTRY            00000-007ED             100           2
+                         00800-03FFF             100
+        IDLOC            08000-08003               4           2
+        RAM              00020-0006F              50           1
+                         000A0-000EF              50
+                         00120-0016F              50
+                         001A0-001EF              50
+                         00220-0026F              50
+                         002A0-002EF              50
+                         00320-0036F              50
+                         003A0-003EF              50
+                         00420-0046F              50
+                         004A0-004EF              50
+                         00520-0056F              50
+                         005A0-005EF              50
+                         00620-0066F              50
+                         006A0-006EF              50
+                         00720-0076F              50
+                         007A0-007EF              50
+                         00820-0086F              50
+                         008A0-008EF              50
+                         00920-0096F              50
+                         009A0-009EF              50
+                         00A20-00A6F              50
+                         00AA0-00AEF              50
+                         00B20-00B6F              50
+                         00BA0-00BEF              50
+                         00C20-00C6F              50
+                         00CA0-00CBF              20
+        SFR0             00000-0001F              20           1
+        SFR1             00080-0009F              20           1
+        SFR10            00500-0051F              20           1
+        SFR11            00580-0059F              20           1
+        SFR12            00600-0061F              20           1
+        SFR13            00680-0069F              20           1
+        SFR14            00700-0071F              20           1
+        SFR15            00780-0079F              20           1
+        SFR16            00800-0081F              20           1
+        SFR17            00880-0089F              20           1
+        SFR18            00900-0091F              20           1
+        SFR19            00980-0099F              20           1
+        SFR2             00100-0011F              20           1
+        SFR20            00A00-00A1F              20           1
+        SFR21            00A80-00A9F              20           1
+        SFR22            00B00-00B1F              20           1
+        SFR23            00B80-00B9F              20           1
+        SFR24            00C00-00C1F              20           1
+        SFR25            00C80-00C9F              20           1
+        SFR26            00D00-00D6F              70           1
+        SFR27            00D80-00DEF              70           1
+        SFR28            00E00-00E6F              70           1
+        SFR29            00E80-00EEF              70           1
+        SFR3             00180-0019F              20           1
+        SFR30            00F00-00F6F              70           1
+        SFR31            00F80-00FDB              5C           1
+        SFR4             00200-0021F              20           1
+        SFR5             00280-0029F              20           1
+        SFR6             00300-0031F              20           1
+        SFR7             00380-0039F              20           1
+        SFR8             00400-0041F              20           1
+        SFR9             00480-0049F              20           1
+        STRCODE          00000-007ED             7EE           2
+                         00800-03FFF            3800
+        STRING           00000-007ED             100           2
+                         00800-03FFF             100
+
+                                  Symbol Table
+
+__Hcode         code         00000  __Hconfig       config       08009
+__Hdata         data         00000  __HresetVec     resetVec     00000
+__Hspace_0      (abs)        00800  __Hspace_1      (abs)        00000
+__Hspace_4      (abs)        10010  __Hudata        udata        00000
+__Hudata_bank0  udata_bank0  00000  __Hudata_bank1  udata_bank1  00000
+__Hudata_bank10 udata_bank10 00000  __Hudata_bank11 udata_bank11 00000
+__Hudata_bank12 udata_bank12 00000  __Hudata_bank13 udata_bank13 00000
+__Hudata_bank14 udata_bank14 00000  __Hudata_bank15 udata_bank15 00000
+__Hudata_bank16 udata_bank16 00000  __Hudata_bank17 udata_bank17 00000
+__Hudata_bank18 udata_bank18 00000  __Hudata_bank19 udata_bank19 00000
+__Hudata_bank2  udata_bank2  00000  __Hudata_bank20 udata_bank20 00000
+__Hudata_bank21 udata_bank21 00000  __Hudata_bank22 udata_bank22 00000
+__Hudata_bank23 udata_bank23 00000  __Hudata_bank24 udata_bank24 00000
+__Hudata_bank25 udata_bank25 00000  __Hudata_bank3  udata_bank3  00000
+__Hudata_bank4  udata_bank4  00000  __Hudata_bank5  udata_bank5  00000
+__Hudata_bank6  udata_bank6  00000  __Hudata_bank7  udata_bank7  00000
+__Hudata_bank8  udata_bank8  00000  __Hudata_bank9  udata_bank9  00000
+__Hudata_shr    udata_shr    00000  __Lcode         code         00000
+__Lconfig       config       00000  __Ldata         data         00000
+__LresetVec     resetVec     00000  __Lspace_0      (abs)        00000
+__Lspace_1      (abs)        00000  __Lspace_4      (abs)        00000
+__Ludata        udata        00000  __Ludata_bank0  udata_bank0  00000
+__Ludata_bank1  udata_bank1  00000  __Ludata_bank10 udata_bank10 00000
+__Ludata_bank11 udata_bank11 00000  __Ludata_bank12 udata_bank12 00000
+__Ludata_bank13 udata_bank13 00000  __Ludata_bank14 udata_bank14 00000
+__Ludata_bank15 udata_bank15 00000  __Ludata_bank16 udata_bank16 00000
+__Ludata_bank17 udata_bank17 00000  __Ludata_bank18 udata_bank18 00000
+__Ludata_bank19 udata_bank19 00000  __Ludata_bank2  udata_bank2  00000
+__Ludata_bank20 udata_bank20 00000  __Ludata_bank21 udata_bank21 00000
+__Ludata_bank22 udata_bank22 00000  __Ludata_bank23 udata_bank23 00000
+__Ludata_bank24 udata_bank24 00000  __Ludata_bank25 udata_bank25 00000
+__Ludata_bank3  udata_bank3  00000  __Ludata_bank4  udata_bank4  00000
+__Ludata_bank5  udata_bank5  00000  __Ludata_bank6  udata_bank6  00000
+__Ludata_bank7  udata_bank7  00000  __Ludata_bank8  udata_bank8  00000
+__Ludata_bank9  udata_bank9  00000  __Ludata_shr    udata_shr    00000
+__S0            (abs)        00800  __S1            (abs)        00000
