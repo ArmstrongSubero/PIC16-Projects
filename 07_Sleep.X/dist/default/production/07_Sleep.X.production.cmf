@@ -1,0 +1,474 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta> <reloc>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$C:\Users\armst\AppData\Local\Temp\xcAsb2o.\driver_tmp_12.o
+reset_vec CODE 0 0 0 2 2 1
+end_init CODE 0 16 16 2 2 1
+config CONFIG 4 8007 8007 2 2 1
+$dist/default/production\07_Sleep.X.production.o
+cinit CODE 0 18 18 4 2 1
+text1 CODE 0 47 47 1C 2 1
+text2 CODE 0 63 63 9 2 1
+maintext CODE 0 1C 1C 2B 2 1
+cstackCOMMON COMMON 1 70 70 5 1 1
+intentry CODE 0 4 4 12 2 1
+config CONFIG 4 8007 8007 2 2 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 20-6F 1
+RAM A0-EF 1
+RAM 120-16F 1
+RAM 1A0-1EF 1
+RAM 220-26F 1
+RAM 2A0-2EF 1
+RAM 320-36F 1
+RAM 3A0-3EF 1
+RAM 420-46F 1
+RAM 4A0-4EF 1
+RAM 520-56F 1
+RAM 5A0-5EF 1
+RAM 620-66F 1
+RAM 6A0-6EF 1
+RAM 720-76F 1
+RAM 7A0-7EF 1
+RAM 820-86F 1
+RAM 8A0-8EF 1
+RAM 920-96F 1
+RAM 9A0-9EF 1
+RAM A20-A6F 1
+RAM AA0-AEF 1
+RAM B20-B6F 1
+RAM BA0-BEF 1
+RAM C20-C6F 1
+RAM CA0-CBF 1
+BANK0 20-6F 1
+BANK1 A0-EF 1
+BANK2 120-16F 1
+BANK3 1A0-1EF 1
+BANK4 220-26F 1
+BANK5 2A0-2EF 1
+BANK6 320-36F 1
+BANK7 3A0-3EF 1
+BANK8 420-46F 1
+BANK9 4A0-4EF 1
+CONST 2-3 2
+CONST 6C-3FFF 2
+ENTRY 2-3 2
+ENTRY 6C-3FFF 2
+IDLOC 8000-8003 2
+SFR10 500-51F 1
+SFR11 580-59F 1
+SFR12 600-61F 1
+SFR13 680-69F 1
+SFR14 700-71F 1
+SFR15 780-79F 1
+SFR16 800-81F 1
+SFR17 880-89F 1
+SFR18 900-91F 1
+SFR19 980-99F 1
+SFR20 A00-A1F 1
+SFR21 A80-A9F 1
+SFR22 B00-B1F 1
+SFR23 B80-B9F 1
+SFR24 C00-C1F 1
+SFR25 C80-C9F 1
+SFR26 D00-D6F 1
+SFR27 D80-DEF 1
+SFR28 E00-E6F 1
+SFR29 E80-EEF 1
+SFR30 F00-F6F 1
+SFR31 F80-FEF 1
+CODE 2-3 2
+CODE 6C-3FFF 2
+SFR0 0-1F 1
+SFR1 80-9F 1
+SFR2 100-11F 1
+SFR3 180-19F 1
+SFR4 200-21F 1
+SFR5 280-29F 1
+SFR6 300-31F 1
+SFR7 380-39F 1
+SFR8 400-41F 1
+SFR9 480-49F 1
+BANK10 520-56F 1
+BANK11 5A0-5EF 1
+BANK12 620-66F 1
+BANK13 6A0-6EF 1
+BANK14 720-76F 1
+BANK15 7A0-7EF 1
+BANK16 820-86F 1
+BANK17 8A0-8EF 1
+BANK18 920-96F 1
+BANK19 9A0-9EF 1
+BANK20 A20-A6F 1
+BANK21 AA0-AEF 1
+BANK22 B20-B6F 1
+BANK23 BA0-BEF 1
+BANK24 C20-C6F 1
+BANK25 CA0-CBF 1
+BIGRAM 2000-27EF 1
+COMMON 75-7D 1
+STRCODE 2-3 2
+STRCODE 6C-3FFF 2
+STRING 2-3 2
+STRING 6C-3FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\07_Sleep.X.production.o
+18 cinit CODE >1398:C:\Users\armst\AppData\Local\Temp\xcAsb2o.\driver_tmp_1.s
+18 cinit CODE >1401:C:\Users\armst\AppData\Local\Temp\xcAsb2o.\driver_tmp_1.s
+18 cinit CODE >1407:C:\Users\armst\AppData\Local\Temp\xcAsb2o.\driver_tmp_1.s
+18 cinit CODE >1409:C:\Users\armst\AppData\Local\Temp\xcAsb2o.\driver_tmp_1.s
+19 cinit CODE >1410:C:\Users\armst\AppData\Local\Temp\xcAsb2o.\driver_tmp_1.s
+1A cinit CODE >1411:C:\Users\armst\AppData\Local\Temp\xcAsb2o.\driver_tmp_1.s
+4 intentry CODE >126:C:\Users\armst\Desktop\PIC16_Toolbox\07_Sleep.X\main.c
+6 intentry CODE >129:C:\Users\armst\Desktop\PIC16_Toolbox\07_Sleep.X\main.c
+7 intentry CODE >132:C:\Users\armst\Desktop\PIC16_Toolbox\07_Sleep.X\main.c
+9 intentry CODE >133:C:\Users\armst\Desktop\PIC16_Toolbox\07_Sleep.X\main.c
+14 intentry CODE >134:C:\Users\armst\Desktop\PIC16_Toolbox\07_Sleep.X\main.c
+63 text2 CODE >32:C:\Users\armst\Desktop\PIC16_Toolbox\07_Sleep.X\PIC16F1719_Internal.c
+63 text2 CODE >34:C:\Users\armst\Desktop\PIC16_Toolbox\07_Sleep.X\PIC16F1719_Internal.c
+65 text2 CODE >35:C:\Users\armst\Desktop\PIC16_Toolbox\07_Sleep.X\PIC16F1719_Internal.c
+66 text2 CODE >38:C:\Users\armst\Desktop\PIC16_Toolbox\07_Sleep.X\PIC16F1719_Internal.c
+67 text2 CODE >39:C:\Users\armst\Desktop\PIC16_Toolbox\07_Sleep.X\PIC16F1719_Internal.c
+68 text2 CODE >40:C:\Users\armst\Desktop\PIC16_Toolbox\07_Sleep.X\PIC16F1719_Internal.c
+69 text2 CODE >41:C:\Users\armst\Desktop\PIC16_Toolbox\07_Sleep.X\PIC16F1719_Internal.c
+6A text2 CODE >44:C:\Users\armst\Desktop\PIC16_Toolbox\07_Sleep.X\PIC16F1719_Internal.c
+6B text2 CODE >45:C:\Users\armst\Desktop\PIC16_Toolbox\07_Sleep.X\PIC16F1719_Internal.c
+47 text1 CODE >43:C:\Users\armst\Desktop\PIC16_Toolbox\07_Sleep.X\main.c
+47 text1 CODE >49:C:\Users\armst\Desktop\PIC16_Toolbox\07_Sleep.X\main.c
+4A text1 CODE >52:C:\Users\armst\Desktop\PIC16_Toolbox\07_Sleep.X\main.c
+4C text1 CODE >55:C:\Users\armst\Desktop\PIC16_Toolbox\07_Sleep.X\main.c
+4E text1 CODE >58:C:\Users\armst\Desktop\PIC16_Toolbox\07_Sleep.X\main.c
+50 text1 CODE >61:C:\Users\armst\Desktop\PIC16_Toolbox\07_Sleep.X\main.c
+52 text1 CODE >68:C:\Users\armst\Desktop\PIC16_Toolbox\07_Sleep.X\main.c
+57 text1 CODE >71:C:\Users\armst\Desktop\PIC16_Toolbox\07_Sleep.X\main.c
+59 text1 CODE >72:C:\Users\armst\Desktop\PIC16_Toolbox\07_Sleep.X\main.c
+5B text1 CODE >73:C:\Users\armst\Desktop\PIC16_Toolbox\07_Sleep.X\main.c
+5D text1 CODE >76:C:\Users\armst\Desktop\PIC16_Toolbox\07_Sleep.X\main.c
+5F text1 CODE >79:C:\Users\armst\Desktop\PIC16_Toolbox\07_Sleep.X\main.c
+60 text1 CODE >82:C:\Users\armst\Desktop\PIC16_Toolbox\07_Sleep.X\main.c
+61 text1 CODE >85:C:\Users\armst\Desktop\PIC16_Toolbox\07_Sleep.X\main.c
+62 text1 CODE >86:C:\Users\armst\Desktop\PIC16_Toolbox\07_Sleep.X\main.c
+1C maintext CODE >96:C:\Users\armst\Desktop\PIC16_Toolbox\07_Sleep.X\main.c
+1C maintext CODE >97:C:\Users\armst\Desktop\PIC16_Toolbox\07_Sleep.X\main.c
+1F maintext CODE >99:C:\Users\armst\Desktop\PIC16_Toolbox\07_Sleep.X\main.c
+1F maintext CODE >103:C:\Users\armst\Desktop\PIC16_Toolbox\07_Sleep.X\main.c
+20 maintext CODE >106:C:\Users\armst\Desktop\PIC16_Toolbox\07_Sleep.X\main.c
+23 maintext CODE >106:C:\Users\armst\Desktop\PIC16_Toolbox\07_Sleep.X\main.c
+2C maintext CODE >108:C:\Users\armst\Desktop\PIC16_Toolbox\07_Sleep.X\main.c
+37 maintext CODE >109:C:\Users\armst\Desktop\PIC16_Toolbox\07_Sleep.X\main.c
+41 maintext CODE >110:C:\Users\armst\Desktop\PIC16_Toolbox\07_Sleep.X\main.c
+43 maintext CODE >113:C:\Users\armst\Desktop\PIC16_Toolbox\07_Sleep.X\main.c
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___latbits 3 0 ABS 0 - dist/default/production\07_Sleep.X.production.o
+__Hspace_0 6C 0 ABS 0 - -
+__Hspace_1 75 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__Hspace_4 10010 0 ABS 0 - -
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+__L__absolute__ 0 0 ABS 0 __absolute__ -
+main@i 74 0 COMMON 1 cstackCOMMON dist/default/production\07_Sleep.X.production.o
+__Hstrings 0 0 ABS 0 strings -
+_SCS0 4C8 0 ABS 0 - dist/default/production\07_Sleep.X.production.o
+_SCS1 4C9 0 ABS 0 - dist/default/production\07_Sleep.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\armst\AppData\Local\Temp\xcAsb2o.\driver_tmp_12.o
+_main 38 0 CODE 0 maintext dist/default/production\07_Sleep.X.production.o
+btemp 7E 0 ABS 0 - dist/default/production\07_Sleep.X.production.o
+___stack_hi 0 0 STACK 2 stack C:\Users\armst\AppData\Local\Temp\xcAsb2o.\driver_tmp_12.o
+___stack_lo 0 0 STACK 2 stack C:\Users\armst\AppData\Local\Temp\xcAsb2o.\driver_tmp_12.o
+start 2C 0 CODE 0 init C:\Users\armst\AppData\Local\Temp\xcAsb2o.\driver_tmp_12.o
+_OPTION_REGbits 95 0 ABS 0 - dist/default/production\07_Sleep.X.production.o
+__Hpowerup 0 0 CODE 0 powerup -
+intlevel0 0 0 ENTRY 0 functab C:\Users\armst\AppData\Local\Temp\xcAsb2o.\driver_tmp_12.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\armst\AppData\Local\Temp\xcAsb2o.\driver_tmp_12.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\armst\AppData\Local\Temp\xcAsb2o.\driver_tmp_12.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\armst\AppData\Local\Temp\xcAsb2o.\driver_tmp_12.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\armst\AppData\Local\Temp\xcAsb2o.\driver_tmp_12.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\armst\AppData\Local\Temp\xcAsb2o.\driver_tmp_12.o
+_initMain 8E 0 CODE 0 text1 dist/default/production\07_Sleep.X.production.o
+wtemp0 7E 0 ABS 0 - dist/default/production\07_Sleep.X.production.o
+__Hfunctab 0 0 ENTRY 0 functab -
+__Hclrtext 0 0 ABS 0 clrtext -
+__end_of_initMain C6 0 CODE 0 text1 dist/default/production\07_Sleep.X.production.o
+__Lmaintext 0 0 ABS 0 maintext -
+_internal_32 C6 0 CODE 0 text2 dist/default/production\07_Sleep.X.production.o
+___stackhi 0 0 ABS 0 - C:\Users\armst\AppData\Local\Temp\xcAsb2o.\driver_tmp_12.o
+___stacklo 0 0 ABS 0 - C:\Users\armst\AppData\Local\Temp\xcAsb2o.\driver_tmp_12.o
+start_initialization 30 0 CODE 0 cinit dist/default/production\07_Sleep.X.production.o
+_TRISBbits 8D 0 ABS 0 - dist/default/production\07_Sleep.X.production.o
+_TRISDbits 8F 0 ABS 0 - dist/default/production\07_Sleep.X.production.o
+_SPLLEN 4CF 0 ABS 0 - dist/default/production\07_Sleep.X.production.o
+_INTPPSbits E10 0 ABS 0 - dist/default/production\07_Sleep.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\armst\AppData\Local\Temp\xcAsb2o.\driver_tmp_12.o
+__Hbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 ABS 0 bank2 -
+__Hbank3 0 0 ABS 0 bank3 -
+__Hbank4 0 0 ABS 0 bank4 -
+__Hbank5 0 0 ABS 0 bank5 -
+__Hbank6 0 0 ABS 0 bank6 -
+__Hbank7 0 0 ABS 0 bank7 -
+__Hbank8 0 0 ABS 0 bank8 -
+__Hbank9 0 0 ABS 0 bank9 -
+__Hcinit 38 0 CODE 0 cinit -
+__Hsfr10 0 0 ABS 0 sfr10 -
+__Hsfr11 0 0 ABS 0 sfr11 -
+__Hsfr12 0 0 ABS 0 sfr12 -
+__Hsfr13 0 0 ABS 0 sfr13 -
+__Hsfr14 0 0 ABS 0 sfr14 -
+__Hsfr15 0 0 ABS 0 sfr15 -
+__Hsfr16 0 0 ABS 0 sfr16 -
+__Hsfr17 0 0 ABS 0 sfr17 -
+__Hsfr18 0 0 ABS 0 sfr18 -
+__Hsfr19 0 0 ABS 0 sfr19 -
+__Hsfr20 0 0 ABS 0 sfr20 -
+__Hsfr21 0 0 ABS 0 sfr21 -
+__Hsfr22 0 0 ABS 0 sfr22 -
+__Hsfr23 0 0 ABS 0 sfr23 -
+__Hsfr24 0 0 ABS 0 sfr24 -
+__Hsfr25 0 0 ABS 0 sfr25 -
+__Hsfr26 0 0 ABS 0 sfr26 -
+__Hsfr27 0 0 ABS 0 sfr27 -
+__Hsfr28 0 0 ABS 0 sfr28 -
+__Hsfr29 0 0 ABS 0 sfr29 -
+__Hsfr30 0 0 ABS 0 sfr30 -
+__Hsfr31 0 0 ABS 0 sfr31 -
+__Hstack 0 0 STACK 2 stack -
+__Hbank10 0 0 ABS 0 bank10 -
+__Hbank11 0 0 ABS 0 bank11 -
+__Hbank12 0 0 ABS 0 bank12 -
+__Hbank13 0 0 ABS 0 bank13 -
+__Hbank14 0 0 ABS 0 bank14 -
+__Hbank15 0 0 ABS 0 bank15 -
+__Hbank16 0 0 ABS 0 bank16 -
+__Hbank17 0 0 ABS 0 bank17 -
+__Hbank18 0 0 ABS 0 bank18 -
+__Hbank19 0 0 ABS 0 bank19 -
+__Hbank20 0 0 ABS 0 bank20 -
+__Hbank21 0 0 ABS 0 bank21 -
+__Hbank22 0 0 ABS 0 bank22 -
+__Hbank23 0 0 ABS 0 bank23 -
+__Hbank24 0 0 ABS 0 bank24 -
+__Hbank25 0 0 ABS 0 bank25 -
+__Hbank26 0 0 BANK26 1 bank26 -
+__Hbank27 0 0 BANK27 1 bank27 -
+__Hbank28 0 0 BANK28 1 bank28 -
+__Hbank29 0 0 BANK29 1 bank29 -
+__Hbank30 0 0 BANK30 1 bank30 -
+__Hbank31 0 0 BANK31 1 bank31 -
+__Hbigram 0 0 ABS 0 bigram -
+__Hmaintext 0 0 ABS 0 maintext -
+__Hcommon 0 0 ABS 0 common -
+__Hconfig 10012 0 CONFIG 4 config -
+__Lbank0 0 0 ABS 0 bank0 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Lbank2 0 0 ABS 0 bank2 -
+__Lbank3 0 0 ABS 0 bank3 -
+__Lbank4 0 0 ABS 0 bank4 -
+__Lbank5 0 0 ABS 0 bank5 -
+__Lbank6 0 0 ABS 0 bank6 -
+__Lbank7 0 0 ABS 0 bank7 -
+__Lbank8 0 0 ABS 0 bank8 -
+__Lbank9 0 0 ABS 0 bank9 -
+__Lcinit 30 0 CODE 0 cinit -
+__Lsfr10 0 0 ABS 0 sfr10 -
+__Lsfr11 0 0 ABS 0 sfr11 -
+__Lsfr12 0 0 ABS 0 sfr12 -
+__Lsfr13 0 0 ABS 0 sfr13 -
+__Lsfr14 0 0 ABS 0 sfr14 -
+__Lsfr15 0 0 ABS 0 sfr15 -
+__Lsfr16 0 0 ABS 0 sfr16 -
+__Lsfr17 0 0 ABS 0 sfr17 -
+__Lsfr18 0 0 ABS 0 sfr18 -
+__Lsfr19 0 0 ABS 0 sfr19 -
+__Lsfr20 0 0 ABS 0 sfr20 -
+__Lsfr21 0 0 ABS 0 sfr21 -
+__Lsfr22 0 0 ABS 0 sfr22 -
+__Lsfr23 0 0 ABS 0 sfr23 -
+__Lsfr24 0 0 ABS 0 sfr24 -
+__Lsfr25 0 0 ABS 0 sfr25 -
+__Lsfr26 0 0 ABS 0 sfr26 -
+__Lsfr27 0 0 ABS 0 sfr27 -
+__Lsfr28 0 0 ABS 0 sfr28 -
+__Lsfr29 0 0 ABS 0 sfr29 -
+__Lsfr30 0 0 ABS 0 sfr30 -
+__Lsfr31 0 0 ABS 0 sfr31 -
+__Lstack 0 0 STACK 2 stack -
+_INTCONbits B 0 ABS 0 - dist/default/production\07_Sleep.X.production.o
+__Habs1 0 0 ABS 0 abs1 -
+__Hcode 0 0 ABS 0 code -
+__Hheap 0 0 HEAP 7 heap -
+__Hinit 2C 0 CODE 0 init -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Hsfr4 0 0 ABS 0 sfr4 -
+__Hsfr5 0 0 ABS 0 sfr5 -
+__Hsfr6 0 0 ABS 0 sfr6 -
+__Hsfr7 0 0 ABS 0 sfr7 -
+__Hsfr8 0 0 ABS 0 sfr8 -
+__Hsfr9 0 0 ABS 0 sfr9 -
+__Htext 0 0 ABS 0 text -
+__Labs1 0 0 ABS 0 abs1 -
+__Lcode 0 0 ABS 0 code -
+__Lheap 0 0 HEAP 7 heap -
+__Linit 2C 0 CODE 0 init -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+__Lsfr4 0 0 ABS 0 sfr4 -
+__Lsfr5 0 0 ABS 0 sfr5 -
+__Lsfr6 0 0 ABS 0 sfr6 -
+__Lsfr7 0 0 ABS 0 sfr7 -
+__Lsfr8 0 0 ABS 0 sfr8 -
+__Lsfr9 0 0 ABS 0 sfr9 -
+__Ltext 0 0 ABS 0 text -
+int$flags 7E 0 ABS 0 - dist/default/production\07_Sleep.X.production.o
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__S0 6C 0 ABS 0 - -
+__S1 75 0 ABS 0 - -
+_isr 8 0 CODE 0 intentry dist/default/production\07_Sleep.X.production.o
+__end_of_isr 2C 0 CODE 0 intentry dist/default/production\07_Sleep.X.production.o
+__Lintentry 8 0 CODE 0 intentry -
+reset_vec 0 0 CODE 0 reset_vec C:\Users\armst\AppData\Local\Temp\xcAsb2o.\driver_tmp_12.o
+__Lbank10 0 0 ABS 0 bank10 -
+__Lbank11 0 0 ABS 0 bank11 -
+__Lbank12 0 0 ABS 0 bank12 -
+__Lbank13 0 0 ABS 0 bank13 -
+__Lbank14 0 0 ABS 0 bank14 -
+__Lbank15 0 0 ABS 0 bank15 -
+__Lbank16 0 0 ABS 0 bank16 -
+__Lbank17 0 0 ABS 0 bank17 -
+__Lbank18 0 0 ABS 0 bank18 -
+__Lbank19 0 0 ABS 0 bank19 -
+__Lbank20 0 0 ABS 0 bank20 -
+__Lbank21 0 0 ABS 0 bank21 -
+__Lbank22 0 0 ABS 0 bank22 -
+__Lbank23 0 0 ABS 0 bank23 -
+__Lbank24 0 0 ABS 0 bank24 -
+__Lbank25 0 0 ABS 0 bank25 -
+__Lbank26 0 0 BANK26 1 bank26 -
+__Lbank27 0 0 BANK27 1 bank27 -
+__Lbank28 0 0 BANK28 1 bank28 -
+__Lbank29 0 0 BANK29 1 bank29 -
+__Lbank30 0 0 BANK30 1 bank30 -
+__Lbank31 0 0 BANK31 1 bank31 -
+__pmaintext 38 0 CODE 0 maintext dist/default/production\07_Sleep.X.production.o
+__Lbigram 0 0 ABS 0 bigram -
+__Lcommon 0 0 ABS 0 common -
+__Lconfig 0 0 CONFIG 4 config -
+_LATDbits 10F 0 ABS 0 - dist/default/production\07_Sleep.X.production.o
+__end_of_internal_32 D8 0 CODE 0 text2 dist/default/production\07_Sleep.X.production.o
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__Lspace_4 0 0 ABS 0 - -
+__Lend_init 2C 0 CODE 0 end_init -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+end_of_initialization 30 0 CODE 0 cinit dist/default/production\07_Sleep.X.production.o
+__Hintentry 2C 0 CODE 0 intentry -
+__Lstrings 0 0 ABS 0 strings -
+__Hreset_vec 4 0 CODE 0 reset_vec -
+__ptext1 8E 0 CODE 0 text1 dist/default/production\07_Sleep.X.production.o
+__ptext2 C6 0 CODE 0 text2 dist/default/production\07_Sleep.X.production.o
+__Lpowerup 0 0 CODE 0 powerup -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+__H__absolute__ 0 0 ABS 0 __absolute__ -
+__Lreset_vec 0 0 CODE 0 reset_vec -
+___heap_hi 0 0 ABS 0 - C:\Users\armst\AppData\Local\Temp\xcAsb2o.\driver_tmp_12.o
+___heap_lo 0 0 ABS 0 - C:\Users\armst\AppData\Local\Temp\xcAsb2o.\driver_tmp_12.o
+__end_of__initialization 30 0 CODE 0 cinit dist/default/production\07_Sleep.X.production.o
+__Lfunctab 0 0 ENTRY 0 functab -
+__Lclrtext 0 0 ABS 0 clrtext -
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\07_Sleep.X.production.o
+__Hend_init 30 0 CODE 0 end_init -
+__end_of_main 8E 0 CODE 0 maintext dist/default/production\07_Sleep.X.production.o
+_IRCF0 4CB 0 ABS 0 - dist/default/production\07_Sleep.X.production.o
+_IRCF1 4CC 0 ABS 0 - dist/default/production\07_Sleep.X.production.o
+_IRCF2 4CD 0 ABS 0 - dist/default/production\07_Sleep.X.production.o
+_IRCF3 4CE 0 ABS 0 - dist/default/production\07_Sleep.X.production.o
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+__pintentry 8 0 CODE 0 intentry dist/default/production\07_Sleep.X.production.o
+__initialization 30 0 CODE 0 cinit dist/default/production\07_Sleep.X.production.o
+_PPSLOCK E0F 0 ABS 0 - dist/default/production\07_Sleep.X.production.o
+_ANSELBbits 18D 0 ABS 0 - dist/default/production\07_Sleep.X.production.o
+___int_stack_hi 0 0 STACK 2 stack C:\Users\armst\AppData\Local\Temp\xcAsb2o.\driver_tmp_12.o
+___int_stack_lo 0 0 STACK 2 stack C:\Users\armst\AppData\Local\Temp\xcAsb2o.\driver_tmp_12.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+cstackCOMMON 1 70 70 5 1
+intentry 0 4 8 68 2
+reset_vec 0 0 0 2 2
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES
