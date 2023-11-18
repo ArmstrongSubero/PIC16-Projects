@@ -2,7 +2,7 @@
  * File: main.c
  * Author: Armstrong Subero
  * PIC: 16F1719 w/int OSC @ 32MHz, 5v
- * Program: 04_Counter
+ * Program: 05_Timer0_Interrupts
  * Compiler: XC8 (v2.45, MPLAX X v6.15)
  * Program Version: 1.2
  *                
