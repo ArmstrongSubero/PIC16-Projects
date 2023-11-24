@@ -2,7 +2,7 @@
  * File: main.c
  * Author: Armstrong Subero
  * PIC: 16F1719 w/int OSC @ 32MHz, 5v
- * Program: 18_UART
+ * Program: 19_I2C
  * Compiler: XC8 (v2.45, MPLAX X v6.15)
  * Program Version: 1.2
  *                  * Updated from PIC16F1717 to PIC16F1719
