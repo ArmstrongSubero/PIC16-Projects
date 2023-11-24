@@ -11,7 +11,7 @@
 # 1 "./PIC16F1719_Internal.h" 1
 # 28 "./PIC16F1719_Internal.h"
 #pragma config FOSC = INTOSC
-#pragma config WDTE = ON
+#pragma config WDTE = OFF
 #pragma config PWRTE = OFF
 #pragma config MCLRE = OFF
 #pragma config CP = OFF

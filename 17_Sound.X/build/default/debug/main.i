@@ -11,7 +11,7 @@
 # 1 "./PIC16F1719_Internal.h" 1
 # 28 "./PIC16F1719_Internal.h"
 #pragma config FOSC = INTOSC
-#pragma config WDTE = ON
+#pragma config WDTE = OFF
 #pragma config PWRTE = OFF
 #pragma config MCLRE = OFF
 #pragma config CP = OFF
@@ -10260,13 +10260,32 @@ void internal_31();
 
 
 
+void delay_ms(unsigned int milliseconds) {
+    for (unsigned int i = 0; i < milliseconds; i++) {
+        TMR0 = 0;
+        while (TMR0 < 250) {
 
-unsigned char sineData[1024];
-
-for (int i = 0; i < 1024; i++) {
-  sineData[i] = 127 + 127 * sinf(2 * PI * i / 1024);
+            OPTION_REGbits.PSA = 0;
+            OPTION_REGbits.PS = 0b111;
+            T0IF = 0;
+            while (!T0IF);
+        }
+    }
 }
-# 44 "main.c"
+
+
+
+void Sound_Play(unsigned int frequency, unsigned int duration) {
+    unsigned long pwm_period;
+    pwm_period = (32000000 / (4 * frequency)) - 1;
+    CCPR1L = pwm_period >> 2;
+    CCP1CONbits.DC1B = pwm_period & 0x03;
+
+    delay_ms(duration);
+    CCPR1L = 0;
+    CCP1CONbits.DC1B = 0;
+}
+# 62 "main.c"
 void initMain(){
 
     internal_32();
@@ -10278,11 +10297,11 @@ void initMain(){
 
     LATDbits.LATD1 = 0;
     LATDbits.LATD1 = 0;
-# 73 "main.c"
+# 91 "main.c"
     T2CONbits.T2CKPS = 0b10;
 
 
-    PR2 = 45;
+    PR2 = 2;
 
 
     TMR2 = 0;
@@ -10301,45 +10320,16 @@ void initMain(){
 
 
     (INTCONbits.GIE = 1);
-
-
-
-
-
-
-    DAC1CON0bits.DAC1EN = 1;
-
-
-    DAC1CON0bits.DAC1OE1 = 1;
-
-
-    DAC1CON0bits.DAC1PSS = 0;
-
-
-    DAC1CON0bits.DAC1NSS = 0;
-
-
-    DAC1CON1bits.DAC1R = 0;
 }
-# 124 "main.c"
+# 123 "main.c"
 void main(void) {
     initMain();
 
     while(1){
-
+      Sound_Play(659, 250);
+      _delay((unsigned long)((500)*(32000000/4000.0)));
     }
 
     return;
 
-}
-# 143 "main.c"
-void __attribute__((picinterrupt(("")))) isr(void){
-    static uint8_t index = 0;
-
-    PIR1bits.TMR2IF = 0;
-
-    DAC1CON1 = sineData[index];
-
-
-    index = (index + 1) & 0xFF;
 }

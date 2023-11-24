@@ -7,11 +7,11 @@
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "main.c" 2
-# 22 "main.c"
+# 21 "main.c"
 # 1 "./PIC16F1719_Internal.h" 1
 # 28 "./PIC16F1719_Internal.h"
 #pragma config FOSC = INTOSC
-#pragma config WDTE = ON
+#pragma config WDTE = OFF
 #pragma config PWRTE = OFF
 #pragma config MCLRE = OFF
 #pragma config CP = OFF
@@ -10256,94 +10256,84 @@ void internal_4();
 void internal_2();
 void internal_1();
 void internal_31();
-# 22 "main.c" 2
-
-
-
-unsigned char sineData[] = {
-  127, 129, 131, 133, 135, 137, 139, 142, 144, 146, 148, 151, 153, 155, 157, 159,
-  160, 162, 163, 165, 166, 168, 169, 171, 172, 174, 175, 176, 177, 178, 179, 180,
-  181, 182, 183, 184, 185, 186, 187, 188, 189, 189, 190, 190, 189, 189, 188, 187,
-  186, 185, 184, 183, 182, 181, 180, 179, 178, 177, 176, 175, 174, 172, 171, 169,
-  168, 166, 165, 163, 162, 160, 159, 157, 155, 153, 151, 148, 146, 144, 142, 139,
-  137, 135, 133, 131, 129, 127, 125, 123, 121, 119, 117, 115, 113, 111, 110, 108,
-  106, 104, 102, 100, 99, 97, 95, 93, 91, 90, 88, 86, 84, 82, 80, 78, 77,
-  75, 73, 71, 69, 67, 65, 63, 61, 59, 57, 55, 53, 51, 49, 47, 45, 43, 41
-};
-# 47 "main.c"
+# 21 "main.c" 2
+# 33 "main.c"
 void initMain(){
 
     internal_32();
 
 
+
+
     TRISDbits.TRISD1 = 0;
-    TRISDbits.TRISD2 = 0;
 
 
-    LATDbits.LATD1 = 0;
-    LATDbits.LATD1 = 0;
-# 76 "main.c"
-    T2CONbits.T2CKPS = 0b10;
+    TRISBbits.TRISB0 = 0;
 
 
-    PR2 = 2;
+    TRISBbits.TRISB1 = 0;
 
 
-    TMR2 = 0;
-
-
-    T2CONbits.T2OUTPS = 0b1110;
-
-
-    T2CONbits.TMR2ON = 1;
-
-
-    PIE1bits.TMR2IE = 1;
-
-
-    INTCONbits.PEIE = 1;
-
-
-    (INTCONbits.GIE = 1);
+    ANSELB = 0;
 
 
 
 
 
 
-    DAC1CON0bits.DAC1EN = 1;
+    CCPTMRSbits.C1TSEL = 0b10;
+    CCPTMRSbits.C2TSEL = 0b10;
+# 71 "main.c"
+    T6CONbits.T6CKPS = 0b01;
 
 
-    DAC1CON0bits.DAC1OE1 = 1;
+    T6CONbits.TMR6ON = 1;
 
 
-    DAC1CON0bits.DAC1PSS = 0;
+    PR6 = 255;
+# 87 "main.c"
+    CCP1CONbits.DC1B = 00;
 
 
-    DAC1CON0bits.DAC1NSS = 0;
+    CCP1CONbits.CCP1M = 0b1100;
 
 
-    DAC1CON1bits.DAC1R = 0;
+
+
+    CCP2CONbits.DC2B = 00;
+
+
+    CCP2CONbits.CCP2M = 0b1100;
+
+
+
+
+
+
+    PPSLOCK = 0x55;
+    PPSLOCK = 0xAA;
+    PPSLOCKbits.PPSLOCKED = 0x00;
+
+
+    RB0PPSbits.RB0PPS = 0b01100;
+
+
+    RB1PPSbits.RB1PPS = 0b01101;
+
+    PPSLOCK = 0x55;
+    PPSLOCK = 0xAA;
+    PPSLOCKbits.PPSLOCKED = 0x01;
 }
-# 127 "main.c"
+# 128 "main.c"
 void main(void) {
     initMain();
 
     while(1){
 
+
+
+        CCPR1L = 192;
+        CCPR2L = 192;
     }
-
-    return;
-
-}
-# 146 "main.c"
-void __attribute__((picinterrupt(("")))) isr(void){
-    static uint8_t index = 0;
-
-    PIR1bits.TMR2IF = 0;
-
-    DAC1CON1 = sineData[index];
-
-
-    index = (index + 1) & 0xFF;
+     return;
 }
