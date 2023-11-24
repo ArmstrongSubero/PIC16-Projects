@@ -10,7 +10,7 @@
  *                  * Added PLL stabilization
  * 
  * Program Description: This program allows the PIC16F1719 to demonstrate use 
- *                      of the I2C bus 
+ *                      of the SPI bus 
  * 
  * Hardware Description: A MCP4131 Digipot is connected to the SPI bus as 
  *                       follows:-
@@ -115,7 +115,7 @@ void main(void) {
 
 
 /*******************************************************************************
- * Function: Main
+ * Function: digipot_write
  *
  * Returns: Nothing
  *
