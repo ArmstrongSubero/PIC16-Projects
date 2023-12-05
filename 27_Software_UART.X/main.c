@@ -12,7 +12,7 @@
  * Program Description: This Program allows the PIC16F1719 to use a software 
  *                      UART
  * 
- * Hardware Description: A USB to UART converter is connected to PIN RE 2
+ * Hardware Description: A USB to UART converter is connected to PIN RE1
  *
  *                      
  * Created April 15st, 2017, 12:26 PM

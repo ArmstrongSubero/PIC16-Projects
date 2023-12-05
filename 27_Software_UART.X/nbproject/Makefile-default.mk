@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=main.c PIC16F1719_Internal.h PIC16F1719_Internal.c swuart.h swuart.c
+SOURCEFILES_QUOTED_IF_SPACED=main.c PIC16F1719_Internal.c swuart.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.p1 ${OBJECTDIR}/PIC16F1719_Internal.o ${OBJECTDIR}/PIC16F1719_Internal.p1 ${OBJECTDIR}/swuart.o ${OBJECTDIR}/swuart.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/main.p1.d ${OBJECTDIR}/PIC16F1719_Internal.o.d ${OBJECTDIR}/PIC16F1719_Internal.p1.d ${OBJECTDIR}/swuart.o.d ${OBJECTDIR}/swuart.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.p1 ${OBJECTDIR}/PIC16F1719_Internal.p1 ${OBJECTDIR}/swuart.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/main.p1.d ${OBJECTDIR}/PIC16F1719_Internal.p1.d ${OBJECTDIR}/swuart.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/main.p1 ${OBJECTDIR}/PIC16F1719_Internal.o ${OBJECTDIR}/PIC16F1719_Internal.p1 ${OBJECTDIR}/swuart.o ${OBJECTDIR}/swuart.p1
+OBJECTFILES=${OBJECTDIR}/main.p1 ${OBJECTDIR}/PIC16F1719_Internal.p1 ${OBJECTDIR}/swuart.p1
 
 # Source Files
-SOURCEFILES=main.c PIC16F1719_Internal.h PIC16F1719_Internal.c swuart.h swuart.c
+SOURCEFILES=main.c PIC16F1719_Internal.c swuart.c
 
 
 
@@ -96,14 +96,6 @@ ${OBJECTDIR}/main.p1: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/main.d ${OBJECTDIR}/main.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/main.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/PIC16F1719_Internal.o: PIC16F1719_Internal.h  nbproject/Makefile-${CND_CONF}.mk 
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/PIC16F1719_Internal.o.d 
-	@${RM} ${OBJECTDIR}/PIC16F1719_Internal.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=pickit3   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/PIC16F1719_Internal.o PIC16F1719_Internal.h 
-	@-${MV} ${OBJECTDIR}/PIC16F1719_Internal.d ${OBJECTDIR}/PIC16F1719_Internal.o.d 
-	@${FIXDEPS} ${OBJECTDIR}/PIC16F1719_Internal.o.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
 ${OBJECTDIR}/PIC16F1719_Internal.p1: PIC16F1719_Internal.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/PIC16F1719_Internal.p1.d 
@@ -111,14 +103,6 @@ ${OBJECTDIR}/PIC16F1719_Internal.p1: PIC16F1719_Internal.c  nbproject/Makefile-$
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=pickit3   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/PIC16F1719_Internal.p1 PIC16F1719_Internal.c 
 	@-${MV} ${OBJECTDIR}/PIC16F1719_Internal.d ${OBJECTDIR}/PIC16F1719_Internal.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/PIC16F1719_Internal.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/swuart.o: swuart.h  nbproject/Makefile-${CND_CONF}.mk 
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/swuart.o.d 
-	@${RM} ${OBJECTDIR}/swuart.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=pickit3   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/swuart.o swuart.h 
-	@-${MV} ${OBJECTDIR}/swuart.d ${OBJECTDIR}/swuart.o.d 
-	@${FIXDEPS} ${OBJECTDIR}/swuart.o.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 ${OBJECTDIR}/swuart.p1: swuart.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
@@ -137,14 +121,6 @@ ${OBJECTDIR}/main.p1: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/main.d ${OBJECTDIR}/main.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/main.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/PIC16F1719_Internal.o: PIC16F1719_Internal.h  nbproject/Makefile-${CND_CONF}.mk 
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/PIC16F1719_Internal.o.d 
-	@${RM} ${OBJECTDIR}/PIC16F1719_Internal.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/PIC16F1719_Internal.o PIC16F1719_Internal.h 
-	@-${MV} ${OBJECTDIR}/PIC16F1719_Internal.d ${OBJECTDIR}/PIC16F1719_Internal.o.d 
-	@${FIXDEPS} ${OBJECTDIR}/PIC16F1719_Internal.o.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
 ${OBJECTDIR}/PIC16F1719_Internal.p1: PIC16F1719_Internal.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/PIC16F1719_Internal.p1.d 
@@ -152,14 +128,6 @@ ${OBJECTDIR}/PIC16F1719_Internal.p1: PIC16F1719_Internal.c  nbproject/Makefile-$
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/PIC16F1719_Internal.p1 PIC16F1719_Internal.c 
 	@-${MV} ${OBJECTDIR}/PIC16F1719_Internal.d ${OBJECTDIR}/PIC16F1719_Internal.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/PIC16F1719_Internal.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/swuart.o: swuart.h  nbproject/Makefile-${CND_CONF}.mk 
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/swuart.o.d 
-	@${RM} ${OBJECTDIR}/swuart.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/swuart.o swuart.h 
-	@-${MV} ${OBJECTDIR}/swuart.d ${OBJECTDIR}/swuart.o.d 
-	@${FIXDEPS} ${OBJECTDIR}/swuart.o.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 ${OBJECTDIR}/swuart.p1: swuart.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
