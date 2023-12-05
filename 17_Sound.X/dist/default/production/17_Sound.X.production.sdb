@@ -3,17 +3,84 @@
 [d edition pro ]
 [d chip 16F1719 ]
 [d frameptr 6 ]
+"43 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
 "10 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
+"242
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
-"33 C:\Users\armst\Desktop\PIC16_Toolbox\17_Sound.X\main.c
+"10 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+"30 C:\Users\armst\Desktop\PIC16_Toolbox\17_Sound.X\main.c
+[v _Delay_Ms Delay_Ms `(v  1 e 1 0 ]
+"68
+[v _Sound_Play Sound_Play `(v  1 e 1 0 ]
+"95
 [v _initMain initMain `(v  1 e 1 0 ]
-"128
+"136
 [v _main main `(v  1 e 1 0 ]
+"153
+[v _isr isr `II(v  1 e 1 0 ]
 "32 C:\Users\armst\Desktop\PIC16_Toolbox\17_Sound.X\PIC16F1719_Internal.c
 [v _internal_32 internal_32 `(v  1 e 1 0 ]
-[s S58 . 1 `uc 1 TRISB0 1 0 :1:0 
+[s S119 . 1 `uc 1 IOCIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 IOCIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"374 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC12-16F1xxx_DFP/1.6.241/xc8\pic\include\proc\pic16f1719.h
+[s S128 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S133 . 1 `S119 1 . 1 0 `S128 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES133  1 e 1 @11 ]
+[s S151 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSP1IF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 TMR1GIF 1 0 :1:7 
+]
+"732
+[u S160 . 1 `S151 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES160  1 e 1 @17 ]
+"910
+[v _TMR1 TMR1 `VEus  1 e 2 @22 ]
+"917
+[v _TMR1L TMR1L `VEuc  1 e 1 @22 ]
+"937
+[v _TMR1H TMR1H `VEuc  1 e 1 @23 ]
+[s S44 . 1 `uc 1 TMR1ON 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 nT1SYNC 1 0 :1:2 
+`uc 1 T1OSCEN 1 0 :1:3 
+`uc 1 T1CKPS 1 0 :2:4 
+`uc 1 TMR1CS 1 0 :2:6 
+]
+"979
+[s S51 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 T1CKPS0 1 0 :1:4 
+`uc 1 T1CKPS1 1 0 :1:5 
+`uc 1 TMR1CS0 1 0 :1:6 
+`uc 1 TMR1CS1 1 0 :1:7 
+]
+[u S57 . 1 `S44 1 . 1 0 `S51 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES57  1 e 1 @24 ]
+[s S75 . 1 `uc 1 TRISB0 1 0 :1:0 
 `uc 1 TRISB1 1 0 :1:1 
 `uc 1 TRISB2 1 0 :1:2 
 `uc 1 TRISB3 1 0 :1:3 
@@ -22,112 +89,35 @@
 `uc 1 TRISB6 1 0 :1:6 
 `uc 1 TRISB7 1 0 :1:7 
 ]
-"1289 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC12-16F1xxx_DFP/1.6.241/xc8\pic\include\proc\pic16f1719.h
-[u S67 . 1 `S58 1 . 1 0 ]
-[v _TRISBbits TRISBbits `VES67  1 e 1 @141 ]
-[s S37 . 1 `uc 1 TRISD0 1 0 :1:0 
-`uc 1 TRISD1 1 0 :1:1 
-`uc 1 TRISD2 1 0 :1:2 
-`uc 1 TRISD3 1 0 :1:3 
-`uc 1 TRISD4 1 0 :1:4 
-`uc 1 TRISD5 1 0 :1:5 
-`uc 1 TRISD6 1 0 :1:6 
-`uc 1 TRISD7 1 0 :1:7 
+"1289
+[u S84 . 1 `S75 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES84  1 e 1 @141 ]
+[s S98 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSP1IE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+`uc 1 TMR1GIE 1 0 :1:7 
 ]
-"1413
-[u S46 . 1 `S37 1 . 1 0 ]
-[v _TRISDbits TRISDbits `VES46  1 e 1 @143 ]
+"1513
+[u S107 . 1 `S98 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES107  1 e 1 @145 ]
+[s S172 . 1 `uc 1 LATB0 1 0 :1:0 
+`uc 1 LATB1 1 0 :1:1 
+`uc 1 LATB2 1 0 :1:2 
+`uc 1 LATB3 1 0 :1:3 
+`uc 1 LATB4 1 0 :1:4 
+`uc 1 LATB5 1 0 :1:5 
+`uc 1 LATB6 1 0 :1:6 
+`uc 1 LATB7 1 0 :1:7 
+]
+"2369
+[u S181 . 1 `S172 1 . 1 0 ]
+[v _LATBbits LATBbits `VES181  1 e 1 @269 ]
 "3854
 [v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
-"7056
-[v _CCPR1L CCPR1L `VEuc  1 e 1 @657 ]
-[s S141 . 1 `uc 1 CCP1M 1 0 :4:0 
-`uc 1 DC1B 1 0 :2:4 
-]
-"7125
-[s S144 . 1 `uc 1 CCP1M0 1 0 :1:0 
-`uc 1 CCP1M1 1 0 :1:1 
-`uc 1 CCP1M2 1 0 :1:2 
-`uc 1 CCP1M3 1 0 :1:3 
-`uc 1 DC1B0 1 0 :1:4 
-`uc 1 DC1B1 1 0 :1:5 
-]
-[s S151 . 1 `uc 1 . 1 0 :4:0 
-`uc 1 CCP1Y 1 0 :1:4 
-`uc 1 CCP1X 1 0 :1:5 
-]
-[u S155 . 1 `S141 1 . 1 0 `S144 1 . 1 0 `S151 1 . 1 0 ]
-[v _CCP1CONbits CCP1CONbits `VES155  1 e 1 @659 ]
-"7259
-[v _CCPR2L CCPR2L `VEuc  1 e 1 @664 ]
-[s S174 . 1 `uc 1 CCP2M 1 0 :4:0 
-`uc 1 DC2B 1 0 :2:4 
-]
-"7328
-[s S177 . 1 `uc 1 CCP2M0 1 0 :1:0 
-`uc 1 CCP2M1 1 0 :1:1 
-`uc 1 CCP2M2 1 0 :1:2 
-`uc 1 CCP2M3 1 0 :1:3 
-`uc 1 DC2B0 1 0 :1:4 
-`uc 1 DC2B1 1 0 :1:5 
-]
-[s S184 . 1 `uc 1 . 1 0 :4:0 
-`uc 1 CCP2Y 1 0 :1:4 
-`uc 1 CCP2X 1 0 :1:5 
-]
-[u S188 . 1 `S174 1 . 1 0 `S177 1 . 1 0 `S184 1 . 1 0 ]
-[v _CCP2CONbits CCP2CONbits `VES188  1 e 1 @666 ]
-[s S80 . 1 `uc 1 C1TSEL 1 0 :2:0 
-`uc 1 C2TSEL 1 0 :2:2 
-`uc 1 P3TSEL 1 0 :2:4 
-`uc 1 P4TSEL 1 0 :2:6 
-]
-"7478
-[s S85 . 1 `uc 1 C1TSEL0 1 0 :1:0 
-`uc 1 C1TSEL1 1 0 :1:1 
-`uc 1 C2TSEL0 1 0 :1:2 
-`uc 1 C2TSEL1 1 0 :1:3 
-`uc 1 P3TSEL0 1 0 :1:4 
-`uc 1 P3TSEL1 1 0 :1:5 
-`uc 1 P4TSEL0 1 0 :1:6 
-`uc 1 P4TSEL1 1 0 :1:7 
-]
-[u S94 . 1 `S80 1 . 1 0 `S85 1 . 1 0 ]
-[v _CCPTMRSbits CCPTMRSbits `VES94  1 e 1 @670 ]
-"8861
-[v _PR6 PR6 `VEuc  1 e 1 @1053 ]
-[s S112 . 1 `uc 1 T6CKPS 1 0 :2:0 
-`uc 1 TMR6ON 1 0 :1:2 
-`uc 1 T6OUTPS 1 0 :4:3 
-]
-"8902
-[s S116 . 1 `uc 1 T6CKPS0 1 0 :1:0 
-`uc 1 T6CKPS1 1 0 :1:1 
-`uc 1 . 1 0 :1:2 
-`uc 1 T6OUTPS0 1 0 :1:3 
-`uc 1 T6OUTPS1 1 0 :1:4 
-`uc 1 T6OUTPS2 1 0 :1:5 
-`uc 1 T6OUTPS3 1 0 :1:6 
-]
-[u S124 . 1 `S112 1 . 1 0 `S116 1 . 1 0 ]
-[v _T6CONbits T6CONbits `VES124  1 e 1 @1054 ]
-"10822
-[v _PPSLOCK PPSLOCK `VEuc  1 e 1 @3599 ]
-[s S208 . 1 `uc 1 PPSLOCKED 1 0 :1:0 
-]
-"10832
-[u S210 . 1 `S208 1 . 1 0 ]
-[v _PPSLOCKbits PPSLOCKbits `VES210  1 e 1 @3599 ]
-[s S215 . 1 `uc 1 RB0PPS 1 0 :5:0 
-]
-"11332
-[u S217 . 1 `S215 1 . 1 0 ]
-[v _RB0PPSbits RB0PPSbits `VES217  1 e 1 @3736 ]
-[s S222 . 1 `uc 1 RB1PPS 1 0 :5:0 
-]
-"11352
-[u S224 . 1 `S222 1 . 1 0 ]
-[v _RB1PPSbits RB1PPSbits `VES224  1 e 1 @3737 ]
 "17488
 [v _IRCF0 IRCF0 `VEb  1 e 0 @1227 ]
 "17491
@@ -142,18 +132,129 @@
 [v _SCS1 SCS1 `VEb  1 e 0 @1225 ]
 "19189
 [v _SPLLEN SPLLEN `VEb  1 e 0 @1231 ]
-"128 C:\Users\armst\Desktop\PIC16_Toolbox\17_Sound.X\main.c
+"27 C:\Users\armst\Desktop\PIC16_Toolbox\17_Sound.X\main.c
+[v _TIMER_H TIMER_H `uc  1 e 1 0 ]
+[v _TIMER_L TIMER_L `uc  1 e 1 0 ]
+"39
+[v _Notes Notes `[25]ui  1 e 50 0 ]
+"45
+[v _Durations Durations `[25]uc  1 e 25 0 ]
+"136
 [v _main main `(v  1 e 1 0 ]
 {
-"139
+"138
+[v main@i i `uc  1 a 1 49 ]
+"151
 } 0
-"33
+"95
 [v _initMain initMain `(v  1 e 1 0 ]
 {
-"118
+"126
 } 0
 "32 C:\Users\armst\Desktop\PIC16_Toolbox\17_Sound.X\PIC16F1719_Internal.c
 [v _internal_32 internal_32 `(v  1 e 1 0 ]
 {
 "45
+} 0
+"15 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"68 C:\Users\armst\Desktop\PIC16_Toolbox\17_Sound.X\main.c
+[v _Sound_Play Sound_Play `(v  1 e 1 0 ]
+{
+"70
+[v Sound_Play@period period `f  1 a 4 43 ]
+"68
+[v Sound_Play@freq freq `ui  1 p 2 36 ]
+[v Sound_Play@duration duration `ui  1 p 2 38 ]
+"83
+} 0
+"10 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+{
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+"13
+[v ___xxtofl@arg arg `ul  1 a 4 10 ]
+"12
+[v ___xxtofl@exp exp `uc  1 a 1 9 ]
+"10
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+[v ___xxtofl@val val `l  1 p 4 0 ]
+"15
+[v ___xxtofl@sign sign `uc  1 a 1 8 ]
+"44
+} 0
+"43 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+{
+"45
+[v ___fltol@exp1 exp1 `uc  1 a 1 35 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 34 ]
+"43
+[v ___fltol@f1 f1 `d  1 p 4 26 ]
+"70
+} 0
+"242 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcadd.c
+[v ___flsub __flsub `(d  1 e 4 0 ]
+{
+[v ___flsub@a a `d  1 p 4 8 ]
+[v ___flsub@b b `d  1 p 4 12 ]
+"250
+} 0
+"10
+[v ___fladd __fladd `(d  1 e 4 0 ]
+{
+"17
+[v ___fladd@grs grs `uc  1 a 1 11 ]
+"15
+[v ___fladd@bexp bexp `uc  1 a 1 10 ]
+"16
+[v ___fladd@aexp aexp `uc  1 a 1 9 ]
+"13
+[v ___fladd@signs signs `uc  1 a 1 8 ]
+"10
+[v ___fladd@b b `d  1 p 4 0 ]
+[v ___fladd@a a `d  1 p 4 4 ]
+"237
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+{
+"21
+[v ___fldiv@grs grs `ul  1 a 4 20 ]
+"22
+[v ___fldiv@rem rem `ul  1 a 4 13 ]
+"20
+[v ___fldiv@new_exp new_exp `s  1 a 2 18 ]
+"19
+[v ___fldiv@aexp aexp `uc  1 a 1 25 ]
+"18
+[v ___fldiv@bexp bexp `uc  1 a 1 24 ]
+"16
+[v ___fldiv@sign sign `uc  1 a 1 17 ]
+"8
+[v ___fldiv@a a `d  1 p 4 0 ]
+[v ___fldiv@b b `d  1 p 4 4 ]
+"185
+} 0
+"30 C:\Users\armst\Desktop\PIC16_Toolbox\17_Sound.X\main.c
+[v _Delay_Ms Delay_Ms `(v  1 e 1 0 ]
+{
+"32
+[v Delay_Ms@j j `ui  1 a 2 3 ]
+"30
+[v Delay_Ms@s s `ui  1 p 2 0 ]
+"37
+} 0
+"153
+[v _isr isr `II(v  1 e 1 0 ]
+{
+"159
 } 0

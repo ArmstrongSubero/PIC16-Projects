@@ -6,7 +6,8 @@
  * Compiler: XC8 (v2.45, MPLAX X v6.15)
  * Program Version: 1.2
  *                
- * Program Description: This generates a PWM signal in the audible range
+ * Program Description: This generates a PWM signal in the audible range using 
+ *                      16 bit Timer1
  * 
  * Hardware Description: An Piezo buzzer is connect to PIN RB0
  *                       
@@ -19,6 +20,67 @@
  *Includes and defines
  ******************************************************************************/
 #include "PIC16F1719_Internal.h"
+
+#define BUZZER LATBbits.LATB0
+#define Max_Notes 25
+
+unsigned char TIMER_H, TIMER_L;
+
+
+void Delay_Ms(unsigned int s)
+{
+    unsigned int j;
+    for(j = 0; j < s; j++)
+    {
+        __delay_ms(1);
+    }
+}
+
+unsigned int Notes[Max_Notes] =
+{
+    659, 659, 0, 659, 0, 523, 659, 0, 784, 0, 392, 523, 0, 311,
+    466, 0, 466, 0, 370, 466, 0, 554, 0, 523, 0, 0,
+};
+
+unsigned char Durations[Max_Notes] =
+{
+    125, 125, 125, 125, 125, 125, 125, 125, 125, 125, 125, 125, 125, 125,
+    125, 125, 125, 125, 125, 125, 125, 125, 125, 125, 125, 125
+};
+
+
+
+/*
+unsigned int Notes[Max_Notes] =
+{
+    262, 262, 294, 262, 349, 330, 262, 262, 294, 262, 392,
+    349, 262, 262, 524, 440, 349, 330, 294, 466, 466, 440,
+    349, 392, 349
+};
+
+unsigned char Durations[Max_Notes] =
+{
+    1, 1, 2, 2, 2, 3, 1, 1, 2, 2, 2, 3, 1, 1, 2, 2, 2, 2, 2,
+    1, 1, 2, 2, 2, 3
+};
+ */
+
+void Sound_Play(unsigned int freq, unsigned int duration)
+{
+    float period;
+    period = 500000.0/freq;
+    period = 65536-period;
+    
+    TIMER_H = (char)(period/256);
+    TIMER_L = (char) (period-256*TIMER_H);
+    TMR1H = TIMER_H;
+    TMR1L = TIMER_L;
+    
+    T1CONbits.TMR1ON = 1;
+    
+    Delay_Ms(duration);
+    T1CONbits.TMR1ON = 0;
+}
 
 /*******************************************************************************
  * Function: void initMain()
@@ -36,85 +98,31 @@ void initMain(){
     
     ////////////////////
     // Configure Ports
-    ///////////////////
-    TRISDbits.TRISD1 = 0;
-    
+    ///////////////////  
     // Set PIN B0 as output
     TRISBbits.TRISB0 = 0;
     
-    // Set PIN B1 as output
-    TRISBbits.TRISB1 = 0;
     
     // Turn off analog
     ANSELB = 0;
     
-    /////////////////////
-    // Configure Timer6
-    /////////////////////
+        // prescale = 2
+    T1CONbits.T1CKPS = 0b01;
     
-    // Select PWM timer as Timer6 for CCP1 and CCP2
-    CCPTMRSbits.C1TSEL = 0b10;
-    CCPTMRSbits.C2TSEL = 0b10;
+    // Set TMR1 to 0
+    TMR1 = 0;
     
- 
-    // Enable timer Increments every 125 ns (32 MHz clock) 1000/(32/4)
-    // Period = 256 x 0.125 us = 31.25 us
+    // enable timer1
+    T1CONbits.TMR1ON = 1;
     
-    //                          Crystal Frequency 
-    //    PWM Freq  = ----------------------------------------- 
-    //                  (PRX + 1) * (TimerX Prescaler) * 4
+    // enable timer1 interrupt
+    PIE1bits.TMR1IE = 1;
     
-    //    PWM Frequency = 32 000 000 / 256 * 1 * 4
-    //    PWM Frequency = 31.250 kHz
+    // enable peripheral interrupt
+    INTCONbits.PEIE = 1;
     
-    // Prescale = 1
-    T6CONbits.T6CKPS = 0b01;
-    
-    // Enable Timer6
-    T6CONbits.TMR6ON = 1;
-    
-    // Set timer period
-    PR6 = 255;
-    
-    
-    //////////////////////////
-    // Configure PWM
-    /////////////////////////
-    
-    // Configure CCP1
-     
-    // LSB's of PWM duty cycle = 00
-    CCP1CONbits.DC1B = 00;
-    
-    // Select PWM mode
-    CCP1CONbits.CCP1M = 0b1100;
-    
-    // Configure CCP2
-    
-    // LSB's of PWM duty cycle = 00
-    CCP2CONbits.DC2B = 00;
-    
-    // Select PWM mode
-    CCP2CONbits.CCP2M = 0b1100;
-    
-    
-    //////////////////////////////
-    // Configure PPS
-    /////////////////////////////
-    
-    PPSLOCK = 0x55;
-    PPSLOCK = 0xAA;
-    PPSLOCKbits.PPSLOCKED = 0x00; // unlock PPS
-    
-    // Set RB0 to PWM1
-    RB0PPSbits.RB0PPS = 0b01100;
-    
-    // Set RB1 to PWM2
-    RB1PPSbits.RB1PPS = 0b01101;
-    
-    PPSLOCK = 0x55;
-    PPSLOCK = 0xAA;
-    PPSLOCKbits.PPSLOCKED = 0x01; // lock PPS
+    // enable global interrupts
+    ei();
 }
 
 /*******************************************************************************
@@ -127,11 +135,25 @@ void initMain(){
 
 void main(void) {
     initMain();
+    unsigned char i;
 
     while(1){
-        // Sound
-        CCPR1L = 192;
+       for (i = 0; i < Max_Notes; i++)
+       {
+           Sound_Play(Notes[i], 400*Durations[i]);
+           __delay_ms(100);
+       }
+       
+       __delay_ms(2000);
     
     }
      return;    
+}
+
+void __interrupt() isr(void)
+{
+    PIR1bits.TMR1IF = 0;
+    TMR1H = TIMER_H;
+    TMR1L = TIMER_L;
+    BUZZER = !BUZZER;
 }

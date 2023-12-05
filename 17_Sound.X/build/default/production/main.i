@@ -7,7 +7,7 @@
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "main.c" 2
-# 21 "main.c"
+# 22 "main.c"
 # 1 "./PIC16F1719_Internal.h" 1
 # 28 "./PIC16F1719_Internal.h"
 #pragma config FOSC = INTOSC
@@ -10256,8 +10256,53 @@ void internal_4();
 void internal_2();
 void internal_1();
 void internal_31();
-# 21 "main.c" 2
-# 33 "main.c"
+# 22 "main.c" 2
+
+
+
+
+
+unsigned char TIMER_H, TIMER_L;
+
+
+void Delay_Ms(unsigned int s)
+{
+    unsigned int j;
+    for(j = 0; j < s; j++)
+    {
+        _delay((unsigned long)((1)*(32000000/4000.0)));
+    }
+}
+
+unsigned int Notes[25] =
+{
+    659, 659, 0, 659, 0, 523, 659, 0, 784, 0, 392, 523, 0, 311,
+    466, 0, 466, 0, 370, 466, 0, 554, 0, 523, 0, 0,
+};
+
+unsigned char Durations[25] =
+{
+    125, 125, 125, 125, 125, 125, 125, 125, 125, 125, 125, 125, 125, 125,
+    125, 125, 125, 125, 125, 125, 125, 125, 125, 125, 125, 125
+};
+# 68 "main.c"
+void Sound_Play(unsigned int freq, unsigned int duration)
+{
+    float period;
+    period = 500000.0/freq;
+    period = 65536-period;
+
+    TIMER_H = (char)(period/256);
+    TIMER_L = (char) (period-256*TIMER_H);
+    TMR1H = TIMER_H;
+    TMR1L = TIMER_L;
+
+    T1CONbits.TMR1ON = 1;
+
+    Delay_Ms(duration);
+    T1CONbits.TMR1ON = 0;
+}
+# 95 "main.c"
 void initMain(){
 
     internal_32();
@@ -10265,75 +10310,53 @@ void initMain(){
 
 
 
-    TRISDbits.TRISD1 = 0;
-
 
     TRISBbits.TRISB0 = 0;
 
-
-    TRISBbits.TRISB1 = 0;
 
 
     ANSELB = 0;
 
 
+    T1CONbits.T1CKPS = 0b01;
 
 
+    TMR1 = 0;
 
 
-    CCPTMRSbits.C1TSEL = 0b10;
-    CCPTMRSbits.C2TSEL = 0b10;
-# 71 "main.c"
-    T6CONbits.T6CKPS = 0b01;
+    T1CONbits.TMR1ON = 1;
 
 
-    T6CONbits.TMR6ON = 1;
+    PIE1bits.TMR1IE = 1;
 
 
-    PR6 = 255;
-# 87 "main.c"
-    CCP1CONbits.DC1B = 00;
+    INTCONbits.PEIE = 1;
 
 
-    CCP1CONbits.CCP1M = 0b1100;
-
-
-
-
-    CCP2CONbits.DC2B = 00;
-
-
-    CCP2CONbits.CCP2M = 0b1100;
-
-
-
-
-
-
-    PPSLOCK = 0x55;
-    PPSLOCK = 0xAA;
-    PPSLOCKbits.PPSLOCKED = 0x00;
-
-
-    RB0PPSbits.RB0PPS = 0b01100;
-
-
-    RB1PPSbits.RB1PPS = 0b01101;
-
-    PPSLOCK = 0x55;
-    PPSLOCK = 0xAA;
-    PPSLOCKbits.PPSLOCKED = 0x01;
+    (INTCONbits.GIE = 1);
 }
-# 128 "main.c"
+# 136 "main.c"
 void main(void) {
     initMain();
+    unsigned char i;
 
     while(1){
+       for (i = 0; i < 25; i++)
+       {
+           Sound_Play(Notes[i], 400*Durations[i]);
+           _delay((unsigned long)((100)*(32000000/4000.0)));
+       }
 
+       _delay((unsigned long)((2000)*(32000000/4000.0)));
 
-
-        CCPR1L = 192;
-        CCPR2L = 192;
     }
      return;
+}
+
+void __attribute__((picinterrupt(("")))) isr(void)
+{
+    PIR1bits.TMR1IF = 0;
+    TMR1H = TIMER_H;
+    TMR1L = TIMER_L;
+    LATBbits.LATB0 = !LATBbits.LATB0;
 }

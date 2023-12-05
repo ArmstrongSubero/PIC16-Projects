@@ -7,7 +7,7 @@
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "main.c" 2
-# 22 "main.c"
+# 21 "main.c"
 # 1 "./PIC16F1719_Internal.h" 1
 # 28 "./PIC16F1719_Internal.h"
 #pragma config FOSC = INTOSC
@@ -10256,64 +10256,79 @@ void internal_4();
 void internal_2();
 void internal_1();
 void internal_31();
-# 22 "main.c" 2
+# 21 "main.c" 2
 
 
 
-void delay_ms(unsigned int milliseconds) {
-    for (unsigned int i = 0; i < milliseconds; i++) {
-        TMR0 = 0;
-        while (TMR0 < 250) {
 
-            OPTION_REGbits.PSA = 0;
-            OPTION_REGbits.PS = 0b111;
-            T0IF = 0;
-            while (!T0IF);
-        }
+
+unsigned char TIMER_H, TIMER_L;
+
+
+void Delay_Ms(unsigned int s)
+{
+    unsigned int j;
+    for(j = 0; j < s; j++)
+    {
+        _delay((unsigned long)((1)*(32000000/4000.0)));
     }
 }
 
+unsigned int Notes[25] =
+{
+    262, 262, 294, 262, 349, 330, 262, 262, 294, 262, 392,
+    349, 262, 262, 524, 440, 349, 330, 294, 466, 466, 440,
+    349, 392, 349
+};
 
+unsigned char Durations[25] =
+{
+    1, 1, 2, 2, 2, 3, 1, 1, 2, 2, 2, 3, 1, 1, 2, 2, 2, 2, 2,
+    1, 1, 2, 2, 2, 3
+};
 
-void Sound_Play(unsigned int frequency, unsigned int duration) {
-    unsigned long pwm_period;
-    pwm_period = (32000000 / (4 * frequency)) - 1;
-    CCPR1L = pwm_period >> 2;
-    CCP1CONbits.DC1B = pwm_period & 0x03;
+void Sound_Play(unsigned int freq, unsigned int duration)
+{
+    float period;
+    period = 500000.0/freq;
+    period = 65536-period;
 
-    delay_ms(duration);
-    CCPR1L = 0;
-    CCP1CONbits.DC1B = 0;
+    TIMER_H = (char)(period/256);
+    TIMER_L = (char) (period-256*TIMER_H);
+    TMR1H = TIMER_H;
+    TMR1L = TIMER_L;
+
+    T1CONbits.TMR1ON = 1;
+
+    Delay_Ms(duration);
+    T1CONbits.TMR1ON = 0;
 }
-# 62 "main.c"
+# 78 "main.c"
 void initMain(){
 
     internal_32();
 
 
-    TRISDbits.TRISD1 = 0;
-    TRISDbits.TRISD2 = 0;
 
 
-    LATDbits.LATD1 = 0;
-    LATDbits.LATD1 = 0;
-# 91 "main.c"
-    T2CONbits.T2CKPS = 0b10;
+
+    TRISBbits.TRISB0 = 0;
 
 
-    PR2 = 2;
+
+    ANSELB = 0;
 
 
-    TMR2 = 0;
+    T1CONbits.T1CKPS = 0b01;
 
 
-    T2CONbits.T2OUTPS = 0b1110;
+    TMR1 = 0;
 
 
-    T2CONbits.TMR2ON = 1;
+    T1CONbits.TMR1ON = 1;
 
 
-    PIE1bits.TMR2IE = 1;
+    PIE1bits.TMR1IE = 1;
 
 
     INTCONbits.PEIE = 1;
@@ -10321,15 +10336,28 @@ void initMain(){
 
     (INTCONbits.GIE = 1);
 }
-# 123 "main.c"
+# 119 "main.c"
 void main(void) {
     initMain();
+    unsigned char i;
 
     while(1){
-      Sound_Play(659, 250);
-      _delay((unsigned long)((500)*(32000000/4000.0)));
+       for (i = 0; i < 25; i++)
+       {
+           Sound_Play(Notes[i], 400*Durations[i]);
+           _delay((unsigned long)((100)*(32000000/4000.0)));
+       }
+
+       _delay((unsigned long)((2000)*(32000000/4000.0)));
+
     }
+     return;
+}
 
-    return;
-
+void __attribute__((picinterrupt(("")))) isr(void)
+{
+    PIR1bits.TMR1IF = 0;
+    TMR1H = TIMER_H;
+    TMR1L = TIMER_L;
+    LATBbits.LATB0 = !LATBbits.LATB0;
 }
