@@ -7,7 +7,7 @@
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "main.c" 2
-# 25 "main.c"
+# 37 "main.c"
 # 1 "./PIC16F1719_Internal.h" 1
 # 28 "./PIC16F1719_Internal.h"
 #pragma config FOSC = INTOSC
@@ -10256,46 +10256,29 @@ void internal_4();
 void internal_2();
 void internal_1();
 void internal_31();
-# 25 "main.c" 2
-
-# 1 "./EUSART.h" 1
-# 18 "./EUSART.h"
-char EUSART_Initialize(const long int baudrate);
-uint8_t EUSART_Read(void);
-void EUSART_Write(uint8_t txData);
-void EUSART_Write_Text(char *text);
-void EUSART_Read_Text(char *Output, unsigned int length);
-void EUSART_Write_Integer(int value_to_send);
-# 26 "main.c" 2
-
-
-
-volatile int encoderCount = 0;
-
-void initEncoder()
-{
-
-
-
-
-}
+# 37 "main.c" 2
 # 49 "main.c"
 void initMain(){
 
     internal_32();
-    _delay((unsigned long)((100)*(32000000/4000.0)));
 
 
 
 
+    TRISDbits.TRISD1 = 0;
 
 
     TRISBbits.TRISB0 = 0;
-    TRISBbits.TRISB2 = 0;
+
+
+    TRISBbits.TRISB1 = 0;
 
 
     ANSELB = 0;
 
+
+    TRISDbits.TRISD0 = 0;
+    TRISDbits.TRISD1 = 0;
 
 
 
@@ -10303,7 +10286,8 @@ void initMain(){
 
 
     CCPTMRSbits.C1TSEL = 0b10;
-# 84 "main.c"
+    CCPTMRSbits.C2TSEL = 0b10;
+# 91 "main.c"
     T6CONbits.T6CKPS = 0b00;
 
 
@@ -10311,11 +10295,20 @@ void initMain(){
 
 
     PR6 = 255;
-# 100 "main.c"
+# 106 "main.c"
     CCP1CONbits.DC1B = 00;
 
 
     CCP1CONbits.CCP1M = 0b1100;
+
+
+
+
+    CCP2CONbits.DC2B = 00;
+
+
+    CCP2CONbits.CCP2M = 0b1100;
+
 
 
 
@@ -10329,37 +10322,107 @@ void initMain(){
     RB0PPSbits.RB0PPS = 0b01100;
 
 
-    RB2PPSbits.RB2PPS = 0x14;
-    RXPPSbits.RXPPS = 0x0B;
+    RB1PPSbits.RB1PPS = 0b01101;
 
     PPSLOCK = 0x55;
     PPSLOCK = 0xAA;
     PPSLOCKbits.PPSLOCKED = 0x01;
 }
-# 136 "main.c"
-void setPWMDutyCycle(uint8_t dutyCycle)
+
+
+void leftEnable(void)
 {
-    CCPR1L = dutyCycle;
+   LATDbits.LATD0 = 1;
 }
-# 151 "main.c"
-void controlMotorPWM(uint8_t dutyCycle)
+
+
+void leftDisable(void)
+{
+    LATDbits.LATD0 = 0;
+}
+
+
+void rightEnable(void)
+{
+    LATDbits.LATD1 = 1;
+}
+
+
+void rightDisable(void)
+{
+    LATDbits.LATD1 = 0;
+}
+
+
+void rightPWMDuty(uint16_t duty)
+{
+    CCPR1L = duty;
+}
+
+
+void leftPWMDuty(uint16_t duty)
+{
+    CCPR2L = duty;
+}
+# 182 "main.c"
+void motorTurnLeft(uint16_t motorSpeed)
 {
 
-    setPWMDutyCycle(dutyCycle);
+   leftEnable();
+   rightEnable();
+
+
+   leftPWMDuty(0);
+
+
+   rightPWMDuty(motorSpeed);
 }
-# 165 "main.c"
-void main(void)
+# 203 "main.c"
+void motorTurnRight(uint16_t motorSpeed)
 {
+
+   leftEnable();
+   rightEnable();
+
+
+   leftPWMDuty(motorSpeed);
+
+
+   rightPWMDuty(0);
+
+}
+# 224 "main.c"
+void motorStop(void)
+{
+
+   leftDisable();
+   rightDisable();
+
+
+   leftPWMDuty(0);
+
+
+   rightPWMDuty(0);
+}
+# 245 "main.c"
+void main(void) {
     initMain();
-
-
-    EUSART_Initialize(19200);
 
     while(1)
     {
-        EUSART_Write_Text("Hello\n");
-        _delay((unsigned long)((1000)*(32000000/4000.0)));
-# 193 "main.c"
+
+        motorTurnLeft(192);
+        _delay((unsigned long)((3000)*(32000000/4000.0)));
+
+        motorStop();
+        _delay((unsigned long)((3000)*(32000000/4000.0)));
+
+
+        motorTurnRight(192);
+        _delay((unsigned long)((3000)*(32000000/4000.0)));
+
+        motorStop();
+        _delay((unsigned long)((3000)*(32000000/4000.0)));
     }
      return;
 }

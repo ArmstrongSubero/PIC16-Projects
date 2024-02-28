@@ -2,20 +2,34 @@
  * File: main.c
  * Author: Armstrong Subero
  * PIC: 16F1719 w/int OSC @ 32MHz, 5v
- * Program: 32_Motor_PWM
+ * Program: 34_Motor_Encoder
  * Compiler: XC8 (v2.45, MPLAX X v6.15)
- * Program Version: 1.3
+ * Program Version: 1.0
  *                
- * Program Description: This program allows for control of a DC motor using 
- *                      the PWM module. The motor speed is ramped up then it 
- *                      it ramped down.
+ * Program Description: This program allows a PIC microcontroller read the 
+ *                      output of a quadrature encoder 
  * 
- * Hardware Description: The 2N2222A transistor is used to drive an IRF540 
- *                       MOSFET that is then used to control a 131:1 gear 
- *                       motor rated for a 5A stall current. 
+ * Hardware Description: A BTS7960 motor driver is connected to a PIC MCU as 
+ *                       follows:
+ * 
+ *                       RPWM - RB0
+ *                       LPWM - RB1 
+ *                       R_EN - RD0 
+ *                       L_EN - RD1
+ *                       R_IS - N/C
+ *                       L_IS - N/C
+ *                       VCC  - 5V
+ *                       GND  - GND
+ *                         
+ *                       The motor used to test is a 131:1 Pololu gear motor. 
+ *                       Recommended 4 1000 uF caps on power rails otherwise 
+ *                       MCU may fail to program. The output channels of the 
+ *                       quadrature encoder A and B are connected to pins 
+ *                       AN0 and AN1 respectively. 
+ * 
  *                       
- * Created November 4th, 2016, 1:00 PM
- * Last Updated: January 11th, 2024, 7:31 PM
+ * Created February 27th, 2024, 10:20 PM
+ * Last Updated: February 27th, 2024, 10:20 PM
  */
 
 
@@ -25,16 +39,9 @@
 #include "PIC16F1719_Internal.h"
 #include "EUSART.h"
 
-
-volatile int encoderCount = 0;
-
-void initEncoder()
-{
- 
-    
-  
-    
-}
+// counters for the encoder
+volatile int counterA = 0;
+volatile int counterB = 0;
 
 /*******************************************************************************
  * Function: void initMain()
@@ -54,22 +61,30 @@ void initMain(){
     ////////////////////
     // Configure Ports
     ///////////////////
-   
+    TRISDbits.TRISD1 = 0;
+    
     // Set PIN B0 as output
     TRISBbits.TRISB0 = 0;
-    TRISBbits.TRISB2 = 0;
-      
+    
+    // Set PIN B1 as output
+    TRISBbits.TRISB1 = 0;
+    
     // Turn off analog
     ANSELB = 0;
-   
+    
+    // Control pins for BTS7960
+    TRISDbits.TRISD0 = 0;
+    TRISDbits.TRISD1 = 0;  
     
     /////////////////////
     // Configure Timer6
     /////////////////////
     
-    // Select PWM timer as Timer6 for CCP1
+    // Select PWM timer as Timer6 for CCP1 and CCP2
     CCPTMRSbits.C1TSEL = 0b10;
-
+    CCPTMRSbits.C2TSEL = 0b10;
+    
+ 
     // Enable timer Increments every 125 ns (32 MHz clock) 1000/(32/4)
     // Period = 256 x 0.125 us = 31.25 us
     
@@ -89,7 +104,6 @@ void initMain(){
     // Set timer period
     PR6 = 255;
     
-    
     //////////////////////////
     // Configure PWM
     /////////////////////////
@@ -102,6 +116,38 @@ void initMain(){
     // Select PWM mode
     CCP1CONbits.CCP1M = 0b1100;
     
+    // Configure CCP2
+    
+    // LSB's of PWM duty cycle = 00
+    CCP2CONbits.DC2B = 00;
+    
+    // Select PWM mode
+    CCP2CONbits.CCP2M = 0b1100;
+    
+    TRISBbits.TRISB2 = 0;
+    ANSELBbits.ANSB2 = 0;
+    
+    
+    /////////////////////////////
+    // Configure Encoders
+    /////////////////////////////
+    TRISAbits.TRISA0 = 1;
+    TRISAbits.TRISA1 = 1;
+    
+    ANSELAbits.ANSA0 = 0;
+    ANSELAbits.ANSA1 = 0;
+    
+    // enable detection of falling edges on RA0
+    IOCANbits.IOCAN0 = 1;
+    IOCANbits.IOCAN1 = 1;
+    
+    // enable IOC interrupt
+    INTCONbits.IOCIE = 1;
+    
+    // Enable global interrupt
+    ei(); 
+    
+    
     //////////////////////////////
     // Configure PPS
     /////////////////////////////
@@ -113,7 +159,10 @@ void initMain(){
     // Set RB0 to PWM1
     RB0PPSbits.RB0PPS = 0b01100;
     
-    // Setup EUSART
+    // Set RB1 to PWM2
+    RB1PPSbits.RB1PPS = 0b01101;
+    
+    
     RB2PPSbits.RB2PPS = 0x14;   //RB2->EUSART:TX;
     RXPPSbits.RXPPS = 0x0B;   //RB3->EUSART:RX;
     
@@ -122,36 +171,102 @@ void initMain(){
     PPSLOCKbits.PPSLOCKED = 0x01; // lock PPS
 }
 
+// enable reverse drive enable input
+void leftEnable(void)
+{
+   LATDbits.LATD0 = 1; 
+}
+
+// disable reverse drive enable input
+void leftDisable(void)
+{
+    LATDbits.LATD0 = 0;
+}
+
+// enable forward drive enable input
+void rightEnable(void)
+{
+    LATDbits.LATD1 = 1;
+}
+
+// disable forward drive enable input
+void rightDisable(void)
+{
+    LATDbits.LATD1 = 0;
+}
+
+// set rightPWM duty cycle
+void rightPWMDuty(uint16_t duty)
+{
+    CCPR1L = duty;
+}
+
+// set left PWM duty cycle
+void leftPWMDuty(uint16_t duty)
+{
+    CCPR2L = duty;
+}
 
 /*******************************************************************************
- * Function: void setPWMDutyCycle(uint8_t dutyCycle) 
+ * Function: void motorTurnLeft(uint16_t motorSpeed)
  *
  * Returns: Nothing
  *
- * Description: Sets the PWM duty Cycle
- * 
- * Usage: setPWMDutyCycle(255)
+ * Description: Turns the motor in the left direction
  ******************************************************************************/
-
-void setPWMDutyCycle(uint8_t dutyCycle) 
+void motorTurnLeft(uint16_t motorSpeed)
 {
-    CCPR1L = dutyCycle;     // Load the duty cycle value to CCP1
+   // enable both channels
+   leftEnable();
+   rightEnable();
+   
+   // turn off left PWM 
+   leftPWMDuty(0);
+   
+   // turn on right PWM
+   rightPWMDuty(motorSpeed);
 }
 
 
 /*******************************************************************************
- * Function: void controlMotorPWM(uint8_t dutyCycle) 
+ * Function: void motorTurnRight(uint16_t motorSpeed)
  *
  * Returns: Nothing
  *
- * Description: Controls the motor 
- * 
- * Usage: controlMotorPWM(dutyCycle)
+ * Description: Turns the motor in the right direction
  ******************************************************************************/
-void controlMotorPWM(uint8_t dutyCycle) 
+void motorTurnRight(uint16_t motorSpeed)
 {
-    // Set the PWM duty cycle
-    setPWMDutyCycle(dutyCycle);
+   // enable both channels
+   leftEnable();
+   rightEnable();
+   
+   // turn off left PWM 
+   leftPWMDuty(motorSpeed);
+   
+   // turn on right PWM
+   rightPWMDuty(0);
+    
+}
+
+/*******************************************************************************
+ * Function: void motorStop(void)
+ *
+ * Returns: Nothing
+ *
+ * Description: Stops the motor rotation
+ ******************************************************************************/
+void motorStop(void)
+{
+   // disable both channels
+   leftDisable();
+   rightDisable();
+   
+   // turn off left PWM 
+   leftPWMDuty(0);
+   
+   // turn off right PWM
+   rightPWMDuty(0); 
 }
 
 /*******************************************************************************
@@ -162,34 +277,57 @@ void controlMotorPWM(uint8_t dutyCycle)
  * Description: Program entry point
  ******************************************************************************/
 
-void main(void) 
-{
+void main(void) {
     initMain();
     
     // Initialize EUSART module with 19200 baud
     EUSART_Initialize(19200);
-
+    
     while(1)
     {
-        EUSART_Write_Text("Hello\n");
+        __delay_ms(5000);
+        
+        motorTurnRight(192);
         __delay_ms(1000);
-        /*
-        // Increase duty cycle to ramp up motor speed
-        for (uint8_t dutyCycle = 0; dutyCycle < 255; dutyCycle++) 
-        {
-            controlMotorPWM(dutyCycle);
-            // Adjust delay as needed for smooth speed changes
-            __delay_ms(50);  
-        }
-
-        // Decrease duty cycle to ramp down motor speed
-        for (uint8_t dutyCycle = 255; dutyCycle > 0; dutyCycle--) 
-        {
-            controlMotorPWM(dutyCycle);
-            // Adjust delay as needed for smooth speed changes
-            __delay_ms(50); 
-        }
-        */
+        
+        motorStop();
+        
+        // Write encoder A output
+        EUSART_Write_Text("EncoderA: ");
+        EUSART_Write_Integer(counterA);
+        EUSART_Write_Text("\t\t");
+        
+        // Write encoder B output
+        EUSART_Write_Text("EncoderB: ");
+        EUSART_Write_Integer(counterB);
+        EUSART_Write_Text("\n");
+        
+        while(1);
     }
      return;    
+}
+
+/*******************************************************************************
+ * Function: __interrupt() isr(void)
+ *
+ * Returns: Nothing
+ *
+ * Description: Increments counters based on encoder output
+ ******************************************************************************/
+void __interrupt() isr(void)
+{
+    if (INTCONbits.IOCIF)
+    {
+        if (IOCAFbits.IOCAF0)
+        {
+            IOCAFbits.IOCAF0 = 0;
+            counterA++;   
+        }
+        
+        if (IOCAFbits.IOCAF1)
+        {
+            IOCAFbits.IOCAF1 = 0;
+            counterB++;
+        }
+    }
 }

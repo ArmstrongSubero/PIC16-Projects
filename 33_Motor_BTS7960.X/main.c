@@ -2,16 +2,32 @@
  * File: main.c
  * Author: Armstrong Subero
  * PIC: 16F1719 w/int OSC @ 32MHz, 5v
- * Program: 15_PWM
+ * Program: 33_Motor_BTS7960
  * Compiler: XC8 (v2.45, MPLAX X v6.15)
- * Program Version: 1.2
+ * Program Version: 1.0
  *                
- * Program Description: This generates a PWM signal on pins RB0 and RB1
+ * Program Description: This program allows a PIC microcontroller to be 
+ *                      interfaced to a BTS7960 motor driver module
  * 
- * Hardware Description: An Oscilloscope probe is connected to pins RB0 and RB1
+ * Hardware Description: A BTS7960 motor driver is connected to a PIC MCU as 
+ *                       follows:
+ * 
+ *                       RPWM - RB0
+ *                       LPWM - RB1 
+ *                       R_EN - RD0 
+ *                       L_EN - RD1
+ *                       R_IS - N/C
+ *                       L_IS - N/C
+ *                       VCC  - 5V
+ *                       GND  - GND
+ *                         
+ *                       The motor used to test is a 131:1 Pololu gear motor. 
+ *                       Recommended 4 1000 uF caps on power rails otherwise 
+ *                       MCU may fail to program 
+ * 
  *                       
- * Created November 4th, 2016, 1:00 PM
- * Last Updated: November 18th, 2023, 4:36 AM
+ * Created February 26th, 2024, 11:34 PM
+ * Last Updated: February 26th, 2024, 11:34 PM
  */
 
 
@@ -47,6 +63,10 @@ void initMain(){
     
     // Turn off analog
     ANSELB = 0;
+    
+    // Control pins for BTS7960
+    TRISDbits.TRISD0 = 0;
+    TRISDbits.TRISD1 = 0;  
     
     /////////////////////
     // Configure Timer6
@@ -114,43 +134,54 @@ void initMain(){
     PPSLOCK = 0x55;
     PPSLOCK = 0xAA;
     PPSLOCKbits.PPSLOCKED = 0x01; // lock PPS
-    
-    TRISDbits.TRISD0 = 0;
-    TRISDbits.TRISD1 = 0;  
 }
 
+// enable reverse drive enable input
 void leftEnable(void)
 {
    LATDbits.LATD0 = 1; 
 }
 
+// disable reverse drive enable input
 void leftDisable(void)
 {
     LATDbits.LATD0 = 0;
 }
 
+// enable forward drive enable input
 void rightEnable(void)
 {
     LATDbits.LATD1 = 1;
 }
 
+// disable forward drive enable input
 void rightDisable(void)
 {
     LATDbits.LATD1 = 0;
 }
 
+// set rightPWM duty cycle
 void rightPWMDuty(uint16_t duty)
 {
     CCPR1L = duty;
 }
 
+// set left PWM duty cycle
 void leftPWMDuty(uint16_t duty)
 {
     CCPR2L = duty;
 }
 
+/*******************************************************************************
+ * Function: void motorTurnLeft(uint16_t motorSpeed)
+ *
+ * Returns: Nothing
+ *
+ * Description: Turns the motor in the left direction
+ ******************************************************************************/
 void motorTurnLeft(uint16_t motorSpeed)
 {
+   // enable both channels
    leftEnable();
    rightEnable();
    
@@ -161,8 +192,17 @@ void motorTurnLeft(uint16_t motorSpeed)
    rightPWMDuty(motorSpeed);
 }
 
+
+/*******************************************************************************
+ * Function: void motorTurnRight(uint16_t motorSpeed)
+ *
+ * Returns: Nothing
+ *
+ * Description: Turns the motor in the right direction
+ ******************************************************************************/
 void motorTurnRight(uint16_t motorSpeed)
 {
+   // enable both channels
    leftEnable();
    rightEnable();
    
@@ -174,17 +214,24 @@ void motorTurnRight(uint16_t motorSpeed)
     
 }
 
+/*******************************************************************************
+ * Function: void motorStop(void)
+ *
+ * Returns: Nothing
+ *
+ * Description: Stops the motor rotation
+ ******************************************************************************/
 void motorStop(void)
 {
+   // disable both channels
    leftDisable();
    rightDisable();
    
    // turn off left PWM 
    leftPWMDuty(0);
    
-   // turn on right PWM
-   rightPWMDuty(0);
-    
+   // turn off right PWM
+   rightPWMDuty(0); 
 }
 
 /*******************************************************************************
@@ -200,12 +247,14 @@ void main(void) {
 
     while(1)
     {
+        // turn the motor left
         motorTurnLeft(192);
         __delay_ms(3000);
         
         motorStop();
         __delay_ms(3000);
         
+        // turn the motor right
         motorTurnRight(192);
         __delay_ms(3000);
         
