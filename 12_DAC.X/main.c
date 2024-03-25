@@ -6,8 +6,8 @@
  * Compiler: XC8 (v2.45, MPLAX X v6.15)
  * Program Version: 1.2
  *                
- * Program Description: This Program Allows PIC16F1717 DAC1 to generate a 
- *                      waveform on PIN RA2
+ * Program Description: This Program Allows PIC16F1719 DAC1 to generate a 
+ *                      ramp waveform on PIN RA2
  * 
  * Hardware Description: An Oscilloscope probe is connected to pin RA2
  *                       
