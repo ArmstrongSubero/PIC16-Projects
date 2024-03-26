@@ -48,6 +48,7 @@ void initMain(){
     // Run at 32 MHz
     internal_32();
     
+    
     // Set PIN D1 as output
     TRISDbits.TRISD1 = 0;
     

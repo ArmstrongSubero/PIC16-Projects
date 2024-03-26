@@ -124,6 +124,8 @@ void main(void) {
              OLED_Clear();
             __delay_ms(100);
             
+            /*
+            
             /////////////////////
             // Integer Count
             ////////////////////
@@ -152,6 +154,7 @@ void main(void) {
                 OLED_Write_Float(dec);
                 __delay_ms(100);          
             }
+            */
             
            
             __delay_ms(100);
