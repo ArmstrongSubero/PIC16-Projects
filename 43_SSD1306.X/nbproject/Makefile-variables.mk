@@ -6,5 +6,5 @@
 CND_BASEDIR=`pwd`
 # default configuration
 CND_ARTIFACT_DIR_default=dist/default/production
-CND_ARTIFACT_NAME_default=IOC_tes.X.production.hex
-CND_ARTIFACT_PATH_default=dist/default/production/IOC_tes.X.production.hex
+CND_ARTIFACT_NAME_default=43_SSD1306.X.production.hex
+CND_ARTIFACT_PATH_default=dist/default/production/43_SSD1306.X.production.hex
