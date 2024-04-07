@@ -125,37 +125,6 @@ void main(void) {
              OLED_Clear();
             __delay_ms(100);
             
-            /*
-            /////////////////////
-            // Integer Count
-            ////////////////////
-            
-            for (count = 0; count <= 1024; count++){
-                OLED_YX( 0, 0 );
-                OLED_Write_String( "Integer Count:" );
-                OLED_YX(2, 0);
-                OLED_Write_Integer(count);
-                __delay_ms(100);
-            }
-            
-            OLED_Clear();
-            __delay_ms(100);
-            
-            
-            //////////////////////
-            // Float Count
-            /////////////////////
-            
-            for(dec = 0.0; dec <= 20.0; dec+= 0.5)
-            {
-                OLED_YX( 0, 0 );
-                OLED_Write_String( "Float Count:" );
-                OLED_YX(2, 0);
-                OLED_Write_Float(dec);
-                __delay_ms(100);          
-            }
-            */
-           
             __delay_ms(100);
             OLED_Clear();
    }
