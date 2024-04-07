@@ -1,9 +1,9 @@
 /*
  * File: Main.c
  * Author: Armstrong Subero
- * PIC: 16F1717 w/Int OSC @ 16MHz, 5v
- * Program: P03_IoT_WiFi
- * Compiler: XC8 (v1.41, MPLAX X v3.55)
+ * PIC: 16F1719 w/Int OSC @ 16MHz, 5v
+ * Program: 45_ESP8266
+ * Compiler: XC8 (v2.45, MPLAX X v6.15)
  * Program Version: 1.0
  *                
  *                
@@ -30,6 +30,7 @@
  *                        External interrupt is connected to PINB0
  *                      
  * Created March 31st, 2017, 10:57 AM
+ * Updated March 30th, 2024, 2:56 PM
  */
 
 
@@ -38,6 +39,8 @@
  ******************************************************************************/
 
 #include "PIC16F1719_Internal.h"
+#include "I2C.h"
+#include "oled.h"
 #include "EUSART.h"
 #include <string.h>
 
@@ -78,6 +81,11 @@ void initMain(){
      PPSLOCK = 0x55;
      PPSLOCK = 0xAA;
      PPSLOCKbits.PPSLOCKED = 0x00; // unlock PPS
+
+     RC4PPSbits.RC4PPS = 0x0011;   //RC4->MSSP:SDA;
+     SSPDATPPSbits.SSPDATPPS = 0x0014;   //RC4->MSSP:SDA;
+     SSPCLKPPSbits.SSPCLKPPS = 0x0015;   //RC5->MSSP:SCL;
+     RC5PPSbits.RC5PPS = 0x0010;   //RC5->MSSP:SCL;
      
      // Setup pins for EUSART
      RB2PPSbits.RB2PPS = 0x14;   //RB2->EUSART:TX;
@@ -86,6 +94,32 @@ void initMain(){
      PPSLOCK = 0x55;
      PPSLOCK = 0xAA;
      PPSLOCKbits.PPSLOCKED = 0x01; // lock PPS
+     
+    ////////////////////
+    // Configure ADC
+    ///////////////////
+    
+    // Fosc/32 ADC conversion time is 2.0 us
+    ADCON1bits.ADCS = 0b010;
+    
+    // Right justified 
+    ADCON1bits.ADFM = 1;
+    
+    // Vref- is Vss
+    ADCON1bits.ADNREF = 0;
+    
+    // Vref+ is Vdd
+    ADCON1bits.ADPREF = 0b00;
+    
+    // Set input channel to AN0
+    ADCON0bits.CHS = 0x05;
+    
+    // Zero ADRESL and ADRESH
+    ADRESL = 0;
+    ADRESH = 0;
+    
+    // Set E0 as ADC input channel5
+    ANSELEbits.ANSE0 = 1;
      
     
     /////////////////////
@@ -160,12 +194,26 @@ void initMain(){
 void main(void) {
     initMain();
     
+    // Initialize I2C
+    I2C_Init();  
+    __delay_ms(500);
+    
+    // Initialize OLED
+    OLED_Init();
+   
+    // clear OLED
+    OLED_Clear();
+    
+    __delay_ms(1000);
+    
     CLRWDT();
     
     // Initialize EUSART
     EUSART_Initialize(9600);
      
     // Indicate start of server
+    OLED_YX(0, 0);
+    OLED_Write_String("START SERVER");
     __delay_ms(2000);
     
     CLRWDT();
@@ -178,14 +226,20 @@ void main(void) {
     
     while(1){ 
         
-
+         // Clear OLED
+         OLED_Clear();
          
          /////////////////////////////////
          // Read and Display temperature
          ////////////////////////////////
          temp = Read_Temperature();
          
-
+         OLED_YX(0, 0);
+         OLED_Write_String("Temperature:");
+         OLED_YX(1, 0);
+         OLED_Write_Integer(temp);
+         __delay_ms(1000);
+         OLED_Clear();
          
          /////////////////////////////////
          // Convert temperature to string
@@ -193,7 +247,7 @@ void main(void) {
          char* buff11;
          int status;
     
-         buff11 = 10; //cusitoa(&status, temp);
+         buff11 = c_itoa(&status, (int)temp, 10);
          strcat(buff11, "\r\n");
           
          /////////////////////////////////
@@ -201,23 +255,42 @@ void main(void) {
          /////////////////////////////////
          EUSART_Read_Text(buf, 20); 
          
-
+         //////////////////////////////////////
+         // Display some of the received data
+         /////////////////////////////////////
+         OLED_YX(1, 0);
+         OLED_Write_String(buf);
+         __delay_ms(3000);
+         OLED_Clear();
          
          ///////////////////////////////////////////
          // Send the temperature as 2 bytes of data
          //////////////////////////////////////////
-
+         OLED_YX(0, 0);
+         OLED_Write_String("Sending Data");
          EUSART_Write_Text("AT+CIPSEND=0,2\r\n");
         __delay_ms(5000);
         
          EUSART_Write_Text(buff11);
          
+         EUSART_Read_Text(buf, 10); 
+         OLED_YX(1, 0);
+         OLED_Write_String(buf);
+         __delay_ms(3000);
+         OLED_Clear();
+  
          /////////////////////////
          // Close connection
          ////////////////////////
          
          EUSART_Write_Text("AT+CIPCLOSE=0\r\n");
          __delay_ms(1000);
+        
+         EUSART_Read_Text(buf, 10); 
+         OLED_YX(1, 0);
+         OLED_Write_String(buf);
+         __delay_ms(3000);
+         OLED_Clear();
          
          // Reset EUSART
          RC1STAbits.SPEN = 0; 
@@ -239,7 +312,8 @@ void main(void) {
  * Description: Interrupt triggered on pushbutton press
  ******************************************************************************/
 
-void __interrupt() isr(void){
+void __interrupt() isr(void)
+{
     // Clear interrupt flag
     INTCONbits.INTF = 0;
     
@@ -303,27 +377,47 @@ void server_Initialize()
         // Send AT Command
         ///////////////////////
          CLRWDT();
-
+         OLED_YX(0, 0);
+         OLED_Write_String("Sending AT");
          EUSART_Write_Text("AT\r\n");
+         EUSART_Read_Text(buf, 11);   
         
-        
-
+         OLED_YX(1, 0);
+         OLED_Write_String(buf);
+         __delay_ms(3000);
+         OLED_Clear(); 
    
         ///////////////////////////////
         // Enable Single Connection
         ///////////////////////////////
          
          CLRWDT();
-        
+         OLED_YX(0, 0);
+         OLED_Write_String("Sending CIPMUX");
          EUSART_Write_Text("AT+CIPMUX=0\r\n");
+         EUSART_Read_Text(buf, 15);   
+        
+        OLED_YX(1, 0);
+        OLED_Write_String(buf);
+        __delay_ms(3000);
+        OLED_Clear();
          
         CLRWDT();
         
         //////////////////////////////////
         // Configure as server on port 80
         //////////////////////////////////
+        OLED_YX(0, 0);
+        OLED_Write_String("Sending CIPSERVER");
         EUSART_Write_Text("AT+CIPSERVER=1,80\r\n");
          
+        EUSART_Read_Text(buf, 15);   
+        
+        OLED_YX(1, 0);
+        OLED_Write_String(buf);
+        
+        __delay_ms(3000);
+        OLED_Clear();  
         
         CLRWDT();
         

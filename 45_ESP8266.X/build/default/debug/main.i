@@ -10258,6 +10258,96 @@ void internal_1();
 void internal_31();
 # 40 "main.c" 2
 
+# 1 "./I2C.h" 1
+# 23 "./I2C.h"
+# 1 "./PIC16F1719_Internal.h" 1
+# 28 "./PIC16F1719_Internal.h"
+#pragma config FOSC = INTOSC
+#pragma config WDTE = ON
+#pragma config PWRTE = OFF
+#pragma config MCLRE = OFF
+#pragma config CP = OFF
+#pragma config BOREN = OFF
+#pragma config CLKOUTEN = OFF
+#pragma config IESO = ON
+#pragma config FCMEN = OFF
+
+
+#pragma config WRT = OFF
+#pragma config PPS1WAY = ON
+#pragma config ZCDDIS = ON
+#pragma config PLLEN = OFF
+#pragma config STVREN = ON
+#pragma config BORV = LO
+#pragma config LPBOR = OFF
+#pragma config LVP = OFF
+# 67 "./PIC16F1719_Internal.h"
+void internal_32();
+void internal_16();
+void internal_8();
+void internal_4();
+void internal_2();
+void internal_1();
+void internal_31();
+# 23 "./I2C.h" 2
+
+
+void I2C_Init(void);
+void Send_I2C_Data(unsigned int databyte);
+unsigned int Read_I2C_Data(void);
+void Send_I2C_ControlByte(unsigned int BlockAddress,unsigned int RW_bit);
+void Send_I2C_StartBit(void);
+void Send_I2C_StopBit(void);
+void Send_I2C_ACK(void);
+void Send_I2C_NAK(void);
+# 41 "main.c" 2
+
+# 1 "./oled.h" 1
+# 49 "./oled.h"
+# 1 "./PIC16F1719_Internal.h" 1
+# 28 "./PIC16F1719_Internal.h"
+#pragma config FOSC = INTOSC
+#pragma config WDTE = ON
+#pragma config PWRTE = OFF
+#pragma config MCLRE = OFF
+#pragma config CP = OFF
+#pragma config BOREN = OFF
+#pragma config CLKOUTEN = OFF
+#pragma config IESO = ON
+#pragma config FCMEN = OFF
+
+
+#pragma config WRT = OFF
+#pragma config PPS1WAY = ON
+#pragma config ZCDDIS = ON
+#pragma config PLLEN = OFF
+#pragma config STVREN = ON
+#pragma config BORV = LO
+#pragma config LPBOR = OFF
+#pragma config LVP = OFF
+# 67 "./PIC16F1719_Internal.h"
+void internal_32();
+void internal_16();
+void internal_8();
+void internal_4();
+void internal_2();
+void internal_1();
+void internal_31();
+# 49 "./oled.h" 2
+
+
+
+void OLED_Command( uint8_t temp);
+void OLED_Data( uint8_t temp);
+void OLED_Init();
+void OLED_YX(unsigned char Row, unsigned char Column);
+void OLED_PutChar( char ch );
+void OLED_Clear();
+void OLED_Write_String( char *s );
+char* c_itoa(int value, char* result, int base);
+void OLED_Write_Integer(uint8_t i);
+# 42 "main.c" 2
+
 # 1 "./EUSART.h" 1
 # 18 "./EUSART.h"
 char EUSART_Initialize(const long int baudrate);
@@ -10266,7 +10356,7 @@ void EUSART_Write(uint8_t txData);
 void EUSART_Write_Text(char *text);
 void EUSART_Read_Text(char *Output, unsigned int length);
 void EUSART_Write_Integer(int value_to_send);
-# 41 "main.c" 2
+# 43 "main.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\c99\\string.h" 1 3
 # 25 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\c99\\string.h" 3
@@ -10325,7 +10415,7 @@ size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
 
 
 void *memccpy (void *restrict, const void *restrict, int, size_t);
-# 42 "main.c" 2
+# 44 "main.c" 2
 
 
 
@@ -10335,7 +10425,7 @@ char buf[50];
 
 float Read_Temperature();
 void server_Initialize();
-# 63 "main.c"
+# 65 "main.c"
 void initMain(){
 
     internal_16();
@@ -10355,6 +10445,11 @@ void initMain(){
      PPSLOCK = 0xAA;
      PPSLOCKbits.PPSLOCKED = 0x00;
 
+     RC4PPSbits.RC4PPS = 0x0011;
+     SSPDATPPSbits.SSPDATPPS = 0x0014;
+     SSPCLKPPSbits.SSPCLKPPS = 0x0015;
+     RC5PPSbits.RC5PPS = 0x0010;
+
 
      RB2PPSbits.RB2PPS = 0x14;
      RXPPSbits.RXPPS = 0x0B;
@@ -10362,6 +10457,32 @@ void initMain(){
      PPSLOCK = 0x55;
      PPSLOCK = 0xAA;
      PPSLOCKbits.PPSLOCKED = 0x01;
+
+
+
+
+
+
+    ADCON1bits.ADCS = 0b010;
+
+
+    ADCON1bits.ADFM = 1;
+
+
+    ADCON1bits.ADNREF = 0;
+
+
+    ADCON1bits.ADPREF = 0b00;
+
+
+    ADCON0bits.CHS = 0x05;
+
+
+    ADRESL = 0;
+    ADRESH = 0;
+
+
+    ANSELEbits.ANSE0 = 1;
 
 
 
@@ -10423,9 +10544,21 @@ void initMain(){
     (INTCONbits.GIE = 1);
 
 }
-# 160 "main.c"
+# 193 "main.c"
 void main(void) {
     initMain();
+
+
+    I2C_Init();
+    _delay((unsigned long)((500)*(32000000/4000.0)));
+
+
+    OLED_Init();
+
+
+    OLED_Clear();
+
+    _delay((unsigned long)((1000)*(32000000/4000.0)));
 
     __asm("clrwdt");
 
@@ -10433,6 +10566,8 @@ void main(void) {
     EUSART_Initialize(9600);
 
 
+    OLED_YX(0, 0);
+    OLED_Write_String("START SERVER");
     _delay((unsigned long)((2000)*(32000000/4000.0)));
 
     __asm("clrwdt");
@@ -10446,13 +10581,19 @@ void main(void) {
     while(1){
 
 
+         OLED_Clear();
 
 
 
 
          temp = Read_Temperature();
 
-
+         OLED_YX(0, 0);
+         OLED_Write_String("Temperature:");
+         OLED_YX(1, 0);
+         OLED_Write_Integer(temp);
+         _delay((unsigned long)((1000)*(32000000/4000.0)));
+         OLED_Clear();
 
 
 
@@ -10460,7 +10601,7 @@ void main(void) {
          char* buff11;
          int status;
 
-         buff11 = 10;
+         buff11 = c_itoa(&status, (int)temp, 10);
          strcat(buff11, "\r\n");
 
 
@@ -10471,13 +10612,26 @@ void main(void) {
 
 
 
+         OLED_YX(1, 0);
+         OLED_Write_String(buf);
+         _delay((unsigned long)((3000)*(32000000/4000.0)));
+         OLED_Clear();
 
 
 
+
+         OLED_YX(0, 0);
+         OLED_Write_String("Sending Data");
          EUSART_Write_Text("AT+CIPSEND=0,2\r\n");
         _delay((unsigned long)((5000)*(32000000/4000.0)));
 
          EUSART_Write_Text(buff11);
+
+         EUSART_Read_Text(buf, 10);
+         OLED_YX(1, 0);
+         OLED_Write_String(buf);
+         _delay((unsigned long)((3000)*(32000000/4000.0)));
+         OLED_Clear();
 
 
 
@@ -10485,6 +10639,12 @@ void main(void) {
 
          EUSART_Write_Text("AT+CIPCLOSE=0\r\n");
          _delay((unsigned long)((1000)*(32000000/4000.0)));
+
+         EUSART_Read_Text(buf, 10);
+         OLED_YX(1, 0);
+         OLED_Write_String(buf);
+         _delay((unsigned long)((3000)*(32000000/4000.0)));
+         OLED_Clear();
 
 
          RC1STAbits.SPEN = 0;
@@ -10496,8 +10656,9 @@ void main(void) {
 
     return;
 }
-# 242 "main.c"
-void __attribute__((picinterrupt(("")))) isr(void){
+# 314 "main.c"
+void __attribute__((picinterrupt(("")))) isr(void)
+{
 
     INTCONbits.INTF = 0;
 
@@ -10507,7 +10668,7 @@ void __attribute__((picinterrupt(("")))) isr(void){
 
     server_Initialize();
 }
-# 260 "main.c"
+# 333 "main.c"
 float Read_Temperature()
 {
      float conversion10;
@@ -10537,7 +10698,7 @@ float Read_Temperature()
 
       return celsius;
 }
-# 299 "main.c"
+# 372 "main.c"
 void server_Initialize()
 {
 
@@ -10545,20 +10706,47 @@ void server_Initialize()
 
 
          __asm("clrwdt");
-
+         OLED_YX(0, 0);
+         OLED_Write_String("Sending AT");
          EUSART_Write_Text("AT\r\n");
-# 316 "main.c"
-         __asm("clrwdt");
+         EUSART_Read_Text(buf, 11);
 
+         OLED_YX(1, 0);
+         OLED_Write_String(buf);
+         _delay((unsigned long)((3000)*(32000000/4000.0)));
+         OLED_Clear();
+
+
+
+
+
+         __asm("clrwdt");
+         OLED_YX(0, 0);
+         OLED_Write_String("Sending CIPMUX");
          EUSART_Write_Text("AT+CIPMUX=0\r\n");
+         EUSART_Read_Text(buf, 15);
+
+        OLED_YX(1, 0);
+        OLED_Write_String(buf);
+        _delay((unsigned long)((3000)*(32000000/4000.0)));
+        OLED_Clear();
 
         __asm("clrwdt");
 
 
 
 
+        OLED_YX(0, 0);
+        OLED_Write_String("Sending CIPSERVER");
         EUSART_Write_Text("AT+CIPSERVER=1,80\r\n");
 
+        EUSART_Read_Text(buf, 15);
+
+        OLED_YX(1, 0);
+        OLED_Write_String(buf);
+
+        _delay((unsigned long)((3000)*(32000000/4000.0)));
+        OLED_Clear();
 
         __asm("clrwdt");
 
