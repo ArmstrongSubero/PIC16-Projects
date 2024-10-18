@@ -151,7 +151,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 For any questions or discussions related to PIC16 Projects:
 - **GitHub**: [ArmstrongSubero](https://github.com/ArmstrongSubero)
-- **Email**: [armstrong.subero@example.com](mailto:armstrong.subero@example.com)
+- **Email**: [armstrong.subero@example.com](mailto:armstrong.subero@gmail.com)
 
 If you find this repository helpful, please give it a star ⭐ and share it with others who might be interested in PIC16 microcontroller projects!
 
