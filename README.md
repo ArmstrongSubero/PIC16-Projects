@@ -2,7 +2,7 @@
 
 # PIC16 Projects
 
-Welcome to the **PIC16 Projects** repository! This repository contains a collection of projects and code examples for Microchip's PIC16 series microcontrollers. These projects are intended for hobbyists, engineers, and students who want to explore the capabilities of the PIC16 microcontrollers through hands-on experimentation.
+Welcome to the **PIC16 Projects** repository! This repository contains a collection of projects and code examples for Microchip's PIC16 series microcontrollers. These projects are intended for makers, engineers, and students who want to explore the capabilities of the PIC16 microcontrollers through hands-on experimentation.
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -15,7 +15,7 @@ Welcome to the **PIC16 Projects** repository! This repository contains a collect
 
 ## Introduction
 
-The PIC16 series is a popular family of 8-bit microcontrollers from Microchip Technology, known for their ease of use, robust feature set, and affordability. This repository provides example code and complete projects to help you get started with PIC16 microcontrollers. Whether you're controlling an LED, working on a sensor application, or creating something more complex, this collection is designed to provide useful starting points and inspiration.
+This repository provides example code and complete projects to help you get started with PIC16 microcontrollers. Whether you're controlling an LED, working on a sensor application, or creating something more complex, this collection is designed to provide useful starting points and inspiration. It contains near everything you will need to work with 8-bit PIC microcontroller devices!
 
 ## Project List
 
@@ -144,7 +144,8 @@ Feel free to suggest new projects or improvements to existing ones!
 
 ## License
 
-This project is licensed under the GPLv3 License. See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
 
 ## Contact
 
