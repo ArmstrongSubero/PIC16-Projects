@@ -1,93 +1,77 @@
 > Libraries and Projects for the 8-bit PIC16 Microcontrollers written in C and Assembly
 
-This is the repository structure
+# PIC16 Projects
 
-### 01_C         :- Contains Libraries and Projects written in C (XC8)
+Welcome to the **PIC16 Projects** repository! This repository contains a collection of projects and code examples for Microchip's PIC16 series microcontrollers. These projects are intended for hobbyists, engineers, and students who want to explore the capabilities of the PIC16 microcontrollers through hands-on experimentation.
 
-### 02_Assembly  :- Contains Libraries and Projects written in Assembly
+## Table of Contents
+- [Introduction](#introduction)
+- [Project List](#project-list)
+- [Getting Started](#getting-started)
+- [Requirements](#requirements)
+- [How to Use](#how-to-use)
+- [Contributing](#contributing)
+- [License](#license)
 
-When you download your repository and open the project be sure your target and compiler selected
-are accurate. 
+## Introduction
 
-Be sure to check out the blog for more electronics projects:
+The PIC16 series is a popular family of 8-bit microcontrollers from Microchip Technology, known for their ease of use, robust feature set, and affordability. This repository provides example code and complete projects to help you get started with PIC16 microcontrollers. Whether you're controlling an LED, working on a sensor application, or creating something more complex, this collection is designed to provide useful starting points and inspiration.
 
-http://trinirobotics.com/
+## Project List
 
-If you are new to PIC microcontroller programming then make sure and pick up a copy of the book 
-Programming PIC Microcontrollers with XC8:
+Below is a list of projects included in this repository:
 
-https://www.apress.com/gp/book/9781484232729
-
-
-### C Libraries and Projects using PIC16F1717/PIC16F1719 Microcontroller
-
-- 00_Documents: Contains datasheets, pinouts, errata and XC8 compiler users guide
-- 00_Output            		:   (PIC16F1) Use I/O pin as output
-- 01_Flash             		:   (PIC16F1) Flash an LED
-- 02_Internal_Pullups  		:   (PIC16F1) Use internal pullups
-- 03_Pushbutton        		:   (PIC16F1) Use a pushbutton
-- 04_Timer0            		:   (PIC16F1) Internal Timer0 module
-- 05_Counter           		:   (PIC16F1) Use the counter module
-- 06_Interrupts        		:   (PIC16F1) Use and interrupt with Timer0 module
-- 07_Internal_External 		:   (PIC16F1) Demonstrates pushbutton interrupt
-- 08_Sleep             		:   (PIC16F1) Sleep mode demonstration
-- 09_Watchdog_Timer    		:   (PIC16F1) Uses the internal watchdog timer
-- 10_Peroidic Sleep    		:   (PIC16F1) Perform a task then go to sleep
-- 11_IOC               		:   (PIC16F1) Demonstrates Interrupt on change
-- 12_Comparator        		:   (PIC16F1) Uses the comparator module
-- 13_FVR               		:   (PIC16F1) Uses the internal fixed voltage reference
-- 14_DAC_8_Bit         		:   (PIC16F1) Digital to Analog Converter (DAC) demonstration
-- 15_HD44780_LCD       		:   (PIC16F1) Library for the HD44780 and compatible LCDs
-- 16_ADC               		:   (PIC16F1) Analog to Digital Converter (ADC) module demonstration
-- 17_OneWire                :   (PIC16F1) Uses the one wire interface for DS18B20 
-- 18_Timer1            		:   (PIC16F1) Uses the Timer1 module
-- 19_Timer2            		:   (PIC16F1) Uses the Timer2 module
-- 20_PWM               		:   (PIC16F1) Pulse Width Modulation (PWM) demonstration
-- 21_EUSART            		:   (PIC16F1) Driver for the Enhanced USART module
-- 22_SPI               		:   (PIC16F1) Driver for the Serial Peripheral Interface (SPI)
-- 23_I2C               		:   (PIC16F1) Inter-Intgrated Circuit (I2C) driver
-- 24_I2C1              		:   (PIC16F1) Additional Driver for Inter-Integrated circuit
-- 25_Shift_Register         :   (PIC16F1) Driver for 74HC595 shift register
-- 26_Line_Decoder           :   (PIC16F1) Driver for 74HC138 3-8 line decoder
-- 27_NCO               		:   (PIC16F1) Uses the Numerically Controlled Oscillator (NCO) module
-- 28_Sound             		:   (PIC16F1) Uses an I/O pin to produce a sound
-- 29_Soft_UART         		:   (PIC16F1) Software UART implementation
-- 30_Hall_Effect       		:   (PIC16F1) Driver for the Keyes KY-003 Hall Effect Sensor
-- 31_Touchscreen       		:   (PIC16F1) Diver for interfacing to the NX3224T024_011 Touchscreen module
-- 32_CLC               		:   (PIC16F1) Demonstrates use of the configurable logic cell module
-
-- I01_DC_Motor         		:   Interfacing to DC Motor
-- I02_Seven_Segment    		:   Interfacing to seven segment module
-- I03_Seve_Segment_Mul 		:   Interfacing to multiplexed seven segment modules
-- I04_Servo_Motor      		:	Interfacing to Servo Motors
-- I05_H-Bridge         		:   Interfacing to SN754410 H-Bridge IC
-- I06_Stepper_Motor    		:   Interfacing to a 4 phase unipolar stepper motor
-- I07_Serial_LCD       		:   Interfacing to a serial LCD
-- I08_Joystick         		:   Interfacing to a joystick
-- I09_TTS                	:   Interfacing to a Emic2 Text to Speech Module
-- I10_RGB_LED            	:   Interfacing to an RGB LED Module
-- I11_IR_Distance_Sensor    :   Interfacing to a IR Distance Sensor Module
-- I12_Nokia5110             :   Interfacing to a Nokia5100 LCD
-- I13_GPS                   :   Interfacing to a NEO-6M GPS module
-- I14_Ultrasonic_Sensor     :   Interfacing to a HC-SR04 ultrasonic distance sensor
-- I15_SSD1306               :   Interfacing to a SSD1306 based LCD
-- I16_GSM                   :   Interfacing to a SIM800L module
-- I17_Bargraph_LED          :   Interfacing to a bargraph LED module
-- I18_DS1306                :   Interfacing to a DS1306 RTC IC
-- I19_Bluetooth_HC05        :   Interfacing to a HC05 Bluetooth module
-- I20_DHT11                 : 	Interfacing to a DHT11 temperature and humidity sensor
-- I21_SD_Card               : 	Interfacing to a SD Card and writing a file
-
-- P01_Termometer            : 	Digital Thermometer project using a LM34 temperature sensor and OLED
-- P02_Temperature_Logger    : 	Temperature logger project using EEPROM for storage
-- P03_IoT_WiFi              : 	IoT Project using ESP8266 ESP-12-F WiFi Module
-- P04_Temp_Fan              : 	Temperature controlled fan project
-- P05_Clock                 : 	A touch screen clock using RTC IC and Touch LCD Module
-
-### (pic-as) Assembly Libraries and Projects using PIC16F1718 Microcontroller
-
-- 01_On                : 	Turns an LED on
-
+1. **01_Blink.X**: A basic blinking LED program for PIC16.
+2. **02_Pushbutton.X**: Control an LED with a pushbutton.
+3. **03_Timer0.X**: Timer0-based delay implementation.
+4. **04_Counter.X**: Simple counter using Timer0.
+5. **05_Timer0_Interrupts.X**: Timer0 interrupt demonstration.
+6. **06_TMR0_Ext_Interrupt.X**: Use Timer0 with an external interrupt.
+7. **07_Sleep.X**: Demonstrate sleep mode to save power.
+8. **08_Watchdog_Timer.X**: Use the watchdog timer to reset the microcontroller.
+9. **09_IOC.X**: Demonstrate Interrupt-On-Change (IOC) functionality.
+10. **10_Comparator.X**: Use the internal comparator module.
+11. **11_FVR.X**: Fixed Voltage Reference (FVR) demonstration.
+12. **12_DAC.X**: Generate analog signals using the DAC.
+13. **13_Timer1.X**: Timer1 usage example.
+14. **14_Timer2.X**: Timer2 usage example.
+15. **15_PWM.X**: Generate PWM signals for motor control.
+16. **16_NCO.X**: Use the Numerically Controlled Oscillator (NCO).
+17. **17_Sound.X**: Generate sound using a buzzer.
+18. **18_UART.X**: UART communication between the PIC and a PC.
+19. **19_I2C.X**: Implement I2C communication.
+20. **20_SPI.X**: Implement SPI communication.
+21. **21_ADC.X**: Analog-to-Digital Conversion example.
+22. **22_Internal_Temp_Indicator.X**: Read internal temperature sensor.
+23. **23_COG.X**: Complementary Output Generator (COG) usage.
+24. **24_CLC.X**: Configurable Logic Cell (CLC) example.
+25. **25_Servo.X**: Control a servo motor with PWM.
+26. **26_Servo_Std.X**: Standard servo control demonstration.
+27. **27_Software_UART.X**: Software UART implementation.
+28. **28_Seven_Segment.X**: Drive a seven-segment display.
+29. **29_Seven_Segment_Mul.X**: Multiplex multiple seven-segment displays.
+30. **30_Countdown_Timer.X**: Create a countdown timer.
+31. **31_Motor_On_Off.X**: Simple DC motor on/off control.
+32. **32_Motor_PWM.X**: Control motor speed using PWM.
+33. **33_Motor_BTS7960.X**: Control motor with BTS7960 driver.
+34. **34_Motor_Encoder.X**: Read encoder feedback for motor control.
+35. **35_Motor_PID_Control.X**: Implement PID control for a motor.
+36. **36_Photoresistor.X**: Read values from a photoresistor.
+37. **37_Analog_Joystick.X**: Interface with an analog joystick.
+38. **38_Sine_Wave_Generation.X**: Generate a sine wave output.
+39. **39_Square_Wave_Generation.X**: Generate a square wave output.
+40. **40_Triangle_Wave_Generation.X**: Generate a triangle wave output.
+41. **41_Knight_Rider.X**: LED pattern resembling the Knight Rider effect.
+42. **42_CLC.X**: Another example of using the Configurable Logic Cell.
+43. **43_SSD1306.X**: Interface with an SSD1306 OLED display.
+44. **44_Nokia_5110.X**: Interface with a Nokia 5110 LCD.
+45. **45_ESP8266.X**: Communicate with an ESP8266 Wi-Fi module.
+46. **46_UBLOX_GSM.X**: Interface with a UBLOX GSM module.
+47. **47_GPS.X**: Read data from a GPS module.
+48. **48_Touch_Display.X**: Interface with a touch display.
+49. **49_Bluetooth.X**: Communicate via Bluetooth module.
+50. **50_Temperature_Controlled_Fan.X**: Control a fan based on temperature readings.
+51. **51_UART_To_Browser_Bridge.X**: Bridge UART data to a web browser.
 
 ### (LEGACY MPASM) Assembly Libraries and Projects using PIC16F506 Microcontroller
 
@@ -105,6 +89,74 @@ https://www.apress.com/gp/book/9781484232729
 - A13_ADC                   : 	Uses the internal ADC module
 - A14_Software_PWM          : 	Uses the software PWM module
 - A15_Sound                 : 	Generates sound
+
+Each project has its own folder with source code, schematics, and relevant documentation.
+
+
+## Getting Started
+
+### Prerequisites
+To work with the projects in this repository, you will need:
+
+- A PIC16 microcontroller (e.g., PIC16F1717, PIC16F877A, etc.).
+- MPLAB X IDE: [Download here](https://www.microchip.com/mplab/mplab-x-ide).
+- XC8 Compiler: [Download here](https://www.microchip.com/mplab/compilers).
+- PICkit Programmer (or equivalent) to upload the code to your microcontroller.
+
+### Setting Up
+1. Clone the repository to your local machine:
+    ```sh
+    git clone https://github.com/ArmstrongSubero/PIC16-Projects.git
+    cd PIC16-Projects
+    ```
+
+2. Open MPLAB X IDE and import the project you want to work on.
+3. Compile and program the microcontroller using your PICkit or other compatible programmer.
+
+## Requirements
+
+- **Hardware**: PIC16 microcontroller, breadboard, resistors, capacitors, LEDs, sensors, etc.
+- **Software**: MPLAB X IDE, XC8 Compiler.
+- **Programmer**: PICkit 3/4 or any compatible programmer.
+
+## How to Use
+
+- Each project contains a `.X` MPLAB project folder that can be opened directly in MPLAB X IDE.
+- Review the README file in each project folder for specific setup instructions.
+- Build the project in MPLAB X IDE and program it onto your PIC16 microcontroller.
+
+### Example: Running the Blink Project
+1. Connect an LED with a resistor to the GPIO pin specified in the code (e.g., PIN D1).
+2. Open the `01_Blink` project in MPLAB X.
+3. Build the project and program it onto your PIC16F1717.
+4. Observe the LED blinking on the breadboard.
+
+## Contributing
+
+Contributions are welcome! If you have a new project, improvements, or bug fixes:
+1. Fork this repository.
+2. Create a new branch (`git checkout -b feature-branch-name`).
+3. Commit your changes (`git commit -m 'Add new project or feature'`).
+4. Push to the branch (`git push origin feature-branch-name`).
+5. Create a pull request for review.
+
+Feel free to suggest new projects or improvements to existing ones!
+
+## License
+
+This project is licensed under the GPLv3 License. See the [LICENSE](LICENSE) file for more details.
+
+## Contact
+
+For any questions or discussions related to PIC16 Projects:
+- **GitHub**: [ArmstrongSubero](https://github.com/ArmstrongSubero)
+- **Email**: [armstrong.subero@example.com](mailto:armstrong.subero@example.com)
+
+If you find this repository helpful, please give it a star ⭐ and share it with others who might be interested in PIC16 microcontroller projects!
+
+
+
+
 
 
 
