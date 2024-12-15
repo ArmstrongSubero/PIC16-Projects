@@ -1159,422 +1159,422 @@ Version 4.0 HI-TECH Software Intermediate Code
 "16177
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc\pic16f1719.h: 16177: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"33 main.c
-[; ;main.c: 33: volatile uint16_t tmr0_overflows = 0;
+"48 main.c
+[; ;main.c: 48: volatile uint16_t tmr0_overflows = 0;
 [v _tmr0_overflows `Vus ~T0 @X0 1 e ]
 [i _tmr0_overflows
 -> -> 0 `i `us
 ]
-"36
-[; ;main.c: 36: uint8_t calibration_value = 98;
+"51
+[; ;main.c: 51: uint8_t calibration_value = 98;
 [v _calibration_value `uc ~T0 @X0 1 e ]
 [i _calibration_value
 -> -> 98 `i `uc
 ]
-"49
-[; ;main.c: 49: void initMain(){
+"64
+[; ;main.c: 64: void initMain(){
 [v _initMain `(v ~T0 @X0 1 ef ]
 {
 [e :U _initMain ]
 [f ]
-"52
-[; ;main.c: 52:     internal_32();
-[e ( _internal_32 ..  ]
-"55
-[; ;main.c: 55:     _delay((unsigned long)((10)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"60
-[; ;main.c: 60:     PPSLOCK = 0x55;
-[e = _PPSLOCK -> -> 85 `i `uc ]
-"61
-[; ;main.c: 61:     PPSLOCK = 0xAA;
-[e = _PPSLOCK -> -> 170 `i `uc ]
-"62
-[; ;main.c: 62:     PPSLOCKbits.PPSLOCKED = 0x00;
-[e = . . _PPSLOCKbits 0 0 -> -> 0 `i `uc ]
-"64
-[; ;main.c: 64:     RB2PPSbits.RB2PPS = 0x14;
-[e = . . _RB2PPSbits 0 0 -> -> 20 `i `uc ]
-"65
-[; ;main.c: 65:     RXPPSbits.RXPPS = 0x0B;
-[e = . . _RXPPSbits 0 0 -> -> 11 `i `uc ]
 "67
-[; ;main.c: 67:     T0CKIPPSbits.T0CKIPPS = 0x08;
-[e = . . _T0CKIPPSbits 0 0 -> -> 8 `i `uc ]
-"69
-[; ;main.c: 69:     PPSLOCK = 0x55;
-[e = _PPSLOCK -> -> 85 `i `uc ]
+[; ;main.c: 67:     internal_32();
+[e ( _internal_32 ..  ]
 "70
-[; ;main.c: 70:     PPSLOCK = 0xAA;
+[; ;main.c: 70:     _delay((unsigned long)((10)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"75
+[; ;main.c: 75:     PPSLOCK = 0x55;
+[e = _PPSLOCK -> -> 85 `i `uc ]
+"76
+[; ;main.c: 76:     PPSLOCK = 0xAA;
 [e = _PPSLOCK -> -> 170 `i `uc ]
-"71
-[; ;main.c: 71:     PPSLOCKbits.PPSLOCKED = 0x01;
-[e = . . _PPSLOCKbits 0 0 -> -> 1 `i `uc ]
-"73
-[; ;main.c: 73:     TRISBbits.TRISB2 = 0;
-[e = . . _TRISBbits 0 2 -> -> 0 `i `uc ]
-"74
-[; ;main.c: 74:     ANSELBbits.ANSB2 = 0;
-[e = . . _ANSELBbits 0 2 -> -> 0 `i `uc ]
 "77
-[; ;main.c: 77:     TRISCbits.TRISC4 = 0;
-[e = . . _TRISCbits 0 4 -> -> 0 `i `uc ]
-"78
-[; ;main.c: 78:     ANSELCbits.ANSC4 = 0;
-[e = . . _ANSELCbits 0 3 -> -> 0 `i `uc ]
+[; ;main.c: 77:     PPSLOCKbits.PPSLOCKED = 0x00;
+[e = . . _PPSLOCKbits 0 0 -> -> 0 `i `uc ]
+"79
+[; ;main.c: 79:     RB2PPSbits.RB2PPS = 0x14;
+[e = . . _RB2PPSbits 0 0 -> -> 20 `i `uc ]
 "80
-[; ;main.c: 80:     TRISCbits.TRISC6 = 1;
-[e = . . _TRISCbits 0 6 -> -> 1 `i `uc ]
-"81
-[; ;main.c: 81:     ANSELCbits.ANSC6 = 0;
-[e = . . _ANSELCbits 0 5 -> -> 0 `i `uc ]
+[; ;main.c: 80:     RXPPSbits.RXPPS = 0x0B;
+[e = . . _RXPPSbits 0 0 -> -> 11 `i `uc ]
+"82
+[; ;main.c: 82:     T0CKIPPSbits.T0CKIPPS = 0x08;
+[e = . . _T0CKIPPSbits 0 0 -> -> 8 `i `uc ]
 "84
-[; ;main.c: 84:     TRISBbits.TRISB0 = 1;
-[e = . . _TRISBbits 0 0 -> -> 1 `i `uc ]
+[; ;main.c: 84:     PPSLOCK = 0x55;
+[e = _PPSLOCK -> -> 85 `i `uc ]
 "85
-[; ;main.c: 85:     ANSELBbits.ANSB0 = 0;
-[e = . . _ANSELBbits 0 0 -> -> 0 `i `uc ]
+[; ;main.c: 85:     PPSLOCK = 0xAA;
+[e = _PPSLOCK -> -> 170 `i `uc ]
+"86
+[; ;main.c: 86:     PPSLOCKbits.PPSLOCKED = 0x01;
+[e = . . _PPSLOCKbits 0 0 -> -> 1 `i `uc ]
 "88
-[; ;main.c: 88:     OPTION_REGbits.TMR0CS = 1;
-[e = . . _OPTION_REGbits 0 3 -> -> 1 `i `uc ]
+[; ;main.c: 88:     TRISBbits.TRISB2 = 0;
+[e = . . _TRISBbits 0 2 -> -> 0 `i `uc ]
 "89
-[; ;main.c: 89:     OPTION_REGbits.PSA = 0;
-[e = . . _OPTION_REGbits 0 1 -> -> 0 `i `uc ]
-"90
-[; ;main.c: 90:     OPTION_REGbits.PS = 0b011;
-[e = . . _OPTION_REGbits 0 0 -> -> 3 `i `uc ]
-"91
-[; ;main.c: 91:     TMR0 = 0;
-[e = _TMR0 -> -> 0 `i `uc ]
-"94
-[; ;main.c: 94:     INTCONbits.TMR0IE = 1;
-[e = . . _INTCONbits 0 5 -> -> 1 `i `uc ]
+[; ;main.c: 89:     ANSELBbits.ANSB2 = 0;
+[e = . . _ANSELBbits 0 2 -> -> 0 `i `uc ]
+"92
+[; ;main.c: 92:     TRISCbits.TRISC4 = 0;
+[e = . . _TRISCbits 0 4 -> -> 0 `i `uc ]
+"93
+[; ;main.c: 93:     ANSELCbits.ANSC4 = 0;
+[e = . . _ANSELCbits 0 3 -> -> 0 `i `uc ]
 "95
-[; ;main.c: 95:     INTCONbits.TMR0IF = 0;
-[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-"98
-[; ;main.c: 98:     T1CON = 0b00110001;
-[e = _T1CON -> -> 49 `i `uc ]
+[; ;main.c: 95:     TRISCbits.TRISC6 = 1;
+[e = . . _TRISCbits 0 6 -> -> 1 `i `uc ]
+"96
+[; ;main.c: 96:     ANSELCbits.ANSC6 = 0;
+[e = . . _ANSELCbits 0 5 -> -> 0 `i `uc ]
 "99
-[; ;main.c: 99:     TMR1 = 0;
-[e = _TMR1 -> -> 0 `i `us ]
+[; ;main.c: 99:     TRISBbits.TRISB0 = 1;
+[e = . . _TRISBbits 0 0 -> -> 1 `i `uc ]
 "100
-[; ;main.c: 100:     PIE1bits.TMR1IE = 1;
-[e = . . _PIE1bits 0 0 -> -> 1 `i `uc ]
-"101
-[; ;main.c: 101:     INTCONbits.PEIE = 1;
-[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+[; ;main.c: 100:     ANSELBbits.ANSB0 = 0;
+[e = . . _ANSELBbits 0 0 -> -> 0 `i `uc ]
+"103
+[; ;main.c: 103:     OPTION_REGbits.TMR0CS = 1;
+[e = . . _OPTION_REGbits 0 3 -> -> 1 `i `uc ]
 "104
-[; ;main.c: 104:     INTCONbits.GIE = 1;
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"107
-[; ;main.c: 107:     EUSART_Initialize(19200);
-[e ( _EUSART_Initialize (1 -> -> 19200 `i `l ]
+[; ;main.c: 104:     OPTION_REGbits.PSA = 0;
+[e = . . _OPTION_REGbits 0 1 -> -> 0 `i `uc ]
+"105
+[; ;main.c: 105:     OPTION_REGbits.PS = 0b011;
+[e = . . _OPTION_REGbits 0 0 -> -> 3 `i `uc ]
+"106
+[; ;main.c: 106:     TMR0 = 0;
+[e = _TMR0 -> -> 0 `i `uc ]
+"109
+[; ;main.c: 109:     INTCONbits.TMR0IE = 1;
+[e = . . _INTCONbits 0 5 -> -> 1 `i `uc ]
 "110
-[; ;main.c: 110: }
+[; ;main.c: 110:     INTCONbits.TMR0IF = 0;
+[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
+"113
+[; ;main.c: 113:     T1CON = 0b00110001;
+[e = _T1CON -> -> 49 `i `uc ]
+"114
+[; ;main.c: 114:     TMR1 = 0;
+[e = _TMR1 -> -> 0 `i `us ]
+"115
+[; ;main.c: 115:     PIE1bits.TMR1IE = 1;
+[e = . . _PIE1bits 0 0 -> -> 1 `i `uc ]
+"116
+[; ;main.c: 116:     INTCONbits.PEIE = 1;
+[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+"119
+[; ;main.c: 119:     INTCONbits.GIE = 1;
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+"122
+[; ;main.c: 122:     EUSART_Initialize(19200);
+[e ( _EUSART_Initialize (1 -> -> 19200 `i `l ]
+"123
+[; ;main.c: 123: }
 [e :UE 786 ]
 }
 [v $root$_isr `(v ~T0 @X0 0 e ]
-"113
-[; ;main.c: 113: void __attribute__((picinterrupt(("")))) isr() {
+"134
+[; ;main.c: 134: void __attribute__((picinterrupt(("")))) isr() {
 [v _isr `(v ~T1 @X0 1 ef ]
 {
 [e :U _isr ]
 [f ]
-"114
-[; ;main.c: 114:     if (INTCONbits.TMR0IF) {
+"135
+[; ;main.c: 135:     if (INTCONbits.TMR0IF) {
 [e $ ! != -> . . _INTCONbits 0 2 `i -> 0 `i 788  ]
 {
-"116
-[; ;main.c: 116:         tmr0_overflows++;
+"137
+[; ;main.c: 137:         tmr0_overflows++;
 [e ++ _tmr0_overflows -> -> 1 `i `Vus ]
-"117
-[; ;main.c: 117:         INTCONbits.TMR0IF = 0;
+"138
+[; ;main.c: 138:         INTCONbits.TMR0IF = 0;
 [e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-"118
-[; ;main.c: 118:     }
+"139
+[; ;main.c: 139:     }
 }
 [e :U 788 ]
-"120
-[; ;main.c: 120:     if (PIR1bits.TMR1IF) {
+"141
+[; ;main.c: 141:     if (PIR1bits.TMR1IF) {
 [e $ ! != -> . . _PIR1bits 0 0 `i -> 0 `i 789  ]
 {
-"122
-[; ;main.c: 122:         PIR1bits.TMR1IF = 0;
+"143
+[; ;main.c: 143:         PIR1bits.TMR1IF = 0;
 [e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
-"123
-[; ;main.c: 123:         TMR1 = 0;
+"144
+[; ;main.c: 144:         TMR1 = 0;
 [e = _TMR1 -> -> 0 `i `us ]
-"124
-[; ;main.c: 124:     }
+"145
+[; ;main.c: 145:     }
 }
 [e :U 789 ]
-"125
-[; ;main.c: 125: }
+"146
+[; ;main.c: 146: }
 [e :UE 787 ]
 }
-"127
-[; ;main.c: 127: uint16_t ReadTimer0WithOverflows() {
+"156
+[; ;main.c: 156: uint16_t ReadTimer0WithOverflows() {
 [v _ReadTimer0WithOverflows `(us ~T0 @X0 1 ef ]
 {
 [e :U _ReadTimer0WithOverflows ]
 [f ]
-"129
-[; ;main.c: 129:     return (tmr0_overflows * 256) + TMR0;
+"158
+[; ;main.c: 158:     return (tmr0_overflows * 256) + TMR0;
 [e ) -> + * -> _tmr0_overflows `ui -> -> 256 `i `ui -> _TMR0 `ui `us ]
 [e $UE 790  ]
-"130
-[; ;main.c: 130: }
+"159
+[; ;main.c: 159: }
 [e :UE 790 ]
 }
-"138
-[; ;main.c: 138: void calibrate() {
+"170
+[; ;main.c: 170: void calibrate() {
 [v _calibrate `(v ~T0 @X0 1 ef ]
 {
 [e :U _calibrate ]
 [f ]
-"139
-[; ;main.c: 139:     EUSART_Write_Text("Calibration mode started...\n");
+"171
+[; ;main.c: 171:     EUSART_Write_Text("Calibration mode started...\n");
 [e ( _EUSART_Write_Text (1 :s 1C ]
-"140
-[; ;main.c: 140:     _delay((unsigned long)((500)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"143
-[; ;main.c: 143:     uint16_t count_start = ReadTimer0WithOverflows();
+"172
+[; ;main.c: 172:     _delay((unsigned long)((1500)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1500 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"175
+[; ;main.c: 175:     uint16_t count_start = ReadTimer0WithOverflows();
 [v _count_start `us ~T0 @X0 1 a ]
 [e = _count_start ( _ReadTimer0WithOverflows ..  ]
-"144
-[; ;main.c: 144:     _delay((unsigned long)((1000)*(32000000/4000.0)));
+"176
+[; ;main.c: 176:     _delay((unsigned long)((1000)*(32000000/4000.0)));
 [e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"145
-[; ;main.c: 145:     uint16_t count_end = ReadTimer0WithOverflows();
+"177
+[; ;main.c: 177:     uint16_t count_end = ReadTimer0WithOverflows();
 [v _count_end `us ~T0 @X0 1 a ]
 [e = _count_end ( _ReadTimer0WithOverflows ..  ]
-"147
-[; ;main.c: 147:     uint16_t total_counts = (count_end >= count_start)
+"179
+[; ;main.c: 179:     uint16_t total_counts = (count_end >= count_start)
 [v _total_counts `us ~T0 @X0 1 a ]
 [e = _total_counts -> ? >= -> _count_end `ui -> _count_start `ui : - -> _count_end `ui -> _count_start `ui + + * - -> _tmr0_overflows `ui -> -> 1 `i `ui -> -> 256 `i `ui - -> -> 256 `i `ui -> _count_start `ui -> _count_end `ui `us ]
-"150
-[; ;main.c: 150:     tmr0_overflows = 0;
+"182
+[; ;main.c: 182:     tmr0_overflows = 0;
 [e = _tmr0_overflows -> -> 0 `i `us ]
-"152
-[; ;main.c: 152:     float frequency = ((float)total_counts * 16) / 1.0;
+"184
+[; ;main.c: 184:     float frequency = ((float)total_counts * 16) / 1.0;
 [v _frequency `f ~T0 @X0 1 a ]
 [e = _frequency -> / -> * -> _total_counts `f -> -> 16 `i `f `d .1.0 `f ]
-"154
-[; ;main.c: 154:     if (frequency > 0) {
+"186
+[; ;main.c: 186:     if (frequency > 0) {
 [e $ ! > _frequency -> -> 0 `i `f 792  ]
 {
-"155
-[; ;main.c: 155:         float capacitance = 100e-9;
+"187
+[; ;main.c: 187:         float capacitance = 100e-9;
 [v _capacitance `f ~T0 @X0 1 a ]
 [e = _capacitance -> .100e-9 `f ]
-"156
-[; ;main.c: 156:         float precomputed_constant = 4 * 3.14159 * 3.14159 * capacitance;
+"188
+[; ;main.c: 188:         float precomputed_constant = 4 * 3.14159 * 3.14159 * capacitance;
 [v _precomputed_constant `f ~T0 @X0 1 a ]
 [e = _precomputed_constant -> * * * -> -> 4 `i `d .3.14159 .3.14159 -> _capacitance `d `f ]
-"157
-[; ;main.c: 157:         float inductance_h = 1.0 / (precomputed_constant * frequency * frequency);
+"189
+[; ;main.c: 189:         float inductance_h = 1.0 / (precomputed_constant * frequency * frequency);
 [v _inductance_h `f ~T0 @X0 1 a ]
 [e = _inductance_h -> / .1.0 -> * * _precomputed_constant _frequency _frequency `d `f ]
-"158
-[; ;main.c: 158:         calibration_value = (uint8_t)(inductance_h * 1e6);
+"190
+[; ;main.c: 190:         calibration_value = (uint8_t)(inductance_h * 1e6);
 [e = _calibration_value -> * -> _inductance_h `d .1e6 `uc ]
-"159
-[; ;main.c: 159:         EUSART_Write_Text("Calibration complete. Offset (uH): ");
+"191
+[; ;main.c: 191:         EUSART_Write_Text("Calibration complete. Offset (uH): ");
 [e ( _EUSART_Write_Text (1 :s 2C ]
-"160
-[; ;main.c: 160:         EUSART_Write_Unsigned_Integer(calibration_value);
+"192
+[; ;main.c: 192:         EUSART_Write_Unsigned_Integer(calibration_value);
 [e ( _EUSART_Write_Unsigned_Integer (1 -> _calibration_value `ul ]
-"161
-[; ;main.c: 161:         EUSART_Write_Text("\n");
+"193
+[; ;main.c: 193:         EUSART_Write_Text("\n");
 [e ( _EUSART_Write_Text (1 :s 3C ]
-"162
-[; ;main.c: 162:     } else {
+"194
+[; ;main.c: 194:     } else {
 }
 [e $U 793  ]
 [e :U 792 ]
 {
-"163
-[; ;main.c: 163:         EUSART_Write_Text("Error: Unable to measure frequency during calibration\n");
+"195
+[; ;main.c: 195:         EUSART_Write_Text("Error: Unable to measure frequency during calibration\n");
 [e ( _EUSART_Write_Text (1 :s 4C ]
-"164
-[; ;main.c: 164:     }
+"196
+[; ;main.c: 196:     }
 }
 [e :U 793 ]
-"165
-[; ;main.c: 165: }
+"197
+[; ;main.c: 197: }
 [e :UE 791 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"175
-[; ;main.c: 175: void main(void) {
+"207
+[; ;main.c: 207: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"176
-[; ;main.c: 176:     initMain();
+"208
+[; ;main.c: 208:     initMain();
 [e ( _initMain ..  ]
-"178
-[; ;main.c: 178:     uint16_t count_start, count_end, total_counts;
+"210
+[; ;main.c: 210:     uint16_t count_start, count_end, total_counts;
 [v _count_start `us ~T0 @X0 1 a ]
 [v _count_end `us ~T0 @X0 1 a ]
 [v _total_counts `us ~T0 @X0 1 a ]
-"179
-[; ;main.c: 179:     float frequency, inductance_h, inductance_uh, inductance_mh;
+"211
+[; ;main.c: 211:     float frequency, inductance_h, inductance_uh, inductance_mh;
 [v _frequency `f ~T0 @X0 1 a ]
 [v _inductance_h `f ~T0 @X0 1 a ]
 [v _inductance_uh `f ~T0 @X0 1 a ]
 [v _inductance_mh `f ~T0 @X0 1 a ]
-"182
-[; ;main.c: 182:     float capacitance = 100e-9;
+"214
+[; ;main.c: 214:     float capacitance = 100e-9;
 [v _capacitance `f ~T0 @X0 1 a ]
 [e = _capacitance -> .100e-9 `f ]
-"185
-[; ;main.c: 185:     float precomputed_constant = 4 * 3.14159 * 3.14159 * capacitance;
+"217
+[; ;main.c: 217:     float precomputed_constant = 4 * 3.14159 * 3.14159 * capacitance;
 [v _precomputed_constant `f ~T0 @X0 1 a ]
 [e = _precomputed_constant -> * * * -> -> 4 `i `d .3.14159 .3.14159 -> _capacitance `d `f ]
-"187
-[; ;main.c: 187:     while (1)
+"219
+[; ;main.c: 219:     while (1)
 [e :U 796 ]
-"188
-[; ;main.c: 188:     {
+"220
+[; ;main.c: 220:     {
 {
-"189
-[; ;main.c: 189:         LATCbits.LATC4 = 1;
+"221
+[; ;main.c: 221:         LATCbits.LATC4 = 1;
 [e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
-"192
-[; ;main.c: 192:         if (PORTCbits.RC6 != 1) {
+"224
+[; ;main.c: 224:         if (PORTCbits.RC6 != 1) {
 [e $ ! != -> . . _PORTCbits 0 6 `i -> 1 `i 798  ]
 {
-"193
-[; ;main.c: 193:             _delay((unsigned long)((50)*(32000000/4000.0)));
+"225
+[; ;main.c: 225:             _delay((unsigned long)((50)*(32000000/4000.0)));
 [e ( __delay (1 -> * -> -> 50 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"194
-[; ;main.c: 194:             if (PORTCbits.RC6 != 1) {
+"226
+[; ;main.c: 226:             if (PORTCbits.RC6 != 1) {
 [e $ ! != -> . . _PORTCbits 0 6 `i -> 1 `i 799  ]
 {
-"195
-[; ;main.c: 195:                 calibrate();
+"227
+[; ;main.c: 227:                 calibrate();
 [e ( _calibrate ..  ]
-"196
-[; ;main.c: 196:                 while (PORTCbits.RC6 != 1);
+"228
+[; ;main.c: 228:                 while (PORTCbits.RC6 != 1);
 [e $U 800  ]
 [e :U 801 ]
 [e :U 800 ]
 [e $ != -> . . _PORTCbits 0 6 `i -> 1 `i 801  ]
 [e :U 802 ]
-"197
-[; ;main.c: 197:             }
+"229
+[; ;main.c: 229:             }
 }
 [e :U 799 ]
-"198
-[; ;main.c: 198:         }
+"230
+[; ;main.c: 230:         }
 }
 [e :U 798 ]
-"201
-[; ;main.c: 201:         count_start = ReadTimer0WithOverflows();
+"233
+[; ;main.c: 233:         count_start = ReadTimer0WithOverflows();
 [e = _count_start ( _ReadTimer0WithOverflows ..  ]
-"202
-[; ;main.c: 202:         _delay((unsigned long)((1000)*(32000000/4000.0)));
+"234
+[; ;main.c: 234:         _delay((unsigned long)((1000)*(32000000/4000.0)));
 [e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"203
-[; ;main.c: 203:         count_end = ReadTimer0WithOverflows();
+"235
+[; ;main.c: 235:         count_end = ReadTimer0WithOverflows();
 [e = _count_end ( _ReadTimer0WithOverflows ..  ]
-"206
-[; ;main.c: 206:         total_counts = (count_end >= count_start)
+"238
+[; ;main.c: 238:         total_counts = (count_end >= count_start)
 [e = _total_counts -> ? >= -> _count_end `ui -> _count_start `ui : - -> _count_end `ui -> _count_start `ui + + * - -> _tmr0_overflows `ui -> -> 1 `i `ui -> -> 256 `i `ui - -> -> 256 `i `ui -> _count_start `ui -> _count_end `ui `us ]
-"209
-[; ;main.c: 209:         tmr0_overflows = 0;
+"241
+[; ;main.c: 241:         tmr0_overflows = 0;
 [e = _tmr0_overflows -> -> 0 `i `us ]
-"212
-[; ;main.c: 212:         frequency = ((float)total_counts * 16) / 1.0;
+"244
+[; ;main.c: 244:         frequency = ((float)total_counts * 16) / 1.0;
 [e = _frequency -> / -> * -> _total_counts `f -> -> 16 `i `f `d .1.0 `f ]
-"214
-[; ;main.c: 214:         if (frequency > 0) {
+"246
+[; ;main.c: 246:         if (frequency > 0) {
 [e $ ! > _frequency -> -> 0 `i `f 803  ]
 {
-"216
-[; ;main.c: 216:             inductance_h = 1.0 / (precomputed_constant * frequency * frequency);
+"248
+[; ;main.c: 248:             inductance_h = 1.0 / (precomputed_constant * frequency * frequency);
 [e = _inductance_h -> / .1.0 -> * * _precomputed_constant _frequency _frequency `d `f ]
-"219
-[; ;main.c: 219:             inductance_uh = inductance_h * 1e6;
+"251
+[; ;main.c: 251:             inductance_uh = inductance_h * 1e6;
 [e = _inductance_uh -> * -> _inductance_h `d .1e6 `f ]
-"220
-[; ;main.c: 220:             inductance_uh = inductance_uh - calibration_value;
+"252
+[; ;main.c: 252:             inductance_uh = inductance_uh - calibration_value;
 [e = _inductance_uh - _inductance_uh -> -> _calibration_value `i `f ]
-"223
-[; ;main.c: 223:             if (inductance_uh > 999.0) {
+"255
+[; ;main.c: 255:             if (inductance_uh > 999.0) {
 [e $ ! > -> _inductance_uh `d .999.0 804  ]
 {
-"225
-[; ;main.c: 225:                 inductance_mh = inductance_uh / 1000.0;
+"257
+[; ;main.c: 257:                 inductance_mh = inductance_uh / 1000.0;
 [e = _inductance_mh -> / -> _inductance_uh `d .1000.0 `f ]
-"228
-[; ;main.c: 228:                 EUSART_Write_Text("Frequency (Hz): ");
+"260
+[; ;main.c: 260:                 EUSART_Write_Text("Frequency (Hz): ");
 [e ( _EUSART_Write_Text (1 :s 5C ]
-"229
-[; ;main.c: 229:                 EUSART_Write_Unsigned_Integer((uint32_t)frequency);
+"261
+[; ;main.c: 261:                 EUSART_Write_Unsigned_Integer((uint32_t)frequency);
 [e ( _EUSART_Write_Unsigned_Integer (1 -> _frequency `ul ]
-"230
-[; ;main.c: 230:                 EUSART_Write_Text(" Inductance (mH): ");
+"262
+[; ;main.c: 262:                 EUSART_Write_Text(" Inductance (mH): ");
 [e ( _EUSART_Write_Text (1 :s 6C ]
-"231
-[; ;main.c: 231:                 EUSART_Write_Float(inductance_mh, 3);
+"263
+[; ;main.c: 263:                 EUSART_Write_Float(inductance_mh, 3);
 [e ( _EUSART_Write_Float (2 , _inductance_mh -> 3 `i ]
-"232
-[; ;main.c: 232:                 EUSART_Write_Text("\n");
+"264
+[; ;main.c: 264:                 EUSART_Write_Text("\n");
 [e ( _EUSART_Write_Text (1 :s 7C ]
-"233
-[; ;main.c: 233:             } else {
+"265
+[; ;main.c: 265:             } else {
 }
 [e $U 805  ]
 [e :U 804 ]
 {
-"235
-[; ;main.c: 235:                 EUSART_Write_Text("Frequency (Hz): ");
+"267
+[; ;main.c: 267:                 EUSART_Write_Text("Frequency (Hz): ");
 [e ( _EUSART_Write_Text (1 :s 8C ]
-"236
-[; ;main.c: 236:                 EUSART_Write_Unsigned_Integer((uint32_t)frequency);
+"268
+[; ;main.c: 268:                 EUSART_Write_Unsigned_Integer((uint32_t)frequency);
 [e ( _EUSART_Write_Unsigned_Integer (1 -> _frequency `ul ]
-"237
-[; ;main.c: 237:                 EUSART_Write_Text(" Inductance (uH): ");
+"269
+[; ;main.c: 269:                 EUSART_Write_Text(" Inductance (uH): ");
 [e ( _EUSART_Write_Text (1 :s 9C ]
-"238
-[; ;main.c: 238:                 EUSART_Write_Float(inductance_uh, 2);
+"270
+[; ;main.c: 270:                 EUSART_Write_Float(inductance_uh, 2);
 [e ( _EUSART_Write_Float (2 , _inductance_uh -> 2 `i ]
-"239
-[; ;main.c: 239:                 EUSART_Write_Text("\n");
+"271
+[; ;main.c: 271:                 EUSART_Write_Text("\n");
 [e ( _EUSART_Write_Text (1 :s 10C ]
-"240
-[; ;main.c: 240:             }
+"272
+[; ;main.c: 272:             }
 }
 [e :U 805 ]
-"241
-[; ;main.c: 241:         } else {
+"273
+[; ;main.c: 273:         } else {
 }
 [e $U 806  ]
 [e :U 803 ]
 {
-"243
-[; ;main.c: 243:             EUSART_Write_Text("Error: Frequency too low\n");
+"275
+[; ;main.c: 275:             EUSART_Write_Text("Error: Frequency too low\n");
 [e ( _EUSART_Write_Text (1 :s 11C ]
-"244
-[; ;main.c: 244:         }
+"276
+[; ;main.c: 276:         }
 }
 [e :U 806 ]
-"245
-[; ;main.c: 245:     }
+"277
+[; ;main.c: 277:     }
 }
 [e :U 795 ]
 [e $U 796  ]
 [e :U 797 ]
-"247
-[; ;main.c: 247:     return;
+"279
+[; ;main.c: 279:     return;
 [e $UE 794  ]
-"248
-[; ;main.c: 248: }
+"280
+[; ;main.c: 280: }
 [e :UE 794 ]
 }
 [a 5C 70 114 101 113 117 101 110 99 121 32 40 72 122 41 58 32 0 ]

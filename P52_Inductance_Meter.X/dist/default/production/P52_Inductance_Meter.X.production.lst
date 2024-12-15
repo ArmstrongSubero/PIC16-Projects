@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.46 build 20240104201356 
-                                                                                               Sat Dec 14 21:13:08 2024
+                                                                                               Sun Dec 15 00:47:36 2024
 
 Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1 
      1                           	processor	16F1719
@@ -2037,7 +2037,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   2023 ;;
   2024 ;; *************** function _main *****************
   2025 ;; Defined at:
-  2026 ;;		line 175 in file "main.c"
+  2026 ;;		line 207 in file "main.c"
   2027 ;; Parameters:    Size  Location     Type
   2028 ;;		None
   2029 ;; Auto vars:     Size  Location     Type
@@ -2096,12 +2096,12 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   2077                           ; Regs used in _main: [wreg-fsr1h+status,2+status,0+pclath+cstack]
   2078                           
   2079                           
-  2080                           ;main.c: 176:     initMain();
+  2080                           ;main.c: 208:     initMain();
   2081     0036  3197  274D  3180   	fcall	_initMain
   2082     0039                     l3122:
   2083                           
-  2084                           ;main.c: 178:     uint16_t count_start, count_end, total_counts;;main.c: 179:     float 
-      +                          frequency, inductance_h, inductance_uh, inductance_mh;;main.c: 182:     float capacitanc
+  2084                           ;main.c: 210:     uint16_t count_start, count_end, total_counts;;main.c: 211:     float 
+      +                          frequency, inductance_h, inductance_uh, inductance_mh;;main.c: 214:     float capacitanc
       +                          e = 100e-9;
   2085     0039  3033               	movlw	51
   2086     003A  0021               	movlb	1	; select bank1
@@ -2114,7 +2114,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   2093     0041  00C8               	movwf	main@capacitance^(0+128)
   2094     0042                     l3124:
   2095                           
-  2096                           ;main.c: 185:     float precomputed_constant = 4 * 3.14159 * 3.14159 * capacitance;
+  2096                           ;main.c: 217:     float precomputed_constant = 4 * 3.14159 * 3.14159 * capacitance;
   2097     0042  3042               	movlw	66
   2098     0043  0020               	movlb	0	; select bank0
   2099     0044  00A3               	movwf	___flmul@b+3
@@ -2159,12 +2159,12 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   2138     006D  00CC               	movwf	main@precomputed_constant^(0+128)
   2139     006E                     l3126:
   2140                           
-  2141                           ;main.c: 188:     {;main.c: 189:         LATCbits.LATC4 = 1;
+  2141                           ;main.c: 220:     {;main.c: 221:         LATCbits.LATC4 = 1;
   2142     006E  0022               	movlb	2	; select bank2
   2143     006F  160E               	bsf	14,4	;volatile
   2144     0070                     l3128:
   2145                           
-  2146                           ;main.c: 192:         if (PORTCbits.RC6 != 1) {
+  2146                           ;main.c: 224:         if (PORTCbits.RC6 != 1) {
   2147     0070  0020               	movlb	0	; select bank0
   2148     0071  1B0E               	btfsc	14,6	;volatile
   2149     0072  2874               	goto	u4121
@@ -2174,7 +2174,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   2153     0075                     u4120:
   2154     0075                     l3130:
   2155                           
-  2156                           ;main.c: 193:             _delay((unsigned long)((50)*(32000000/4000.0)));
+  2156                           ;main.c: 225:             _delay((unsigned long)((50)*(32000000/4000.0)));
   2157     0075  3003               	movlw	3
   2158     0076  0020               	movlb	0	; select bank0
   2159     0077  00E6               	movwf	??_main+1
@@ -2190,7 +2190,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   2169     0080  287B               	goto	u4187
   2170     0081                     l3132:
   2171                           
-  2172                           ;main.c: 194:             if (PORTCbits.RC6 != 1) {
+  2172                           ;main.c: 226:             if (PORTCbits.RC6 != 1) {
   2173     0081  0020               	movlb	0	; select bank0
   2174     0082  1B0E               	btfsc	14,6	;volatile
   2175     0083  2885               	goto	u4131
@@ -2200,10 +2200,10 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   2179     0086                     u4130:
   2180     0086                     l3134:
   2181                           
-  2182                           ;main.c: 195:                 calibrate();
+  2182                           ;main.c: 227:                 calibrate();
   2183     0086  318E  2649  3180   	fcall	_calibrate
   2184     0089                     l163:	
-  2185                           ;main.c: 196:                 while (PORTCbits.RC6 != 1);
+  2185                           ;main.c: 228:                 while (PORTCbits.RC6 != 1);
   2186                           
   2187     0089  0020               	movlb	0	; select bank0
   2188     008A  1F0E               	btfss	14,6	;volatile
@@ -2214,7 +2214,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   2193     008E                     u4140:
   2194     008E                     l3136:
   2195                           
-  2196                           ;main.c: 201:         count_start = ReadTimer0WithOverflows();
+  2196                           ;main.c: 233:         count_start = ReadTimer0WithOverflows();
   2197     008E  3187  27EA  3180   	fcall	_ReadTimer0WithOverflows
   2198     0091  0871               	movf	?_ReadTimer0WithOverflows+1,w
   2199     0092  0021               	movlb	1	; select bank1
@@ -2223,7 +2223,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   2202     0095  00D6               	movwf	main@count_start^(0+128)
   2203     0096                     l3138:
   2204                           
-  2205                           ;main.c: 202:         _delay((unsigned long)((1000)*(32000000/4000.0)));
+  2205                           ;main.c: 234:         _delay((unsigned long)((1000)*(32000000/4000.0)));
   2206     0096  3029               	movlw	41
   2207     0097  0020               	movlb	0	; select bank0
   2208     0098  00E6               	movwf	??_main+1
@@ -2239,7 +2239,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   2218     00A1  289C               	goto	u4197
   2219     00A2                     l3140:
   2220                           
-  2221                           ;main.c: 203:         count_end = ReadTimer0WithOverflows();
+  2221                           ;main.c: 235:         count_end = ReadTimer0WithOverflows();
   2222     00A2  3187  27EA  3180   	fcall	_ReadTimer0WithOverflows
   2223     00A5  0871               	movf	?_ReadTimer0WithOverflows+1,w
   2224     00A6  0021               	movlb	1	; select bank1
@@ -2247,7 +2247,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   2226     00A8  0870               	movf	?_ReadTimer0WithOverflows,w
   2227     00A9  00D8               	movwf	main@count_end^(0+128)
   2228                           
-  2229                           ;main.c: 206:         total_counts = (count_end >= count_start)
+  2229                           ;main.c: 238:         total_counts = (count_end >= count_start)
   2230     00AA  0857               	movf	(main@count_start+1)^(0+128),w
   2231     00AB  0259               	subwf	(main@count_end+1)^(0+128),w
   2232     00AC  1D03               	skipz
@@ -2297,12 +2297,12 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   2276     00D3  00D5               	movwf	(main@total_counts+1)^(0+128)
   2277     00D4                     l3146:
   2278                           
-  2279                           ;main.c: 209:         tmr0_overflows = 0;
+  2279                           ;main.c: 241:         tmr0_overflows = 0;
   2280     00D4  01E2               	clrf	_tmr0_overflows^(0+128)	;volatile
   2281     00D5  01E3               	clrf	(_tmr0_overflows+1)^(0+128)	;volatile
   2282     00D6                     l3148:
   2283                           
-  2284                           ;main.c: 212:         frequency = ((float)total_counts * 16) / 1.0;
+  2284                           ;main.c: 244:         frequency = ((float)total_counts * 16) / 1.0;
   2285     00D6  303F               	movlw	63
   2286     00D7  0020               	movlb	0	; select bank0
   2287     00D8  00BD               	movwf	___fldiv@a+3
@@ -2367,7 +2367,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   2346     0119  00DE               	movwf	main@frequency^(0+128)
   2347     011A                     l3150:
   2348                           
-  2349                           ;main.c: 214:         if (frequency > 0) {
+  2349                           ;main.c: 246:         if (frequency > 0) {
   2350     011A  3000               	movlw	0
   2351     011B  00F3               	movwf	___flge@ff1+3
   2352     011C  3000               	movlw	0
@@ -2393,7 +2393,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   2372     0131                     u4160:
   2373     0131                     l3152:
   2374                           
-  2375                           ;main.c: 216:             inductance_h = 1.0 / (precomputed_constant * frequency * frequ
+  2375                           ;main.c: 248:             inductance_h = 1.0 / (precomputed_constant * frequency * frequ
       +                          ency);
   2376     0131  0021               	movlb	1	; select bank1
   2377     0132  0861               	movf	(main@frequency+3)^(0+128),w
@@ -2445,7 +2445,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   2423     0162  0021               	movlb	1	; select bank1
   2424     0163  00D0               	movwf	_main$1142^(0+128)
   2425                           
-  2426                           ;main.c: 216:             inductance_h = 1.0 / (precomputed_constant * frequency * frequ
+  2426                           ;main.c: 248:             inductance_h = 1.0 / (precomputed_constant * frequency * frequ
       +                          ency);
   2427     0164  0861               	movf	(main@frequency+3)^(0+128),w
   2428     0165  0020               	movlb	0	; select bank0
@@ -2514,7 +2514,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   2491     01A8  0021               	movlb	1	; select bank1
   2492     01A9  00C0               	movwf	main@inductance_h^(0+128)
   2493                           
-  2494                           ;main.c: 219:             inductance_uh = inductance_h * 1e6;
+  2494                           ;main.c: 251:             inductance_uh = inductance_h * 1e6;
   2495     01AA  3049               	movlw	73
   2496     01AB  0020               	movlb	0	; select bank0
   2497     01AC  00A3               	movwf	___flmul@b+3
@@ -2558,7 +2558,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   2535     01D4  0021               	movlb	1	; select bank1
   2536     01D5  00DA               	movwf	main@inductance_uh^(0+128)
   2537                           
-  2538                           ;main.c: 220:             inductance_uh = inductance_uh - calibration_value;
+  2538                           ;main.c: 252:             inductance_uh = inductance_uh - calibration_value;
   2539     01D6  0864               	movf	_calibration_value^(0+128),w
   2540     01D7  0020               	movlb	0	; select bank0
   2541     01D8  00E5               	movwf	??_main
@@ -2618,7 +2618,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   2595     0212  0021               	movlb	1	; select bank1
   2596     0213  00DA               	movwf	main@inductance_uh^(0+128)
   2597                           
-  2598                           ;main.c: 223:             if (inductance_uh > 999.0) {
+  2598                           ;main.c: 255:             if (inductance_uh > 999.0) {
   2599     0214  3044               	movlw	68
   2600     0215  00F3               	movwf	___flge@ff1+3
   2601     0216  3079               	movlw	121
@@ -2644,7 +2644,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   2621     022B                     u4170:
   2622     022B                     l3154:
   2623                           
-  2624                           ;main.c: 225:                 inductance_mh = inductance_uh / 1000.0;
+  2624                           ;main.c: 257:                 inductance_mh = inductance_uh / 1000.0;
   2625     022B  3044               	movlw	68
   2626     022C  0020               	movlb	0	; select bank0
   2627     022D  00BD               	movwf	___fldiv@a+3
@@ -2689,7 +2689,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   2666     0256  00C4               	movwf	main@inductance_mh^(0+128)
   2667     0257                     l3156:
   2668                           
-  2669                           ;main.c: 228:                 EUSART_Write_Text("Frequency (Hz): ");
+  2669                           ;main.c: 260:                 EUSART_Write_Text("Frequency (Hz): ");
   2670     0257  30B8               	movlw	low (STR_6| (0+32768))
   2671     0258  00F1               	movwf	EUSART_Write_Text@text
   2672     0259  3098               	movlw	high (STR_6| (0+32768))
@@ -2697,7 +2697,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   2674     025B  3195  2574  3180   	fcall	_EUSART_Write_Text
   2675     025E                     l3158:
   2676                           
-  2677                           ;main.c: 229:                 EUSART_Write_Unsigned_Integer((uint32_t)frequency);
+  2677                           ;main.c: 261:                 EUSART_Write_Unsigned_Integer((uint32_t)frequency);
   2678     025E  0021               	movlb	1	; select bank1
   2679     025F  0861               	movf	(main@frequency+3)^(0+128),w
   2680     0260  0020               	movlb	0	; select bank0
@@ -2727,7 +2727,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   2704     027A  3195  253F  3180   	fcall	_EUSART_Write_Unsigned_Integer
   2705     027D                     l3160:
   2706                           
-  2707                           ;main.c: 230:                 EUSART_Write_Text(" Inductance (mH): ");
+  2707                           ;main.c: 262:                 EUSART_Write_Text(" Inductance (mH): ");
   2708     027D  3092               	movlw	low (STR_7| (0+32768))
   2709     027E  00F1               	movwf	EUSART_Write_Text@text
   2710     027F  3098               	movlw	high (STR_7| (0+32768))
@@ -2735,7 +2735,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   2712     0281  3195  2574  3180   	fcall	_EUSART_Write_Text
   2713     0284                     l3162:
   2714                           
-  2715                           ;main.c: 231:                 EUSART_Write_Float(inductance_mh, 3);
+  2715                           ;main.c: 263:                 EUSART_Write_Float(inductance_mh, 3);
   2716     0284  0021               	movlb	1	; select bank1
   2717     0285  0847               	movf	(main@inductance_mh+3)^(0+128),w
   2718     0286  0020               	movlb	0	; select bank0
@@ -2759,18 +2759,18 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   2736     0298  3195  2526  3180   	fcall	_EUSART_Write_Float
   2737     029B                     l3164:
   2738                           
-  2739                           ;main.c: 232:                 EUSART_Write_Text("\n");
+  2739                           ;main.c: 264:                 EUSART_Write_Text("\n");
   2740     029B  3076               	movlw	low ((STR_2+27)| (0+32768))
   2741     029C  00F1               	movwf	EUSART_Write_Text@text
   2742     029D  3098               	movlw	high ((STR_2+27)| (0+32768))
   2743     029E  00F2               	movwf	EUSART_Write_Text@text+1
   2744     029F  3195  2574  3180   	fcall	_EUSART_Write_Text
   2745                           
-  2746                           ;main.c: 233:             } else {
+  2746                           ;main.c: 265:             } else {
   2747     02A2  286E               	goto	l3126
   2748     02A3                     l3166:
   2749                           
-  2750                           ;main.c: 235:                 EUSART_Write_Text("Frequency (Hz): ");
+  2750                           ;main.c: 267:                 EUSART_Write_Text("Frequency (Hz): ");
   2751     02A3  30B8               	movlw	low (STR_6| (0+32768))
   2752     02A4  00F1               	movwf	EUSART_Write_Text@text
   2753     02A5  3098               	movlw	high (STR_6| (0+32768))
@@ -2778,7 +2778,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   2755     02A7  3195  2574  3180   	fcall	_EUSART_Write_Text
   2756     02AA                     l3168:
   2757                           
-  2758                           ;main.c: 236:                 EUSART_Write_Unsigned_Integer((uint32_t)frequency);
+  2758                           ;main.c: 268:                 EUSART_Write_Unsigned_Integer((uint32_t)frequency);
   2759     02AA  0021               	movlb	1	; select bank1
   2760     02AB  0861               	movf	(main@frequency+3)^(0+128),w
   2761     02AC  0020               	movlb	0	; select bank0
@@ -2808,14 +2808,14 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   2785     02C6  3195  253F  3180   	fcall	_EUSART_Write_Unsigned_Integer
   2786     02C9                     l3170:
   2787                           
-  2788                           ;main.c: 237:                 EUSART_Write_Text(" Inductance (uH): ");
+  2788                           ;main.c: 269:                 EUSART_Write_Text(" Inductance (uH): ");
   2789     02C9  30A5               	movlw	low (STR_10| (0+32768))
   2790     02CA  00F1               	movwf	EUSART_Write_Text@text
   2791     02CB  3098               	movlw	high (STR_10| (0+32768))
   2792     02CC  00F2               	movwf	EUSART_Write_Text@text+1
   2793     02CD  3195  2574  3180   	fcall	_EUSART_Write_Text
   2794                           
-  2795                           ;main.c: 238:                 EUSART_Write_Float(inductance_uh, 2);
+  2795                           ;main.c: 270:                 EUSART_Write_Float(inductance_uh, 2);
   2796     02D0  0021               	movlb	1	; select bank1
   2797     02D1  085D               	movf	(main@inductance_uh+3)^(0+128),w
   2798     02D2  0020               	movlb	0	; select bank0
@@ -2839,7 +2839,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   2816     02E4  3195  2526  3180   	fcall	_EUSART_Write_Float
   2817     02E7                     l3172:
   2818                           
-  2819                           ;main.c: 239:                 EUSART_Write_Text("\n");
+  2819                           ;main.c: 271:                 EUSART_Write_Text("\n");
   2820     02E7  3076               	movlw	low ((STR_2+27)| (0+32768))
   2821     02E8  00F1               	movwf	EUSART_Write_Text@text
   2822     02E9  3098               	movlw	high ((STR_2+27)| (0+32768))
@@ -2848,7 +2848,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   2825     02EE  286E               	goto	l3126
   2826     02EF                     l3174:
   2827                           
-  2828                           ;main.c: 243:             EUSART_Write_Text("Error: Frequency too low\n");
+  2828                           ;main.c: 275:             EUSART_Write_Text("Error: Frequency too low\n");
   2829     02EF  3078               	movlw	low (STR_12| (0+32768))
   2830     02F0  00F1               	movwf	EUSART_Write_Text@text
   2831     02F1  3098               	movlw	high (STR_12| (0+32768))
@@ -2862,7 +2862,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   2839     174D                     __ptext1:	
   2840 ;; *************** function _initMain *****************
   2841 ;; Defined at:
-  2842 ;;		line 49 in file "main.c"
+  2842 ;;		line 64 in file "main.c"
   2843 ;; Parameters:    Size  Location     Type
   2844 ;;		None
   2845 ;; Auto vars:     Size  Location     Type
@@ -2904,11 +2904,11 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   2876                           ; Regs used in _initMain: [wreg+status,2+status,0+pclath+cstack]
   2877                           
   2878                           
-  2879                           ;main.c: 52:     internal_32();
+  2879                           ;main.c: 67:     internal_32();
   2880     174D  3195  2508  3197   	fcall	_internal_32
   2881     1750                     l2996:
   2882                           
-  2883                           ;main.c: 55:     _delay((unsigned long)((10)*(32000000/4000.0)));
+  2883                           ;main.c: 70:     _delay((unsigned long)((10)*(32000000/4000.0)));
   2884     1750  3068               	movlw	104
   2885     1751  00FB               	movwf	??_initMain
   2886     1752  30E4               	movlw	228
@@ -2920,22 +2920,22 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   2892     1757  3200               	nop2
   2893     1758                     l2998:
   2894                           
-  2895                           ;main.c: 60:     PPSLOCK = 0x55;
+  2895                           ;main.c: 75:     PPSLOCK = 0x55;
   2896     1758  3055               	movlw	85
   2897     1759  003C               	movlb	28	; select bank28
   2898     175A  008F               	movwf	15	;volsfr
   2899     175B                     l3000:
   2900                           
-  2901                           ;main.c: 61:     PPSLOCK = 0xAA;
+  2901                           ;main.c: 76:     PPSLOCK = 0xAA;
   2902     175B  30AA               	movlw	170
   2903     175C  008F               	movwf	15	;volsfr
   2904     175D                     l3002:
   2905                           
-  2906                           ;main.c: 62:     PPSLOCKbits.PPSLOCKED = 0x00;
+  2906                           ;main.c: 77:     PPSLOCKbits.PPSLOCKED = 0x00;
   2907     175D  100F               	bcf	15,0	;volsfr
   2908     175E                     l3004:
   2909                           
-  2910                           ;main.c: 64:     RB2PPSbits.RB2PPS = 0x14;
+  2910                           ;main.c: 79:     RB2PPSbits.RB2PPS = 0x14;
   2911     175E  003D               	movlb	29	; select bank29
   2912     175F  081A               	movf	26,w	;volatile
   2913     1760  39E0               	andlw	-32
@@ -2943,7 +2943,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   2915     1762  009A               	movwf	26	;volatile
   2916     1763                     l3006:
   2917                           
-  2918                           ;main.c: 65:     RXPPSbits.RXPPS = 0x0B;
+  2918                           ;main.c: 80:     RXPPSbits.RXPPS = 0x0B;
   2919     1763  003C               	movlb	28	; select bank28
   2920     1764  0824               	movf	36,w	;volatile
   2921     1765  39E0               	andlw	-32
@@ -2951,120 +2951,120 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   2923     1767  00A4               	movwf	36	;volatile
   2924     1768                     l3008:
   2925                           
-  2926                           ;main.c: 67:     T0CKIPPSbits.T0CKIPPS = 0x08;
+  2926                           ;main.c: 82:     T0CKIPPSbits.T0CKIPPS = 0x08;
   2927     1768  0811               	movf	17,w	;volatile
   2928     1769  39E0               	andlw	-32
   2929     176A  3808               	iorlw	8
   2930     176B  0091               	movwf	17	;volatile
   2931     176C                     l3010:
   2932                           
-  2933                           ;main.c: 69:     PPSLOCK = 0x55;
+  2933                           ;main.c: 84:     PPSLOCK = 0x55;
   2934     176C  3055               	movlw	85
   2935     176D  008F               	movwf	15	;volsfr
   2936     176E                     l3012:
   2937                           
-  2938                           ;main.c: 70:     PPSLOCK = 0xAA;
+  2938                           ;main.c: 85:     PPSLOCK = 0xAA;
   2939     176E  30AA               	movlw	170
   2940     176F  008F               	movwf	15	;volsfr
   2941     1770                     l3014:
   2942                           
-  2943                           ;main.c: 71:     PPSLOCKbits.PPSLOCKED = 0x01;
+  2943                           ;main.c: 86:     PPSLOCKbits.PPSLOCKED = 0x01;
   2944     1770  140F               	bsf	15,0	;volsfr
   2945     1771                     l3016:
   2946                           
-  2947                           ;main.c: 73:     TRISBbits.TRISB2 = 0;
+  2947                           ;main.c: 88:     TRISBbits.TRISB2 = 0;
   2948     1771  0021               	movlb	1	; select bank1
   2949     1772  110D               	bcf	13,2	;volatile
   2950     1773                     l3018:
   2951                           
-  2952                           ;main.c: 74:     ANSELBbits.ANSB2 = 0;
+  2952                           ;main.c: 89:     ANSELBbits.ANSB2 = 0;
   2953     1773  0023               	movlb	3	; select bank3
   2954     1774  110D               	bcf	13,2	;volatile
   2955     1775                     l3020:
   2956                           
-  2957                           ;main.c: 77:     TRISCbits.TRISC4 = 0;
+  2957                           ;main.c: 92:     TRISCbits.TRISC4 = 0;
   2958     1775  0021               	movlb	1	; select bank1
   2959     1776  120E               	bcf	14,4	;volatile
   2960     1777                     l3022:
   2961                           
-  2962                           ;main.c: 78:     ANSELCbits.ANSC4 = 0;
+  2962                           ;main.c: 93:     ANSELCbits.ANSC4 = 0;
   2963     1777  0023               	movlb	3	; select bank3
   2964     1778  120E               	bcf	14,4	;volatile
   2965     1779                     l3024:
   2966                           
-  2967                           ;main.c: 80:     TRISCbits.TRISC6 = 1;
+  2967                           ;main.c: 95:     TRISCbits.TRISC6 = 1;
   2968     1779  0021               	movlb	1	; select bank1
   2969     177A  170E               	bsf	14,6	;volatile
   2970     177B                     l3026:
   2971                           
-  2972                           ;main.c: 81:     ANSELCbits.ANSC6 = 0;
+  2972                           ;main.c: 96:     ANSELCbits.ANSC6 = 0;
   2973     177B  0023               	movlb	3	; select bank3
   2974     177C  130E               	bcf	14,6	;volatile
   2975     177D                     l3028:
   2976                           
-  2977                           ;main.c: 84:     TRISBbits.TRISB0 = 1;
+  2977                           ;main.c: 99:     TRISBbits.TRISB0 = 1;
   2978     177D  0021               	movlb	1	; select bank1
   2979     177E  140D               	bsf	13,0	;volatile
   2980     177F                     l3030:
   2981                           
-  2982                           ;main.c: 85:     ANSELBbits.ANSB0 = 0;
+  2982                           ;main.c: 100:     ANSELBbits.ANSB0 = 0;
   2983     177F  0023               	movlb	3	; select bank3
   2984     1780  100D               	bcf	13,0	;volatile
   2985     1781                     l3032:
   2986                           
-  2987                           ;main.c: 88:     OPTION_REGbits.TMR0CS = 1;
+  2987                           ;main.c: 103:     OPTION_REGbits.TMR0CS = 1;
   2988     1781  0021               	movlb	1	; select bank1
   2989     1782  1695               	bsf	21,5	;volatile
   2990     1783                     l3034:
   2991                           
-  2992                           ;main.c: 89:     OPTION_REGbits.PSA = 0;
+  2992                           ;main.c: 104:     OPTION_REGbits.PSA = 0;
   2993     1783  1195               	bcf	21,3	;volatile
   2994     1784                     l3036:
   2995                           
-  2996                           ;main.c: 90:     OPTION_REGbits.PS = 0b011;
+  2996                           ;main.c: 105:     OPTION_REGbits.PS = 0b011;
   2997     1784  0815               	movf	21,w	;volatile
   2998     1785  39F8               	andlw	-8
   2999     1786  3803               	iorlw	3
   3000     1787  0095               	movwf	21	;volatile
   3001     1788                     l3038:
   3002                           
-  3003                           ;main.c: 91:     TMR0 = 0;
+  3003                           ;main.c: 106:     TMR0 = 0;
   3004     1788  0020               	movlb	0	; select bank0
   3005     1789  0195               	clrf	21	;volatile
   3006     178A                     l3040:
   3007                           
-  3008                           ;main.c: 94:     INTCONbits.TMR0IE = 1;
+  3008                           ;main.c: 109:     INTCONbits.TMR0IE = 1;
   3009     178A  168B               	bsf	11,5	;volatile
   3010     178B                     l3042:
   3011                           
-  3012                           ;main.c: 95:     INTCONbits.TMR0IF = 0;
+  3012                           ;main.c: 110:     INTCONbits.TMR0IF = 0;
   3013     178B  110B               	bcf	11,2	;volatile
   3014     178C                     l3044:
   3015                           
-  3016                           ;main.c: 98:     T1CON = 0b00110001;
+  3016                           ;main.c: 113:     T1CON = 0b00110001;
   3017     178C  3031               	movlw	49
   3018     178D  0098               	movwf	24	;volatile
   3019     178E                     l3046:
   3020                           
-  3021                           ;main.c: 99:     TMR1 = 0;
+  3021                           ;main.c: 114:     TMR1 = 0;
   3022     178E  0196               	clrf	22	;volatile
   3023     178F  0197               	clrf	23	;volatile
   3024     1790                     l3048:
   3025                           
-  3026                           ;main.c: 100:     PIE1bits.TMR1IE = 1;
+  3026                           ;main.c: 115:     PIE1bits.TMR1IE = 1;
   3027     1790  0021               	movlb	1	; select bank1
   3028     1791  1411               	bsf	17,0	;volatile
   3029     1792                     l3050:
   3030                           
-  3031                           ;main.c: 101:     INTCONbits.PEIE = 1;
+  3031                           ;main.c: 116:     INTCONbits.PEIE = 1;
   3032     1792  170B               	bsf	11,6	;volatile
   3033     1793                     l3052:
   3034                           
-  3035                           ;main.c: 104:     INTCONbits.GIE = 1;
+  3035                           ;main.c: 119:     INTCONbits.GIE = 1;
   3036     1793  178B               	bsf	11,7	;volatile
   3037     1794                     l3054:
   3038                           
-  3039                           ;main.c: 107:     EUSART_Initialize(19200);
+  3039                           ;main.c: 122:     EUSART_Initialize(19200);
   3040     1794  3000               	movlw	0
   3041     1795  0020               	movlb	0	; select bank0
   3042     1796  00A9               	movwf	EUSART_Initialize@baudrate+3
@@ -3537,7 +3537,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   3493     0E49                     __ptext5:	
   3494 ;; *************** function _calibrate *****************
   3495 ;; Defined at:
-  3496 ;;		line 138 in file "main.c"
+  3496 ;;		line 170 in file "main.c"
   3497 ;; Parameters:    Size  Location     Type
   3498 ;;		None
   3499 ;; Auto vars:     Size  Location     Type
@@ -3591,7 +3591,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   3542                           ; Regs used in _calibrate: [wreg-fsr1h+status,2+status,0+pclath+cstack]
   3543                           
   3544                           
-  3545                           ;main.c: 139:     EUSART_Write_Text("Calibration mode started...\n");
+  3545                           ;main.c: 171:     EUSART_Write_Text("Calibration mode started...\n");
   3546     0E49  305B               	movlw	low (STR_2| (0+32768))
   3547     0E4A  00F1               	movwf	EUSART_Write_Text@text
   3548     0E4B  3098               	movlw	high (STR_2| (0+32768))
@@ -3599,13 +3599,13 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   3550     0E4D  3195  2574  318E   	fcall	_EUSART_Write_Text
   3551     0E50                     l3058:
   3552                           
-  3553                           ;main.c: 140:     _delay((unsigned long)((500)*(32000000/4000.0)));
-  3554     0E50  3015               	movlw	21
+  3553                           ;main.c: 172:     _delay((unsigned long)((1500)*(32000000/4000.0)));
+  3554     0E50  303D               	movlw	61
   3555     0E51  0020               	movlb	0	; select bank0
   3556     0E52  00E2               	movwf	??_calibrate+1
-  3557     0E53  304B               	movlw	75
+  3557     0E53  30E1               	movlw	225
   3558     0E54  00E1               	movwf	??_calibrate
-  3559     0E55  30BE               	movlw	190
+  3559     0E55  303F               	movlw	63
   3560     0E56                     u4217:
   3561     0E56  0B89               	decfsz	9,f
   3562     0E57  2E56               	goto	u4217
@@ -3613,10 +3613,10 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   3564     0E59  2E56               	goto	u4217
   3565     0E5A  0BE2               	decfsz	??_calibrate+1,f
   3566     0E5B  2E56               	goto	u4217
-  3567     0E5C  0000               	nop
+  3567     0E5C  3200               	nop2
   3568     0E5D                     l3060:
   3569                           
-  3570                           ;main.c: 143:     uint16_t count_start = ReadTimer0WithOverflows();
+  3570                           ;main.c: 175:     uint16_t count_start = ReadTimer0WithOverflows();
   3571     0E5D  3187  27EA  318E   	fcall	_ReadTimer0WithOverflows
   3572     0E60  0871               	movf	?_ReadTimer0WithOverflows+1,w
   3573     0E61  0021               	movlb	1	; select bank1
@@ -3625,7 +3625,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   3576     0E64  00B6               	movwf	calibrate@count_start^(0+128)
   3577     0E65                     l3062:
   3578                           
-  3579                           ;main.c: 144:     _delay((unsigned long)((1000)*(32000000/4000.0)));
+  3579                           ;main.c: 176:     _delay((unsigned long)((1000)*(32000000/4000.0)));
   3580     0E65  3029               	movlw	41
   3581     0E66  0020               	movlb	0	; select bank0
   3582     0E67  00E2               	movwf	??_calibrate+1
@@ -3641,7 +3641,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   3592     0E70  2E6B               	goto	u4227
   3593     0E71                     l3064:
   3594                           
-  3595                           ;main.c: 145:     uint16_t count_end = ReadTimer0WithOverflows();
+  3595                           ;main.c: 177:     uint16_t count_end = ReadTimer0WithOverflows();
   3596     0E71  3187  27EA  318E   	fcall	_ReadTimer0WithOverflows
   3597     0E74  0871               	movf	?_ReadTimer0WithOverflows+1,w
   3598     0E75  0021               	movlb	1	; select bank1
@@ -3650,7 +3650,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   3601     0E78  00B8               	movwf	calibrate@count_end^(0+128)
   3602     0E79                     l3066:
   3603                           
-  3604                           ;main.c: 147:     uint16_t total_counts = (count_end >= count_start)
+  3604                           ;main.c: 179:     uint16_t total_counts = (count_end >= count_start)
   3605     0E79  0837               	movf	(calibrate@count_start+1)^(0+128),w
   3606     0E7A  0239               	subwf	(calibrate@count_end+1)^(0+128),w
   3607     0E7B  1D03               	skipz
@@ -3700,12 +3700,12 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   3651     0EA2  00B1               	movwf	(calibrate@total_counts+1)^(0+128)
   3652     0EA3                     l3072:
   3653                           
-  3654                           ;main.c: 150:     tmr0_overflows = 0;
+  3654                           ;main.c: 182:     tmr0_overflows = 0;
   3655     0EA3  01E2               	clrf	_tmr0_overflows^(0+128)	;volatile
   3656     0EA4  01E3               	clrf	(_tmr0_overflows+1)^(0+128)	;volatile
   3657     0EA5                     l3074:
   3658                           
-  3659                           ;main.c: 152:     float frequency = ((float)total_counts * 16) / 1.0;
+  3659                           ;main.c: 184:     float frequency = ((float)total_counts * 16) / 1.0;
   3660     0EA5  303F               	movlw	63
   3661     0EA6  0020               	movlb	0	; select bank0
   3662     0EA7  00BD               	movwf	___fldiv@a+3
@@ -3770,7 +3770,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   3721     0EE8  00B2               	movwf	calibrate@frequency^(0+128)
   3722     0EE9                     l3076:
   3723                           
-  3724                           ;main.c: 154:     if (frequency > 0) {
+  3724                           ;main.c: 186:     if (frequency > 0) {
   3725     0EE9  3000               	movlw	0
   3726     0EEA  00F3               	movwf	___flge@ff1+3
   3727     0EEB  3000               	movlw	0
@@ -3796,7 +3796,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   3747     0F00                     u4080:
   3748     0F00                     l3078:
   3749                           
-  3750                           ;main.c: 155:         float capacitance = 100e-9;
+  3750                           ;main.c: 187:         float capacitance = 100e-9;
   3751     0F00  3033               	movlw	51
   3752     0F01  0021               	movlb	1	; select bank1
   3753     0F02  00A3               	movwf	(calibrate@capacitance+3)^(0+128)
@@ -3808,7 +3808,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   3759     0F08  00A0               	movwf	calibrate@capacitance^(0+128)
   3760     0F09                     l3080:
   3761                           
-  3762                           ;main.c: 156:         float precomputed_constant = 4 * 3.14159 * 3.14159 * capacitance;
+  3762                           ;main.c: 188:         float precomputed_constant = 4 * 3.14159 * 3.14159 * capacitance;
   3763     0F09  3042               	movlw	66
   3764     0F0A  0020               	movlb	0	; select bank0
   3765     0F0B  00A3               	movwf	___flmul@b+3
@@ -3853,7 +3853,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   3804     0F34  00A4               	movwf	calibrate@precomputed_constant^(0+128)
   3805     0F35                     l3082:
   3806                           
-  3807                           ;main.c: 157:         float inductance_h = 1.0 / (precomputed_constant * frequency * fre
+  3807                           ;main.c: 189:         float inductance_h = 1.0 / (precomputed_constant * frequency * fre
       +                          quency);
   3808     0F35  0835               	movf	(calibrate@frequency+3)^(0+128),w
   3809     0F36  0020               	movlb	0	; select bank0
@@ -3905,7 +3905,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   3855     0F66  00AC               	movwf	_calibrate$1141^(0+128)
   3856     0F67                     l3084:
   3857                           
-  3858                           ;main.c: 157:         float inductance_h = 1.0 / (precomputed_constant * frequency * fre
+  3858                           ;main.c: 189:         float inductance_h = 1.0 / (precomputed_constant * frequency * fre
       +                          quency);
   3859     0F67  0835               	movf	(calibrate@frequency+3)^(0+128),w
   3860     0F68  0020               	movlb	0	; select bank0
@@ -3975,7 +3975,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   3924     0FAC  00A8               	movwf	calibrate@inductance_h^(0+128)
   3925     0FAD                     l3086:
   3926                           
-  3927                           ;main.c: 158:         calibration_value = (uint8_t)(inductance_h * 1e6);
+  3927                           ;main.c: 190:         calibration_value = (uint8_t)(inductance_h * 1e6);
   3928     0FAD  082B               	movf	(calibrate@inductance_h+3)^(0+128),w
   3929     0FAE  0020               	movlb	0	; select bank0
   3930     0FAF  00A7               	movwf	___flmul@a+3
@@ -4016,7 +4016,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   3965     0FD6  00E4               	movwf	_calibration_value^(0+128)
   3966     0FD7                     l3088:
   3967                           
-  3968                           ;main.c: 159:         EUSART_Write_Text("Calibration complete. Offset (uH): ");
+  3968                           ;main.c: 191:         EUSART_Write_Text("Calibration complete. Offset (uH): ");
   3969     0FD7  3037               	movlw	low (STR_3| (0+32768))
   3970     0FD8  00F1               	movwf	EUSART_Write_Text@text
   3971     0FD9  3098               	movlw	high (STR_3| (0+32768))
@@ -4024,7 +4024,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   3973     0FDB  3195  2574  318E   	fcall	_EUSART_Write_Text
   3974     0FDE                     l3090:
   3975                           
-  3976                           ;main.c: 160:         EUSART_Write_Unsigned_Integer(calibration_value);
+  3976                           ;main.c: 192:         EUSART_Write_Unsigned_Integer(calibration_value);
   3977     0FDE  0021               	movlb	1	; select bank1
   3978     0FDF  0864               	movf	_calibration_value^(0+128),w
   3979     0FE0  0020               	movlb	0	; select bank0
@@ -4043,18 +4043,18 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   3992     0FED  3195  253F  318E   	fcall	_EUSART_Write_Unsigned_Integer
   3993     0FF0                     l3092:
   3994                           
-  3995                           ;main.c: 161:         EUSART_Write_Text("\n");
+  3995                           ;main.c: 193:         EUSART_Write_Text("\n");
   3996     0FF0  3076               	movlw	low ((STR_2+27)| (0+32768))
   3997     0FF1  00F1               	movwf	EUSART_Write_Text@text
   3998     0FF2  3098               	movlw	high ((STR_2+27)| (0+32768))
   3999     0FF3  00F2               	movwf	EUSART_Write_Text@text+1
   4000     0FF4  3195  2574  318E   	fcall	_EUSART_Write_Text
   4001                           
-  4002                           ;main.c: 162:     } else {
+  4002                           ;main.c: 194:     } else {
   4003     0FF7  2FFF               	goto	l155
   4004     0FF8                     l3094:
   4005                           
-  4006                           ;main.c: 163:         EUSART_Write_Text("Error: Unable to measure frequency during calib
+  4006                           ;main.c: 195:         EUSART_Write_Text("Error: Unable to measure frequency during calib
       +                          ration\n");
   4007     0FF8  3000               	movlw	low (STR_5| (0+32768))
   4008     0FF9  00F1               	movwf	EUSART_Write_Text@text
@@ -4674,7 +4674,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   4617     07EA                     __ptext7:	
   4618 ;; *************** function _ReadTimer0WithOverflows *****************
   4619 ;; Defined at:
-  4620 ;;		line 127 in file "main.c"
+  4620 ;;		line 156 in file "main.c"
   4621 ;; Parameters:    Size  Location     Type
   4622 ;;		None
   4623 ;; Auto vars:     Size  Location     Type
@@ -4716,7 +4716,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   4654                           ; Regs used in _ReadTimer0WithOverflows: [wreg+status,2+status,0]
   4655                           
   4656                           
-  4657                           ;main.c: 129:     return (tmr0_overflows * 256) + TMR0;
+  4657                           ;main.c: 158:     return (tmr0_overflows * 256) + TMR0;
   4658     07EA  0020               	movlb	0	; select bank0
   4659     07EB  0815               	movf	21,w	;volatile
   4660     07EC  00F2               	movwf	??_ReadTimer0WithOverflows
@@ -9657,7 +9657,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   9438     0004                     __pintentry:	
   9439 ;; *************** function _isr *****************
   9440 ;; Defined at:
-  9441 ;;		line 113 in file "main.c"
+  9441 ;;		line 134 in file "main.c"
   9442 ;; Parameters:    Size  Location     Type
   9443 ;;		None
   9444 ;; Auto vars:     Size  Location     Type
@@ -9698,7 +9698,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   9474     0005  3180               	pagesel	$
   9475     0006                     i1l3108:
   9476                           
-  9477                           ;main.c: 114:     if (INTCONbits.TMR0IF) {
+  9477                           ;main.c: 135:     if (INTCONbits.TMR0IF) {
   9478     0006  1D0B               	btfss	11,2	;volatile
   9479     0007  2809               	goto	u410_21
   9480     0008  280A               	goto	u410_20
@@ -9707,7 +9707,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   9483     000A                     u410_20:
   9484     000A                     i1l3110:
   9485                           
-  9486                           ;main.c: 116:         tmr0_overflows++;
+  9486                           ;main.c: 137:         tmr0_overflows++;
   9487     000A  3001               	movlw	1
   9488     000B  0021               	movlb	1	; select bank1
   9489     000C  07E2               	addwf	_tmr0_overflows^(0+128),f	;volatile
@@ -9715,11 +9715,11 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   9491     000E  3DE3               	addwfc	(_tmr0_overflows+1)^(0+128),f	;volatile
   9492     000F                     i1l3112:
   9493                           
-  9494                           ;main.c: 117:         INTCONbits.TMR0IF = 0;
+  9494                           ;main.c: 138:         INTCONbits.TMR0IF = 0;
   9495     000F  110B               	bcf	11,2	;volatile
   9496     0010                     i1l3114:
   9497                           
-  9498                           ;main.c: 120:     if (PIR1bits.TMR1IF) {
+  9498                           ;main.c: 141:     if (PIR1bits.TMR1IF) {
   9499     0010  0020               	movlb	0	; select bank0
   9500     0011  1C11               	btfss	17,0	;volatile
   9501     0012  2814               	goto	u411_21
@@ -9729,11 +9729,11 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   9505     0015                     u411_20:
   9506     0015                     i1l3116:
   9507                           
-  9508                           ;main.c: 122:         PIR1bits.TMR1IF = 0;
+  9508                           ;main.c: 143:         PIR1bits.TMR1IF = 0;
   9509     0015  1011               	bcf	17,0	;volatile
   9510     0016                     i1l3118:
   9511                           
-  9512                           ;main.c: 123:         TMR1 = 0;
+  9512                           ;main.c: 144:         TMR1 = 0;
   9513     0016  0196               	clrf	22	;volatile
   9514     0017  0197               	clrf	23	;volatile
   9515     0018                     i1l143:
@@ -10486,7 +10486,7 @@ BANK25              20      0       0      57        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.46 build 20240104201356 
-Symbol Table                                                                                   Sat Dec 14 21:13:08 2024
+Symbol Table                                                                                   Sun Dec 15 00:47:36 2024
 
                               ___fldiv@aexp 0053                                ___fldiv@bexp 0052  
                               ___fldiv@sign 004B                                          l43 1512  

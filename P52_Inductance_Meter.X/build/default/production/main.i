@@ -7,7 +7,7 @@
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "main.c" 2
-# 27 "main.c"
+# 42 "main.c"
 # 1 "./PIC16F1719_Internal.h" 1
 # 28 "./PIC16F1719_Internal.h"
 #pragma config FOSC = INTOSC
@@ -10245,7 +10245,7 @@ void internal_4();
 void internal_2();
 void internal_1();
 void internal_31();
-# 27 "main.c" 2
+# 42 "main.c" 2
 
 # 1 "./EUSART.h" 1
 # 18 "./EUSART.h"
@@ -10257,7 +10257,7 @@ void EUSART_Read_Text(char *Output, unsigned int length);
 void EUSART_Write_Integer(int value_to_send);
 void EUSART_Write_Unsigned_Integer(uint32_t value_to_send);
 void EUSART_Write_Float(float value, int precision);
-# 28 "main.c" 2
+# 43 "main.c" 2
 
 
 
@@ -10267,7 +10267,7 @@ volatile uint16_t tmr0_overflows = 0;
 
 
 uint8_t calibration_value = 98;
-# 49 "main.c"
+# 64 "main.c"
 void initMain(){
 
 
@@ -10327,11 +10327,8 @@ void initMain(){
 
 
     EUSART_Initialize(19200);
-
-
 }
-
-
+# 134 "main.c"
 void __attribute__((picinterrupt(("")))) isr() {
     if (INTCONbits.TMR0IF) {
 
@@ -10345,21 +10342,15 @@ void __attribute__((picinterrupt(("")))) isr() {
         TMR1 = 0;
     }
 }
-
+# 156 "main.c"
 uint16_t ReadTimer0WithOverflows() {
 
     return (tmr0_overflows * 256) + TMR0;
 }
-
-
-
-
-
-
-
+# 170 "main.c"
 void calibrate() {
     EUSART_Write_Text("Calibration mode started...\n");
-    _delay((unsigned long)((500)*(32000000/4000.0)));
+    _delay((unsigned long)((1500)*(32000000/4000.0)));
 
 
     uint16_t count_start = ReadTimer0WithOverflows();
@@ -10385,7 +10376,7 @@ void calibrate() {
         EUSART_Write_Text("Error: Unable to measure frequency during calibration\n");
     }
 }
-# 175 "main.c"
+# 207 "main.c"
 void main(void) {
     initMain();
 
