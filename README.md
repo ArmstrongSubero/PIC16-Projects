@@ -72,6 +72,7 @@ Below is a list of projects included in this repository:
 49. **49_Bluetooth.X**: Communicate via Bluetooth module.
 50. **50_Temperature_Controlled_Fan.X**: Control a fan based on temperature readings.
 51. **51_UART_To_Browser_Bridge.X**: Bridge UART data to a web browser.
+52. **52_Inductance_Meter**: A PIC16F Based Inductance Meter
 
 ### (LEGACY MPASM) Assembly Libraries and Projects using PIC16F506 Microcontroller
 
