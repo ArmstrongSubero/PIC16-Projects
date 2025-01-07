@@ -73,7 +73,8 @@ Below is a list of projects included in this repository:
 50. **50_Temperature_Controlled_Fan.X**: Control a fan based on temperature readings.
 51. **51_UART_To_Browser_Bridge.X**: Bridge UART data to a web browser.
 52. **52_Inductance_Meter**: A PIC16F Based Inductance Meter
-
+53. **53_SC1601K_LCD**: Large 16x1 HD44780 Compatible Display
+54. **54_Inductance_Meter_LCD**: Inductance meter using LCD
 ### (LEGACY MPASM) Assembly Libraries and Projects using PIC16F506 Microcontroller
 
 - A01_Led_On                : 	Turns an LED on
