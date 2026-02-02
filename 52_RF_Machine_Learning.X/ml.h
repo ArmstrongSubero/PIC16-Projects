@@ -2,7 +2,6 @@
  * File: ml_ml_iris_rf.h
  * Description: IrisRF Classifier for PIC16 microcontrollers
  * Generated: 2026-01-30 02:01:49
- * Source: Converted from micromlgen C++ output
  * 
  * Classifier: Random Forest
  * Trees: 5
