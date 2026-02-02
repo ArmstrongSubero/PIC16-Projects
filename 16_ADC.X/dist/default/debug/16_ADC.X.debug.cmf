@@ -1,0 +1,1332 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta> <reloc>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_12.o
+reset_vec CODE 0 0 0 3 2 1
+end_init CODE 0 3 3 2 2 1
+config CONFIG 4 8007 8007 2 2 1
+$dist/default/debug\16_ADC.X.debug.o
+cinit CODE 0 7F2 7F2 E 2 1
+text1 CODE 0 4A 4A 4F 2 1
+text2 CODE 0 CCA CCA 9 2 1
+text3 CODE 0 1F5 1F5 65 2 1
+text4 CODE 0 9 9 41 2 1
+text5 CODE 0 3D9 3D9 419 2 1
+text6 CODE 0 CF3 CF3 1B 2 1
+text7 CODE 0 E2C E2C 2D 2 1
+text8 CODE 0 DD6 DD6 2A 2 1
+text9 CODE 0 EB9 EB9 34 2 1
+text10 CODE 0 EED EED 3C 2 1
+text11 CODE 0 F69 F69 4A 2 1
+text12 CODE 0 13C 13C 5A 2 1
+text13 CODE 0 E9 E9 53 2 1
+text14 CODE 0 196 196 5F 2 1
+text15 CODE 0 2CE 2CE 7B 2 1
+text16 CODE 0 349 349 90 2 1
+text17 CODE 0 E00 E00 2C 2 1
+text18 CODE 0 25A 25A 74 2 1
+text19 CODE 0 FB3 FB3 4D 2 1
+text20 CODE 0 D0E D0E 1C 2 1
+text21 CODE 0 D48 D48 22 2 1
+text22 CODE 0 E59 E59 2E 2 1
+text23 CODE 0 99 99 50 2 1
+text24 CODE 0 7 7 2 2 1
+text25 CODE 0 E87 E87 32 2 1
+text26 CODE 0 D6A D6A 23 2 1
+text27 CODE 0 DB1 DB1 25 2 1
+text28 CODE 0 D8D D8D 24 2 1
+text29 CODE 0 D2A D2A 1E 2 1
+text30 CODE 0 CDF CDF 14 2 1
+text31 CODE 0 CC3 CC3 7 2 1
+maintext CODE 0 F29 F29 40 2 1
+cstackCOMMON COMMON 1 70 70 E 1 1
+cstackBANK0 BANK0 1 20 20 50 1 1
+cstackBANK1 BANK1 1 A0 A0 30 1 1
+stringtext1 STRCODE 0 1000 1000 A 2 1
+stringtext2 STRCODE 0 800 800 30E 2 1
+clrtext CODE 0 CD3 CD3 C 2 1
+config CONFIG 4 8007 8007 2 2 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM D0-EF 1
+RAM 120-16F 1
+RAM 1A0-1EF 1
+RAM 220-26F 1
+RAM 2A0-2EF 1
+RAM 320-36F 1
+RAM 3A0-3EF 1
+RAM 420-46F 1
+RAM 4A0-4EF 1
+RAM 520-56F 1
+RAM 5A0-5EF 1
+RAM 620-66F 1
+RAM 6A0-6EF 1
+RAM 720-76F 1
+RAM 7A0-7DF 1
+BANK1 D0-EF 1
+BANK2 120-16F 1
+BANK3 1A0-1EF 1
+BANK4 220-26F 1
+BANK5 2A0-2EF 1
+BANK6 320-36F 1
+BANK7 3A0-3EF 1
+BANK8 420-46F 1
+BANK9 4A0-4EF 1
+CONST 5-6 2
+CONST B0E-CC2 2
+CONST 100A-3FFF 2
+ENTRY 5-6 2
+ENTRY B0E-CC2 2
+ENTRY 100A-3FFF 2
+IDLOC 8000-8003 2
+SFR10 500-51F 1
+SFR11 580-59F 1
+SFR12 600-61F 1
+SFR13 680-69F 1
+SFR14 700-71F 1
+SFR15 780-79F 1
+SFR16 800-81F 1
+SFR17 880-89F 1
+SFR18 900-91F 1
+SFR19 980-99F 1
+SFR20 A00-A1F 1
+SFR21 A80-A9F 1
+SFR22 B00-B1F 1
+SFR23 B80-B9F 1
+SFR24 C00-C1F 1
+SFR25 C80-C9F 1
+SFR26 D00-D6F 1
+SFR27 D80-DEF 1
+SFR28 E00-E6F 1
+SFR29 E80-EEF 1
+SFR30 F00-F6F 1
+SFR31 F80-FEF 1
+CODE 5-6 2
+CODE B0E-CC2 2
+CODE 100A-3FFF 2
+SFR0 0-1F 1
+SFR1 80-9F 1
+SFR2 100-11F 1
+SFR3 180-19F 1
+SFR4 200-21F 1
+SFR5 280-29F 1
+SFR6 300-31F 1
+SFR7 380-39F 1
+SFR8 400-41F 1
+SFR9 480-49F 1
+BANK10 520-56F 1
+BANK11 5A0-5EF 1
+BANK12 620-66F 1
+BANK13 6A0-6EF 1
+BANK14 720-76F 1
+BANK15 7A0-7DF 1
+BIGRAM 2000-27EF 1
+STRCODE 5-6 2
+STRCODE B0E-CC2 2
+STRCODE 100A-3FFF 2
+STRING 5-6 2
+STRING B0E-CC2 2
+STRING 100A-3FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/debug\16_ADC.X.debug.o
+7F2 cinit CODE >3363:C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_1.s
+7F2 cinit CODE >3366:C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_1.s
+7F2 cinit CODE >3392:C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_1.s
+7F3 cinit CODE >3393:C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_1.s
+7F4 cinit CODE >3394:C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_1.s
+7F5 cinit CODE >3395:C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_1.s
+7F6 cinit CODE >3396:C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_1.s
+7F7 cinit CODE >3397:C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_1.s
+7F8 cinit CODE >3398:C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_1.s
+7F9 cinit CODE >3399:C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_1.s
+7FA cinit CODE >3400:C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_1.s
+7FD cinit CODE >3406:C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_1.s
+7FD cinit CODE >3408:C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_1.s
+7FE cinit CODE >3409:C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_1.s
+CC3 text31 CODE >62:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+CC3 text31 CODE >65:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+CC5 text31 CODE >66:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+CC6 text31 CODE >69:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+CC8 text31 CODE >72:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+CC9 text31 CODE >73:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+CDF text30 CODE >41:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+CDF text30 CODE >44:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+CE4 text30 CODE >47:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+CE5 text30 CODE >50:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+CE7 text30 CODE >52:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+CEA text30 CODE >53:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+CF2 text30 CODE >54:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+D2A text29 CODE >23:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+D2A text29 CODE >25:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+D2B text29 CODE >27:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+D30 text29 CODE >28:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+D32 text29 CODE >30:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+D3A text29 CODE >25:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+D3F text29 CODE >25:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+D46 text29 CODE >32:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+D47 text29 CODE >33:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+D8D text28 CODE >81:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+D8D text28 CODE >83:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+D8E text28 CODE >87:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+D99 text28 CODE >88:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+D9B text28 CODE >90:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+DA3 text28 CODE >83:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+DA8 text28 CODE >83:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+DAF text28 CODE >92:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+DB0 text28 CODE >93:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+DB1 text27 CODE >98:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+DB1 text27 CODE >102:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+DB9 text27 CODE >103:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+DC0 text27 CODE >105:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+DC2 text27 CODE >106:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+DC4 text27 CODE >108:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+DCC text27 CODE >109:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+DD2 text27 CODE >111:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+DD4 text27 CODE >112:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+DD5 text27 CODE >113:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+D6A text26 CODE >138:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+D6A text26 CODE >142:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+D72 text26 CODE >143:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+D78 text26 CODE >145:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+D7A text26 CODE >146:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+D7C text26 CODE >148:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+D84 text26 CODE >149:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+D8A text26 CODE >151:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+D8C text26 CODE >153:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+E87 text25 CODE >161:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+E88 text25 CODE >165:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+E90 text25 CODE >166:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+E97 text25 CODE >168:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+E99 text25 CODE >169:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+E9C text25 CODE >171:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+EA4 text25 CODE >172:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+EAA text25 CODE >175:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+EAF text25 CODE >177:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+EB0 text25 CODE >178:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+EB2 text25 CODE >179:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+EB2 text25 CODE >182:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+EB3 text25 CODE >183:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+EB8 text25 CODE >184:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\I2C.c
+7 text24 CODE >182:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+99 text23 CODE >215:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+99 text23 CODE >219:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+A0 text23 CODE >221:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+A4 text23 CODE >222:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+AA text23 CODE >224:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+B1 text23 CODE >225:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+BA text23 CODE >227:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+BF text23 CODE >228:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+C5 text23 CODE >230:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+C8 text23 CODE >232:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+D3 text23 CODE >233:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+D9 text23 CODE >234:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+DF text23 CODE >234:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+E3 text23 CODE >234:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+E8 text23 CODE >238:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+E59 text22 CODE >190:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+E5A text22 CODE >194:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+E5E text22 CODE >195:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+E64 text22 CODE >197:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+E6B text22 CODE >198:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+E74 text22 CODE >200:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+E79 text22 CODE >201:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+E7F text22 CODE >203:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+E83 text22 CODE >204:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+E86 text22 CODE >207:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+D48 text21 CODE >283:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+D49 text21 CODE >285:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+D4E text21 CODE >285:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+D52 text21 CODE >287:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+D58 text21 CODE >288:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+D5D text21 CODE >289:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+D69 text21 CODE >290:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+D0E text20 CODE >3:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\memset.c
+D0E text20 CODE >5:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\memset.c
+D12 text20 CODE >6:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\memset.c
+D13 text20 CODE >7:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\memset.c
+D1D text20 CODE >6:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\memset.c
+D22 text20 CODE >6:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\memset.c
+D29 text20 CODE >10:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\memset.c
+FB3 text19 CODE >356:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+FB3 text19 CODE >358:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+FB4 text19 CODE >360:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+FD1 text19 CODE >362:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+FD6 text19 CODE >363:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+FF4 text19 CODE >364:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+FFB text19 CODE >364:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+FFF text19 CODE >365:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+25A text18 CODE >298:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+25A text18 CODE >300:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+262 text18 CODE >302:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+266 text18 CODE >303:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+26A text18 CODE >305:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+26E text18 CODE >306:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+272 text18 CODE >308:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+276 text18 CODE >312:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+27A text18 CODE >315:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+27E text18 CODE >316:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+282 text18 CODE >318:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+286 text18 CODE >320:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+28A text18 CODE >321:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+28E text18 CODE >323:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+292 text18 CODE >324:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+296 text18 CODE >326:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+29A text18 CODE >327:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+29E text18 CODE >329:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+2A2 text18 CODE >333:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+2A6 text18 CODE >336:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+2AA text18 CODE >337:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+2AE text18 CODE >339:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+2B2 text18 CODE >340:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+2B6 text18 CODE >342:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+2BA text18 CODE >343:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+2BE text18 CODE >345:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+2C2 text18 CODE >346:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+2C6 text18 CODE >347:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+2CA text18 CODE >350:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+2CD text18 CODE >351:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+E00 text17 CODE >370:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+E01 text17 CODE >372:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+E03 text17 CODE >372:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+E08 text17 CODE >374:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+E0D text17 CODE >375:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+E2B text17 CODE >376:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+349 text16 CODE >5:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+349 text16 CODE >13:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+34B text16 CODE >14:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+34F text16 CODE >15:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+354 text16 CODE >15:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+356 text16 CODE >15:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+358 text16 CODE >15:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+35A text16 CODE >16:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+35C text16 CODE >17:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+35C text16 CODE >18:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+360 text16 CODE >19:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+365 text16 CODE >19:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+367 text16 CODE >19:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+369 text16 CODE >19:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+36B text16 CODE >20:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+36F text16 CODE >22:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+377 text16 CODE >23:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+37B text16 CODE >23:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+37F text16 CODE >24:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+381 text16 CODE >25:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+382 text16 CODE >26:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+389 text16 CODE >27:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+38D text16 CODE >25:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+391 text16 CODE >30:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+398 text16 CODE >31:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+39A text16 CODE >31:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+39E text16 CODE >31:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+3A2 text16 CODE >31:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+3A6 text16 CODE >31:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+3AA text16 CODE >32:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+3B2 text16 CODE >33:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+3B3 text16 CODE >35:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+3BA text16 CODE >36:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+3C0 text16 CODE >38:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+3C5 text16 CODE >39:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+3CA text16 CODE >39:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+3CC text16 CODE >39:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+3CE text16 CODE >39:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+3D0 text16 CODE >40:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+3D8 text16 CODE >41:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+2CE text15 CODE >5:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\almod.c
+2CE text15 CODE >12:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\almod.c
+2CF text15 CODE >13:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\almod.c
+2D3 text15 CODE >14:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\almod.c
+2D8 text15 CODE >14:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\almod.c
+2DA text15 CODE >14:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\almod.c
+2DC text15 CODE >14:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\almod.c
+2DE text15 CODE >15:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\almod.c
+2E0 text15 CODE >16:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\almod.c
+2E0 text15 CODE >17:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\almod.c
+2E4 text15 CODE >18:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\almod.c
+2E9 text15 CODE >18:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\almod.c
+2EB text15 CODE >18:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\almod.c
+2ED text15 CODE >18:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\almod.c
+2EF text15 CODE >19:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\almod.c
+2F3 text15 CODE >19:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\almod.c
+2F7 text15 CODE >20:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\almod.c
+2F9 text15 CODE >21:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\almod.c
+2FA text15 CODE >22:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\almod.c
+301 text15 CODE >23:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\almod.c
+305 text15 CODE >21:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\almod.c
+309 text15 CODE >26:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\almod.c
+30B text15 CODE >26:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\almod.c
+30F text15 CODE >26:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\almod.c
+313 text15 CODE >26:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\almod.c
+317 text15 CODE >26:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\almod.c
+31B text15 CODE >27:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\almod.c
+323 text15 CODE >28:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\almod.c
+32A text15 CODE >29:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\almod.c
+330 text15 CODE >31:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\almod.c
+335 text15 CODE >32:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\almod.c
+33A text15 CODE >32:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\almod.c
+33C text15 CODE >32:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\almod.c
+33E text15 CODE >32:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\almod.c
+340 text15 CODE >33:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\almod.c
+348 text15 CODE >34:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\almod.c
+196 text14 CODE >5:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+196 text14 CODE >13:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+197 text14 CODE >14:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+19B text14 CODE >15:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+19E text14 CODE >15:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+1A0 text14 CODE >16:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+1A2 text14 CODE >18:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+1A6 text14 CODE >19:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+1A9 text14 CODE >19:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+1AB text14 CODE >20:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+1AF text14 CODE >22:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+1B1 text14 CODE >23:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+1B7 text14 CODE >24:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+1B9 text14 CODE >25:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+1BA text14 CODE >26:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+1BF text14 CODE >27:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+1C3 text14 CODE >25:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+1C7 text14 CODE >30:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+1CC text14 CODE >31:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+1CE text14 CODE >31:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+1D2 text14 CODE >31:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+1D6 text14 CODE >32:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+1DA text14 CODE >33:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+1DB text14 CODE >35:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+1E0 text14 CODE >36:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+1E6 text14 CODE >38:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+1EB text14 CODE >39:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+1EE text14 CODE >39:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+1F0 text14 CODE >40:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+1F4 text14 CODE >41:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+E9 text13 CODE >5:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+E9 text13 CODE >12:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+EA text13 CODE >13:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+EE text13 CODE >14:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+F1 text13 CODE >14:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+F3 text13 CODE >15:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+F5 text13 CODE >17:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+F9 text13 CODE >18:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+FC text13 CODE >18:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+FE text13 CODE >19:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+104 text13 CODE >20:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+106 text13 CODE >21:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+107 text13 CODE >22:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+10C text13 CODE >23:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+110 text13 CODE >21:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+114 text13 CODE >26:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+116 text13 CODE >26:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+11A text13 CODE >26:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+11E text13 CODE >27:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+122 text13 CODE >28:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+127 text13 CODE >29:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+12D text13 CODE >31:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+132 text13 CODE >32:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+135 text13 CODE >32:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+137 text13 CODE >33:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+13B text13 CODE >34:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+13C text12 CODE >5:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\__lldiv.c
+13C text12 CODE >13:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\__lldiv.c
+144 text12 CODE >14:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\__lldiv.c
+148 text12 CODE >14:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\__lldiv.c
+14C text12 CODE >15:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\__lldiv.c
+14E text12 CODE >16:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\__lldiv.c
+14F text12 CODE >17:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\__lldiv.c
+156 text12 CODE >18:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\__lldiv.c
+15A text12 CODE >16:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\__lldiv.c
+15E text12 CODE >21:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\__lldiv.c
+165 text12 CODE >22:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\__lldiv.c
+167 text12 CODE >22:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\__lldiv.c
+16B text12 CODE >22:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\__lldiv.c
+16F text12 CODE >22:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\__lldiv.c
+173 text12 CODE >22:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\__lldiv.c
+177 text12 CODE >23:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\__lldiv.c
+17F text12 CODE >24:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\__lldiv.c
+180 text12 CODE >26:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\__lldiv.c
+187 text12 CODE >27:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\__lldiv.c
+18D text12 CODE >29:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\__lldiv.c
+195 text12 CODE >30:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\__lldiv.c
+F69 text11 CODE >5:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\llmod.c
+F69 text11 CODE >12:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\llmod.c
+F6D text11 CODE >12:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\llmod.c
+F71 text11 CODE >13:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\llmod.c
+F73 text11 CODE >14:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\llmod.c
+F74 text11 CODE >15:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\llmod.c
+F7B text11 CODE >16:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\llmod.c
+F7F text11 CODE >14:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\llmod.c
+F83 text11 CODE >19:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\llmod.c
+F85 text11 CODE >19:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\llmod.c
+F89 text11 CODE >19:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\llmod.c
+F8D text11 CODE >19:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\llmod.c
+F91 text11 CODE >19:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\llmod.c
+F95 text11 CODE >20:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\llmod.c
+F9D text11 CODE >21:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\llmod.c
+FA4 text11 CODE >22:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\llmod.c
+FAA text11 CODE >24:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\llmod.c
+FB2 text11 CODE >25:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\llmod.c
+EED text10 CODE >5:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwdiv.c
+EED text10 CODE >13:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwdiv.c
+EEF text10 CODE >14:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwdiv.c
+EF5 text10 CODE >15:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwdiv.c
+EF7 text10 CODE >16:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwdiv.c
+EF8 text10 CODE >17:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwdiv.c
+EFD text10 CODE >18:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwdiv.c
+F01 text10 CODE >16:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwdiv.c
+F05 text10 CODE >21:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwdiv.c
+F0A text10 CODE >22:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwdiv.c
+F0C text10 CODE >22:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwdiv.c
+F10 text10 CODE >22:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwdiv.c
+F14 text10 CODE >23:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwdiv.c
+F18 text10 CODE >24:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwdiv.c
+F19 text10 CODE >26:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwdiv.c
+F1E text10 CODE >27:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwdiv.c
+F24 text10 CODE >29:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwdiv.c
+F28 text10 CODE >30:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwdiv.c
+EB9 text9 CODE >5:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwmod.c
+EB9 text9 CODE >12:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwmod.c
+EBF text9 CODE >13:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwmod.c
+EC1 text9 CODE >14:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwmod.c
+EC2 text9 CODE >15:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwmod.c
+EC7 text9 CODE >16:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwmod.c
+ECB text9 CODE >14:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwmod.c
+ECF text9 CODE >19:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwmod.c
+ED1 text9 CODE >19:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwmod.c
+ED5 text9 CODE >19:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwmod.c
+ED9 text9 CODE >20:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwmod.c
+EDD text9 CODE >21:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwmod.c
+EE2 text9 CODE >22:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwmod.c
+EE8 text9 CODE >24:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwmod.c
+EEC text9 CODE >25:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwmod.c
+DD6 text8 CODE >4:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\memcpy.c
+DD6 text8 CODE >11:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\memcpy.c
+DDA text8 CODE >12:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\memcpy.c
+DDE text8 CODE >13:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\memcpy.c
+DDF text8 CODE >14:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\memcpy.c
+DE9 text8 CODE >15:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\memcpy.c
+DF3 text8 CODE >13:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\memcpy.c
+DF8 text8 CODE >13:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\memcpy.c
+DFF text8 CODE >18:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\memcpy.c
+E2C text7 CODE >3:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strcmp.c
+E2D text7 CODE >5:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strcmp.c
+E3F text7 CODE >5:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strcmp.c
+E4B text7 CODE >6:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strcmp.c
+E56 text7 CODE >6:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strcmp.c
+E58 text7 CODE >7:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strcmp.c
+CF3 text6 CODE >3:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strcpy.c
+CF3 text6 CODE >5:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strcpy.c
+CF7 text6 CODE >6:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strcpy.c
+CFC text6 CODE >6:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strcpy.c
+D0D text6 CODE >8:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strcpy.c
+3D9 text5 CODE >424:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+3DB text5 CODE >428:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+3DD text5 CODE >429:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+3E5 text5 CODE >431:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+3E7 text5 CODE >431:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+3EC text5 CODE >434:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+3EE text5 CODE >437:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+3EF text5 CODE >438:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+3F9 text5 CODE >439:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+3FD text5 CODE >440:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+3FE text5 CODE >442:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+40B text5 CODE >443:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+40F text5 CODE >444:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+41A text5 CODE >445:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+41D text5 CODE >445:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+41F text5 CODE >449:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+420 text5 CODE >451:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+438 text5 CODE >452:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+448 text5 CODE >453:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+450 text5 CODE >453:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+455 text5 CODE >454:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+46C text5 CODE >458:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+470 text5 CODE >459:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+47A text5 CODE >460:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+48B text5 CODE >462:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+48C text5 CODE >464:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+4AC text5 CODE >465:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+4C8 text5 CODE >466:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+4CC text5 CODE >466:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+4D2 text5 CODE >466:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+4D7 text5 CODE >467:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+4EE text5 CODE >468:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+4F8 text5 CODE >469:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+509 text5 CODE >470:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+50D text5 CODE >471:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+518 text5 CODE >472:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+51D text5 CODE >472:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+51F text5 CODE >472:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+521 text5 CODE >472:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+523 text5 CODE >475:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+524 text5 CODE >477:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+544 text5 CODE >478:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+560 text5 CODE >479:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+564 text5 CODE >479:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+56A text5 CODE >479:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+56F text5 CODE >480:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+586 text5 CODE >483:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+591 text5 CODE >484:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+59C text5 CODE >485:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+5AB text5 CODE >487:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+5AF text5 CODE >488:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+5B0 text5 CODE >491:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+5BD text5 CODE >493:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+5BE text5 CODE >495:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+5D6 text5 CODE >496:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+5E6 text5 CODE >497:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+5EE text5 CODE >497:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+5F3 text5 CODE >498:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+60A text5 CODE >502:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+617 text5 CODE >504:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+618 text5 CODE >506:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+61D text5 CODE >507:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+61F text5 CODE >507:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+628 text5 CODE >507:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+631 text5 CODE >507:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+641 text5 CODE >508:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+647 text5 CODE >509:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+650 text5 CODE >509:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+655 text5 CODE >510:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+66D text5 CODE >514:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+678 text5 CODE >515:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+679 text5 CODE >516:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+68D text5 CODE >515:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+699 text5 CODE >515:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+69E text5 CODE >521:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+6B2 text5 CODE >522:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+6B3 text5 CODE >525:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+6B9 text5 CODE >529:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+6C4 text5 CODE >530:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+6CE text5 CODE >531:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+6D4 text5 CODE >531:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+6D7 text5 CODE >531:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+6DA text5 CODE >531:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+6DD text5 CODE >531:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+6E0 text5 CODE >531:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+6E3 text5 CODE >531:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+6E6 text5 CODE >531:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+6E9 text5 CODE >532:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+6ED text5 CODE >533:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+6EE text5 CODE >534:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+701 text5 CODE >437:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+70E text5 CODE >437:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+712 text5 CODE >537:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+716 text5 CODE >541:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+738 text5 CODE >542:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+751 text5 CODE >545:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+76F text5 CODE >548:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+771 text5 CODE >549:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+774 text5 CODE >551:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+77A text5 CODE >552:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+77C text5 CODE >552:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+782 text5 CODE >552:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+788 text5 CODE >554:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+7C3 text5 CODE >555:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+7C9 text5 CODE >556:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+7DC text5 CODE >556:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+7E4 text5 CODE >556:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+7E8 text5 CODE >556:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+7EC text5 CODE >558:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+7F1 text5 CODE >559:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+9 text4 CODE >246:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+A text4 CODE >248:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+E text4 CODE >250:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+F text4 CODE >254:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+13 text4 CODE >255:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+17 text4 CODE >256:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+18 text4 CODE >259:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+1C text4 CODE >260:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+20 text4 CODE >261:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+21 text4 CODE >264:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+25 text4 CODE >265:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+29 text4 CODE >266:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+2A text4 CODE >269:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+2E text4 CODE >270:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+32 text4 CODE >271:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+33 text4 CODE >272:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+38 text4 CODE >272:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+3D text4 CODE >272:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+40 text4 CODE >272:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+43 text4 CODE >272:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+46 text4 CODE >272:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+49 text4 CODE >273:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\OLED_SSD1306.c
+1F5 text3 CODE >52:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X/ADC.h
+1F6 text3 CODE >54:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X/ADC.h
+1F7 text3 CODE >55:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X/ADC.h
+1FC text3 CODE >56:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X/ADC.h
+201 text3 CODE >57:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X/ADC.h
+206 text3 CODE >58:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X/ADC.h
+20B text3 CODE >59:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X/ADC.h
+210 text3 CODE >60:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X/ADC.h
+215 text3 CODE >61:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X/ADC.h
+21A text3 CODE >62:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X/ADC.h
+21F text3 CODE >63:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X/ADC.h
+224 text3 CODE >64:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X/ADC.h
+229 text3 CODE >65:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X/ADC.h
+22E text3 CODE >66:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X/ADC.h
+233 text3 CODE >66:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X/ADC.h
+238 text3 CODE >66:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X/ADC.h
+23B text3 CODE >66:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X/ADC.h
+23E text3 CODE >66:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X/ADC.h
+241 text3 CODE >66:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X/ADC.h
+244 text3 CODE >66:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X/ADC.h
+247 text3 CODE >66:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X/ADC.h
+24A text3 CODE >66:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X/ADC.h
+24D text3 CODE >66:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X/ADC.h
+250 text3 CODE >66:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X/ADC.h
+253 text3 CODE >66:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X/ADC.h
+256 text3 CODE >66:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X/ADC.h
+259 text3 CODE >67:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X/ADC.h
+CCA text2 CODE >36:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\PIC16F1718_Internal.c
+CCA text2 CODE >38:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\PIC16F1718_Internal.c
+CCC text2 CODE >39:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\PIC16F1718_Internal.c
+CCD text2 CODE >42:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\PIC16F1718_Internal.c
+CCE text2 CODE >43:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\PIC16F1718_Internal.c
+CCF text2 CODE >44:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\PIC16F1718_Internal.c
+CD0 text2 CODE >45:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\PIC16F1718_Internal.c
+CD1 text2 CODE >48:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\PIC16F1718_Internal.c
+CD2 text2 CODE >49:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\PIC16F1718_Internal.c
+4A text1 CODE >42:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\main.c
+4A text1 CODE >45:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\main.c
+4D text1 CODE >48:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\main.c
+55 text1 CODE >50:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\main.c
+57 text1 CODE >51:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\main.c
+59 text1 CODE >58:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\main.c
+5A text1 CODE >59:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\main.c
+5B text1 CODE >60:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\main.c
+5D text1 CODE >61:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\main.c
+5E text1 CODE >64:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\main.c
+64 text1 CODE >66:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\main.c
+69 text1 CODE >67:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\main.c
+6E text1 CODE >69:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\main.c
+73 text1 CODE >70:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\main.c
+78 text1 CODE >72:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\main.c
+7C text1 CODE >73:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\main.c
+81 text1 CODE >75:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\main.c
+87 text1 CODE >83:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\main.c
+8C text1 CODE >86:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\main.c
+8D text1 CODE >89:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\main.c
+8E text1 CODE >92:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\main.c
+90 text1 CODE >95:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\main.c
+94 text1 CODE >96:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\main.c
+98 text1 CODE >97:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\main.c
+F29 maintext CODE >107:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\main.c
+F29 maintext CODE >109:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\main.c
+F2C maintext CODE >110:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\main.c
+F2F maintext CODE >112:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\main.c
+F32 maintext CODE >113:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\main.c
+F36 maintext CODE >114:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\main.c
+F39 maintext CODE >116:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\main.c
+F39 maintext CODE >117:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\main.c
+F39 maintext CODE >126:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\main.c
+F3B maintext CODE >129:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\main.c
+F3F maintext CODE >130:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\main.c
+F41 maintext CODE >131:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\main.c
+F45 maintext CODE >134:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\main.c
+F49 maintext CODE >137:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\main.c
+F5A maintext CODE >139:C:\Users\armstrongsubero\Desktop\PIC16F1718\16_ADC.X\main.c
+CD3 clrtext CODE >3375:C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_1.s
+CD3 clrtext CODE >3376:C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_1.s
+CD4 clrtext CODE >3377:C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_1.s
+CD4 clrtext CODE >3378:C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_1.s
+CD5 clrtext CODE >3379:C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_1.s
+CD6 clrtext CODE >3380:C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_1.s
+CD7 clrtext CODE >3381:C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_1.s
+CD8 clrtext CODE >3382:C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_1.s
+CD9 clrtext CODE >3383:C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_1.s
+CDA clrtext CODE >3384:C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_1.s
+CDB clrtext CODE >3385:C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_1.s
+CDC clrtext CODE >3386:C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_1.s
+CDD clrtext CODE >3387:C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_1.s
+CDE clrtext CODE >3388:C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_1.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___latbits 3 0 ABS 0 - dist/default/debug\16_ADC.X.debug.o
+___awdiv@counter 75 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+___lwmod@counter 75 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+__Hspace_0 100A 0 ABS 0 - -
+__Hspace_1 D0 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__Hspace_4 10010 0 ABS 0 - -
+_OLED_Printf_Line 7B2 0 CODE 0 text5 dist/default/debug\16_ADC.X.debug.o
+I2C_Start@st 73 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+_RXPPSbits E24 0 ABS 0 - dist/default/debug\16_ADC.X.debug.o
+OLED_Printf_Line@val_350 B4 0 BANK1 1 cstackBANK1 dist/default/debug\16_ADC.X.debug.o
+OLED_Printf_Line@val_353 C1 0 BANK1 1 cstackBANK1 dist/default/debug\16_ADC.X.debug.o
+OLED_Printf_Line@val_356 B8 0 BANK1 1 cstackBANK1 dist/default/debug\16_ADC.X.debug.o
+OLED_Printf_Line@val_359 6E 0 BANK0 1 cstackBANK0 dist/default/debug\16_ADC.X.debug.o
+__L__absolute__ 0 0 ABS 0 __absolute__ -
+__end_of_I2C_Start 1BAC 0 CODE 0 text27 dist/default/debug\16_ADC.X.debug.o
+__Hstrings 0 0 ABS 0 strings -
+_SCS0 4C8 0 ABS 0 - dist/default/debug\16_ADC.X.debug.o
+_SCS1 4C9 0 ABS 0 - dist/default/debug\16_ADC.X.debug.o
+___sp 0 0 STACK 2 stack C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_12.o
+_main 1E52 0 CODE 0 maintext dist/default/debug\16_ADC.X.debug.o
+btemp 7E 0 ABS 0 - dist/default/debug\16_ADC.X.debug.o
+___stack_hi 0 0 STACK 2 stack C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_12.o
+___stack_lo 0 0 STACK 2 stack C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_12.o
+start 6 0 CODE 0 init C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_12.o
+OLED_UpdateLine@page 7C 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+_I2C_WriteByte 1D0E 0 CODE 0 text25 dist/default/debug\16_ADC.X.debug.o
+__end_of_OLED_SetOrientation 94 0 CODE 0 text4 dist/default/debug\16_ADC.X.debug.o
+__end_of_BatteryIcon 2014 0 STRCODE 0 stringtext1 dist/default/debug\16_ADC.X.debug.o
+_I2C_Start 1B62 0 CODE 0 text27 dist/default/debug\16_ADC.X.debug.o
+__Hpowerup 0 0 CODE 0 powerup -
+___almod@sign 7A 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+OLED_Printf_Line@nibble BA 0 BANK1 1 cstackBANK1 dist/default/debug\16_ADC.X.debug.o
+___awmod@sign 76 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+__end_of_OLED_Init 59C 0 CODE 0 text18 dist/default/debug\16_ADC.X.debug.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_12.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_12.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_12.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_12.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_12.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_12.o
+_initMain 94 0 CODE 0 text1 dist/default/debug\16_ADC.X.debug.o
+___aldiv@divisor 70 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+wtemp0 7E 0 ABS 0 - dist/default/debug\16_ADC.X.debug.o
+___llmod@divisor 70 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+_ADC_ConfigurePin 3EA 0 CODE 0 text3 dist/default/debug\16_ADC.X.debug.o
+__Hfunctab 0 0 ENTRY 0 functab -
+___aldiv@sign 21 0 BANK0 1 cstackBANK0 dist/default/debug\16_ADC.X.debug.o
+___awdiv@sign 76 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+__Hclrtext 0 0 ABS 0 clrtext -
+__end_of_initMain 132 0 CODE 0 text1 dist/default/debug\16_ADC.X.debug.o
+OLED_WriteData@i 79 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+_OLED_Init 4B4 0 CODE 0 text18 dist/default/debug\16_ADC.X.debug.o
+I2C_WaitIdle@timeout_ms 70 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+_ADRESH 9C 0 ABS 0 - dist/default/debug\16_ADC.X.debug.o
+_ADRESL 9B 0 ABS 0 - dist/default/debug\16_ADC.X.debug.o
+___awdiv@dividend 72 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+__end_of_OLED_Printf_Line FE4 0 CODE 0 text5 dist/default/debug\16_ADC.X.debug.o
+_SSPCONbits 215 0 ABS 0 - dist/default/debug\16_ADC.X.debug.o
+_I2C_Init 19BE 0 CODE 0 text30 dist/default/debug\16_ADC.X.debug.o
+_I2C_Stop 1AD4 0 CODE 0 text26 dist/default/debug\16_ADC.X.debug.o
+__Lmaintext 0 0 ABS 0 maintext -
+__end_of_I2C_Init 19E6 0 CODE 0 text30 dist/default/debug\16_ADC.X.debug.o
+__end_of_I2C_Stop 1B1A 0 CODE 0 text26 dist/default/debug\16_ADC.X.debug.o
+OLED_Command@cmd 75 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+___awdiv@divisor 70 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+_OLED_Clear 1F66 0 CODE 0 text19 dist/default/debug\16_ADC.X.debug.o
+_internal_32 1994 0 CODE 0 text2 dist/default/debug\16_ADC.X.debug.o
+__end_of_I2C_ClearErrors 1994 0 CODE 0 text31 dist/default/debug\16_ADC.X.debug.o
+___lwmod@divisor 70 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+__end_of___aldiv 7B2 0 CODE 0 text16 dist/default/debug\16_ADC.X.debug.o
+__end_of___almod 692 0 CODE 0 text15 dist/default/debug\16_ADC.X.debug.o
+__end_of___awdiv 3EA 0 CODE 0 text14 dist/default/debug\16_ADC.X.debug.o
+__end_of___awmod 278 0 CODE 0 text13 dist/default/debug\16_ADC.X.debug.o
+__end_of___lldiv 32C 0 CODE 0 text12 dist/default/debug\16_ADC.X.debug.o
+__end_of___llmod 1F66 0 CODE 0 text11 dist/default/debug\16_ADC.X.debug.o
+__end_of___lwdiv 1E52 0 CODE 0 text10 dist/default/debug\16_ADC.X.debug.o
+__end_of___lwmod 1DDA 0 CODE 0 text9 dist/default/debug\16_ADC.X.debug.o
+__end_of_OLED_YX 1AD4 0 CODE 0 text21 dist/default/debug\16_ADC.X.debug.o
+?_strcmp 70 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+___stackhi 0 0 ABS 0 - C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_12.o
+___stacklo 0 0 ABS 0 - C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_12.o
+___lwdiv@quotient 75 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+_SSPDATPPSbits E21 0 ABS 0 - dist/default/debug\16_ADC.X.debug.o
+memcpy@tmp 7A 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+OLED_Printf_Line@i_352 BD 0 BANK1 1 cstackBANK1 dist/default/debug\16_ADC.X.debug.o
+OLED_Printf_Line@i_355 BE 0 BANK1 1 cstackBANK1 dist/default/debug\16_ADC.X.debug.o
+OLED_Printf_Line@i_358 BF 0 BANK1 1 cstackBANK1 dist/default/debug\16_ADC.X.debug.o
+OLED_Printf_Line@i_361 C0 0 BANK1 1 cstackBANK1 dist/default/debug\16_ADC.X.debug.o
+___lwmod@dividend 72 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+___lldiv@counter 7D 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+OLED_Command@st 76 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+start_initialization FE4 0 CODE 0 cinit dist/default/debug\16_ADC.X.debug.o
+I2C_WaitIF@timeout_ms 70 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+__end_of_ADC_ConfigurePin 4B4 0 CODE 0 text3 dist/default/debug\16_ADC.X.debug.o
+OLED_Printf_Line@i BC 0 BANK1 1 cstackBANK1 dist/default/debug\16_ADC.X.debug.o
+OLED_Printf_Line@p B3 0 BANK1 1 cstackBANK1 dist/default/debug\16_ADC.X.debug.o
+OLED_YX@page 79 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+_TRISAbits 8C 0 ABS 0 - dist/default/debug\16_ADC.X.debug.o
+_TRISBbits 8D 0 ABS 0 - dist/default/debug\16_ADC.X.debug.o
+_TRISCbits 8E 0 ABS 0 - dist/default/debug\16_ADC.X.debug.o
+___aldiv@quotient 22 0 BANK0 1 cstackBANK0 dist/default/debug\16_ADC.X.debug.o
+___lldiv@dividend 74 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+__end_of_memcpy 1C00 0 CODE 0 text8 dist/default/debug\16_ADC.X.debug.o
+__end_of_memset 1A54 0 CODE 0 text20 dist/default/debug\16_ADC.X.debug.o
+___almod@dividend 74 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+OLED_WriteData@len 77 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+clear_ram0 19A6 0 CODE 0 clrtext dist/default/debug\16_ADC.X.debug.o
+_SPLLEN 4CF 0 ABS 0 - dist/default/debug\16_ADC.X.debug.o
+__pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/debug\16_ADC.X.debug.o
+__pcstackBANK1 A0 0 BANK1 1 cstackBANK1 dist/default/debug\16_ADC.X.debug.o
+_SSPADD 212 0 ABS 0 - dist/default/debug\16_ADC.X.debug.o
+_SSPBUF 211 0 ABS 0 - dist/default/debug\16_ADC.X.debug.o
+__end_of_I2C_WriteByte 1D72 0 CODE 0 text25 dist/default/debug\16_ADC.X.debug.o
+_I2C_ClearErrors 1986 0 CODE 0 text31 dist/default/debug\16_ADC.X.debug.o
+__end_of_OLED_Clear 2000 0 CODE 0 text19 dist/default/debug\16_ADC.X.debug.o
+___int_sp 0 0 STACK 2 stack C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_12.o
+__Hbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 ABS 0 bank2 -
+__Hbank3 0 0 ABS 0 bank3 -
+__Hbank4 0 0 ABS 0 bank4 -
+__Hbank5 0 0 ABS 0 bank5 -
+__Hbank6 0 0 ABS 0 bank6 -
+__Hbank7 0 0 ABS 0 bank7 -
+__Hbank8 0 0 ABS 0 bank8 -
+__Hbank9 0 0 ABS 0 bank9 -
+__Hcinit 1000 0 CODE 0 cinit -
+__end_of_strcmp 1CB2 0 CODE 0 text7 dist/default/debug\16_ADC.X.debug.o
+__end_of_strcpy 1A1C 0 CODE 0 text6 dist/default/debug\16_ADC.X.debug.o
+__Hsfr10 0 0 ABS 0 sfr10 -
+__Hsfr11 0 0 ABS 0 sfr11 -
+__Hsfr12 0 0 ABS 0 sfr12 -
+__Hsfr13 0 0 ABS 0 sfr13 -
+__Hsfr14 0 0 ABS 0 sfr14 -
+__Hsfr15 0 0 ABS 0 sfr15 -
+__Hsfr16 0 0 ABS 0 sfr16 -
+__Hsfr17 0 0 ABS 0 sfr17 -
+__Hsfr18 0 0 ABS 0 sfr18 -
+__Hsfr19 0 0 ABS 0 sfr19 -
+__Hsfr20 0 0 ABS 0 sfr20 -
+__Hsfr21 0 0 ABS 0 sfr21 -
+__Hsfr22 0 0 ABS 0 sfr22 -
+__Hsfr23 0 0 ABS 0 sfr23 -
+__Hsfr24 0 0 ABS 0 sfr24 -
+__Hsfr25 0 0 ABS 0 sfr25 -
+__Hsfr26 0 0 ABS 0 sfr26 -
+__Hsfr27 0 0 ABS 0 sfr27 -
+__Hsfr28 0 0 ABS 0 sfr28 -
+__Hsfr29 0 0 ABS 0 sfr29 -
+__Hsfr30 0 0 ABS 0 sfr30 -
+__Hsfr31 0 0 ABS 0 sfr31 -
+__Hstack 0 0 STACK 2 stack -
+___lwdiv@counter 77 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+__Hbank10 0 0 ABS 0 bank10 -
+__Hbank11 0 0 ABS 0 bank11 -
+__Hbank12 0 0 ABS 0 bank12 -
+__Hbank13 0 0 ABS 0 bank13 -
+__Hbank14 0 0 ABS 0 bank14 -
+__Hbank15 0 0 ABS 0 bank15 -
+__Hbank16 0 0 ABS 0 bank16 -
+__Hbank17 0 0 ABS 0 bank17 -
+__Hbank18 0 0 ABS 0 bank18 -
+__Hbank19 0 0 ABS 0 bank19 -
+__Hbank20 0 0 ABS 0 bank20 -
+__Hbank21 0 0 ABS 0 bank21 -
+__Hbank22 0 0 ABS 0 bank22 -
+__Hbank23 0 0 ABS 0 bank23 -
+__Hbank24 0 0 ABS 0 bank24 -
+__Hbank25 0 0 ABS 0 bank25 -
+__Hbank26 0 0 BANK26 1 bank26 -
+__Hbank27 0 0 BANK27 1 bank27 -
+__Hbank28 0 0 BANK28 1 bank28 -
+__Hbank29 0 0 BANK29 1 bank29 -
+__Hbank30 0 0 BANK30 1 bank30 -
+__Hbank31 0 0 BANK31 1 bank31 -
+__Hbigram 0 0 ABS 0 bigram -
+__Hmaintext 0 0 ABS 0 maintext -
+__Hcommon 0 0 ABS 0 common -
+__Hconfig 10012 0 CONFIG 4 config -
+__Lbank0 0 0 ABS 0 bank0 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Lbank2 0 0 ABS 0 bank2 -
+__Lbank3 0 0 ABS 0 bank3 -
+__Lbank4 0 0 ABS 0 bank4 -
+__Lbank5 0 0 ABS 0 bank5 -
+__Lbank6 0 0 ABS 0 bank6 -
+__Lbank7 0 0 ABS 0 bank7 -
+__Lbank8 0 0 ABS 0 bank8 -
+__Lbank9 0 0 ABS 0 bank9 -
+__Lcinit FE4 0 CODE 0 cinit -
+__Lsfr10 0 0 ABS 0 sfr10 -
+__Lsfr11 0 0 ABS 0 sfr11 -
+__Lsfr12 0 0 ABS 0 sfr12 -
+__Lsfr13 0 0 ABS 0 sfr13 -
+__Lsfr14 0 0 ABS 0 sfr14 -
+__Lsfr15 0 0 ABS 0 sfr15 -
+__Lsfr16 0 0 ABS 0 sfr16 -
+__Lsfr17 0 0 ABS 0 sfr17 -
+__Lsfr18 0 0 ABS 0 sfr18 -
+__Lsfr19 0 0 ABS 0 sfr19 -
+__Lsfr20 0 0 ABS 0 sfr20 -
+__Lsfr21 0 0 ABS 0 sfr21 -
+__Lsfr22 0 0 ABS 0 sfr22 -
+__Lsfr23 0 0 ABS 0 sfr23 -
+__Lsfr24 0 0 ABS 0 sfr24 -
+__Lsfr25 0 0 ABS 0 sfr25 -
+__Lsfr26 0 0 ABS 0 sfr26 -
+__Lsfr27 0 0 ABS 0 sfr27 -
+__Lsfr28 0 0 ABS 0 sfr28 -
+__Lsfr29 0 0 ABS 0 sfr29 -
+__Lsfr30 0 0 ABS 0 sfr30 -
+__Lsfr31 0 0 ABS 0 sfr31 -
+__Lstack 0 0 STACK 2 stack -
+memcpy@d1 70 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+memcpy@s1 72 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+_SSD1306_CtrlW E 0 CODE 0 text24 dist/default/debug\16_ADC.X.debug.o
+__Habs1 0 0 ABS 0 abs1 -
+__Hcode 0 0 ABS 0 code -
+__Hheap 0 0 HEAP 7 heap -
+__Hinit 6 0 CODE 0 init -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Hsfr4 0 0 ABS 0 sfr4 -
+__Hsfr5 0 0 ABS 0 sfr5 -
+__Hsfr6 0 0 ABS 0 sfr6 -
+__Hsfr7 0 0 ABS 0 sfr7 -
+__Hsfr8 0 0 ABS 0 sfr8 -
+__Hsfr9 0 0 ABS 0 sfr9 -
+__Hsivt 6 0 CODE 0 sivt -
+__Htext 0 0 ABS 0 text -
+__Labs1 0 0 ABS 0 abs1 -
+__Lcode 0 0 ABS 0 code -
+__Lheap 0 0 HEAP 7 heap -
+__Linit 6 0 CODE 0 init -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+__Lsfr4 0 0 ABS 0 sfr4 -
+__Lsfr5 0 0 ABS 0 sfr5 -
+__Lsfr6 0 0 ABS 0 sfr6 -
+__Lsfr7 0 0 ABS 0 sfr7 -
+__Lsfr8 0 0 ABS 0 sfr8 -
+__Lsfr9 0 0 ABS 0 sfr9 -
+__Lsivt 6 0 CODE 0 sivt -
+__Ltext 0 0 ABS 0 text -
+memcpy@d 76 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+memcpy@n 74 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+memcpy@s 78 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+__pstringtext1 2000 0 STRCODE 0 stringtext1 dist/default/debug\16_ADC.X.debug.o
+__pstringtext2 1000 0 STRCODE 0 stringtext2 dist/default/debug\16_ADC.X.debug.o
+__pstringtext3 0 0 STRCODE 0 stringtext3 dist/default/debug\16_ADC.X.debug.o
+_OLED_Command 1CB2 0 CODE 0 text22 dist/default/debug\16_ADC.X.debug.o
+memset@dest 70 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+memset@c 72 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+memset@n 74 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+memset@p 76 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__LcstackBANK1 0 0 ABS 0 cstackBANK1 -
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__S0 100A 0 ABS 0 - -
+__S1 D0 0 ABS 0 - -
+___almod@counter 79 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+_OledFont 1000 0 STRCODE 0 stringtext2 dist/default/debug\16_ADC.X.debug.o
+?_OLED_Printf_Line 26 0 BANK0 1 cstackBANK0 dist/default/debug\16_ADC.X.debug.o
+_I2C_WaitIF 1A54 0 CODE 0 text29 dist/default/debug\16_ADC.X.debug.o
+__end_of_OledFont 1600 0 STRCODE 0 stringtext2 dist/default/debug\16_ADC.X.debug.o
+__Lintentry 6 0 CODE 0 intentry -
+___lldiv@divisor 70 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+strcmp@l 73 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+strcmp@r 70 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+strcpy@d 75 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_12.o
+OLED_SetOrientation@o 79 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+_screen_buffer 24F0 0 ABS 1 - dist/default/debug\16_ADC.X.debug.o
+__Lstringtext1 0 0 ABS 0 stringtext1 -
+__Lstringtext2 0 0 ABS 0 stringtext2 -
+__Lstringtext3 0 0 ABS 0 stringtext3 -
+___awmod@counter 75 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+_memcpy 1BAC 0 CODE 0 text8 dist/default/debug\16_ADC.X.debug.o
+_memset 1A1C 0 CODE 0 text20 dist/default/debug\16_ADC.X.debug.o
+_OLED_WriteData 132 0 CODE 0 text23 dist/default/debug\16_ADC.X.debug.o
+__ptext10 1DDA 0 CODE 0 text10 dist/default/debug\16_ADC.X.debug.o
+__ptext11 1ED2 0 CODE 0 text11 dist/default/debug\16_ADC.X.debug.o
+__ptext12 278 0 CODE 0 text12 dist/default/debug\16_ADC.X.debug.o
+__ptext13 1D2 0 CODE 0 text13 dist/default/debug\16_ADC.X.debug.o
+__ptext14 32C 0 CODE 0 text14 dist/default/debug\16_ADC.X.debug.o
+__ptext15 59C 0 CODE 0 text15 dist/default/debug\16_ADC.X.debug.o
+__ptext16 692 0 CODE 0 text16 dist/default/debug\16_ADC.X.debug.o
+__ptext17 1C00 0 CODE 0 text17 dist/default/debug\16_ADC.X.debug.o
+__ptext18 4B4 0 CODE 0 text18 dist/default/debug\16_ADC.X.debug.o
+__ptext19 1F66 0 CODE 0 text19 dist/default/debug\16_ADC.X.debug.o
+__ptext20 1A1C 0 CODE 0 text20 dist/default/debug\16_ADC.X.debug.o
+__ptext21 1A90 0 CODE 0 text21 dist/default/debug\16_ADC.X.debug.o
+__ptext22 1CB2 0 CODE 0 text22 dist/default/debug\16_ADC.X.debug.o
+__ptext23 132 0 CODE 0 text23 dist/default/debug\16_ADC.X.debug.o
+__ptext24 E 0 CODE 0 text24 dist/default/debug\16_ADC.X.debug.o
+__ptext25 1D0E 0 CODE 0 text25 dist/default/debug\16_ADC.X.debug.o
+__ptext26 1AD4 0 CODE 0 text26 dist/default/debug\16_ADC.X.debug.o
+__ptext27 1B62 0 CODE 0 text27 dist/default/debug\16_ADC.X.debug.o
+__ptext28 1B1A 0 CODE 0 text28 dist/default/debug\16_ADC.X.debug.o
+__ptext29 1A54 0 CODE 0 text29 dist/default/debug\16_ADC.X.debug.o
+__ptext30 19BE 0 CODE 0 text30 dist/default/debug\16_ADC.X.debug.o
+__ptext31 1986 0 CODE 0 text31 dist/default/debug\16_ADC.X.debug.o
+___aldiv 692 0 CODE 0 text16 dist/default/debug\16_ADC.X.debug.o
+___almod 59C 0 CODE 0 text15 dist/default/debug\16_ADC.X.debug.o
+___awdiv 32C 0 CODE 0 text14 dist/default/debug\16_ADC.X.debug.o
+___awmod 1D2 0 CODE 0 text13 dist/default/debug\16_ADC.X.debug.o
+_I2C_WaitIdle 1B1A 0 CODE 0 text28 dist/default/debug\16_ADC.X.debug.o
+___lldiv 278 0 CODE 0 text12 dist/default/debug\16_ADC.X.debug.o
+___llmod 1ED2 0 CODE 0 text11 dist/default/debug\16_ADC.X.debug.o
+___lwdiv 1DDA 0 CODE 0 text10 dist/default/debug\16_ADC.X.debug.o
+___lwmod 1D72 0 CODE 0 text9 dist/default/debug\16_ADC.X.debug.o
+__Lbank10 0 0 ABS 0 bank10 -
+__Lbank11 0 0 ABS 0 bank11 -
+__Lbank12 0 0 ABS 0 bank12 -
+__Lbank13 0 0 ABS 0 bank13 -
+__Lbank14 0 0 ABS 0 bank14 -
+__Lbank15 0 0 ABS 0 bank15 -
+__Lbank16 0 0 ABS 0 bank16 -
+__Lbank17 0 0 ABS 0 bank17 -
+__Lbank18 0 0 ABS 0 bank18 -
+__Lbank19 0 0 ABS 0 bank19 -
+__Lbank20 0 0 ABS 0 bank20 -
+__Lbank21 0 0 ABS 0 bank21 -
+__Lbank22 0 0 ABS 0 bank22 -
+__Lbank23 0 0 ABS 0 bank23 -
+__Lbank24 0 0 ABS 0 bank24 -
+__Lbank25 0 0 ABS 0 bank25 -
+__Lbank26 0 0 BANK26 1 bank26 -
+__Lbank27 0 0 BANK27 1 bank27 -
+__Lbank28 0 0 BANK28 1 bank28 -
+__Lbank29 0 0 BANK29 1 bank29 -
+__Lbank30 0 0 BANK30 1 bank30 -
+__Lbank31 0 0 BANK31 1 bank31 -
+__pmaintext 1E52 0 CODE 0 maintext dist/default/debug\16_ADC.X.debug.o
+__Lbigram 0 0 ABS 0 bigram -
+_OLED_YX 1A90 0 CODE 0 text21 dist/default/debug\16_ADC.X.debug.o
+__end_of_OLED_Command 1D0E 0 CODE 0 text22 dist/default/debug\16_ADC.X.debug.o
+__Lcommon 0 0 ABS 0 common -
+__Lconfig 0 0 CONFIG 4 config -
+OLED_Printf_Line@line C7 0 BANK1 1 cstackBANK1 dist/default/debug\16_ADC.X.debug.o
+OLED_Printf_Line@temp A0 0 BANK1 1 cstackBANK1 dist/default/debug\16_ADC.X.debug.o
+OLED_WriteData@st 7B 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+__end_of_internal_32 19A6 0 CODE 0 text2 dist/default/debug\16_ADC.X.debug.o
+___lwdiv@divisor 70 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+_strcmp 1C58 0 CODE 0 text7 dist/default/debug\16_ADC.X.debug.o
+_strcpy 19E6 0 CODE 0 text6 dist/default/debug\16_ADC.X.debug.o
+OLED_Printf_Line@last_text 26F0 0 ABS 1 - dist/default/debug\16_ADC.X.debug.o
+__end_of_I2C_WaitIF 1A90 0 CODE 0 text29 dist/default/debug\16_ADC.X.debug.o
+_OLED_Printf_Line$363 6C 0 BANK0 1 cstackBANK0 dist/default/debug\16_ADC.X.debug.o
+_RB2PPSbits E9A 0 ABS 0 - dist/default/debug\16_ADC.X.debug.o
+_ADCON0bits 9D 0 ABS 0 - dist/default/debug\16_ADC.X.debug.o
+_ADCON1bits 9E 0 ABS 0 - dist/default/debug\16_ADC.X.debug.o
+__pbssBIGRAM 24F0 0 ABS 0 - dist/default/debug\16_ADC.X.debug.o
+strcpy@dest 70 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+OLED_WriteData@data 75 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__Lspace_4 0 0 ABS 0 - -
+_BatteryIcon 2000 0 STRCODE 0 stringtext1 dist/default/debug\16_ADC.X.debug.o
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__HcstackBANK1 0 0 ABS 0 cstackBANK1 -
+_PIR1bits 11 0 ABS 0 - dist/default/debug\16_ADC.X.debug.o
+_PIR2bits 12 0 ABS 0 - dist/default/debug\16_ADC.X.debug.o
+__Lend_init 6 0 CODE 0 end_init -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+ADC_ConfigurePin@channel 72 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+__end_of_OLED_WriteData 1D2 0 CODE 0 text23 dist/default/debug\16_ADC.X.debug.o
+end_of_initialization FFA 0 CODE 0 cinit dist/default/debug\16_ADC.X.debug.o
+I2C_WriteByte@st 74 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+__Hintentry 6 0 CODE 0 intentry -
+___almod@divisor 70 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+__end_of_SSD1306_CtrlW 12 0 CODE 0 text24 dist/default/debug\16_ADC.X.debug.o
+_PPSLOCKbits E0F 0 ABS 0 - dist/default/debug\16_ADC.X.debug.o
+__Lstrings 0 0 ABS 0 strings -
+___awdiv@quotient 77 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+?___aldiv 70 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+?___almod 70 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+?___awdiv 70 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+?___awmod 70 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+___lwdiv@dividend 72 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+?___lldiv 70 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+?___llmod 70 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+?___lwdiv 70 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+?___lwmod 70 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+__Hreset_vec 6 0 CODE 0 reset_vec -
+___awmod@dividend 72 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+_SSPCON1bits 215 0 ABS 0 - dist/default/debug\16_ADC.X.debug.o
+_SSPCON2bits 216 0 ABS 0 - dist/default/debug\16_ADC.X.debug.o
+__ptext1 94 0 CODE 0 text1 dist/default/debug\16_ADC.X.debug.o
+__ptext2 1994 0 CODE 0 text2 dist/default/debug\16_ADC.X.debug.o
+__ptext3 3EA 0 CODE 0 text3 dist/default/debug\16_ADC.X.debug.o
+__ptext4 12 0 CODE 0 text4 dist/default/debug\16_ADC.X.debug.o
+__ptext5 7B2 0 CODE 0 text5 dist/default/debug\16_ADC.X.debug.o
+__ptext6 19E6 0 CODE 0 text6 dist/default/debug\16_ADC.X.debug.o
+__ptext7 1C58 0 CODE 0 text7 dist/default/debug\16_ADC.X.debug.o
+__ptext8 1BAC 0 CODE 0 text8 dist/default/debug\16_ADC.X.debug.o
+__ptext9 1D72 0 CODE 0 text9 dist/default/debug\16_ADC.X.debug.o
+__end_of_I2C_WaitIdle 1B62 0 CODE 0 text28 dist/default/debug\16_ADC.X.debug.o
+___aldiv@dividend 74 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+OLED_Printf_Line@temp_351 36 0 BANK0 1 cstackBANK0 dist/default/debug\16_ADC.X.debug.o
+OLED_Printf_Line@temp_354 41 0 BANK0 1 cstackBANK0 dist/default/debug\16_ADC.X.debug.o
+OLED_Printf_Line@temp_357 A6 0 BANK1 1 cstackBANK1 dist/default/debug\16_ADC.X.debug.o
+OLED_Printf_Line@temp_360 AC 0 BANK1 1 cstackBANK1 dist/default/debug\16_ADC.X.debug.o
+__Lpowerup 0 0 CODE 0 powerup -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+__H__absolute__ 0 0 ABS 0 __absolute__ -
+__Lreset_vec 0 0 CODE 0 reset_vec -
+__Hstringtext1 0 0 ABS 0 stringtext1 -
+__Hstringtext2 0 0 ABS 0 stringtext2 -
+__Hstringtext3 0 0 ABS 0 stringtext3 -
+OLED_YX@col 7A 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+OLED_YX@col_char 77 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+___heap_hi 0 0 ABS 0 - C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_12.o
+___heap_lo 0 0 ABS 0 - C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_12.o
+I2C_WriteByte@data 73 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+strcpy@src 72 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+__end_of__initialization FFA 0 CODE 0 cinit dist/default/debug\16_ADC.X.debug.o
+main@result CE 0 BANK1 1 cstackBANK1 dist/default/debug\16_ADC.X.debug.o
+___awmod@divisor 70 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+__Lfunctab 0 0 ENTRY 0 functab -
+__Lclrtext 0 0 ABS 0 clrtext -
+__end_of_OLED_UpdateLine 1C58 0 CODE 0 text17 dist/default/debug\16_ADC.X.debug.o
+OLED_Printf_Line@buf 4C 0 BANK0 1 cstackBANK0 dist/default/debug\16_ADC.X.debug.o
+OLED_Printf_Line@col B2 0 BANK1 1 cstackBANK1 dist/default/debug\16_ADC.X.debug.o
+OLED_Printf_Line@dst CB 0 BANK1 1 cstackBANK1 dist/default/debug\16_ADC.X.debug.o
+OLED_Printf_Line@fmt 26 0 BANK0 1 cstackBANK0 dist/default/debug\16_ADC.X.debug.o
+OLED_Printf_Line@src C9 0 BANK1 1 cstackBANK1 dist/default/debug\16_ADC.X.debug.o
+OLED_Printf_Line@str B1 0 BANK1 1 cstackBANK1 dist/default/debug\16_ADC.X.debug.o
+OLED_Printf_Line@val C5 0 BANK1 1 cstackBANK1 dist/default/debug\16_ADC.X.debug.o
+OLED_Printf_Line@ap C8 0 BANK1 1 cstackBANK1 dist/default/debug\16_ADC.X.debug.o
+OLED_Printf_Line@ch BB 0 BANK1 1 cstackBANK1 dist/default/debug\16_ADC.X.debug.o
+___lldiv@quotient 79 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+_OLED_SetOrientation 12 0 CODE 0 text4 dist/default/debug\16_ADC.X.debug.o
+_SSPCON2 216 0 ABS 0 - dist/default/debug\16_ADC.X.debug.o
+__Hend_init A 0 CODE 0 end_init -
+___llmod@dividend 74 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+___aldiv@counter 20 0 BANK0 1 cstackBANK0 dist/default/debug\16_ADC.X.debug.o
+___llmod@counter 79 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+__end_of_main 1ED2 0 CODE 0 maintext dist/default/debug\16_ADC.X.debug.o
+OLED_Clear@p 7C 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+_RC5PPSbits EA5 0 ABS 0 - dist/default/debug\16_ADC.X.debug.o
+_IRCF0 4CB 0 ABS 0 - dist/default/debug\16_ADC.X.debug.o
+_IRCF1 4CC 0 ABS 0 - dist/default/debug\16_ADC.X.debug.o
+_IRCF2 4CD 0 ABS 0 - dist/default/debug\16_ADC.X.debug.o
+_IRCF3 4CE 0 ABS 0 - dist/default/debug\16_ADC.X.debug.o
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+_SSPSTATbits 214 0 ABS 0 - dist/default/debug\16_ADC.X.debug.o
+I2C_Stop@st 73 0 COMMON 1 cstackCOMMON dist/default/debug\16_ADC.X.debug.o
+__initialization FE4 0 CODE 0 cinit dist/default/debug\16_ADC.X.debug.o
+_PPSLOCK E0F 0 ABS 0 - dist/default/debug\16_ADC.X.debug.o
+_OLED_UpdateLine 1C00 0 CODE 0 text17 dist/default/debug\16_ADC.X.debug.o
+_SSPCLKPPSbits E20 0 ABS 0 - dist/default/debug\16_ADC.X.debug.o
+_ANSELAbits 18C 0 ABS 0 - dist/default/debug\16_ADC.X.debug.o
+_ANSELBbits 18D 0 ABS 0 - dist/default/debug\16_ADC.X.debug.o
+_ANSELCbits 18E 0 ABS 0 - dist/default/debug\16_ADC.X.debug.o
+_RC4PPSbits EA4 0 ABS 0 - dist/default/debug\16_ADC.X.debug.o
+___int_stack_hi 0 0 STACK 2 stack C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_12.o
+___int_stack_lo 0 0 STACK 2 stack C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsreg.\driver_tmp_12.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+_screen_buffer 1 24F0 0
+OLED_Printf_Line@last_text 1 26F0 0
+- 1 CA0 20
+- 1 C20 50
+- 1 BA0 50
+- 1 B30 40
+- 1 B20 10
+- 1 AA0 50
+- 1 A20 50
+- 1 9A0 50
+- 1 920 50
+- 1 8A0 50
+- 1 820 50
+- 1 7E0 10
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+cinit 0 7F2 FE4 E 2
+text1 0 4A 94 4F 2
+text2 0 CCA 1994 9 2
+text3 0 1F5 3EA 65 2
+text4 0 9 12 41 2
+text5 0 3D9 7B2 419 2
+text6 0 CF3 19E6 1B 2
+text7 0 E2C 1C58 2D 2
+text8 0 DD6 1BAC 2A 2
+text9 0 EB9 1D72 34 2
+text10 0 EED 1DDA 3C 2
+text11 0 F69 1ED2 4A 2
+text12 0 13C 278 5A 2
+text13 0 E9 1D2 53 2
+text14 0 196 32C 5F 2
+text15 0 2CE 59C 7B 2
+text16 0 349 692 90 2
+text17 0 E00 1C00 2C 2
+text18 0 25A 4B4 74 2
+text19 0 FB3 1F66 4D 2
+text20 0 D0E 1A1C 1C 2
+text21 0 D48 1A90 22 2
+text22 0 E59 1CB2 2E 2
+text23 0 99 132 50 2
+text24 0 7 E 2 2
+text25 0 E87 1D0E 32 2
+text26 0 D6A 1AD4 23 2
+text27 0 DB1 1B62 25 2
+text28 0 D8D 1B1A 24 2
+text29 0 D2A 1A54 1E 2
+text30 0 CDF 19BE 14 2
+text31 0 CC3 1986 7 2
+maintext 0 F29 1E52 40 2
+cstackCOMMON 1 70 70 E 1
+cstackBANK0 1 20 20 50 1
+cstackBANK1 1 A0 A0 30 1
+stringtext1 0 1000 2000 A 2
+stringtext2 0 800 1000 30E 2
+reset_vec 0 0 0 5 2
+clrtext 0 CD3 19A6 C 2
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES

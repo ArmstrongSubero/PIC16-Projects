@@ -4,7 +4,7 @@ __Hintentry 3 0 CODE 0
 __Lintentry 3 0 CODE 0
 _SCS0 4C8 0 ABS 0
 _SCS1 4C9 0 ABS 0
-_main 7DF 0 CODE 0
+_main 7D3 0 CODE 0
 ___sp 0 0 STACK 2
 btemp 7E 0 ABS 0
 start 3 0 CODE 0
@@ -16,7 +16,7 @@ reset_vec 0 0 CODE 0
 wtemp0 7E 0 ABS 0
 __Hconfig 8009 0 CONFIG 4
 __Lconfig 0 0 CONFIG 4
-_initMain 7D5 0 CODE 0
+_initMain 7E5 0 CODE 0
 __Hbigram 0 0 ABS 0
 __Lbigram 0 0 ABS 0
 __Hram 0 0 ABS 0
@@ -28,7 +28,7 @@ __Hcommon 0 0 ABS 0
 __Lcommon 0 0 ABS 0
 __Heeprom_data 0 0 EEDATA 3
 __Leeprom_data 0 0 EEDATA 3
-_LATDbits 10F 0 ABS 0
+_LATCbits 10E 0 ABS 0
 ___int_sp 0 0 STACK 2
 _SPLLEN 4CF 0 ABS 0
 __Habs1 0 0 ABS 0
@@ -61,8 +61,10 @@ __Hheap 0 0 HEAP 7
 __Lheap 0 0 HEAP 7
 __Hinit 3 0 CODE 0
 __Linit 3 0 CODE 0
-__end_of_main 7FD 0 CODE 0
+__end_of_main 7E5 0 CODE 0
+__Hsivt 3 0 CODE 0
 __Htext 0 0 ABS 0
+__Lsivt 3 0 CODE 0
 __Ltext 0 0 ABS 0
 ___heap_lo 0 0 ABS 0
 end_of_initialization 7FD 0 CODE 0
@@ -111,10 +113,11 @@ __Hsfr19 0 0 ABS 0
 __Lsfr19 0 0 ABS 0
 __Hsfr29 0 0 ABS 0
 __Lsfr29 0 0 ABS 0
-_TRISDbits 8F 0 ABS 0
+_TRISCbits 8E 0 ABS 0
+_PORTCbits E 0 ABS 0
 __Hstrings 0 0 ABS 0
 __Lstrings 0 0 ABS 0
-_internal_32 7CC 0 CODE 0
+_internal_32 7CA 0 CODE 0
 __Hbank0 0 0 ABS 0
 __Lbank0 0 0 ABS 0
 __Hbank1 0 0 ABS 0
@@ -136,11 +139,11 @@ __Hbank7 0 0 ABS 0
 __Lbank7 0 0 ABS 0
 __Hbank8 0 0 ABS 0
 __Lbank8 0 0 ABS 0
-__end_of_internal_32 7D5 0 CODE 0
+__end_of_internal_32 7D3 0 CODE 0
 __Hbank9 0 0 ABS 0
 __Lbank9 0 0 ABS 0
-__ptext1 7D5 0 CODE 0
-__ptext2 7CC 0 CODE 0
+__ptext1 7E5 0 CODE 0
+__ptext2 7CA 0 CODE 0
 ___stack_hi 0 0 STACK 2
 __Hclrtext 0 0 ABS 0
 __Lclrtext 0 0 ABS 0
@@ -206,6 +209,7 @@ __Hbank19 0 0 ABS 0
 __Lbank19 0 0 ABS 0
 __Hbank29 0 0 BANK29 1
 __Lbank29 0 0 BANK29 1
+_ANSELCbits 18E 0 ABS 0
 __Hend_init 5 0 CODE 0
 __Lend_init 3 0 CODE 0
 __Hreset_vec 3 0 CODE 0
@@ -220,47 +224,48 @@ __HcstackCOMMON 0 0 ABS 0
 __LcstackCOMMON 0 0 ABS 0
 __pcstackCOMMON 70 0 COMMON 1
 start_initialization 7FD 0 CODE 0
-__end_of_initMain 7DF 0 CODE 0
+__end_of_initMain 7FD 0 CODE 0
 ___int_stack_lo 0 0 STACK 2
 __Hmaintext 0 0 ABS 0
 __Lmaintext 0 0 ABS 0
-__pmaintext 7DF 0 CODE 0
+__pmaintext 7D3 0 CODE 0
 __initialization 7FD 0 CODE 0
 %segments
 reset_vec 0 9 CODE 0 0
 cinit FFA FFF CODE FFA 0
 cstackCOMMON 70 71 COMMON 70 1
-maintext FBE FF9 CODE FBE 0
-text1 FAA FBD CODE FAA 0
-text2 F98 FA9 CODE F98 0
+text1 FCA FF9 CODE FCA 0
+maintext FA6 FC9 CODE FA6 0
+text2 F94 FA5 CODE F94 0
 %locals
 dist/default/debug\02_Pushbutton.X.debug.o
-C:\Users\armst\AppData\Local\Temp\xcAs3rc.\driver_tmp_1.s
-1383 7FD 0 CODE 0
-1386 7FD 0 CODE 0
-1392 7FD 0 CODE 0
-1394 7FD 0 CODE 0
-1395 7FE 0 CODE 0
+C:\Users\ARMSTR~1\AppData\Local\Temp\xcAsrgo.\driver_tmp_1.s
+1295 7FD 0 CODE 0
+1298 7FD 0 CODE 0
+1304 7FD 0 CODE 0
+1306 7FD 0 CODE 0
+1307 7FE 0 CODE 0
 main.c
-64 7DF 0 CODE 0
-65 7DF 0 CODE 0
-69 7E2 0 CODE 0
-69 7E2 0 CODE 0
-69 7E5 0 CODE 0
-72 7EE 0 CODE 0
-43 7D5 0 CODE 0
-45 7D5 0 CODE 0
-48 7D8 0 CODE 0
-50 7DA 0 CODE 0
-53 7DC 0 CODE 0
-54 7DE 0 CODE 0
-PIC16F1719_Internal.c
-32 7CC 0 CODE 0
-34 7CC 0 CODE 0
-35 7CE 0 CODE 0
-38 7CF 0 CODE 0
-39 7D0 0 CODE 0
-40 7D1 0 CODE 0
-41 7D2 0 CODE 0
-44 7D3 0 CODE 0
-45 7D4 0 CODE 0
+67 7D3 0 CODE 0
+68 7D3 0 CODE 0
+72 7D6 0 CODE 0
+72 7D6 0 CODE 0
+72 7D9 0 CODE 0
+42 7E5 0 CODE 0
+44 7E5 0 CODE 0
+47 7E8 0 CODE 0
+50 7F4 0 CODE 0
+51 7F6 0 CODE 0
+55 7F8 0 CODE 0
+56 7FA 0 CODE 0
+57 7FC 0 CODE 0
+PIC16F1718_Internal.c
+36 7CA 0 CODE 0
+38 7CA 0 CODE 0
+39 7CC 0 CODE 0
+42 7CD 0 CODE 0
+43 7CE 0 CODE 0
+44 7CF 0 CODE 0
+45 7D0 0 CODE 0
+48 7D1 0 CODE 0
+49 7D2 0 CODE 0

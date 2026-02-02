@@ -3,22 +3,22 @@
  * Author: Armstrong Subero
  * PIC: 16F1719 w/int OSC @ 32MHz, 5v
  * Program: 03_Timer0
- * Compiler: XC8 (v2.45, MPLAX X v6.15)
+ * Compiler: XC8 (v2.46, MPLAX X v6.20)
  * Program Version: 1.2
  *                
- * Program Description: This Program Allows PIC16F1719 to flash an LED at 1 Hz
+ * Program Description: This Program Allows PIC16F1718 to flash an LED at 1 Hz
  *                      on Timer0 overflow 
  * 
- * Hardware Description: An LED is connected via a 1K resistor to PIN D1 and 
- *                       a switch connected to PIN D2
+ * Hardware Description: An LED is connected via a 1K resistor to PIN C3 
  *                       
  * Created November 4th, 2016, 1:00 PM
- * Last Updated: November 18th, 2023, 12:44 AM
+ * Updated on Thursday 25th, December, 2025, 12:25 AM
  */
 
 /*******************************************************************************
  Change History:
  Revision     Description
+ v1.3         Updated for MPLAX v6.20 using XC8 v2.46 focus on PIC16F1718
  v1.2         Updated and recompiled with MPLABX v6.15 using XC8 v2.45
  v1.1         Changed from PIC16F1717 to PIC16F1719 and recompiled with
               MPLABX v5.15 using v2.05 of the XC8 compiler
@@ -27,8 +27,7 @@
 /*******************************************************************************
  *Includes and defines
  ******************************************************************************/
-
-#include "PIC16F1719_Internal.h"
+#include "PIC16F1718_Internal.h"
 
 //counter variable 
 int count = 0;
@@ -49,13 +48,9 @@ void initMain(){
     internal_32();
     
     // Set PIN D1 as output
-    TRISDbits.TRISD1 = 0;
-    
-    LATDbits.LATD1 = 0;
-    
-    // Set PIN D2 as input
-    TRISDbits.TRISD2 = 1;  
-    ANSELDbits.ANSD2 = 0;
+    TRISCbits.TRISC3 = 0;
+    LATCbits.LATC3 = 0;
+ 
     
     ///////////////////////
     /// Configure Timer0
@@ -106,13 +101,13 @@ void main(void) {
 
         // Turn on LED for 1 second on timer overflow
         if (count == 122){
-            LATDbits.LATD1 = 1;
+            LATCbits.LATC3 = 1;
             count = 0;
         }
 
         // Else turn LED off
         else {
-            LATDbits.LATD1 = 0;
+            LATCbits.LATC3 = 0;
         }     
     }
     

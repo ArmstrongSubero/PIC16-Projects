@@ -1,0 +1,6 @@
+build/default/debug/main.p1:  \
+main.c  \
+PIC16F1718_Internal.h  \
+EUSART.h  \
+I2C.h  \
+EEPROM_24AA512.h 

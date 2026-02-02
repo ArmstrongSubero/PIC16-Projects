@@ -1,0 +1,525 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1718 ]
+[d frameptr 6 ]
+"23 C:\Users\armstrongsubero\Desktop\PIC16F1718\14_EEPROM_24AA512.X\I2C.c
+[e E6036 . `uc
+I2C_OK 0
+I2C_NAK 1
+I2C_TIMEOUT 2
+I2C_BUS_COLLISION 3
+]
+"36 C:\Users\armstrongsubero\Desktop\PIC16F1718\14_EEPROM_24AA512.X\main.c
+[e E6055 . `uc
+I2C_OK 0
+I2C_NAK 1
+I2C_TIMEOUT 2
+I2C_BUS_COLLISION 3
+]
+"42 C:\Users\armstrongsubero\Desktop\PIC16F1718\14_EEPROM_24AA512.X\EEPROM_24AA512.c
+[e E6036 . `uc
+I2C_OK 0
+I2C_NAK 1
+I2C_TIMEOUT 2
+I2C_BUS_COLLISION 3
+]
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"18 C:\Users\armstrongsubero\Desktop\PIC16F1718\14_EEPROM_24AA512.X\EEPROM_24AA512.c
+[v _EEPROM_Ctrl EEPROM_Ctrl `(uc  1 s 1 EEPROM_Ctrl ]
+"29
+[v _EEPROM24AA512_ControlByte EEPROM24AA512_ControlByte `(uc  1 s 1 EEPROM24AA512_ControlByte ]
+"42
+[v _EEPROM24AA512_AckPoll EEPROM24AA512_AckPoll `(E6036  1 e 1 0 ]
+"63
+[v _EEPROM24AA512_WriteByte EEPROM24AA512_WriteByte `(E6055  1 e 1 0 ]
+"94
+[v _EEPROM24AA512_ReadByte EEPROM24AA512_ReadByte `(E6055  1 e 1 0 ]
+"36 C:\Users\armstrongsubero\Desktop\PIC16F1718\14_EEPROM_24AA512.X\EUSART.c
+[v _EUSART_Initialize EUSART_Initialize `(uc  1 e 1 0 ]
+"62
+[v _EUSART_Read EUSART_Read `(uc  1 e 1 0 ]
+"108
+[v _EUSART_Write EUSART_Write `(v  1 e 1 0 ]
+"127
+[v _EUSART_Write_Text EUSART_Write_Text `(v  1 e 1 0 ]
+"149
+[v _itoa itoa `(v  1 e 1 0 ]
+"185
+[v _EUSART_Write_Integer EUSART_Write_Integer `(v  1 e 1 0 ]
+"23 C:\Users\armstrongsubero\Desktop\PIC16F1718\14_EEPROM_24AA512.X\I2C.c
+[v _I2C_WaitIF I2C_WaitIF `(E6036  1 s 1 I2C_WaitIF ]
+"41
+[v _I2C_Init I2C_Init `(v  1 e 1 0 ]
+"62
+[v _I2C_ClearErrors I2C_ClearErrors `(v  1 e 1 0 ]
+"81
+[v _I2C_WaitIdle I2C_WaitIdle `(E6036  1 e 1 0 ]
+"98
+[v _I2C_Start I2C_Start `(E6036  1 e 1 0 ]
+"118
+[v _I2C_RepeatedStart I2C_RepeatedStart `(E6036  1 e 1 0 ]
+"138
+[v _I2C_Stop I2C_Stop `(E6036  1 e 1 0 ]
+"161
+[v _I2C_WriteByte I2C_WriteByte `(E6036  1 e 1 0 ]
+"192
+[v _I2C_ReadByte I2C_ReadByte `(E6036  1 e 1 0 ]
+"28 C:\Users\armstrongsubero\Desktop\PIC16F1718\14_EEPROM_24AA512.X\main.c
+[v _I2C_ScanBus I2C_ScanBus `(v  1 s 1 I2C_ScanBus ]
+"62
+[v _initMain initMain `(v  1 e 1 0 ]
+"96
+[v _main main `(v  1 e 1 0 ]
+"36 C:\Users\armstrongsubero\Desktop\PIC16F1718\14_EEPROM_24AA512.X\PIC16F1718_Internal.c
+[v _internal_32 internal_32 `(v  1 e 1 0 ]
+[s S41 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSP1IF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 TMR1GIF 1 0 :1:7 
+]
+"653 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc\pic16f1718.h
+[u S50 . 1 `S41 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES50  1 e 1 @17 ]
+[s S125 . 1 `uc 1 CCP2IF 1 0 :1:0 
+`uc 1 TMR4IF 1 0 :1:1 
+`uc 1 TMR6IF 1 0 :1:2 
+`uc 1 BCL1IF 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 C1IF 1 0 :1:5 
+`uc 1 C2IF 1 0 :1:6 
+`uc 1 OSFIF 1 0 :1:7 
+]
+"715
+[u S134 . 1 `S125 1 . 1 0 ]
+[v _PIR2bits PIR2bits `VES134  1 e 1 @18 ]
+[s S275 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"1210
+[u S284 . 1 `S275 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES284  1 e 1 @141 ]
+[s S332 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"1272
+[u S341 . 1 `S332 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES341  1 e 1 @142 ]
+[s S296 . 1 `uc 1 ANSB0 1 0 :1:0 
+`uc 1 ANSB1 1 0 :1:1 
+`uc 1 ANSB2 1 0 :1:2 
+`uc 1 ANSB3 1 0 :1:3 
+`uc 1 ANSB4 1 0 :1:4 
+`uc 1 ANSB5 1 0 :1:5 
+]
+"3617
+[u S303 . 1 `S296 1 . 1 0 ]
+[v _ANSELBbits ANSELBbits `VES303  1 e 1 @397 ]
+[s S313 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 ANSC2 1 0 :1:2 
+`uc 1 ANSC3 1 0 :1:3 
+`uc 1 ANSC4 1 0 :1:4 
+`uc 1 ANSC5 1 0 :1:5 
+`uc 1 ANSC6 1 0 :1:6 
+`uc 1 ANSC7 1 0 :1:7 
+]
+"3668
+[u S321 . 1 `S313 1 . 1 0 ]
+[v _ANSELCbits ANSELCbits `VES321  1 e 1 @398 ]
+"3894
+[v _RC1REG RC1REG `VEuc  1 e 1 @409 ]
+"3948
+[v _TX1REG TX1REG `VEuc  1 e 1 @410 ]
+"4023
+[v _SPBRGL SPBRGL `VEuc  1 e 1 @411 ]
+[s S563 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"4148
+[u S572 . 1 `S563 1 . 1 0 ]
+[v _RC1STAbits RC1STAbits `VES572  1 e 1 @413 ]
+"4940
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @529 ]
+"5194
+[v _SSPADD SSPADD `VEuc  1 e 1 @530 ]
+[s S147 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+"5774
+[u S156 . 1 `S147 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES156  1 e 1 @532 ]
+[s S68 . 1 `uc 1 SSPM 1 0 :4:0 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"5915
+[s S74 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+]
+[u S79 . 1 `S68 1 . 1 0 `S74 1 . 1 0 ]
+[v _SSPCONbits SSPCONbits `VES79  1 e 1 @533 ]
+"5977
+[v _SSPCON1bits SSPCON1bits `VES79  1 e 1 @533 ]
+"6094
+[v _SSPCON2 SSPCON2 `VEuc  1 e 1 @534 ]
+[s S168 . 1 `uc 1 SEN 1 0 :1:0 
+`uc 1 RSEN 1 0 :1:1 
+`uc 1 PEN 1 0 :1:2 
+`uc 1 RCEN 1 0 :1:3 
+`uc 1 ACKEN 1 0 :1:4 
+`uc 1 ACKDT 1 0 :1:5 
+`uc 1 ACKSTAT 1 0 :1:6 
+`uc 1 GCEN 1 0 :1:7 
+]
+"6166
+[u S177 . 1 `S168 1 . 1 0 ]
+[v _SSPCON2bits SSPCON2bits `VES177  1 e 1 @534 ]
+"10119
+[v _PPSLOCK PPSLOCK `VEuc  1 e 1 @3599 ]
+[s S354 . 1 `uc 1 PPSLOCKED 1 0 :1:0 
+]
+"10129
+[u S356 . 1 `S354 1 . 1 0 ]
+[v _PPSLOCKbits PPSLOCKbits `VES356  1 e 1 @3599 ]
+[s S389 . 1 `uc 1 SSPCLKPPS 1 0 :5:0 
+]
+"10289
+[u S391 . 1 `S389 1 . 1 0 ]
+[v _SSPCLKPPSbits SSPCLKPPSbits `VES391  1 e 1 @3616 ]
+[s S382 . 1 `uc 1 SSPDATPPS 1 0 :5:0 
+]
+"10309
+[u S384 . 1 `S382 1 . 1 0 ]
+[v _SSPDATPPSbits SSPDATPPSbits `VES384  1 e 1 @3617 ]
+[s S368 . 1 `uc 1 RXPPS 1 0 :5:0 
+]
+"10349
+[u S370 . 1 `S368 1 . 1 0 ]
+[v _RXPPSbits RXPPSbits `VES370  1 e 1 @3620 ]
+[s S361 . 1 `uc 1 RB2PPS 1 0 :5:0 
+]
+"10669
+[u S363 . 1 `S361 1 . 1 0 ]
+[v _RB2PPSbits RB2PPSbits `VES363  1 e 1 @3738 ]
+[s S375 . 1 `uc 1 RC4PPS 1 0 :5:0 
+]
+"10869
+[u S377 . 1 `S375 1 . 1 0 ]
+[v _RC4PPSbits RC4PPSbits `VES377  1 e 1 @3748 ]
+[s S396 . 1 `uc 1 RC5PPS 1 0 :5:0 
+]
+"10889
+[u S398 . 1 `S396 1 . 1 0 ]
+[v _RC5PPSbits RC5PPSbits `VES398  1 e 1 @3749 ]
+"15443
+[v _BRG16 BRG16 `VEb  1 e 0 @3323 ]
+"15446
+[v _BRGH BRGH `VEb  1 e 0 @3314 ]
+"15713
+[v _CREN CREN `VEb  1 e 0 @3308 ]
+"16499
+[v _IRCF0 IRCF0 `VEb  1 e 0 @1227 ]
+"16502
+[v _IRCF1 IRCF1 `VEb  1 e 0 @1228 ]
+"16505
+[v _IRCF2 IRCF2 `VEb  1 e 0 @1229 ]
+"16508
+[v _IRCF3 IRCF3 `VEb  1 e 0 @1230 ]
+"17972
+[v _SCS0 SCS0 `VEb  1 e 0 @1224 ]
+"17975
+[v _SCS1 SCS1 `VEb  1 e 0 @1225 ]
+"18065
+[v _SPEN SPEN `VEb  1 e 0 @3311 ]
+"18068
+[v _SPLLEN SPLLEN `VEb  1 e 0 @1231 ]
+"18179
+[v _SYNC SYNC `VEb  1 e 0 @3316 ]
+"18461
+[v _TXEN TXEN `VEb  1 e 0 @3317 ]
+"96 C:\Users\armstrongsubero\Desktop\PIC16F1718\14_EEPROM_24AA512.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"115
+[v main@st st `E6055  1 a 1 44 ]
+"109
+[v main@address address `us  1 a 2 42 ]
+"111
+[v main@readVal readVal `uc  1 a 1 41 ]
+"110
+[v main@writeVal writeVal `uc  1 a 1 40 ]
+"164
+} 0
+"62
+[v _initMain initMain `(v  1 e 1 0 ]
+{
+"91
+} 0
+"36 C:\Users\armstrongsubero\Desktop\PIC16F1718\14_EEPROM_24AA512.X\PIC16F1718_Internal.c
+[v _internal_32 internal_32 `(v  1 e 1 0 ]
+{
+"49
+} 0
+"28 C:\Users\armstrongsubero\Desktop\PIC16F1718\14_EEPROM_24AA512.X\main.c
+[v _I2C_ScanBus I2C_ScanBus `(v  1 s 1 I2C_ScanBus ]
+{
+"36
+[v I2C_ScanBus@st st `E6055  1 a 1 32 ]
+"34
+[v I2C_ScanBus@ctrlW ctrlW `uc  1 a 1 31 ]
+"32
+[v I2C_ScanBus@addr7 addr7 `uc  1 a 1 33 ]
+"53
+} 0
+"127 C:\Users\armstrongsubero\Desktop\PIC16F1718\14_EEPROM_24AA512.X\EUSART.c
+[v _EUSART_Write_Text EUSART_Write_Text `(v  1 e 1 0 ]
+{
+"129
+[v EUSART_Write_Text@i i `i  1 a 2 4 ]
+"127
+[v EUSART_Write_Text@text text `*.25uc  1 p 2 1 ]
+"132
+} 0
+"185
+[v _EUSART_Write_Integer EUSART_Write_Integer `(v  1 e 1 0 ]
+{
+"187
+[v EUSART_Write_Integer@buffer buffer `[20]uc  1 a 20 7 ]
+"193
+[v EUSART_Write_Integer@temp_ptr temp_ptr `*.4uc  1 a 1 28 ]
+"188
+[v EUSART_Write_Integer@ptr ptr `*.4uc  1 a 1 27 ]
+"185
+[v EUSART_Write_Integer@value_to_send value_to_send `i  1 p 2 11 ]
+"197
+} 0
+"149
+[v _itoa itoa `(v  1 e 1 0 ]
+{
+[v itoa@buf buf `*.4*.4uc  1 a 1 wreg ]
+"167
+[v itoa@num num `i  1 a 2 0 ]
+"151
+[v itoa@div div `i  1 a 2 5 ]
+"158
+[v itoa@temp temp `i  1 a 2 2 ]
+"149
+[v itoa@buf buf `*.4*.4uc  1 a 1 wreg ]
+[v itoa@d d `i  1 p 2 9 ]
+"151
+[v itoa@buf buf `*.4*.4uc  1 a 1 4 ]
+"173
+} 0
+"15 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"10
+[v ___awmod@sign sign `uc  1 a 1 6 ]
+[v ___awmod@counter counter `uc  1 a 1 5 ]
+"5
+[v ___awmod@divisor divisor `i  1 p 2 0 ]
+[v ___awmod@dividend dividend `i  1 p 2 2 ]
+"34
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 7 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 6 ]
+[v ___awdiv@counter counter `uc  1 a 1 5 ]
+"5
+[v ___awdiv@divisor divisor `i  1 p 2 0 ]
+[v ___awdiv@dividend dividend `i  1 p 2 2 ]
+"41
+} 0
+"108 C:\Users\armstrongsubero\Desktop\PIC16F1718\14_EEPROM_24AA512.X\EUSART.c
+[v _EUSART_Write EUSART_Write `(v  1 e 1 0 ]
+{
+[v EUSART_Write@txData txData `uc  1 a 1 wreg ]
+[v EUSART_Write@txData txData `uc  1 a 1 wreg ]
+[v EUSART_Write@txData txData `uc  1 a 1 0 ]
+"115
+} 0
+"41 C:\Users\armstrongsubero\Desktop\PIC16F1718\14_EEPROM_24AA512.X\I2C.c
+[v _I2C_Init I2C_Init `(v  1 e 1 0 ]
+{
+"54
+} 0
+"62
+[v _I2C_ClearErrors I2C_ClearErrors `(v  1 e 1 0 ]
+{
+"73
+} 0
+"36 C:\Users\armstrongsubero\Desktop\PIC16F1718\14_EEPROM_24AA512.X\EUSART.c
+[v _EUSART_Initialize EUSART_Initialize `(uc  1 e 1 0 ]
+{
+"38
+[v EUSART_Initialize@x x `ui  1 a 2 9 ]
+"36
+[v EUSART_Initialize@baudrate baudrate `DCl  1 p 4 6 ]
+"50
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+{
+"10
+[v ___aldiv@quotient quotient `l  1 a 4 2 ]
+"11
+[v ___aldiv@sign sign `uc  1 a 1 1 ]
+[v ___aldiv@counter counter `uc  1 a 1 0 ]
+"5
+[v ___aldiv@divisor divisor `l  1 p 4 0 ]
+[v ___aldiv@dividend dividend `l  1 p 4 4 ]
+"41
+} 0
+"63 C:\Users\armstrongsubero\Desktop\PIC16F1718\14_EEPROM_24AA512.X\EEPROM_24AA512.c
+[v _EEPROM24AA512_WriteByte EEPROM24AA512_WriteByte `(E6055  1 e 1 0 ]
+{
+"65
+[v EEPROM24AA512_WriteByte@st st `E6036  1 a 1 12 ]
+"63
+[v EEPROM24AA512_WriteByte@addr addr `us  1 p 2 9 ]
+[v EEPROM24AA512_WriteByte@data data `uc  1 p 1 11 ]
+"85
+} 0
+"42
+[v _EEPROM24AA512_AckPoll EEPROM24AA512_AckPoll `(E6036  1 e 1 0 ]
+{
+"47
+[v EEPROM24AA512_AckPoll@st st `E6036  1 a 1 6 ]
+"44
+[v EEPROM24AA512_AckPoll@t t `us  1 a 2 7 ]
+"54
+} 0
+"94
+[v _EEPROM24AA512_ReadByte EEPROM24AA512_ReadByte `(E6055  1 e 1 0 ]
+{
+"96
+[v EEPROM24AA512_ReadByte@st st `E6036  1 a 1 9 ]
+"94
+[v EEPROM24AA512_ReadByte@addr addr `us  1 p 2 6 ]
+[v EEPROM24AA512_ReadByte@data data `*.4uc  1 p 1 8 ]
+"120
+} 0
+"161 C:\Users\armstrongsubero\Desktop\PIC16F1718\14_EEPROM_24AA512.X\I2C.c
+[v _I2C_WriteByte I2C_WriteByte `(E6036  1 e 1 0 ]
+{
+[v I2C_WriteByte@data data `uc  1 a 1 wreg ]
+"163
+[v I2C_WriteByte@st st `E6036  1 a 1 4 ]
+"161
+[v I2C_WriteByte@data data `uc  1 a 1 wreg ]
+"165
+[v I2C_WriteByte@data data `uc  1 a 1 3 ]
+"184
+} 0
+"138
+[v _I2C_Stop I2C_Stop `(E6036  1 e 1 0 ]
+{
+"140
+[v I2C_Stop@st st `E6036  1 a 1 3 ]
+"153
+} 0
+"98
+[v _I2C_Start I2C_Start `(E6036  1 e 1 0 ]
+{
+"100
+[v I2C_Start@st st `E6036  1 a 1 3 ]
+"113
+} 0
+"118
+[v _I2C_RepeatedStart I2C_RepeatedStart `(E6036  1 e 1 0 ]
+{
+"120
+[v I2C_RepeatedStart@st st `E6036  1 a 1 3 ]
+"133
+} 0
+"192
+[v _I2C_ReadByte I2C_ReadByte `(E6036  1 e 1 0 ]
+{
+[v I2C_ReadByte@data data `*.4uc  1 a 1 wreg ]
+"194
+[v I2C_ReadByte@st st `E6036  1 a 1 5 ]
+"192
+[v I2C_ReadByte@data data `*.4uc  1 a 1 wreg ]
+[v I2C_ReadByte@ack ack `a  1 p 1 3 ]
+"196
+[v I2C_ReadByte@data data `*.4uc  1 a 1 4 ]
+"220
+} 0
+"81
+[v _I2C_WaitIdle I2C_WaitIdle `(E6036  1 e 1 0 ]
+{
+[v I2C_WaitIdle@timeout_ms timeout_ms `us  1 p 2 0 ]
+"93
+} 0
+"23
+[v _I2C_WaitIF I2C_WaitIF `(E6036  1 s 1 I2C_WaitIF ]
+{
+[v I2C_WaitIF@timeout_ms timeout_ms `us  1 p 2 0 ]
+"33
+} 0
+"18 C:\Users\armstrongsubero\Desktop\PIC16F1718\14_EEPROM_24AA512.X\EEPROM_24AA512.c
+[v _EEPROM_Ctrl EEPROM_Ctrl `(uc  1 s 1 EEPROM_Ctrl ]
+{
+[v EEPROM_Ctrl@read read `a  1 a 1 wreg ]
+[v EEPROM_Ctrl@read read `a  1 a 1 wreg ]
+"20
+[v EEPROM_Ctrl@read read `a  1 a 1 0 ]
+"21
+} 0

@@ -1,0 +1,605 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1718 ]
+[d frameptr 6 ]
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"36 C:\Users\armstrongsubero\Desktop\PIC16F1718\47_NRF24L01.X\EUSART.c
+[v _EUSART_Initialize EUSART_Initialize `(uc  1 e 1 0 ]
+"62
+[v _EUSART_Read EUSART_Read `(uc  1 e 1 0 ]
+"108
+[v _EUSART_Write EUSART_Write `(v  1 e 1 0 ]
+"127
+[v _EUSART_Write_Text EUSART_Write_Text `(v  1 e 1 0 ]
+"149
+[v _itoa itoa `(v  1 e 1 0 ]
+"185
+[v _EUSART_Write_Integer EUSART_Write_Integer `(v  1 e 1 0 ]
+"76 C:\Users\armstrongsubero\Desktop\PIC16F1718\47_NRF24L01.X\main.c
+[v _CE_H CE_H `T(v  1 s 1 CE_H ]
+"77
+[v _CE_L CE_L `T(v  1 s 1 CE_L ]
+"78
+[v _CSN_H CSN_H `T(v  1 s 1 CSN_H ]
+"79
+[v _CSN_L CSN_L `T(v  1 s 1 CSN_L ]
+"91
+[v _uart_crlf uart_crlf `(v  1 s 1 uart_crlf ]
+"92
+[v _uart_print uart_print `(v  1 s 1 uart_print ]
+"94
+[v _uart_write_n uart_write_n `(v  1 s 1 uart_write_n ]
+"107
+[v _spi_xfer spi_xfer `T(uc  1 s 1 spi_xfer ]
+"116
+[v _nrf_write_reg nrf_write_reg `(v  1 s 1 nrf_write_reg ]
+"124
+[v _nrf_read_reg nrf_read_reg `(uc  1 s 1 nrf_read_reg ]
+"134
+[v _nrf_write_buf nrf_write_buf `(v  1 s 1 nrf_write_buf ]
+"142
+[v _nrf_cmd nrf_cmd `(v  1 s 1 nrf_cmd ]
+"149
+[v _nrf_clear_irqs nrf_clear_irqs `(v  1 s 1 nrf_clear_irqs ]
+"154
+[v _nrf_flush_all nrf_flush_all `(v  1 s 1 nrf_flush_all ]
+"170
+[v _nrf_write_payload nrf_write_payload `(v  1 s 1 nrf_write_payload ]
+"179
+[v _radio_common_setup radio_common_setup `(v  1 s 1 radio_common_setup ]
+"212
+[v _radio_init_tx radio_init_tx `(v  1 s 1 radio_init_tx ]
+"236
+[v _tx_send_packet tx_send_packet `(uc  1 s 1 tx_send_packet ]
+"269
+[v _initMain initMain `(v  1 s 1 initMain ]
+"311
+[v _button_pressed_event button_pressed_event `(uc  1 s 1 button_pressed_event ]
+"330
+[v _make_cmd5 make_cmd5 `(v  1 s 1 make_cmd5 ]
+"337
+[v _main main `(v  1 e 1 0 ]
+"36 C:\Users\armstrongsubero\Desktop\PIC16F1718\47_NRF24L01.X\PIC16F1718_Internal.c
+[v _internal_32 internal_32 `(v  1 e 1 0 ]
+"52 C:\Users\armstrongsubero\Desktop\PIC16F1718\47_NRF24L01.X\SPI.c
+[v _SPI_Initialize SPI_Initialize `(v  1 e 1 0 ]
+"86
+[v _SPI_Exchange8bit SPI_Exchange8bit `(uc  1 e 1 0 ]
+[s S327 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"508 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc\pic16f1718.h
+[u S336 . 1 `S327 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES336  1 e 1 @13 ]
+[s S562 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSP1IF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 TMR1GIF 1 0 :1:7 
+]
+"653
+[u S571 . 1 `S562 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES571  1 e 1 @17 ]
+[s S153 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"1210
+[u S162 . 1 `S153 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES162  1 e 1 @141 ]
+[s S210 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"1272
+[u S219 . 1 `S210 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES219  1 e 1 @142 ]
+[s S231 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 TMR0SE 1 0 :1:4 
+`uc 1 TMR0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nWPUEN 1 0 :1:7 
+]
+"1536
+[s S238 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+]
+[u S245 . 1 `S231 1 . 1 0 `S238 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES245  1 e 1 @149 ]
+[s S114 . 1 `uc 1 LATC0 1 0 :1:0 
+`uc 1 LATC1 1 0 :1:1 
+`uc 1 LATC2 1 0 :1:2 
+`uc 1 LATC3 1 0 :1:3 
+`uc 1 LATC4 1 0 :1:4 
+`uc 1 LATC5 1 0 :1:5 
+`uc 1 LATC6 1 0 :1:6 
+`uc 1 LATC7 1 0 :1:7 
+]
+"2273
+[u S123 . 1 `S114 1 . 1 0 ]
+[v _LATCbits LATCbits `VES123  1 e 1 @270 ]
+[s S174 . 1 `uc 1 ANSB0 1 0 :1:0 
+`uc 1 ANSB1 1 0 :1:1 
+`uc 1 ANSB2 1 0 :1:2 
+`uc 1 ANSB3 1 0 :1:3 
+`uc 1 ANSB4 1 0 :1:4 
+`uc 1 ANSB5 1 0 :1:5 
+]
+"3617
+[u S181 . 1 `S174 1 . 1 0 ]
+[v _ANSELBbits ANSELBbits `VES181  1 e 1 @397 ]
+[s S191 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 ANSC2 1 0 :1:2 
+`uc 1 ANSC3 1 0 :1:3 
+`uc 1 ANSC4 1 0 :1:4 
+`uc 1 ANSC5 1 0 :1:5 
+`uc 1 ANSC6 1 0 :1:6 
+`uc 1 ANSC7 1 0 :1:7 
+]
+"3668
+[u S199 . 1 `S191 1 . 1 0 ]
+[v _ANSELCbits ANSELCbits `VES199  1 e 1 @398 ]
+"3894
+[v _RC1REG RC1REG `VEuc  1 e 1 @409 ]
+"3948
+[v _TX1REG TX1REG `VEuc  1 e 1 @410 ]
+"4023
+[v _SPBRGL SPBRGL `VEuc  1 e 1 @411 ]
+[s S541 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"4148
+[u S550 . 1 `S541 1 . 1 0 ]
+[v _RC1STAbits RC1STAbits `VES550  1 e 1 @413 ]
+[s S263 . 1 `uc 1 WPUB0 1 0 :1:0 
+`uc 1 WPUB1 1 0 :1:1 
+`uc 1 WPUB2 1 0 :1:2 
+`uc 1 WPUB3 1 0 :1:3 
+`uc 1 WPUB4 1 0 :1:4 
+`uc 1 WPUB5 1 0 :1:5 
+`uc 1 WPUB6 1 0 :1:6 
+`uc 1 WPUB7 1 0 :1:7 
+]
+"4807
+[u S272 . 1 `S263 1 . 1 0 ]
+[v _WPUBbits WPUBbits `VES272  1 e 1 @525 ]
+"4940
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @529 ]
+"5189
+[v _SSP1ADD SSP1ADD `VEuc  1 e 1 @530 ]
+"5697
+[v _SSP1STAT SSP1STAT `VEuc  1 e 1 @532 ]
+[s S39 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+"5719
+[u S48 . 1 `S39 1 . 1 0 ]
+[v _SSP1STATbits SSP1STATbits `VES48  1 e 1 @532 ]
+"5819
+[v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @533 ]
+[s S61 . 1 `uc 1 SSPM 1 0 :4:0 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"5852
+[s S67 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+]
+[u S72 . 1 `S61 1 . 1 0 `S67 1 . 1 0 ]
+[v _SSP1CON1bits SSP1CON1bits `VES72  1 e 1 @533 ]
+"10119
+[v _PPSLOCK PPSLOCK `VEuc  1 e 1 @3599 ]
+[s S285 . 1 `uc 1 PPSLOCKED 1 0 :1:0 
+]
+"10129
+[u S287 . 1 `S285 1 . 1 0 ]
+[v _PPSLOCKbits PPSLOCKbits `VES287  1 e 1 @3599 ]
+[s S306 . 1 `uc 1 SSPDATPPS 1 0 :5:0 
+]
+"10309
+[u S308 . 1 `S306 1 . 1 0 ]
+[v _SSPDATPPSbits SSPDATPPSbits `VES308  1 e 1 @3617 ]
+[s S299 . 1 `uc 1 RXPPS 1 0 :5:0 
+]
+"10349
+[u S301 . 1 `S299 1 . 1 0 ]
+[v _RXPPSbits RXPPSbits `VES301  1 e 1 @3620 ]
+[s S292 . 1 `uc 1 RB2PPS 1 0 :5:0 
+]
+"10669
+[u S294 . 1 `S292 1 . 1 0 ]
+[v _RB2PPSbits RB2PPSbits `VES294  1 e 1 @3738 ]
+[s S313 . 1 `uc 1 RC3PPS 1 0 :5:0 
+]
+"10849
+[u S315 . 1 `S313 1 . 1 0 ]
+[v _RC3PPSbits RC3PPSbits `VES315  1 e 1 @3747 ]
+[s S320 . 1 `uc 1 RC5PPS 1 0 :5:0 
+]
+"10889
+[u S322 . 1 `S320 1 . 1 0 ]
+[v _RC5PPSbits RC5PPSbits `VES322  1 e 1 @3749 ]
+"15443
+[v _BRG16 BRG16 `VEb  1 e 0 @3323 ]
+"15446
+[v _BRGH BRGH `VEb  1 e 0 @3314 ]
+"15713
+[v _CREN CREN `VEb  1 e 0 @3308 ]
+"16499
+[v _IRCF0 IRCF0 `VEb  1 e 0 @1227 ]
+"16502
+[v _IRCF1 IRCF1 `VEb  1 e 0 @1228 ]
+"16505
+[v _IRCF2 IRCF2 `VEb  1 e 0 @1229 ]
+"16508
+[v _IRCF3 IRCF3 `VEb  1 e 0 @1230 ]
+"17972
+[v _SCS0 SCS0 `VEb  1 e 0 @1224 ]
+"17975
+[v _SCS1 SCS1 `VEb  1 e 0 @1225 ]
+"18065
+[v _SPEN SPEN `VEb  1 e 0 @3311 ]
+"18068
+[v _SPLLEN SPLLEN `VEb  1 e 0 @1231 ]
+"18179
+[v _SYNC SYNC `VEb  1 e 0 @3316 ]
+"18461
+[v _TXEN TXEN `VEb  1 e 0 @3317 ]
+"88 C:\Users\armstrongsubero\Desktop\PIC16F1718\47_NRF24L01.X\main.c
+[v _adr0 adr0 `DC[5]uc  1 s 5 adr0 ]
+"337
+[v _main main `(v  1 e 1 0 ]
+{
+"370
+[v main@ok ok `uc  1 a 1 50 ]
+"356
+[v main@cmds cmds `[6]*.25DCuc  1 a 12 31 ]
+"360
+[v main@pkt pkt `[5]uc  1 a 5 43 ]
+"358
+[v main@idx idx `uc  1 a 1 51 ]
+"353
+[v main@F6295 F6295 `[6]*.25DCuc  1 s 12 F6295 ]
+"415
+} 0
+"94
+[v _uart_write_n uart_write_n `(v  1 s 1 uart_write_n ]
+{
+[v uart_write_n@buf buf `*.4DCuc  1 a 1 wreg ]
+"96
+[v uart_write_n@i i `uc  1 a 1 4 ]
+"94
+[v uart_write_n@buf buf `*.4DCuc  1 a 1 wreg ]
+[v uart_write_n@n n `uc  1 p 1 1 ]
+"96
+[v uart_write_n@buf buf `*.4DCuc  1 a 1 3 ]
+"97
+} 0
+"92
+[v _uart_print uart_print `(v  1 s 1 uart_print ]
+{
+[v uart_print@s s `*.25DCuc  1 p 2 6 ]
+} 0
+"127 C:\Users\armstrongsubero\Desktop\PIC16F1718\47_NRF24L01.X\EUSART.c
+[v _EUSART_Write_Text EUSART_Write_Text `(v  1 e 1 0 ]
+{
+"129
+[v EUSART_Write_Text@i i `i  1 a 2 4 ]
+"127
+[v EUSART_Write_Text@text text `*.25uc  1 p 2 1 ]
+"132
+} 0
+"91 C:\Users\armstrongsubero\Desktop\PIC16F1718\47_NRF24L01.X\main.c
+[v _uart_crlf uart_crlf `(v  1 s 1 uart_crlf ]
+{
+} 0
+"236
+[v _tx_send_packet tx_send_packet `(uc  1 s 1 tx_send_packet ]
+{
+[v tx_send_packet@payload5 payload5 `*.4DCuc  1 a 1 wreg ]
+"251
+[v tx_send_packet@st st `uc  1 a 1 12 ]
+"249
+[v tx_send_packet@t t `ul  1 a 4 8 ]
+"236
+[v tx_send_packet@payload5 payload5 `*.4DCuc  1 a 1 wreg ]
+"238
+[v tx_send_packet@payload5 payload5 `*.4DCuc  1 a 1 7 ]
+"266
+} 0
+"170
+[v _nrf_write_payload nrf_write_payload `(v  1 s 1 nrf_write_payload ]
+{
+[v nrf_write_payload@buf buf `*.4DCuc  1 a 1 wreg ]
+"174
+[v nrf_write_payload@i i `uc  1 a 1 6 ]
+"170
+[v nrf_write_payload@buf buf `*.4DCuc  1 a 1 wreg ]
+[v nrf_write_payload@len len `uc  1 p 1 3 ]
+"172
+[v nrf_write_payload@buf buf `*.4DCuc  1 a 1 5 ]
+"176
+} 0
+"124
+[v _nrf_read_reg nrf_read_reg `(uc  1 s 1 nrf_read_reg ]
+{
+[v nrf_read_reg@reg reg `uc  1 a 1 wreg ]
+"126
+[v nrf_read_reg@v v `uc  1 a 1 4 ]
+"124
+[v nrf_read_reg@reg reg `uc  1 a 1 wreg ]
+"127
+[v nrf_read_reg@reg reg `uc  1 a 1 3 ]
+"132
+} 0
+"76
+[v _CE_H CE_H `T(v  1 s 1 CE_H ]
+{
+} 0
+"212
+[v _radio_init_tx radio_init_tx `(v  1 s 1 radio_init_tx ]
+{
+"221
+} 0
+"179
+[v _radio_common_setup radio_common_setup `(v  1 s 1 radio_common_setup ]
+{
+"209
+} 0
+"134
+[v _nrf_write_buf nrf_write_buf `(v  1 s 1 nrf_write_buf ]
+{
+[v nrf_write_buf@reg reg `uc  1 a 1 wreg ]
+"138
+[v nrf_write_buf@i i `uc  1 a 1 9 ]
+"134
+[v nrf_write_buf@reg reg `uc  1 a 1 wreg ]
+[v nrf_write_buf@buf buf `*.25DCuc  1 p 2 3 ]
+[v nrf_write_buf@len len `uc  1 p 1 5 ]
+"136
+[v nrf_write_buf@reg reg `uc  1 a 1 8 ]
+"140
+} 0
+"154
+[v _nrf_flush_all nrf_flush_all `(v  1 s 1 nrf_flush_all ]
+{
+"158
+} 0
+"142
+[v _nrf_cmd nrf_cmd `(v  1 s 1 nrf_cmd ]
+{
+[v nrf_cmd@cmd cmd `uc  1 a 1 wreg ]
+[v nrf_cmd@cmd cmd `uc  1 a 1 wreg ]
+"144
+[v nrf_cmd@cmd cmd `uc  1 a 1 3 ]
+"147
+} 0
+"149
+[v _nrf_clear_irqs nrf_clear_irqs `(v  1 s 1 nrf_clear_irqs ]
+{
+"152
+} 0
+"116
+[v _nrf_write_reg nrf_write_reg `(v  1 s 1 nrf_write_reg ]
+{
+[v nrf_write_reg@reg reg `uc  1 a 1 wreg ]
+[v nrf_write_reg@reg reg `uc  1 a 1 wreg ]
+[v nrf_write_reg@val val `uc  1 p 1 3 ]
+"118
+[v nrf_write_reg@reg reg `uc  1 a 1 4 ]
+"122
+} 0
+"107
+[v _spi_xfer spi_xfer `T(uc  1 s 1 spi_xfer ]
+{
+[v spi_xfer@b b `uc  1 a 1 wreg ]
+[v spi_xfer@b b `uc  1 a 1 wreg ]
+[v spi_xfer@b b `uc  1 a 1 2 ]
+} 0
+"86 C:\Users\armstrongsubero\Desktop\PIC16F1718\47_NRF24L01.X\SPI.c
+[v _SPI_Exchange8bit SPI_Exchange8bit `(uc  1 e 1 0 ]
+{
+[v SPI_Exchange8bit@data data `uc  1 a 1 wreg ]
+"88
+[v SPI_Exchange8bit@dummy dummy `VEuc  1 a 1 1 ]
+"86
+[v SPI_Exchange8bit@data data `uc  1 a 1 wreg ]
+"91
+[v SPI_Exchange8bit@data data `uc  1 a 1 0 ]
+"101
+} 0
+"79 C:\Users\armstrongsubero\Desktop\PIC16F1718\47_NRF24L01.X\main.c
+[v _CSN_L CSN_L `T(v  1 s 1 CSN_L ]
+{
+} 0
+"330
+[v _make_cmd5 make_cmd5 `(v  1 s 1 make_cmd5 ]
+{
+[v make_cmd5@out out `*.4uc  1 a 1 wreg ]
+"334
+[v make_cmd5@i i `uc  1 a 1 5 ]
+"330
+[v make_cmd5@out out `*.4uc  1 a 1 wreg ]
+[v make_cmd5@s s `*.25DCuc  1 p 2 0 ]
+"333
+[v make_cmd5@out out `*.4uc  1 a 1 6 ]
+"335
+} 0
+"269
+[v _initMain initMain `(v  1 s 1 initMain ]
+{
+"306
+} 0
+"36 C:\Users\armstrongsubero\Desktop\PIC16F1718\47_NRF24L01.X\PIC16F1718_Internal.c
+[v _internal_32 internal_32 `(v  1 e 1 0 ]
+{
+"49
+} 0
+"78 C:\Users\armstrongsubero\Desktop\PIC16F1718\47_NRF24L01.X\main.c
+[v _CSN_H CSN_H `T(v  1 s 1 CSN_H ]
+{
+} 0
+"77
+[v _CE_L CE_L `T(v  1 s 1 CE_L ]
+{
+} 0
+"311
+[v _button_pressed_event button_pressed_event `(uc  1 s 1 button_pressed_event ]
+{
+"314
+[v button_pressed_event@now now `uc  1 a 1 1 ]
+"313
+[v button_pressed_event@last last `uc  1 s 1 last ]
+"327
+} 0
+"52 C:\Users\armstrongsubero\Desktop\PIC16F1718\47_NRF24L01.X\SPI.c
+[v _SPI_Initialize SPI_Initialize `(v  1 e 1 0 ]
+{
+"67
+} 0
+"185 C:\Users\armstrongsubero\Desktop\PIC16F1718\47_NRF24L01.X\EUSART.c
+[v _EUSART_Write_Integer EUSART_Write_Integer `(v  1 e 1 0 ]
+{
+"187
+[v EUSART_Write_Integer@buffer buffer `[20]uc  1 a 20 7 ]
+"193
+[v EUSART_Write_Integer@temp_ptr temp_ptr `*.4uc  1 a 1 28 ]
+"188
+[v EUSART_Write_Integer@ptr ptr `*.4uc  1 a 1 27 ]
+"185
+[v EUSART_Write_Integer@value_to_send value_to_send `i  1 p 2 11 ]
+"197
+} 0
+"149
+[v _itoa itoa `(v  1 e 1 0 ]
+{
+[v itoa@buf buf `*.4*.4uc  1 a 1 wreg ]
+"167
+[v itoa@num num `i  1 a 2 0 ]
+"151
+[v itoa@div div `i  1 a 2 5 ]
+"158
+[v itoa@temp temp `i  1 a 2 2 ]
+"149
+[v itoa@buf buf `*.4*.4uc  1 a 1 wreg ]
+[v itoa@d d `i  1 p 2 9 ]
+"151
+[v itoa@buf buf `*.4*.4uc  1 a 1 4 ]
+"173
+} 0
+"15 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"10
+[v ___awmod@sign sign `uc  1 a 1 6 ]
+[v ___awmod@counter counter `uc  1 a 1 5 ]
+"5
+[v ___awmod@divisor divisor `i  1 p 2 0 ]
+[v ___awmod@dividend dividend `i  1 p 2 2 ]
+"34
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 7 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 6 ]
+[v ___awdiv@counter counter `uc  1 a 1 5 ]
+"5
+[v ___awdiv@divisor divisor `i  1 p 2 0 ]
+[v ___awdiv@dividend dividend `i  1 p 2 2 ]
+"41
+} 0
+"108 C:\Users\armstrongsubero\Desktop\PIC16F1718\47_NRF24L01.X\EUSART.c
+[v _EUSART_Write EUSART_Write `(v  1 e 1 0 ]
+{
+[v EUSART_Write@txData txData `uc  1 a 1 wreg ]
+[v EUSART_Write@txData txData `uc  1 a 1 wreg ]
+[v EUSART_Write@txData txData `uc  1 a 1 0 ]
+"115
+} 0
+"36
+[v _EUSART_Initialize EUSART_Initialize `(uc  1 e 1 0 ]
+{
+"38
+[v EUSART_Initialize@x x `ui  1 a 2 9 ]
+"36
+[v EUSART_Initialize@baudrate baudrate `DCl  1 p 4 6 ]
+"50
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+{
+"10
+[v ___aldiv@quotient quotient `l  1 a 4 2 ]
+"11
+[v ___aldiv@sign sign `uc  1 a 1 1 ]
+[v ___aldiv@counter counter `uc  1 a 1 0 ]
+"5
+[v ___aldiv@divisor divisor `l  1 p 4 0 ]
+[v ___aldiv@dividend dividend `l  1 p 4 4 ]
+"41
+} 0

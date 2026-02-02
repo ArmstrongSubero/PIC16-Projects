@@ -1,0 +1,832 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1718 ]
+[d frameptr 6 ]
+"464 C:\Users\armstrongsubero\Desktop\PIC16F1718\36_SD_Card_FAT32.X\pff.c
+[e E101 . `uc
+RES_OK 0
+RES_ERROR 1
+RES_NOTRDY 2
+RES_PARERR 3
+]
+"514
+[e E71 . `uc
+FR_OK 0
+FR_DISK_ERR 1
+FR_NOT_READY 2
+FR_NO_FILE 3
+FR_NOT_OPENED 4
+FR_NOT_ENABLED 5
+FR_NO_FILESYSTEM 6
+]
+"145 C:\Users\armstrongsubero\Desktop\PIC16F1718\36_SD_Card_FAT32.X\diskio.c
+[e E5348 . `uc
+RES_OK 0
+RES_ERROR 1
+RES_NOTRDY 2
+RES_PARERR 3
+]
+"111 C:\Users\armstrongsubero\Desktop\PIC16F1718\36_SD_Card_FAT32.X\main.c
+[e E6100 . `uc
+FR_OK 0
+FR_DISK_ERR 1
+FR_NOT_READY 2
+FR_NO_FILE 3
+FR_NOT_OPENED 4
+FR_NOT_ENABLED 5
+FR_NO_FILESYSTEM 6
+]
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"3 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\memset.c
+[v _memset memset `(*.5v  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"13 C:\Users\armstrongsubero\Desktop\PIC16F1718\36_SD_Card_FAT32.X\diskio.c
+[v _xfer_spi xfer_spi `T(uc  1 s 1 xfer_spi ]
+"18
+[v _xmit_spi xmit_spi `(v  1 s 1 xmit_spi ]
+"23
+[v _rcv_spi rcv_spi `(uc  1 s 1 rcv_spi ]
+"29
+[v _dly_100us dly_100us `(v  1 s 1 dly_100us ]
+"53
+[v _send_cmd_raw send_cmd_raw `(uc  1 s 1 send_cmd_raw ]
+"79
+[v _send_cmd send_cmd `(uc  1 s 1 send_cmd ]
+"93
+[v _disk_initialize disk_initialize `(uc  1 e 1 0 ]
+"145
+[v _disk_readp disk_readp `(E101  1 e 1 0 ]
+"186
+[v _disk_writep disk_writep `(E101  1 e 1 0 ]
+"36 C:\Users\armstrongsubero\Desktop\PIC16F1718\36_SD_Card_FAT32.X\EUSART.c
+[v _EUSART_Initialize EUSART_Initialize `(uc  1 e 1 0 ]
+"62
+[v _EUSART_Read EUSART_Read `(uc  1 e 1 0 ]
+"108
+[v _EUSART_Write EUSART_Write `(v  1 e 1 0 ]
+"127
+[v _EUSART_Write_Text EUSART_Write_Text `(v  1 e 1 0 ]
+"149
+[v _itoa itoa `(v  1 e 1 0 ]
+"47 C:\Users\armstrongsubero\Desktop\PIC16F1718\36_SD_Card_FAT32.X\main.c
+[v _initMain initMain `(v  1 s 1 initMain ]
+"108
+[v _write_test write_test `(v  1 s 1 write_test ]
+"157
+[v _main main `(v  1 e 1 0 ]
+"384 C:\Users\armstrongsubero\Desktop\PIC16F1718\36_SD_Card_FAT32.X\pff.c
+[v _ld_word ld_word `(us  1 s 2 ld_word ]
+"393
+[v _ld_dword ld_dword `(ul  1 s 4 ld_dword ]
+"411
+[v _mem_set mem_set `(v  1 s 1 mem_set ]
+"417
+[v _mem_cmp mem_cmp `(i  1 s 2 mem_cmp ]
+"430
+[v _get_fat get_fat `(ul  1 s 4 get_fat ]
+"479
+[v _clust2sect clust2sect `(ul  1 s 4 clust2sect ]
+"492
+[v _get_clust get_clust `(ul  1 s 4 get_clust ]
+"514
+[v _dir_rewind dir_rewind `(E71  1 s 1 dir_rewind ]
+"543
+[v _dir_next dir_next `(E71  1 s 1 dir_next ]
+"584
+[v _dir_find dir_find `(E71  1 s 1 dir_find ]
+"651
+[v _create_name create_name `(E71  1 s 1 create_name ]
+"742
+[v _follow_path follow_path `(E71  1 s 1 follow_path ]
+"783
+[v _check_fs check_fs `(uc  1 s 1 check_fs ]
+"819
+[v _pf_mount pf_mount `(E71  1 e 1 0 ]
+"894
+[v _pf_open pf_open `(E71  1 e 1 0 ]
+"985
+[v _pf_write pf_write `(E71  1 e 1 0 ]
+"1055
+[v _pf_lseek pf_lseek `(E71  1 e 1 0 ]
+"36 C:\Users\armstrongsubero\Desktop\PIC16F1718\36_SD_Card_FAT32.X\PIC16F1718_Internal.c
+[v _internal_32 internal_32 `(v  1 e 1 0 ]
+"52 C:\Users\armstrongsubero\Desktop\PIC16F1718\36_SD_Card_FAT32.X\SPI.c
+[v _SPI_Initialize SPI_Initialize `(v  1 e 1 0 ]
+"86
+[v _SPI_Exchange8bit SPI_Exchange8bit `(uc  1 e 1 0 ]
+[s S50 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSP1IF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 TMR1GIF 1 0 :1:7 
+]
+"653 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc\pic16f1718.h
+[u S59 . 1 `S50 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES59  1 e 1 @17 ]
+[s S715 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"1210
+[u S724 . 1 `S715 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES724  1 e 1 @141 ]
+[s S593 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"1272
+[u S602 . 1 `S593 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES602  1 e 1 @142 ]
+[s S572 . 1 `uc 1 LATC0 1 0 :1:0 
+`uc 1 LATC1 1 0 :1:1 
+`uc 1 LATC2 1 0 :1:2 
+`uc 1 LATC3 1 0 :1:3 
+`uc 1 LATC4 1 0 :1:4 
+`uc 1 LATC5 1 0 :1:5 
+`uc 1 LATC6 1 0 :1:6 
+`uc 1 LATC7 1 0 :1:7 
+]
+"2273
+[u S581 . 1 `S572 1 . 1 0 ]
+[v _LATCbits LATCbits `VES581  1 e 1 @270 ]
+[s S698 . 1 `uc 1 ANSB0 1 0 :1:0 
+`uc 1 ANSB1 1 0 :1:1 
+`uc 1 ANSB2 1 0 :1:2 
+`uc 1 ANSB3 1 0 :1:3 
+`uc 1 ANSB4 1 0 :1:4 
+`uc 1 ANSB5 1 0 :1:5 
+]
+"3617
+[u S705 . 1 `S698 1 . 1 0 ]
+[v _ANSELBbits ANSELBbits `VES705  1 e 1 @397 ]
+[s S736 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 ANSC2 1 0 :1:2 
+`uc 1 ANSC3 1 0 :1:3 
+`uc 1 ANSC4 1 0 :1:4 
+`uc 1 ANSC5 1 0 :1:5 
+`uc 1 ANSC6 1 0 :1:6 
+`uc 1 ANSC7 1 0 :1:7 
+]
+"3668
+[u S744 . 1 `S736 1 . 1 0 ]
+[v _ANSELCbits ANSELCbits `VES744  1 e 1 @398 ]
+"3894
+[v _RC1REG RC1REG `VEuc  1 e 1 @409 ]
+"3948
+[v _TX1REG TX1REG `VEuc  1 e 1 @410 ]
+"4023
+[v _SPBRGL SPBRGL `VEuc  1 e 1 @411 ]
+[s S29 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"4148
+[u S38 . 1 `S29 1 . 1 0 ]
+[v _RC1STAbits RC1STAbits `VES38  1 e 1 @413 ]
+"4940
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @529 ]
+"5189
+[v _SSP1ADD SSP1ADD `VEuc  1 e 1 @530 ]
+"5697
+[v _SSP1STAT SSP1STAT `VEuc  1 e 1 @532 ]
+[s S161 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+"5719
+[u S170 . 1 `S161 1 . 1 0 ]
+[v _SSP1STATbits SSP1STATbits `VES170  1 e 1 @532 ]
+"5819
+[v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @533 ]
+[s S134 . 1 `uc 1 SSPM 1 0 :4:0 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"5852
+[s S140 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+]
+[u S145 . 1 `S134 1 . 1 0 `S140 1 . 1 0 ]
+[v _SSP1CON1bits SSP1CON1bits `VES145  1 e 1 @533 ]
+"10119
+[v _PPSLOCK PPSLOCK `VEuc  1 e 1 @3599 ]
+[s S780 . 1 `uc 1 PPSLOCKED 1 0 :1:0 
+]
+"10129
+[u S782 . 1 `S780 1 . 1 0 ]
+[v _PPSLOCKbits PPSLOCKbits `VES782  1 e 1 @3599 ]
+[s S801 . 1 `uc 1 SSPDATPPS 1 0 :5:0 
+]
+"10309
+[u S803 . 1 `S801 1 . 1 0 ]
+[v _SSPDATPPSbits SSPDATPPSbits `VES803  1 e 1 @3617 ]
+[s S794 . 1 `uc 1 RXPPS 1 0 :5:0 
+]
+"10349
+[u S796 . 1 `S794 1 . 1 0 ]
+[v _RXPPSbits RXPPSbits `VES796  1 e 1 @3620 ]
+[s S787 . 1 `uc 1 RB2PPS 1 0 :5:0 
+]
+"10669
+[u S789 . 1 `S787 1 . 1 0 ]
+[v _RB2PPSbits RB2PPSbits `VES789  1 e 1 @3738 ]
+[s S808 . 1 `uc 1 RC3PPS 1 0 :5:0 
+]
+"10849
+[u S810 . 1 `S808 1 . 1 0 ]
+[v _RC3PPSbits RC3PPSbits `VES810  1 e 1 @3747 ]
+[s S815 . 1 `uc 1 RC5PPS 1 0 :5:0 
+]
+"10889
+[u S817 . 1 `S815 1 . 1 0 ]
+[v _RC5PPSbits RC5PPSbits `VES817  1 e 1 @3749 ]
+"15443
+[v _BRG16 BRG16 `VEb  1 e 0 @3323 ]
+"15446
+[v _BRGH BRGH `VEb  1 e 0 @3314 ]
+"15713
+[v _CREN CREN `VEb  1 e 0 @3308 ]
+"16499
+[v _IRCF0 IRCF0 `VEb  1 e 0 @1227 ]
+"16502
+[v _IRCF1 IRCF1 `VEb  1 e 0 @1228 ]
+"16505
+[v _IRCF2 IRCF2 `VEb  1 e 0 @1229 ]
+"16508
+[v _IRCF3 IRCF3 `VEb  1 e 0 @1230 ]
+"17972
+[v _SCS0 SCS0 `VEb  1 e 0 @1224 ]
+"17975
+[v _SCS1 SCS1 `VEb  1 e 0 @1225 ]
+"18065
+[v _SPEN SPEN `VEb  1 e 0 @3311 ]
+"18068
+[v _SPLLEN SPLLEN `VEb  1 e 0 @1231 ]
+"18179
+[v _SYNC SYNC `VEb  1 e 0 @3316 ]
+"18461
+[v _TXEN TXEN `VEb  1 e 0 @3317 ]
+"46 C:\Users\armstrongsubero\Desktop\PIC16F1718\36_SD_Card_FAT32.X\diskio.c
+[v _CardType CardType `uc  1 s 1 CardType ]
+[s S208 . 42 `uc 1 fs_type 1 0 `uc 1 flag 1 1 `uc 1 csize 1 2 `uc 1 pad1 1 3 `us 1 n_rootdir 2 4 `ul 1 n_fatent 4 6 `ul 1 fatbase 4 10 `ul 1 dirbase 4 14 `ul 1 database 4 18 `ul 1 fptr 4 22 `ul 1 fsize 4 26 `ul 1 org_clust 4 30 `ul 1 curr_clust 4 34 `ul 1 dsect 4 38 ]
+"41 C:\Users\armstrongsubero\Desktop\PIC16F1718\36_SD_Card_FAT32.X\main.c
+[v _fs fs `S208  1 e 42 0 ]
+"377 C:\Users\armstrongsubero\Desktop\PIC16F1718\36_SD_Card_FAT32.X\pff.c
+[v _FatFs FatFs `*.5S208  1 s 1 FatFs ]
+"157 C:\Users\armstrongsubero\Desktop\PIC16F1718\36_SD_Card_FAT32.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"180
+} 0
+"108
+[v _write_test write_test `(v  1 s 1 write_test ]
+{
+"135
+[v write_test@pad pad `[32]uc  1 a 32 0 ]
+"136
+[v write_test@chunk chunk `ui  1 a 2 32 ]
+"110
+[v write_test@bw bw `ui  1 a 2 37 ]
+"114
+[v write_test@total total `ui  1 a 2 34 ]
+"111
+[v write_test@fr fr `E6100  1 a 1 36 ]
+"113
+[v write_test@msg msg `DC[25]uc  1 s 25 msg ]
+"151
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+{
+"7
+[v strlen@a a `*.25DCuc  1 a 2 3 ]
+"5
+[v strlen@s s `*.25DCuc  1 p 2 0 ]
+"12
+} 0
+"985 C:\Users\armstrongsubero\Desktop\PIC16F1718\36_SD_Card_FAT32.X\pff.c
+[v _pf_write pf_write `(E71  1 e 1 0 ]
+{
+"991
+[v pf_write@clst clst `ul  1 a 4 69 ]
+"992
+[v pf_write@remain remain `ul  1 a 4 65 ]
+[v pf_write@sect sect `ul  1 a 4 61 ]
+"995
+[v pf_write@wcnt wcnt `ui  1 a 2 74 ]
+"993
+[v pf_write@p p `*.26DCuc  1 a 2 59 ]
+[s S208 . 42 `uc 1 fs_type 1 0 `uc 1 flag 1 1 `uc 1 csize 1 2 `uc 1 pad1 1 3 `us 1 n_rootdir 2 4 `ul 1 n_fatent 4 6 `ul 1 fatbase 4 10 `ul 1 dirbase 4 14 `ul 1 database 4 18 `ul 1 fptr 4 22 `ul 1 fsize 4 26 `ul 1 org_clust 4 30 `ul 1 curr_clust 4 34 `ul 1 dsect 4 38 ]
+"996
+[v pf_write@fs fs `*.5S208  1 a 1 76 ]
+"994
+[v pf_write@cs cs `uc  1 a 1 73 ]
+"986
+[v pf_write@buff buff `*.26DCv  1 p 2 46 ]
+"987
+[v pf_write@btw btw `ui  1 p 2 48 ]
+"988
+[v pf_write@bw bw `*.5ui  1 p 1 50 ]
+"1045
+} 0
+"186 C:\Users\armstrongsubero\Desktop\PIC16F1718\36_SD_Card_FAT32.X\diskio.c
+[v _disk_writep disk_writep `(E101  1 e 1 0 ]
+{
+"215
+[v disk_writep@resp resp `uc  1 a 1 17 ]
+"186
+[v disk_writep@buff buff `*.26DCuc  1 p 2 7 ]
+[v disk_writep@sc sc `ul  1 p 4 9 ]
+"188
+[v disk_writep@wc wc `us  1 s 2 wc ]
+"237
+} 0
+"894 C:\Users\armstrongsubero\Desktop\PIC16F1718\36_SD_Card_FAT32.X\pff.c
+[v _pf_open pf_open `(E71  1 e 1 0 ]
+{
+"900
+[v pf_open@dir dir `[32]uc  1 a 32 0 ]
+[s S236 . 15 `us 1 index 2 0 `*.4uc 1 fn 1 2 `ul 1 sclust 4 3 `ul 1 clust 4 7 `ul 1 sect 4 11 ]
+"899
+[v pf_open@dj dj `S236  1 a 15 46 ]
+"900
+[v pf_open@sp sp `[12]uc  1 a 12 32 ]
+[s S208 . 42 `uc 1 fs_type 1 0 `uc 1 flag 1 1 `uc 1 csize 1 2 `uc 1 pad1 1 3 `us 1 n_rootdir 2 4 `ul 1 n_fatent 4 6 `ul 1 fatbase 4 10 `ul 1 dirbase 4 14 `ul 1 database 4 18 `ul 1 fptr 4 22 `ul 1 fsize 4 26 `ul 1 org_clust 4 30 `ul 1 curr_clust 4 34 `ul 1 dsect 4 38 ]
+"901
+[v pf_open@fs fs `*.5S208  1 a 1 45 ]
+"898
+[v pf_open@res res `E71  1 a 1 44 ]
+"895
+[v pf_open@path path `*.25DCuc  1 p 2 74 ]
+"918
+} 0
+"742
+[v _follow_path follow_path `(E71  1 s 1 follow_path ]
+{
+[s S236 . 15 `us 1 index 2 0 `*.4uc 1 fn 1 2 `ul 1 sclust 4 3 `ul 1 clust 4 7 `ul 1 sect 4 11 ]
+"743
+[v follow_path@dj dj `*.4S236  1 a 1 wreg ]
+"748
+[v follow_path@res res `E71  1 a 1 72 ]
+"743
+[v follow_path@dj dj `*.4S236  1 a 1 wreg ]
+"744
+[v follow_path@dir dir `*.4uc  1 p 1 68 ]
+"745
+[v follow_path@path path `*.25DCuc  1 p 2 69 ]
+"742
+"743
+[v follow_path@dj dj `*.4S236  1 a 1 73 ]
+"774
+} 0
+"492
+[v _get_clust get_clust `(ul  1 s 4 get_clust ]
+{
+"493
+[v get_clust@dir dir `*.4uc  1 a 1 wreg ]
+"497
+[v get_clust@clst clst `ul  1 a 4 4 ]
+"493
+[v get_clust@dir dir `*.4uc  1 a 1 wreg ]
+"497
+[v get_clust@dir dir `*.4uc  1 a 1 8 ]
+"507
+} 0
+"584
+[v _dir_find dir_find `(E71  1 s 1 dir_find ]
+{
+[s S236 . 15 `us 1 index 2 0 `*.4uc 1 fn 1 2 `ul 1 sclust 4 3 `ul 1 clust 4 7 `ul 1 sect 4 11 ]
+"585
+[v dir_find@dj dj `*.4S236  1 a 1 wreg ]
+"589
+[v dir_find@res res `E71  1 a 1 67 ]
+"590
+[v dir_find@c c `uc  1 a 1 65 ]
+"585
+[v dir_find@dj dj `*.4S236  1 a 1 wreg ]
+"586
+[v dir_find@dir dir `*.4uc  1 p 1 60 ]
+"593
+"585
+[v dir_find@dj dj `*.4S236  1 a 1 66 ]
+"607
+} 0
+"417
+[v _mem_cmp mem_cmp `(i  1 s 2 mem_cmp ]
+{
+[v mem_cmp@dst dst `*.4DCv  1 a 1 wreg ]
+"419
+[v mem_cmp@r r `i  1 a 2 3 ]
+"418
+[v mem_cmp@s s `*.4DCuc  1 a 1 6 ]
+[v mem_cmp@d d `*.4DCuc  1 a 1 5 ]
+"417
+[v mem_cmp@dst dst `*.4DCv  1 a 1 wreg ]
+[v mem_cmp@src src `*.4DCv  1 p 1 0 ]
+[v mem_cmp@cnt cnt `i  1 p 2 1 ]
+[v mem_cmp@dst dst `*.4DCv  1 a 1 7 ]
+"422
+} 0
+"514
+[v _dir_rewind dir_rewind `(E71  1 s 1 dir_rewind ]
+{
+[s S236 . 15 `us 1 index 2 0 `*.4uc 1 fn 1 2 `ul 1 sclust 4 3 `ul 1 clust 4 7 `ul 1 sect 4 11 ]
+"515
+[v dir_rewind@dj dj `*.4S236  1 a 1 wreg ]
+"518
+[v dir_rewind@clst clst `ul  1 a 4 22 ]
+[s S208 . 42 `uc 1 fs_type 1 0 `uc 1 flag 1 1 `uc 1 csize 1 2 `uc 1 pad1 1 3 `us 1 n_rootdir 2 4 `ul 1 n_fatent 4 6 `ul 1 fatbase 4 10 `ul 1 dirbase 4 14 `ul 1 database 4 18 `ul 1 fptr 4 22 `ul 1 fsize 4 26 `ul 1 org_clust 4 30 `ul 1 curr_clust 4 34 `ul 1 dsect 4 38 ]
+"519
+[v dir_rewind@fs fs `*.5S208  1 a 1 20 ]
+"515
+[v dir_rewind@dj dj `*.4S236  1 a 1 wreg ]
+"519
+"515
+[v dir_rewind@dj dj `*.4S236  1 a 1 21 ]
+"534
+} 0
+"543
+[v _dir_next dir_next `(E71  1 s 1 dir_next ]
+{
+[s S236 . 15 `us 1 index 2 0 `*.4uc 1 fn 1 2 `ul 1 sclust 4 3 `ul 1 clust 4 7 `ul 1 sect 4 11 ]
+"544
+[v dir_next@dj dj `*.4S236  1 a 1 wreg ]
+"547
+[v dir_next@clst clst `ul  1 a 4 53 ]
+"548
+[v dir_next@i i `us  1 a 2 57 ]
+[s S208 . 42 `uc 1 fs_type 1 0 `uc 1 flag 1 1 `uc 1 csize 1 2 `uc 1 pad1 1 3 `us 1 n_rootdir 2 4 `ul 1 n_fatent 4 6 `ul 1 fatbase 4 10 `ul 1 dirbase 4 14 `ul 1 database 4 18 `ul 1 fptr 4 22 `ul 1 fsize 4 26 `ul 1 org_clust 4 30 `ul 1 curr_clust 4 34 `ul 1 dsect 4 38 ]
+"549
+[v dir_next@fs fs `*.5S208  1 a 1 52 ]
+"544
+[v dir_next@dj dj `*.4S236  1 a 1 wreg ]
+"549
+"544
+[v dir_next@dj dj `*.4S236  1 a 1 59 ]
+"575
+} 0
+"651
+[v _create_name create_name `(E71  1 s 1 create_name ]
+{
+[s S236 . 15 `us 1 index 2 0 `*.4uc 1 fn 1 2 `ul 1 sclust 4 3 `ul 1 clust 4 7 `ul 1 sect 4 11 ]
+"652
+[v create_name@dj dj `*.4S236  1 a 1 wreg ]
+"657
+[v create_name@p p `*.25DCuc  1 a 2 1 ]
+"656
+[v create_name@c c `uc  1 a 1 7 ]
+[v create_name@i i `uc  1 a 1 6 ]
+[v create_name@sfn sfn `*.4uc  1 a 1 5 ]
+[v create_name@si si `uc  1 a 1 4 ]
+[v create_name@ni ni `uc  1 a 1 3 ]
+"652
+[v create_name@dj dj `*.4S236  1 a 1 wreg ]
+"653
+[v create_name@path path `*.4*.25DCuc  1 p 1 7 ]
+"663
+"652
+[v create_name@dj dj `*.4S236  1 a 1 0 ]
+"692
+} 0
+"411
+[v _mem_set mem_set `(v  1 s 1 mem_set ]
+{
+[v mem_set@dst dst `*.4v  1 a 1 wreg ]
+"412
+[v mem_set@d d `*.4uc  1 a 1 6 ]
+"411
+[v mem_set@dst dst `*.4v  1 a 1 wreg ]
+[v mem_set@val val `i  1 p 2 0 ]
+[v mem_set@cnt cnt `i  1 p 2 2 ]
+[v mem_set@dst dst `*.4v  1 a 1 5 ]
+"414
+} 0
+"1055
+[v _pf_lseek pf_lseek `(E71  1 e 1 0 ]
+{
+"1059
+[v pf_lseek@clst clst `ul  1 a 4 12 ]
+"1060
+[v pf_lseek@bcs bcs `ul  1 a 4 8 ]
+[v pf_lseek@ifptr ifptr `ul  1 a 4 4 ]
+[v pf_lseek@sect sect `ul  1 a 4 0 ]
+[s S208 . 42 `uc 1 fs_type 1 0 `uc 1 flag 1 1 `uc 1 csize 1 2 `uc 1 pad1 1 3 `us 1 n_rootdir 2 4 `ul 1 n_fatent 4 6 `ul 1 fatbase 4 10 `ul 1 dirbase 4 14 `ul 1 database 4 18 `ul 1 fptr 4 22 `ul 1 fsize 4 26 `ul 1 org_clust 4 30 `ul 1 curr_clust 4 34 `ul 1 dsect 4 38 ]
+"1061
+[v pf_lseek@fs fs `*.5S208  1 a 1 16 ]
+"1056
+[v pf_lseek@ofs ofs `ul  1 p 4 46 ]
+"1095
+} 0
+"430
+[v _get_fat get_fat `(ul  1 s 4 get_fat ]
+{
+"434
+[v get_fat@buf buf `[4]uc  1 a 4 41 ]
+[s S208 . 42 `uc 1 fs_type 1 0 `uc 1 flag 1 1 `uc 1 csize 1 2 `uc 1 pad1 1 3 `us 1 n_rootdir 2 4 `ul 1 n_fatent 4 6 `ul 1 fatbase 4 10 `ul 1 dirbase 4 14 `ul 1 database 4 18 `ul 1 fptr 4 22 `ul 1 fsize 4 26 `ul 1 org_clust 4 30 `ul 1 curr_clust 4 34 `ul 1 dsect 4 38 ]
+"435
+[v get_fat@fs fs `*.5S208  1 a 1 45 ]
+"431
+[v get_fat@clst clst `ul  1 p 4 27 ]
+"470
+} 0
+"479
+[v _clust2sect clust2sect `(ul  1 s 4 clust2sect ]
+{
+[s S208 . 42 `uc 1 fs_type 1 0 `uc 1 flag 1 1 `uc 1 csize 1 2 `uc 1 pad1 1 3 `us 1 n_rootdir 2 4 `ul 1 n_fatent 4 6 `ul 1 fatbase 4 10 `ul 1 dirbase 4 14 `ul 1 database 4 18 `ul 1 fptr 4 22 `ul 1 fsize 4 26 `ul 1 org_clust 4 30 `ul 1 curr_clust 4 34 `ul 1 dsect 4 38 ]
+"483
+[v clust2sect@fs fs `*.5S208  1 a 1 12 ]
+"480
+[v clust2sect@clst clst `ul  1 p 4 0 ]
+"489
+} 0
+"3 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\memset.c
+[v _memset memset `(*.5v  1 e 2 0 ]
+{
+[v memset@dest dest `*.5v  1 a 1 wreg ]
+"5
+[v memset@p p `*.5uc  1 a 1 6 ]
+"3
+[v memset@dest dest `*.5v  1 a 1 wreg ]
+[v memset@c c `i  1 p 2 0 ]
+[v memset@n n `ui  1 p 2 2 ]
+"5
+[v memset@dest dest `*.5v  1 a 1 5 ]
+"10
+} 0
+"127 C:\Users\armstrongsubero\Desktop\PIC16F1718\36_SD_Card_FAT32.X\EUSART.c
+[v _EUSART_Write_Text EUSART_Write_Text `(v  1 e 1 0 ]
+{
+"129
+[v EUSART_Write_Text@i i `i  1 a 2 4 ]
+"127
+[v EUSART_Write_Text@text text `*.25uc  1 p 2 1 ]
+"132
+} 0
+"108
+[v _EUSART_Write EUSART_Write `(v  1 e 1 0 ]
+{
+[v EUSART_Write@txData txData `uc  1 a 1 wreg ]
+[v EUSART_Write@txData txData `uc  1 a 1 wreg ]
+[v EUSART_Write@txData txData `uc  1 a 1 0 ]
+"115
+} 0
+"819 C:\Users\armstrongsubero\Desktop\PIC16F1718\36_SD_Card_FAT32.X\pff.c
+[v _pf_mount pf_mount `(E71  1 e 1 0 ]
+{
+[s S208 . 42 `uc 1 fs_type 1 0 `uc 1 flag 1 1 `uc 1 csize 1 2 `uc 1 pad1 1 3 `us 1 n_rootdir 2 4 `ul 1 n_fatent 4 6 `ul 1 fatbase 4 10 `ul 1 dirbase 4 14 `ul 1 database 4 18 `ul 1 fptr 4 22 `ul 1 fsize 4 26 `ul 1 org_clust 4 30 `ul 1 curr_clust 4 34 `ul 1 dsect 4 38 ]
+"820
+[v pf_mount@fs fs `*.5S208  1 a 1 wreg ]
+"823
+[v pf_mount@buf buf `[36]uc  1 a 36 0 ]
+"824
+[v pf_mount@fsize fsize `ul  1 a 4 48 ]
+[v pf_mount@bsect bsect `ul  1 a 4 44 ]
+[v pf_mount@mclst mclst `ul  1 a 4 40 ]
+[v pf_mount@tsect tsect `ul  1 a 4 36 ]
+"823
+[v pf_mount@fmt fmt `uc  1 a 1 52 ]
+"820
+[v pf_mount@fs fs `*.5S208  1 a 1 wreg ]
+"827
+"820
+[v pf_mount@fs fs `*.5S208  1 a 1 53 ]
+"885
+} 0
+"393
+[v _ld_dword ld_dword `(ul  1 s 4 ld_dword ]
+{
+[v ld_dword@ptr ptr `*.4DCuc  1 a 1 wreg ]
+"395
+[v ld_dword@rv rv `ul  1 a 4 0 ]
+"393
+[v ld_dword@ptr ptr `*.4DCuc  1 a 1 wreg ]
+"397
+[v ld_dword@ptr ptr `*.4DCuc  1 a 1 4 ]
+"402
+} 0
+"93 C:\Users\armstrongsubero\Desktop\PIC16F1718\36_SD_Card_FAT32.X\diskio.c
+[v _disk_initialize disk_initialize `(uc  1 e 1 0 ]
+{
+"126
+[v disk_initialize@cmd cmd `uc  1 a 1 14 ]
+"95
+[v disk_initialize@ocr ocr `[4]uc  1 a 4 8 ]
+"96
+[v disk_initialize@tmr tmr `us  1 a 2 16 ]
+"95
+[v disk_initialize@n n `uc  1 a 1 18 ]
+[v disk_initialize@ty ty `uc  1 a 1 15 ]
+"143
+} 0
+"29
+[v _dly_100us dly_100us `(v  1 s 1 dly_100us ]
+{
+"32
+} 0
+"783 C:\Users\armstrongsubero\Desktop\PIC16F1718\36_SD_Card_FAT32.X\pff.c
+[v _check_fs check_fs `(uc  1 s 1 check_fs ]
+{
+"784
+[v check_fs@buf buf `*.4uc  1 a 1 wreg ]
+[v check_fs@buf buf `*.4uc  1 a 1 wreg ]
+"785
+[v check_fs@sect sect `ul  1 p 4 27 ]
+"788
+[v check_fs@buf buf `*.4uc  1 a 1 31 ]
+"802
+} 0
+"384
+[v _ld_word ld_word `(us  1 s 2 ld_word ]
+{
+[v ld_word@ptr ptr `*.4DCuc  1 a 1 wreg ]
+"386
+[v ld_word@rv rv `us  1 a 2 6 ]
+"384
+[v ld_word@ptr ptr `*.4DCuc  1 a 1 wreg ]
+"388
+[v ld_word@ptr ptr `*.4DCuc  1 a 1 8 ]
+"391
+} 0
+"145 C:\Users\armstrongsubero\Desktop\PIC16F1718\36_SD_Card_FAT32.X\diskio.c
+[v _disk_readp disk_readp `(E101  1 e 1 0 ]
+{
+[v disk_readp@buff buff `*.4uc  1 a 1 wreg ]
+"147
+[v disk_readp@i i `us  1 a 2 23 ]
+"150
+[v disk_readp@count0 count0 `ui  1 a 2 21 ]
+"149
+[v disk_readp@offset0 offset0 `ui  1 a 2 19 ]
+"148
+[v disk_readp@token token `uc  1 a 1 25 ]
+"145
+[v disk_readp@buff buff `*.4uc  1 a 1 wreg ]
+[v disk_readp@sector sector `ul  1 p 4 7 ]
+[v disk_readp@offset offset `ui  1 p 2 11 ]
+[v disk_readp@count count `ui  1 p 2 13 ]
+"149
+[v disk_readp@buff buff `*.4uc  1 a 1 26 ]
+"184
+} 0
+"79
+[v _send_cmd send_cmd `(uc  1 s 1 send_cmd ]
+{
+[v send_cmd@cmd cmd `uc  1 a 1 wreg ]
+"81
+[v send_cmd@res res `uc  1 a 1 6 ]
+"79
+[v send_cmd@cmd cmd `uc  1 a 1 wreg ]
+[v send_cmd@arg arg `ul  1 p 4 0 ]
+"83
+[v send_cmd@cmd cmd `uc  1 a 1 5 ]
+"89
+} 0
+"53
+[v _send_cmd_raw send_cmd_raw `(uc  1 s 1 send_cmd_raw ]
+{
+[v send_cmd_raw@cmd cmd `uc  1 a 1 wreg ]
+"55
+[v send_cmd_raw@n n `uc  1 a 1 13 ]
+[v send_cmd_raw@res res `uc  1 a 1 11 ]
+"53
+[v send_cmd_raw@cmd cmd `uc  1 a 1 wreg ]
+[v send_cmd_raw@arg arg `ul  1 p 4 3 ]
+"58
+[v send_cmd_raw@cmd cmd `uc  1 a 1 12 ]
+"77
+} 0
+"18
+[v _xmit_spi xmit_spi `(v  1 s 1 xmit_spi ]
+{
+[v xmit_spi@d d `uc  1 a 1 wreg ]
+[v xmit_spi@d d `uc  1 a 1 wreg ]
+"20
+[v xmit_spi@d d `uc  1 a 1 2 ]
+"21
+} 0
+"23
+[v _rcv_spi rcv_spi `(uc  1 s 1 rcv_spi ]
+{
+"26
+} 0
+"13
+[v _xfer_spi xfer_spi `T(uc  1 s 1 xfer_spi ]
+{
+[v xfer_spi@d d `uc  1 a 1 wreg ]
+[v xfer_spi@d d `uc  1 a 1 wreg ]
+"15
+[v xfer_spi@d d `uc  1 a 1 1 ]
+"16
+} 0
+"86 C:\Users\armstrongsubero\Desktop\PIC16F1718\36_SD_Card_FAT32.X\SPI.c
+[v _SPI_Exchange8bit SPI_Exchange8bit `(uc  1 e 1 0 ]
+{
+[v SPI_Exchange8bit@data data `uc  1 a 1 wreg ]
+[v SPI_Exchange8bit@data data `uc  1 a 1 wreg ]
+"89
+[v SPI_Exchange8bit@data data `uc  1 a 1 0 ]
+"101
+} 0
+"15 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+{
+"17
+[v ___lmul@product product `ul  1 a 4 8 ]
+"15
+[v ___lmul@multiplier multiplier `ul  1 p 4 0 ]
+[v ___lmul@multiplicand multiplicand `ul  1 p 4 4 ]
+"129
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+{
+"10
+[v ___lldiv@quotient quotient `ul  1 a 4 8 ]
+"11
+[v ___lldiv@counter counter `uc  1 a 1 12 ]
+"5
+[v ___lldiv@divisor divisor `ul  1 p 4 0 ]
+[v ___lldiv@dividend dividend `ul  1 p 4 4 ]
+"30
+} 0
+"47 C:\Users\armstrongsubero\Desktop\PIC16F1718\36_SD_Card_FAT32.X\main.c
+[v _initMain initMain `(v  1 s 1 initMain ]
+{
+"105
+} 0
+"36 C:\Users\armstrongsubero\Desktop\PIC16F1718\36_SD_Card_FAT32.X\PIC16F1718_Internal.c
+[v _internal_32 internal_32 `(v  1 e 1 0 ]
+{
+"49
+} 0
+"52 C:\Users\armstrongsubero\Desktop\PIC16F1718\36_SD_Card_FAT32.X\SPI.c
+[v _SPI_Initialize SPI_Initialize `(v  1 e 1 0 ]
+{
+"67
+} 0
+"36 C:\Users\armstrongsubero\Desktop\PIC16F1718\36_SD_Card_FAT32.X\EUSART.c
+[v _EUSART_Initialize EUSART_Initialize `(uc  1 e 1 0 ]
+{
+"38
+[v EUSART_Initialize@x x `ui  1 a 2 9 ]
+"36
+[v EUSART_Initialize@baudrate baudrate `DCl  1 p 4 6 ]
+"50
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+{
+"10
+[v ___aldiv@quotient quotient `l  1 a 4 2 ]
+"11
+[v ___aldiv@sign sign `uc  1 a 1 1 ]
+[v ___aldiv@counter counter `uc  1 a 1 0 ]
+"5
+[v ___aldiv@divisor divisor `l  1 p 4 0 ]
+[v ___aldiv@dividend dividend `l  1 p 4 4 ]
+"41
+} 0

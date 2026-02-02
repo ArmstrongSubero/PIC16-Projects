@@ -6,17 +6,18 @@
  * Compiler: XC8 (v2.45, MPLAX X v6.15)
  * Program Version: 1.2
  *                
- * Program Description: This Program Allows PIC16F1719 to Turn on an LED
+ * Program Description: This Program Allows PIC16F1718 to Turn on an LED
  * 
- * Hardware Description: An LED is connected via a 1K resistor to PIN D1
+ * Hardware Description: An LED is connected via a 1K resistor to PIN C3
  *                       
  * Created November 4th, 2016, 1:00 PM
- * Last Updated: November 17th, 2023, 10:00 PM
+ * Updated on Thursday 25th, December, 2025, 12:04 AM
  */
 
 /*******************************************************************************
  Change History:
  Revision     Description
+ v1.3         Updated to MPLABX v6.20 using XC8 v2.46 for PIC16F1718
  v1.2         Updated and recompiled with MPLABX v6.15 using XC8 v2.45
  v1.1         Changed from PIC16F1717 to PIC16F1719 and recompiled with
               MPLABX v5.15 using v2.05 of the XC8 compiler
@@ -25,8 +26,7 @@
 /*******************************************************************************
  *Includes and defines
  ******************************************************************************/
-
-#include "PIC16F1719_Internal.h"
+#include "PIC16F1718_Internal.h"
 
 
 /*******************************************************************************
@@ -43,8 +43,11 @@ void initMain(){
     // Run at 32 MHz
     internal_32();
     
-    // Set PIN D1 as output
-    TRISDbits.TRISD1 = 0;
+    // PLL Stabilization 
+    __delay_ms(100);
+     
+    // Set PIN C3 as output
+    TRISCbits.TRISC3 = 0;
 }
 
 /*******************************************************************************
@@ -59,8 +62,8 @@ void main(void) {
     initMain();
     
     while(1){
-        // Toggle PIND1
-        LATDbits.LATD1 = !LATDbits.LATD1;
+        // Toggle PINC3
+        LATCbits.LATC3 = !LATCbits.LATC3;
         
         // Delay 500 milliseconds
         __delay_ms(500);

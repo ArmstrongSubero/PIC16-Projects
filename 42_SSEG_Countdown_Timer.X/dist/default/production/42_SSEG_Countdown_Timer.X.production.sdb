@@ -1,0 +1,273 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1718 ]
+[d frameptr 6 ]
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"49 C:\Users\armstrongsubero\Desktop\PIC16F1718\42_SSEG_Countdown_Timer.X\main.c
+[v _seg seg `(uc  1 e 1 0 ]
+"67
+[v _updateDigits updateDigits `(v  1 e 1 0 ]
+"86
+[v _pressed_edge_active_low pressed_edge_active_low `(uc  1 s 1 pressed_edge_active_low ]
+"95
+[v _accel_interval_ms accel_interval_ms `(us  1 s 2 accel_interval_ms ]
+"106
+[v _hold_button_action hold_button_action `(uc  1 s 1 hold_button_action ]
+"152
+[v _initMain initMain `(v  1 e 1 0 ]
+"198
+[v _isr isr `II(v  1 e 1 0 ]
+"228
+[v _main main `(v  1 e 1 0 ]
+"36 C:\Users\armstrongsubero\Desktop\PIC16F1718\42_SSEG_Countdown_Timer.X\PIC16F1718_Internal.c
+[v _internal_32 internal_32 `(v  1 e 1 0 ]
+[s S188 . 1 `uc 1 IOCIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 IOCIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"374 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc\pic16f1718.h
+[s S197 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S202 . 1 `S188 1 . 1 0 `S197 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES202  1 e 1 @11 ]
+[s S220 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+`uc 1 RA6 1 0 :1:6 
+`uc 1 RA7 1 0 :1:7 
+]
+"446
+[u S229 . 1 `S220 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES229  1 e 1 @12 ]
+[s S146 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSP1IF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 TMR1GIF 1 0 :1:7 
+]
+"653
+[u S155 . 1 `S146 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES155  1 e 1 @17 ]
+"1020
+[v _TMR2 TMR2 `VEuc  1 e 1 @26 ]
+"1040
+[v _PR2 PR2 `VEuc  1 e 1 @27 ]
+[s S116 . 1 `uc 1 T2CKPS 1 0 :2:0 
+`uc 1 TMR2ON 1 0 :1:2 
+`uc 1 T2OUTPS 1 0 :4:3 
+]
+"1081
+[s S120 . 1 `uc 1 T2CKPS0 1 0 :1:0 
+`uc 1 T2CKPS1 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 T2OUTPS0 1 0 :1:3 
+`uc 1 T2OUTPS1 1 0 :1:4 
+`uc 1 T2OUTPS2 1 0 :1:5 
+`uc 1 T2OUTPS3 1 0 :1:6 
+]
+[u S128 . 1 `S116 1 . 1 0 `S120 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES128  1 e 1 @28 ]
+[s S95 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+`uc 1 TRISA6 1 0 :1:6 
+`uc 1 TRISA7 1 0 :1:7 
+]
+"1148
+[u S104 . 1 `S95 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES104  1 e 1 @140 ]
+[s S53 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"1210
+[u S62 . 1 `S53 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES62  1 e 1 @141 ]
+"1255
+[v _TRISC TRISC `VEuc  1 e 1 @142 ]
+[s S167 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSP1IE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+`uc 1 TMR1GIE 1 0 :1:7 
+]
+"1355
+[u S176 . 1 `S167 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES176  1 e 1 @145 ]
+[s S74 . 1 `uc 1 LATB0 1 0 :1:0 
+`uc 1 LATB1 1 0 :1:1 
+`uc 1 LATB2 1 0 :1:2 
+`uc 1 LATB3 1 0 :1:3 
+`uc 1 LATB4 1 0 :1:4 
+`uc 1 LATB5 1 0 :1:5 
+`uc 1 LATB6 1 0 :1:6 
+`uc 1 LATB7 1 0 :1:7 
+]
+"2211
+[u S83 . 1 `S74 1 . 1 0 ]
+[v _LATBbits LATBbits `VES83  1 e 1 @269 ]
+"2256
+[v _LATC LATC `VEuc  1 e 1 @270 ]
+"3552
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"3602
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"3652
+[v _ANSELC ANSELC `VEuc  1 e 1 @398 ]
+"16499
+[v _IRCF0 IRCF0 `VEb  1 e 0 @1227 ]
+"16502
+[v _IRCF1 IRCF1 `VEb  1 e 0 @1228 ]
+"16505
+[v _IRCF2 IRCF2 `VEb  1 e 0 @1229 ]
+"16508
+[v _IRCF3 IRCF3 `VEb  1 e 0 @1230 ]
+"17972
+[v _SCS0 SCS0 `VEb  1 e 0 @1224 ]
+"17975
+[v _SCS1 SCS1 `VEb  1 e 0 @1225 ]
+"18068
+[v _SPLLEN SPLLEN `VEb  1 e 0 @1231 ]
+"42 C:\Users\armstrongsubero\Desktop\PIC16F1718\42_SSEG_Countdown_Timer.X\main.c
+[v _displayValue displayValue `VEus  1 e 2 0 ]
+"43
+[v _digits digits `VE[4]uc  1 e 4 0 ]
+"44
+[v _currentDigit currentDigit `VEuc  1 e 1 0 ]
+"228
+[v _main main `(v  1 e 1 0 ]
+{
+[s S36 . 6 `uc 1 prev 1 0 `us 1 hold_ms 2 1 `us 1 repeat_ms 2 3 `uc 1 fired_hold 1 5 ]
+"237
+[v main@decBtn decBtn `S36  1 a 6 18 ]
+"236
+[v main@incBtn incBtn `S36  1 a 6 12 ]
+"241
+[v main@sec_accum_ms sec_accum_ms `us  1 a 2 9 ]
+"233
+[v main@running running `uc  1 a 1 11 ]
+"234
+[v main@prev_start prev_start `uc  1 a 1 8 ]
+[v main@F6065 F6065 `S36  1 s 6 F6065 ]
+"236
+[v main@F6067 F6067 `S36  1 s 6 F6067 ]
+"291
+} 0
+"67
+[v _updateDigits updateDigits `(v  1 e 1 0 ]
+{
+[v updateDigits@value value `us  1 p 2 5 ]
+"73
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwmod@counter counter `uc  1 a 1 4 ]
+"5
+[v ___lwmod@divisor divisor `ui  1 p 2 0 ]
+[v ___lwmod@dividend dividend `ui  1 p 2 2 ]
+"25
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwdiv@quotient quotient `ui  1 a 2 7 ]
+"11
+[v ___lwdiv@counter counter `uc  1 a 1 9 ]
+"5
+[v ___lwdiv@divisor divisor `ui  1 p 2 2 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 4 ]
+"30
+} 0
+"152 C:\Users\armstrongsubero\Desktop\PIC16F1718\42_SSEG_Countdown_Timer.X\main.c
+[v _initMain initMain `(v  1 e 1 0 ]
+{
+"193
+} 0
+"36 C:\Users\armstrongsubero\Desktop\PIC16F1718\42_SSEG_Countdown_Timer.X\PIC16F1718_Internal.c
+[v _internal_32 internal_32 `(v  1 e 1 0 ]
+{
+"49
+} 0
+"106 C:\Users\armstrongsubero\Desktop\PIC16F1718\42_SSEG_Countdown_Timer.X\main.c
+[v _hold_button_action hold_button_action `(uc  1 s 1 hold_button_action ]
+{
+[v hold_button_action@pin_now pin_now `uc  1 a 1 wreg ]
+"128
+[v hold_button_action@interval interval `us  1 a 2 0 ]
+"106
+[v hold_button_action@pin_now pin_now `uc  1 a 1 wreg ]
+[s S36 . 6 `uc 1 prev 1 0 `us 1 hold_ms 2 1 `us 1 repeat_ms 2 3 `uc 1 fired_hold 1 5 ]
+[v hold_button_action@b b `*.4S36  1 p 1 6 ]
+[v hold_button_action@tick_ms tick_ms `us  1 p 2 7 ]
+"109
+[v hold_button_action@pin_now pin_now `uc  1 a 1 2 ]
+"147
+} 0
+"86
+[v _pressed_edge_active_low pressed_edge_active_low `(uc  1 s 1 pressed_edge_active_low ]
+{
+[v pressed_edge_active_low@now now `uc  1 a 1 wreg ]
+"89
+[v pressed_edge_active_low@hit hit `uc  1 a 1 3 ]
+"86
+[v pressed_edge_active_low@now now `uc  1 a 1 wreg ]
+[v pressed_edge_active_low@prev prev `*.4uc  1 p 1 2 ]
+"89
+[v pressed_edge_active_low@now now `uc  1 a 1 5 ]
+"92
+} 0
+"95
+[v _accel_interval_ms accel_interval_ms `(us  1 s 2 accel_interval_ms ]
+{
+[v accel_interval_ms@hold_ms hold_ms `us  1 p 2 2 ]
+"103
+} 0
+"198
+[v _isr isr `II(v  1 e 1 0 ]
+{
+"223
+} 0
+"49
+[v _seg seg `(uc  1 e 1 0 ]
+{
+[v seg@num num `uc  1 a 1 wreg ]
+[v seg@num num `uc  1 a 1 wreg ]
+[v seg@num num `uc  1 a 1 0 ]
+"65
+} 0
