@@ -1,4 +1,4 @@
-> Libraries and Projects for the 8-bit PIC16 Microcontrollers written in C and Assembly
+> Libraries and Projects for the 8-bit PIC16 Microcontrollers written in C and Assembly written by Armstrong Subero
 
 # PIC16 Projects
 
