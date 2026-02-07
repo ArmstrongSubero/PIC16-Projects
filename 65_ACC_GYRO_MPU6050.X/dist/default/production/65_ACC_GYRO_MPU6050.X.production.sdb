@@ -1,0 +1,768 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1718 ]
+[d frameptr 6 ]
+"23 C:\Users\armstrongsubero\Desktop\PIC16F1718\65_ACC_GYRO_MPU6050.X\I2C.c
+[e E6036 . `uc
+I2C_OK 0
+I2C_NAK 1
+I2C_TIMEOUT 2
+I2C_BUS_COLLISION 3
+]
+"98 C:\Users\armstrongsubero\Desktop\PIC16F1718\65_ACC_GYRO_MPU6050.X\main.c
+[e E6043 . `uc
+I2C_OK 0
+I2C_NAK 1
+I2C_TIMEOUT 2
+I2C_BUS_COLLISION 3
+]
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\almod.c
+[v ___almod __almod `(l  1 e 4 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"36 C:\Users\armstrongsubero\Desktop\PIC16F1718\65_ACC_GYRO_MPU6050.X\EUSART.c
+[v _EUSART_Initialize EUSART_Initialize `(uc  1 e 1 0 ]
+"62
+[v _EUSART_Read EUSART_Read `(uc  1 e 1 0 ]
+"108
+[v _EUSART_Write EUSART_Write `(v  1 e 1 0 ]
+"127
+[v _EUSART_Write_Text EUSART_Write_Text `(v  1 e 1 0 ]
+"149
+[v _itoa itoa `(v  1 e 1 0 ]
+"23 C:\Users\armstrongsubero\Desktop\PIC16F1718\65_ACC_GYRO_MPU6050.X\I2C.c
+[v _I2C_WaitIF I2C_WaitIF `(E6036  1 s 1 I2C_WaitIF ]
+"41
+[v _I2C_Init I2C_Init `(v  1 e 1 0 ]
+"62
+[v _I2C_ClearErrors I2C_ClearErrors `(v  1 e 1 0 ]
+"81
+[v _I2C_WaitIdle I2C_WaitIdle `(E6036  1 e 1 0 ]
+"98
+[v _I2C_Start I2C_Start `(E6036  1 e 1 0 ]
+"118
+[v _I2C_RepeatedStart I2C_RepeatedStart `(E6036  1 e 1 0 ]
+"138
+[v _I2C_Stop I2C_Stop `(E6036  1 e 1 0 ]
+"161
+[v _I2C_WriteByte I2C_WriteByte `(E6036  1 e 1 0 ]
+"192
+[v _I2C_ReadByte I2C_ReadByte `(E6036  1 e 1 0 ]
+"60 C:\Users\armstrongsubero\Desktop\PIC16F1718\65_ACC_GYRO_MPU6050.X\main.c
+[v _TMR0_Init TMR0_Init `(v  1 s 1 TMR0_Init ]
+"72
+[v _ISR ISR `II(v  1 e 1 0 ]
+"82
+[v _millis millis `(ul  1 s 4 millis ]
+"95
+[v _i2c_write_bytes i2c_write_bytes `(uc  1 s 1 i2c_write_bytes ]
+"109
+[v _i2c_read_bytes i2c_read_bytes `(uc  1 s 1 i2c_read_bytes ]
+"130
+[v _mpu_write_reg mpu_write_reg `(a  1 s 1 mpu_write_reg ]
+"135
+[v _mpu_read_reg mpu_read_reg `(a  1 s 1 mpu_read_reg ]
+"140
+[v _mpu_read_multi mpu_read_multi `(a  1 s 1 mpu_read_multi ]
+"156
+[v _mpu_frame_sane mpu_frame_sane `(a  1 s 1 mpu_frame_sane ]
+"172
+[v _mpu_read_raw mpu_read_raw `(a  1 s 1 mpu_read_raw ]
+"194
+[v _mpu_wait_data_ready mpu_wait_data_ready `(a  1 s 1 mpu_wait_data_ready ]
+"212
+[v _mpu_init mpu_init `(a  1 s 1 mpu_init ]
+"255
+[v _raw_to_mg raw_to_mg `(l  1 s 4 raw_to_mg ]
+"260
+[v _raw_to_mdps raw_to_mdps `(l  1 s 4 raw_to_mdps ]
+"265
+[v _temp_to_c_x100 temp_to_c_x100 `(l  1 s 4 temp_to_c_x100 ]
+"274
+[v _median3 median3 `(l  1 s 4 median3 ]
+"306
+[v _mpu_calibrate mpu_calibrate `(a  1 s 1 mpu_calibrate ]
+"365
+[v _filter_step filter_step `(v  1 s 1 filter_step ]
+"419
+[v _UART_PrintInt32 UART_PrintInt32 `(v  1 s 1 UART_PrintInt32 ]
+"445
+[v _UART_PrintFixed100 UART_PrintFixed100 `(v  1 s 1 UART_PrintFixed100 ]
+"460
+[v _initMain initMain `(v  1 e 1 0 ]
+"493
+[v _main main `(v  1 e 1 0 ]
+"36 C:\Users\armstrongsubero\Desktop\PIC16F1718\65_ACC_GYRO_MPU6050.X\PIC16F1718_Internal.c
+[v _internal_32 internal_32 `(v  1 e 1 0 ]
+[s S365 . 1 `uc 1 IOCIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 IOCIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"374 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc\pic16f1718.h
+[s S374 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S379 . 1 `S365 1 . 1 0 `S374 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES379  1 e 1 @11 ]
+[s S50 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSP1IF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 TMR1GIF 1 0 :1:7 
+]
+"653
+[u S59 . 1 `S50 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES59  1 e 1 @17 ]
+[s S197 . 1 `uc 1 CCP2IF 1 0 :1:0 
+`uc 1 TMR4IF 1 0 :1:1 
+`uc 1 TMR6IF 1 0 :1:2 
+`uc 1 BCL1IF 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 C1IF 1 0 :1:5 
+`uc 1 C2IF 1 0 :1:6 
+`uc 1 OSFIF 1 0 :1:7 
+]
+"715
+[u S206 . 1 `S197 1 . 1 0 ]
+[v _PIR2bits PIR2bits `VES206  1 e 1 @18 ]
+"811
+[v _TMR0 TMR0 `VEuc  1 e 1 @21 ]
+[s S419 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"1210
+[u S428 . 1 `S419 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES428  1 e 1 @141 ]
+[s S476 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"1272
+[u S485 . 1 `S476 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES485  1 e 1 @142 ]
+[s S332 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 TMR0SE 1 0 :1:4 
+`uc 1 TMR0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nWPUEN 1 0 :1:7 
+]
+"1536
+[s S339 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+]
+[u S346 . 1 `S332 1 . 1 0 `S339 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES346  1 e 1 @149 ]
+[s S440 . 1 `uc 1 ANSB0 1 0 :1:0 
+`uc 1 ANSB1 1 0 :1:1 
+`uc 1 ANSB2 1 0 :1:2 
+`uc 1 ANSB3 1 0 :1:3 
+`uc 1 ANSB4 1 0 :1:4 
+`uc 1 ANSB5 1 0 :1:5 
+]
+"3617
+[u S447 . 1 `S440 1 . 1 0 ]
+[v _ANSELBbits ANSELBbits `VES447  1 e 1 @397 ]
+[s S457 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 ANSC2 1 0 :1:2 
+`uc 1 ANSC3 1 0 :1:3 
+`uc 1 ANSC4 1 0 :1:4 
+`uc 1 ANSC5 1 0 :1:5 
+`uc 1 ANSC6 1 0 :1:6 
+`uc 1 ANSC7 1 0 :1:7 
+]
+"3668
+[u S465 . 1 `S457 1 . 1 0 ]
+[v _ANSELCbits ANSELCbits `VES465  1 e 1 @398 ]
+"3894
+[v _RC1REG RC1REG `VEuc  1 e 1 @409 ]
+"3948
+[v _TX1REG TX1REG `VEuc  1 e 1 @410 ]
+"4023
+[v _SPBRGL SPBRGL `VEuc  1 e 1 @411 ]
+[s S29 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"4148
+[u S38 . 1 `S29 1 . 1 0 ]
+[v _RC1STAbits RC1STAbits `VES38  1 e 1 @413 ]
+"4940
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @529 ]
+"5194
+[v _SSPADD SSPADD `VEuc  1 e 1 @530 ]
+[s S219 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+"5774
+[u S228 . 1 `S219 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES228  1 e 1 @532 ]
+[s S140 . 1 `uc 1 SSPM 1 0 :4:0 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"5915
+[s S146 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+]
+[u S151 . 1 `S140 1 . 1 0 `S146 1 . 1 0 ]
+[v _SSPCONbits SSPCONbits `VES151  1 e 1 @533 ]
+"5977
+[v _SSPCON1bits SSPCON1bits `VES151  1 e 1 @533 ]
+"6094
+[v _SSPCON2 SSPCON2 `VEuc  1 e 1 @534 ]
+[s S240 . 1 `uc 1 SEN 1 0 :1:0 
+`uc 1 RSEN 1 0 :1:1 
+`uc 1 PEN 1 0 :1:2 
+`uc 1 RCEN 1 0 :1:3 
+`uc 1 ACKEN 1 0 :1:4 
+`uc 1 ACKDT 1 0 :1:5 
+`uc 1 ACKSTAT 1 0 :1:6 
+`uc 1 GCEN 1 0 :1:7 
+]
+"6166
+[u S249 . 1 `S240 1 . 1 0 ]
+[v _SSPCON2bits SSPCON2bits `VES249  1 e 1 @534 ]
+"10119
+[v _PPSLOCK PPSLOCK `VEuc  1 e 1 @3599 ]
+[s S498 . 1 `uc 1 PPSLOCKED 1 0 :1:0 
+]
+"10129
+[u S500 . 1 `S498 1 . 1 0 ]
+[v _PPSLOCKbits PPSLOCKbits `VES500  1 e 1 @3599 ]
+[s S533 . 1 `uc 1 SSPCLKPPS 1 0 :5:0 
+]
+"10289
+[u S535 . 1 `S533 1 . 1 0 ]
+[v _SSPCLKPPSbits SSPCLKPPSbits `VES535  1 e 1 @3616 ]
+[s S526 . 1 `uc 1 SSPDATPPS 1 0 :5:0 
+]
+"10309
+[u S528 . 1 `S526 1 . 1 0 ]
+[v _SSPDATPPSbits SSPDATPPSbits `VES528  1 e 1 @3617 ]
+[s S512 . 1 `uc 1 RXPPS 1 0 :5:0 
+]
+"10349
+[u S514 . 1 `S512 1 . 1 0 ]
+[v _RXPPSbits RXPPSbits `VES514  1 e 1 @3620 ]
+[s S505 . 1 `uc 1 RB2PPS 1 0 :5:0 
+]
+"10669
+[u S507 . 1 `S505 1 . 1 0 ]
+[v _RB2PPSbits RB2PPSbits `VES507  1 e 1 @3738 ]
+[s S519 . 1 `uc 1 RC4PPS 1 0 :5:0 
+]
+"10869
+[u S521 . 1 `S519 1 . 1 0 ]
+[v _RC4PPSbits RC4PPSbits `VES521  1 e 1 @3748 ]
+[s S540 . 1 `uc 1 RC5PPS 1 0 :5:0 
+]
+"10889
+[u S542 . 1 `S540 1 . 1 0 ]
+[v _RC5PPSbits RC5PPSbits `VES542  1 e 1 @3749 ]
+"15443
+[v _BRG16 BRG16 `VEb  1 e 0 @3323 ]
+"15446
+[v _BRGH BRGH `VEb  1 e 0 @3314 ]
+"15713
+[v _CREN CREN `VEb  1 e 0 @3308 ]
+"16499
+[v _IRCF0 IRCF0 `VEb  1 e 0 @1227 ]
+"16502
+[v _IRCF1 IRCF1 `VEb  1 e 0 @1228 ]
+"16505
+[v _IRCF2 IRCF2 `VEb  1 e 0 @1229 ]
+"16508
+[v _IRCF3 IRCF3 `VEb  1 e 0 @1230 ]
+"17972
+[v _SCS0 SCS0 `VEb  1 e 0 @1224 ]
+"17975
+[v _SCS1 SCS1 `VEb  1 e 0 @1225 ]
+"18065
+[v _SPEN SPEN `VEb  1 e 0 @3311 ]
+"18068
+[v _SPLLEN SPLLEN `VEb  1 e 0 @1231 ]
+"18179
+[v _SYNC SYNC `VEb  1 e 0 @3316 ]
+"18461
+[v _TXEN TXEN `VEb  1 e 0 @3317 ]
+"58 C:\Users\armstrongsubero\Desktop\PIC16F1718\65_ACC_GYRO_MPU6050.X\main.c
+[v _millis_counter millis_counter `VEul  1 s 4 millis_counter ]
+"289
+[v _g_ax_off_mg g_ax_off_mg `l  1 s 4 g_ax_off_mg ]
+[v _g_ay_off_mg g_ay_off_mg `l  1 s 4 g_ay_off_mg ]
+[v _g_az_off_mg g_az_off_mg `l  1 s 4 g_az_off_mg ]
+"290
+[v _g_gx_off_mdps g_gx_off_mdps `l  1 s 4 g_gx_off_mdps ]
+[v _g_gy_off_mdps g_gy_off_mdps `l  1 s 4 g_gy_off_mdps ]
+[v _g_gz_off_mdps g_gz_off_mdps `l  1 s 4 g_gz_off_mdps ]
+"292
+[v _s_ax s_ax `l  1 s 4 s_ax ]
+[v _s_ay s_ay `l  1 s 4 s_ay ]
+[v _s_az s_az `l  1 s 4 s_az ]
+"293
+[v _s_gx s_gx `l  1 s 4 s_gx ]
+[v _s_gy s_gy `l  1 s 4 s_gy ]
+[v _s_gz s_gz `l  1 s 4 s_gz ]
+"294
+[v _filter_initialized filter_initialized `a  1 s 1 filter_initialized ]
+"296
+[v _ax_hist ax_hist `[2]l  1 s 8 ax_hist ]
+[v _ay_hist ay_hist `[2]l  1 s 8 ay_hist ]
+[v _az_hist az_hist `[2]l  1 s 8 az_hist ]
+"297
+[v _gx_hist gx_hist `[2]l  1 s 8 gx_hist ]
+[v _gy_hist gy_hist `[2]l  1 s 8 gy_hist ]
+[v _gz_hist gz_hist `[2]l  1 s 8 gz_hist ]
+"493
+[v _main main `(v  1 e 1 0 ]
+{
+[s S407 . 14 `s 1 ax 2 0 `s 1 ay 2 2 `s 1 az 2 4 `s 1 temp 2 6 `s 1 gx 2 8 `s 1 gy 2 10 `s 1 gz 2 12 ]
+"565
+[v main@r r `S407  1 a 14 14 ]
+"572
+[v main@now now `ul  1 a 4 10 ]
+"543
+[v main@last_print_ms last_print_ms `ul  1 a 4 4 ]
+"544
+[v main@read_errors read_errors `us  1 a 2 8 ]
+"600
+} 0
+"265
+[v _temp_to_c_x100 temp_to_c_x100 `(l  1 s 4 temp_to_c_x100 ]
+{
+[v temp_to_c_x100@t t `s  1 p 2 14 ]
+"268
+} 0
+"212
+[v _mpu_init mpu_init `(a  1 s 1 mpu_init ]
+{
+"214
+[v mpu_init@who who `uc  1 a 1 3 ]
+"245
+} 0
+"306
+[v _mpu_calibrate mpu_calibrate `(a  1 s 1 mpu_calibrate ]
+{
+[s S407 . 14 `s 1 ax 2 0 `s 1 ay 2 2 `s 1 az 2 4 `s 1 temp 2 6 `s 1 gx 2 8 `s 1 gy 2 10 `s 1 gz 2 12 ]
+"320
+[v mpu_calibrate@r r `S407  1 a 14 57 ]
+"352
+[v mpu_calibrate@i_687 i `uc  1 a 1 56 ]
+"316
+[v mpu_calibrate@i i `us  1 a 2 52 ]
+"309
+[v mpu_calibrate@sgz sgz `l  1 a 4 48 ]
+[v mpu_calibrate@sgy sgy `l  1 a 4 44 ]
+[v mpu_calibrate@sgx sgx `l  1 a 4 40 ]
+"308
+[v mpu_calibrate@saz saz `l  1 a 4 36 ]
+[v mpu_calibrate@say say `l  1 a 4 32 ]
+[v mpu_calibrate@sax sax `l  1 a 4 28 ]
+"310
+[v mpu_calibrate@good good `us  1 a 2 54 ]
+"359
+} 0
+"130
+[v _mpu_write_reg mpu_write_reg `(a  1 s 1 mpu_write_reg ]
+{
+[v mpu_write_reg@reg reg `uc  1 a 1 wreg ]
+[v mpu_write_reg@reg reg `uc  1 a 1 wreg ]
+[v mpu_write_reg@val val `uc  1 p 1 11 ]
+"132
+[v mpu_write_reg@reg reg `uc  1 a 1 12 ]
+"133
+} 0
+"95
+[v _i2c_write_bytes i2c_write_bytes `(uc  1 s 1 i2c_write_bytes ]
+{
+[v i2c_write_bytes@addr7 addr7 `uc  1 a 1 wreg ]
+"101
+[v i2c_write_bytes@i i `uc  1 a 1 10 ]
+"95
+[v i2c_write_bytes@addr7 addr7 `uc  1 a 1 wreg ]
+[v i2c_write_bytes@reg reg `uc  1 p 1 5 ]
+"96
+[v i2c_write_bytes@src src `*.1uc  1 p 1 6 ]
+[v i2c_write_bytes@len len `uc  1 p 1 7 ]
+"98
+[v i2c_write_bytes@addr7 addr7 `uc  1 a 1 9 ]
+"107
+} 0
+"194
+[v _mpu_wait_data_ready mpu_wait_data_ready `(a  1 s 1 mpu_wait_data_ready ]
+{
+"197
+[v mpu_wait_data_ready@start start `ul  1 a 4 12 ]
+"196
+[v mpu_wait_data_ready@st st `uc  1 a 1 16 ]
+"194
+[v mpu_wait_data_ready@timeout_ms timeout_ms `us  1 p 2 2 ]
+"206
+} 0
+"135
+[v _mpu_read_reg mpu_read_reg `(a  1 s 1 mpu_read_reg ]
+{
+[v mpu_read_reg@reg reg `uc  1 a 1 wreg ]
+[v mpu_read_reg@reg reg `uc  1 a 1 wreg ]
+[v mpu_read_reg@val val `*.4uc  1 p 1 0 ]
+"137
+[v mpu_read_reg@reg reg `uc  1 a 1 1 ]
+"138
+} 0
+"82
+[v _millis millis `(ul  1 s 4 millis ]
+{
+"84
+[v millis@val val `ul  1 a 4 4 ]
+"89
+} 0
+"172
+[v _mpu_read_raw mpu_read_raw `(a  1 s 1 mpu_read_raw ]
+{
+[s S407 . 14 `s 1 ax 2 0 `s 1 ay 2 2 `s 1 az 2 4 `s 1 temp 2 6 `s 1 gx 2 8 `s 1 gy 2 10 `s 1 gz 2 12 ]
+[v mpu_read_raw@o o `*.4S407  1 a 1 wreg ]
+"176
+[v mpu_read_raw@attempt attempt `uc  1 a 1 18 ]
+"174
+[v mpu_read_raw@b b `[14]uc  1 a 14 4 ]
+"172
+[v mpu_read_raw@o o `*.4S407  1 a 1 wreg ]
+"176
+"172
+[v mpu_read_raw@o o `*.4S407  1 a 1 19 ]
+"192
+} 0
+"140
+[v _mpu_read_multi mpu_read_multi `(a  1 s 1 mpu_read_multi ]
+{
+[v mpu_read_multi@reg reg `uc  1 a 1 wreg ]
+[v mpu_read_multi@reg reg `uc  1 a 1 wreg ]
+[v mpu_read_multi@buf buf `*.4uc  1 p 1 0 ]
+[v mpu_read_multi@len len `uc  1 p 1 1 ]
+"142
+[v mpu_read_multi@reg reg `uc  1 a 1 2 ]
+"143
+} 0
+"109
+[v _i2c_read_bytes i2c_read_bytes `(uc  1 s 1 i2c_read_bytes ]
+{
+[v i2c_read_bytes@addr7 addr7 `uc  1 a 1 wreg ]
+"119
+[v i2c_read_bytes@ack ack `a  1 a 1 11 ]
+"117
+[v i2c_read_bytes@i i `uc  1 a 1 13 ]
+"109
+[v i2c_read_bytes@addr7 addr7 `uc  1 a 1 wreg ]
+[v i2c_read_bytes@reg reg `uc  1 p 1 6 ]
+"110
+[v i2c_read_bytes@dst dst `*.4uc  1 p 1 7 ]
+[v i2c_read_bytes@len len `uc  1 p 1 8 ]
+"112
+[v i2c_read_bytes@addr7 addr7 `uc  1 a 1 12 ]
+"124
+} 0
+"161 C:\Users\armstrongsubero\Desktop\PIC16F1718\65_ACC_GYRO_MPU6050.X\I2C.c
+[v _I2C_WriteByte I2C_WriteByte `(E6036  1 e 1 0 ]
+{
+[v I2C_WriteByte@data data `uc  1 a 1 wreg ]
+"163
+[v I2C_WriteByte@st st `E6036  1 a 1 4 ]
+"161
+[v I2C_WriteByte@data data `uc  1 a 1 wreg ]
+"165
+[v I2C_WriteByte@data data `uc  1 a 1 3 ]
+"184
+} 0
+"138
+[v _I2C_Stop I2C_Stop `(E6036  1 e 1 0 ]
+{
+"140
+[v I2C_Stop@st st `E6036  1 a 1 3 ]
+"153
+} 0
+"98
+[v _I2C_Start I2C_Start `(E6036  1 e 1 0 ]
+{
+"100
+[v I2C_Start@st st `E6036  1 a 1 3 ]
+"113
+} 0
+"118
+[v _I2C_RepeatedStart I2C_RepeatedStart `(E6036  1 e 1 0 ]
+{
+"120
+[v I2C_RepeatedStart@st st `E6036  1 a 1 3 ]
+"133
+} 0
+"192
+[v _I2C_ReadByte I2C_ReadByte `(E6036  1 e 1 0 ]
+{
+[v I2C_ReadByte@data data `*.4uc  1 a 1 wreg ]
+"194
+[v I2C_ReadByte@st st `E6036  1 a 1 5 ]
+"192
+[v I2C_ReadByte@data data `*.4uc  1 a 1 wreg ]
+[v I2C_ReadByte@ack ack `a  1 p 1 3 ]
+"196
+[v I2C_ReadByte@data data `*.4uc  1 a 1 4 ]
+"220
+} 0
+"81
+[v _I2C_WaitIdle I2C_WaitIdle `(E6036  1 e 1 0 ]
+{
+[v I2C_WaitIdle@timeout_ms timeout_ms `us  1 p 2 0 ]
+"93
+} 0
+"23
+[v _I2C_WaitIF I2C_WaitIF `(E6036  1 s 1 I2C_WaitIF ]
+{
+[v I2C_WaitIF@timeout_ms timeout_ms `us  1 p 2 0 ]
+"33
+} 0
+"156 C:\Users\armstrongsubero\Desktop\PIC16F1718\65_ACC_GYRO_MPU6050.X\main.c
+[v _mpu_frame_sane mpu_frame_sane `(a  1 s 1 mpu_frame_sane ]
+{
+[v mpu_frame_sane@b b `*.4DCuc  1 a 1 wreg ]
+"159
+[v mpu_frame_sane@i i `uc  1 a 1 10 ]
+"166
+[v mpu_frame_sane@traw traw `s  1 a 2 8 ]
+"158
+[v mpu_frame_sane@andv andv `uc  1 a 1 7 ]
+[v mpu_frame_sane@orv orv `uc  1 a 1 6 ]
+"156
+[v mpu_frame_sane@b b `*.4DCuc  1 a 1 wreg ]
+[v mpu_frame_sane@len len `uc  1 p 1 0 ]
+"158
+[v mpu_frame_sane@b b `*.4DCuc  1 a 1 11 ]
+"170
+} 0
+"460
+[v _initMain initMain `(v  1 e 1 0 ]
+{
+"487
+} 0
+"36 C:\Users\armstrongsubero\Desktop\PIC16F1718\65_ACC_GYRO_MPU6050.X\PIC16F1718_Internal.c
+[v _internal_32 internal_32 `(v  1 e 1 0 ]
+{
+"49
+} 0
+"365 C:\Users\armstrongsubero\Desktop\PIC16F1718\65_ACC_GYRO_MPU6050.X\main.c
+[v _filter_step filter_step `(v  1 s 1 filter_step ]
+{
+[s S407 . 14 `s 1 ax 2 0 `s 1 ay 2 2 `s 1 az 2 4 `s 1 temp 2 6 `s 1 gx 2 8 `s 1 gy 2 10 `s 1 gz 2 12 ]
+[v filter_step@r r `*.4DCS407  1 a 1 wreg ]
+"372
+[v filter_step@gz gz `l  1 a 4 75 ]
+"371
+[v filter_step@gy gy `l  1 a 4 71 ]
+"370
+[v filter_step@gx gx `l  1 a 4 67 ]
+"369
+[v filter_step@az az `l  1 a 4 63 ]
+"368
+[v filter_step@ay ay `l  1 a 4 59 ]
+"367
+[v filter_step@ax ax `l  1 a 4 55 ]
+"388
+[v filter_step@gz_m gz_m `l  1 a 4 51 ]
+"387
+[v filter_step@gy_m gy_m `l  1 a 4 47 ]
+"386
+[v filter_step@gx_m gx_m `l  1 a 4 43 ]
+"385
+[v filter_step@az_m az_m `l  1 a 4 39 ]
+"384
+[v filter_step@ay_m ay_m `l  1 a 4 35 ]
+"383
+[v filter_step@ax_m ax_m `l  1 a 4 31 ]
+"365
+[v filter_step@r r `*.4DCS407  1 a 1 wreg ]
+"367
+"365
+[v filter_step@r r `*.4DCS407  1 a 1 79 ]
+"413
+} 0
+"255
+[v _raw_to_mg raw_to_mg `(l  1 s 4 raw_to_mg ]
+{
+[v raw_to_mg@r r `s  1 p 2 14 ]
+"258
+} 0
+"260
+[v _raw_to_mdps raw_to_mdps `(l  1 s 4 raw_to_mdps ]
+{
+[v raw_to_mdps@r r `s  1 p 2 14 ]
+"263
+} 0
+"15 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+{
+"17
+[v ___lmul@product product `ul  1 a 4 8 ]
+"15
+[v ___lmul@multiplier multiplier `ul  1 p 4 0 ]
+[v ___lmul@multiplicand multiplicand `ul  1 p 4 4 ]
+"129
+} 0
+"274 C:\Users\armstrongsubero\Desktop\PIC16F1718\65_ACC_GYRO_MPU6050.X\main.c
+[v _median3 median3 `(l  1 s 4 median3 ]
+{
+"278
+[v median3@t_646 t `l  1 a 4 8 ]
+"277
+[v median3@t_645 t `l  1 a 4 4 ]
+"276
+[v median3@t t `l  1 a 4 0 ]
+"274
+[v median3@a a `l  1 p 4 0 ]
+[v median3@b b `l  1 p 4 4 ]
+[v median3@c c `l  1 p 4 8 ]
+"280
+} 0
+"445
+[v _UART_PrintFixed100 UART_PrintFixed100 `(v  1 s 1 UART_PrintFixed100 ]
+{
+"451
+[v UART_PrintFixed100@frac frac `l  1 a 4 41 ]
+"445
+[v UART_PrintFixed100@val val `l  1 p 4 33 ]
+"454
+} 0
+"419
+[v _UART_PrintInt32 UART_PrintInt32 `(v  1 s 1 UART_PrintInt32 ]
+{
+"440
+[v UART_PrintInt32@c c `[2]uc  1 a 2 30 ]
+"421
+[v UART_PrintInt32@buf buf `[12]uc  1 a 12 18 ]
+"422
+[v UART_PrintInt32@i i `c  1 a 1 32 ]
+"419
+[v UART_PrintInt32@val val `l  1 p 4 14 ]
+"443
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\almod.c
+[v ___almod __almod `(l  1 e 4 0 ]
+{
+"10
+[v ___almod@sign sign `uc  1 a 1 10 ]
+[v ___almod@counter counter `uc  1 a 1 9 ]
+"5
+[v ___almod@divisor divisor `l  1 p 4 0 ]
+[v ___almod@dividend dividend `l  1 p 4 4 ]
+"34
+} 0
+"127 C:\Users\armstrongsubero\Desktop\PIC16F1718\65_ACC_GYRO_MPU6050.X\EUSART.c
+[v _EUSART_Write_Text EUSART_Write_Text `(v  1 e 1 0 ]
+{
+"129
+[v EUSART_Write_Text@i i `i  1 a 2 4 ]
+"127
+[v EUSART_Write_Text@text text `*.26uc  1 p 2 1 ]
+"132
+} 0
+"108
+[v _EUSART_Write EUSART_Write `(v  1 e 1 0 ]
+{
+[v EUSART_Write@txData txData `uc  1 a 1 wreg ]
+[v EUSART_Write@txData txData `uc  1 a 1 wreg ]
+[v EUSART_Write@txData txData `uc  1 a 1 0 ]
+"115
+} 0
+"60 C:\Users\armstrongsubero\Desktop\PIC16F1718\65_ACC_GYRO_MPU6050.X\main.c
+[v _TMR0_Init TMR0_Init `(v  1 s 1 TMR0_Init ]
+{
+"70
+} 0
+"41 C:\Users\armstrongsubero\Desktop\PIC16F1718\65_ACC_GYRO_MPU6050.X\I2C.c
+[v _I2C_Init I2C_Init `(v  1 e 1 0 ]
+{
+"54
+} 0
+"62
+[v _I2C_ClearErrors I2C_ClearErrors `(v  1 e 1 0 ]
+{
+"73
+} 0
+"36 C:\Users\armstrongsubero\Desktop\PIC16F1718\65_ACC_GYRO_MPU6050.X\EUSART.c
+[v _EUSART_Initialize EUSART_Initialize `(uc  1 e 1 0 ]
+{
+"38
+[v EUSART_Initialize@x x `ui  1 a 2 30 ]
+"36
+[v EUSART_Initialize@baudrate baudrate `DCl  1 p 4 14 ]
+"50
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+{
+"10
+[v ___aldiv@quotient quotient `l  1 a 4 10 ]
+"11
+[v ___aldiv@sign sign `uc  1 a 1 9 ]
+[v ___aldiv@counter counter `uc  1 a 1 8 ]
+"5
+[v ___aldiv@divisor divisor `l  1 p 4 0 ]
+[v ___aldiv@dividend dividend `l  1 p 4 4 ]
+"41
+} 0
+"72 C:\Users\armstrongsubero\Desktop\PIC16F1718\65_ACC_GYRO_MPU6050.X\main.c
+[v _ISR ISR `II(v  1 e 1 0 ]
+{
+"80
+} 0
